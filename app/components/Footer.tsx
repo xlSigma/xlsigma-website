@@ -21,9 +21,6 @@ export default function Footer() {
               <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
                 SDVOSB
               </span>
-              <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
-                Minority-Owned SB
-              </span>
               <span className="bg-navy text-slate-400 text-xs px-3 py-1 rounded-full border border-slate-600">
                 SAM.gov Registered
               </span>

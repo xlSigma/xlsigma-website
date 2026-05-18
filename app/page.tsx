@@ -29,10 +29,10 @@ const CAPABILITIES_PREVIEW = [
 ];
 
 const VALUE_PROPS = [
-  'Senior practitioner on every engagement -- no juniors, no bench',
+  'Senior-only delivery teams on every engagement -- no juniors, no bench',
   'Full-stack delivery: strategy, design, build, and training',
   'Lean Six Sigma Master Black Belt with Fortune 500 track record',
-  'Deep expertise across Accenture, IBM, GE, and Emerson',
+  'Deep expertise across Accenture, GE, and Emerson',
   'Multilingual delivery: English, Spanish, and Portuguese',
 ];
 
@@ -86,12 +86,10 @@ export default function HomePage() {
               <p className="text-slate-600 leading-relaxed mb-4">
                 xlSigma is a boutique management consulting and technology firm that brings
                 Fortune 500 rigor to enterprise and mid-market clients. Our principal has led
-                process transformation, analytics, and automation programs at Accenture, IBM,
-                GE, and Emerson.
+                process transformation, analytics, and automation programs at Accenture, GE, and Emerson.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                Every engagement is led personally -- not delegated. You get the experience
-                you hired, from kickoff to delivery.
+                You're never handed off to juniors. Every engagement is staffed with senior consultants and backed by direct principal oversight.
               </p>
             </div>
             <div className="bg-gold-pale border border-gold/20 rounded-xl p-6">
@@ -113,7 +111,7 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  Experience across Accenture, IBM, GE, Emerson
+                  Experience across Accenture, GE, Emerson
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
@@ -198,10 +196,6 @@ export default function HomePage() {
                              rounded-full border border-gold/30 uppercase tracking-wider">
               SDVOSB
             </span>
-            <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
-                             rounded-full border border-gold/30 uppercase tracking-wider">
-              Minority-Owned SB
-            </span>
             <span className="bg-slate-700 text-slate-300 text-xs font-bold px-4 py-1.5
                              rounded-full border border-slate-600 uppercase tracking-wider">
               SAM.gov Registered
@@ -211,7 +205,7 @@ export default function HomePage() {
             Federal Prime Contractor?
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto leading-relaxed">
-            xlSigma is a certified SDVOSB and Minority-Owned Small Business -- helping
+            xlSigma is a certified SDVOSB and Veteran-Owned Small Business -- helping
             prime contractors meet participation goals while delivering senior-level execution.
           </p>
           <Link

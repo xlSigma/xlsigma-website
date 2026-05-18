@@ -4,7 +4,7 @@ import {
 } from 'lucide-react';
 
 const VALUE_PROPS = [
-  'Satisfies SDVOSB and Minority-Owned small-business participation goals',
+  'Satisfies SDVOSB and Veteran-Owned small-business participation goals',
   'Delivers senior-level execution with no ramp-up -- hit the ground running',
   'Fills capability gaps in process improvement, automation, and analytics',
   'Augments proposal teams with differentiated technical content',
@@ -59,10 +59,6 @@ export default function GovernmentContractingPage() {
                              rounded-full border border-gold/30 uppercase tracking-wider">
               SDVOSB
             </span>
-            <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
-                             rounded-full border border-gold/30 uppercase tracking-wider">
-              Minority-Owned SB
-            </span>
             <span className="bg-slate-700 text-slate-300 text-xs font-bold px-4 py-1.5
                              rounded-full border border-slate-600 uppercase tracking-wider">
               SAM.gov Registered
@@ -87,12 +83,12 @@ export default function GovernmentContractingPage() {
             Small Business Credits
           </p>
           <h2 className="text-2xl font-bold text-navy mb-8">
-            Dual Certification -- One Subcontractor
+            SDVOSB Certified
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { Icon: Shield, label: 'SDVOSB',          sub: 'Service-Disabled Veteran-Owned' },
-              { Icon: Award,  label: 'Minority-Owned',  sub: 'Minority-Owned Small Business'  },
+              { Icon: Award,  label: 'VBE (pending)',   sub: 'FL OSD Veteran CBE'              },
               { Icon: Users,  label: 'SAM.gov',         sub: 'Active Registration'             },
             ].map(({ Icon, label, sub }) => (
               <div key={label}

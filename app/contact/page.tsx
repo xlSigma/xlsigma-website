@@ -267,10 +267,6 @@ export default function ContactPage() {
                 <li className="text-slate-500 text-xs mb-1">
                   Service-Disabled Veteran-Owned Small Business
                 </li>
-                <li className="font-semibold text-navy">Minority-Owned SB</li>
-                <li className="text-slate-500 text-xs mb-1">
-                  Minority-Owned Small Business
-                </li>
                 <li className="font-semibold text-navy">SAM.gov Registered</li>
                 <li className="text-slate-500 text-xs">
                   Active federal registration

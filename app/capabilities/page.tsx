@@ -65,7 +65,7 @@ const CAPABILITIES = [
 ];
 
 const DIFFERENTIATORS = [
-  'Dual small-business credit: SDVOSB and Minority-Owned',
+  'Dual set-aside credit: SDVOSB and Veteran-Owned',
   'Lean Six Sigma Master Black Belt -- rare at small-business scale',
   'Proven federal track record: USPS, U.S. Army CENTCOM, U.S. Army JIEDDO',
   'Full-stack delivery: strategy, design, build, and train',
@@ -83,7 +83,7 @@ export default function CapabilitiesPage() {
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Core Capabilities</h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Eight integrated practice areas, delivered by a single senior practitioner
+            Eight integrated practice areas, delivered by senior-only teams with principal oversight
             who has led each in production environments.
           </p>
         </div>
