@@ -69,7 +69,7 @@ const DIFFERENTIATORS = [
   'Lean Six Sigma Master Black Belt -- rare at small-business scale',
   'Proven federal track record: USPS, U.S. Army CENTCOM, U.S. Army JIEDDO',
   'Full-stack delivery: strategy, design, build, and train',
-  'Multilingual: English, Spanish, Portuguese',
+  'Bilingual: English, Spanish',
 ];
 
 export default function CapabilitiesPage() {
