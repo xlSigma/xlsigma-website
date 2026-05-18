@@ -292,10 +292,10 @@ const CAPABILITIES_PREVIEW = [
 ];
 
 const VALUE_PROPS = [
-  'Senior practitioner on every engagement -- no juniors, no bench',
+  'Senior-only delivery teams on every engagement -- no juniors, no bench',
   'Full-stack delivery: strategy, design, build, and training',
   'Lean Six Sigma Master Black Belt with Fortune 500 track record',
-  'Deep expertise across Accenture, IBM, GE, and Emerson',
+  'Deep expertise across Accenture, GE, and Emerson',
   'Multilingual delivery: English, Spanish, and Portuguese',
 ];
 
@@ -349,12 +349,10 @@ export default function HomePage() {
               <p className="text-slate-600 leading-relaxed mb-4">
                 xlSigma is a boutique management consulting and technology firm that brings
                 Fortune 500 rigor to enterprise and mid-market clients. Our principal has led
-                process transformation, analytics, and automation programs at Accenture, IBM,
-                GE, and Emerson.
+                process transformation, analytics, and automation programs at Accenture, GE, and Emerson.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                Every engagement is led personally -- not delegated. You get the experience
-                you hired, from kickoff to delivery.
+                You're never handed off to juniors. Every engagement is staffed with senior consultants and backed by direct principal oversight.
               </p>
             </div>
             <div className="bg-gold-pale border border-gold/20 rounded-xl p-6">
@@ -376,7 +374,7 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  Experience across Accenture, IBM, GE, Emerson
+                  Experience across Accenture, GE, Emerson
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
@@ -819,7 +817,7 @@ export default function CapabilitiesPage() {
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Core Capabilities</h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Eight integrated practice areas, delivered by a single senior practitioner
+            Eight integrated practice areas, delivered by senior-only teams with principal oversight
             who has led each in production environments.
           </p>
         </div>
