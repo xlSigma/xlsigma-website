@@ -32,8 +32,8 @@ const VALUE_PROPS = [
   'Senior-only delivery teams on every engagement -- no juniors, no bench',
   'Full-stack delivery: strategy, design, build, and training',
   'Lean Six Sigma Master Black Belt with Fortune 500 track record',
-  'Deep expertise across Accenture, GE, and Emerson',
-  'Multilingual delivery: English, Spanish, and Portuguese',
+  'Expertise across Accenture, GE, Emerson, Citi Group, Discover Financial, Citrix Systems, Johnson & Johnson',
+  'Bilingual delivery: English, Spanish',
 ];
 
 export default function HomePage() {
