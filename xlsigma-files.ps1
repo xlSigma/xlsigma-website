@@ -296,7 +296,7 @@ const VALUE_PROPS = [
   'Full-stack delivery: strategy, design, build, and training',
   'Lean Six Sigma Master Black Belt with Fortune 500 track record',
   'Deep expertise across Accenture, GE, and Emerson',
-  'Multilingual delivery: English, Spanish, and Portuguese',
+  'Bilingual delivery: English, Spanish',
 ];
 
 export default function HomePage() {
@@ -378,7 +378,7 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  English, Spanish, Portuguese
+                  English, Spanish
                 </li>
               </ul>
             </div>
@@ -803,7 +803,7 @@ const DIFFERENTIATORS = [
   'Lean Six Sigma Master Black Belt -- rare at small-business scale',
   'Proven federal track record: USPS, U.S. Army CENTCOM, U.S. Army JIEDDO',
   'Full-stack delivery: strategy, design, build, and train',
-  'Multilingual: English, Spanish, Portuguese',
+  'Bilingual: English, Spanish',
 ];
 
 export default function CapabilitiesPage() {
