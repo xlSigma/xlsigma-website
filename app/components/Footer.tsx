@@ -21,6 +21,9 @@ export default function Footer() {
               <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
                 SDVOSB
               </span>
+              <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
+                Minority-Owned SB (cert pending)
+              </span>
               <span className="bg-navy text-slate-400 text-xs px-3 py-1 rounded-full border border-slate-600">
                 SAM.gov Registered
               </span>
@@ -55,7 +58,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>Tampa, FL</li>
-              <li>(703) 969-8177</li>
+              <li>(813) 919-9772</li>
               <li>
                 <Link href="/contact" className="hover:text-gold-light transition-colors">
                   Send a Message

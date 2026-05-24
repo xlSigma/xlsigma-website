@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   title: 'xlSigma LLC | Management Consulting & Technology',
   description:
     'Senior-level management consulting and technology services. ' +
-    'Process improvement, advanced analytics, and automation. ' +
-    'SDVOSB and Veteran-Owned Small Business.',
+    'Process improvement, business process automation, strategy deployment, advanced analytics. ' +
+    'SDVOSB and Minority-Owned Small Business.',
 };
 
 export const viewport: Viewport = {

@@ -4,39 +4,59 @@ import {
 } from 'lucide-react';
 
 const VALUE_PROPS = [
-  'Satisfies SDVOSB and Veteran-Owned small-business participation goals',
+  'Satisfies SDVOSB small-business participation goals',
   'Delivers senior-level execution with no ramp-up -- hit the ground running',
-  'Fills capability gaps in process improvement, automation, and analytics',
+  'Fills capability gaps in operations excellence, process improvement, automation, and analytics',
   'Augments proposal teams with differentiated technical content',
   'Scales engagement size to fit subcontract scope and timeline',
 ];
 
 const PAST_PERFORMANCE = [
   {
-    client:  'U.S. Army / DoD',
-    summary: 'Reengineered LOGCAP logistics change-order process in Afghan theater. ' +
+    client:  'U.S. Army / ARCENT',
+    summary: 'Reengineered LOGCAP logistics change-order process in Afghanistan theater' +
+			 '(with Calibre Systems Inc.) ' +
              'Cut cycle time from 150+ days to under 70 days. ' +
-             'Built supporting EUC tools (Excel, SharePoint, SQL).',
+             'Built supporting EUC tools (Excel, SharePoint, SQL database).',
     tags:    ['Process Reengineering', 'EUC Tools', 'DoD'],
   },
   {
+    client:  'CENTCOM / DoD',
+    summary: 'Developed alternate land-routes logistics for the draw-down (retrograde) in ' +
+			 'the Afghanistan theater' +
+			 '(with Calibre Systems Inc.)' +
+             'Risk mitigation imperative for the scenario of Pakistan closing access to the sea. ' +
+             'Designed stochastic multi-node network flow optimizer to minimize cost/time/risk while ' +
+			 'maximizing throughput, safety, and adherence to timelines, subject to constraints (with Calibre Systems)',
+    tags:    ['Logistics', 'Data Analytics', 'DoD'],
+  },
+    {
+    client:  'U.S. Army / DoD',
+    summary: 'Designed and deployed IT infrastructure for reporting the location of 90,000+ ' +
+			 'shipping containers across the war theater in preparation for draw-down (retrograde).' +
+			 '(with Calibre Systems Inc.). ' +
+             'Reduced errors 80%+ and accelerated reporting cycle time x4. ' +
+             'Raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).',
+    tags:    ['Data Analytics', 'Database Design', 'DoD'],
+  },
+  {
     client:  'U.S. Postal Service',
-    summary: 'Enterprise Lean Six Sigma deployment (with Accenture). Built governance, ' +
-             'metrics capture and reporting, IT enablement, and infrastructure for ' +
-             'project management and training.',
+    summary: 'Enterprise Lean Six Sigma deployment. Built governance, metrics capture and reporting, ' +
+			 'IT enablement and infrastructure for project management and training ' +
+			 '(with Accenture). ',
     tags:    ['Lean Six Sigma', 'Enterprise Deployment', 'Federal'],
   },
   {
     client:  'Top-Tier Financial Institutions',
-    summary: 'Designed and deployed AI/RPA solutions automating check processing and ' +
-             'bank operations. Supported regulatory consent-order remediation through ' +
-             'process and data diagnostics.',
-    tags:    ['AI/RPA', 'Regulatory Compliance', 'Financial Services'],
+    summary: 'Designed and deployed AI/RPA solutions automating bank operations ' +
+			 'such as paper check processing, invoicing, and KYC process' +
+             'Supported regulatory consent-order remediation through process and data diagnostics.',
+    tags:    ['AI/RPA', 'Regulatory Compliance', 'KYC', 'Financial Services'],
   },
   {
     client:  'USF Health',
-    summary: 'Process improvement and workflow automation engagements supporting ' +
-             'healthcare operations.',
+    summary: 'Process improvement and workflow automation supporting ' +
+             'referrals process of BRIDGE Clinic operations.',
     tags:    ['Healthcare', 'Process Improvement', 'Workflow Automation'],
   },
 ];
@@ -59,6 +79,10 @@ export default function GovernmentContractingPage() {
                              rounded-full border border-gold/30 uppercase tracking-wider">
               SDVOSB
             </span>
+            <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
+                             rounded-full border border-gold/30 uppercase tracking-wider">
+              Minority-Owned SB (pending)
+            </span>
             <span className="bg-slate-700 text-slate-300 text-xs font-bold px-4 py-1.5
                              rounded-full border border-slate-600 uppercase tracking-wider">
               SAM.gov Registered
@@ -69,26 +93,25 @@ export default function GovernmentContractingPage() {
             <span className="text-gold-light block mt-1">SDVOSB Subcontracting Partner</span>
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            xlSigma helps federal prime contractors meet small-business participation
+            xlSigma helps federal prime contractors meet small-business SDVOSB participation
             goals while delivering senior-level consulting and technology capabilities
             with a proven federal track record.
           </p>
         </div>
       </section>
 
-      {/* Dual SB Credit */}
+      {/* SDVOSB Credit */}
       <section className="py-16 px-4 bg-gold-pale border-b border-gold/20">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
             Small Business Credits
           </p>
           <h2 className="text-2xl font-bold text-navy mb-8">
-            SDVOSB Certified
+            Service-Disabled Veteran-Owned Small Business
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { Icon: Shield, label: 'SDVOSB',          sub: 'Service-Disabled Veteran-Owned' },
-              { Icon: Award,  label: 'VBE (pending)',   sub: 'FL OSD Veteran CBE'              },
               { Icon: Users,  label: 'SAM.gov',         sub: 'Active Registration'             },
             ].map(({ Icon, label, sub }) => (
               <div key={label}

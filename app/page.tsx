@@ -9,7 +9,7 @@ const CAPABILITIES_PREVIEW = [
   {
     Icon:  Bot,
     title: 'AI-Enabled Process Automation',
-    desc:  'RPA and AI solutions that eliminate manual work and reduce cycle times across operations.',
+    desc:  'AI and RPA solutions that eliminate manual work and reduce cycle times across operations.',
   },
   {
     Icon:  TrendingUp,
@@ -23,16 +23,17 @@ const CAPABILITIES_PREVIEW = [
   },
   {
     Icon:  Code2,
-    title: 'End-User Computing Development',
+    title: 'End-User Computing (EUC) Development',
     desc:  'Excel/VBA, Power Platform, and lightweight applications built for real users.',
   },
 ];
 
 const VALUE_PROPS = [
   'Senior-only delivery teams on every engagement -- no juniors, no bench',
-  'Full-stack delivery: strategy, design, build, and training',
-  'Lean Six Sigma Master Black Belt with Fortune 500 track record',
-  'Expertise across Accenture, GE, Emerson, Citi Group, Discover Financial, Citrix Systems, Johnson & Johnson',
+  'Workflow Automation Full-stack delivery: strategy, design, build, implement, and training',
+  'Strategy Deployment, Process Improvement, Data Analytics, KPI Dashboards',
+  'Leadership: Lean Six Sigma Master Black Belt with Fortune 500 track record',
+  'Deep expertise across Accenture, GE, Emerson, Citi, Discover, Federal Government agencies',
   'Bilingual delivery: English, Spanish',
 ];
 
@@ -45,14 +46,21 @@ export default function HomePage() {
           <div className="flex justify-center mb-8">
             <Image src="/logo.png" alt="xlSigma" width={120} height={120} priority />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Senior-Level Consulting for
-            <span className="text-gold-light block mt-1">Complex Operations</span>
+
+            <h1 className="leading-tight mb-6">
+            <span className="text-3xl md:text-4xl font-bold block">Senior-Level Consulting for</span>
+            <span className="text-5xl md:text-6xl font-bold text-gold-light block mt-1">Operations Excellence</span>
           </h1>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Process improvement, advanced analytics, and automation -- delivered by
-            practitioners with Fortune 500 depth, not generalists with slide decks.
+          <p className="text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto mb-2 leading-relaxed">
+            Process reengineering / Process improvement
           </p>
+          <p className="text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto mb-8 leading-relaxed">
+            Smart Automation, Advanced Analytics
+          </p>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+            delivered by practitioners with Fortune 500 depth
+          </p>
+
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               href="/capabilities"
@@ -79,14 +87,13 @@ export default function HomePage() {
             Who We Are
           </p>
           <h2 className="text-3xl font-bold text-navy mb-6">
-            Boutique. Senior. Accountable.
+            Operational Excellence. Senior. Accountable.
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <p className="text-slate-600 leading-relaxed mb-4">
                 xlSigma is a boutique management consulting and technology firm that brings
-                Fortune 500 rigor to enterprise and mid-market clients. Our principal has led
-                process transformation, analytics, and automation programs at Accenture, GE, and Emerson.
+                big consulting firm rigor with small firm agility
               </p>
               <p className="text-slate-600 leading-relaxed">
                 You're never handed off to juniors. Every engagement is staffed with senior consultants and backed by direct principal oversight.
@@ -99,11 +106,11 @@ export default function HomePage() {
               <ul className="space-y-3 text-sm text-slate-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  MBA, University of Michigan (Ross)
+                  MBA, The University of Michigan (Ross)
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  B.S. Electrical Engineering, FIU
+                  B.S. Electrical Engineering, Florida International University
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
@@ -111,11 +118,11 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  Experience across Accenture, GE, Emerson
+                  Experience across Accenture, IBM, GE, Emerson, Citi Group, Discover Financial, Federal Government
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  English, Spanish, Portuguese
+                  English, Spanish
                 </li>
               </ul>
             </div>
@@ -172,8 +179,7 @@ export default function HomePage() {
               </h2>
               <p className="text-slate-600 leading-relaxed">
                 Large firms send senior partners to sell -- then deliver with junior staff.
-                xlSigma operates differently. The principal who proposes is the practitioner
-                who delivers, from day one through final handoff.
+                xlSigma operates differently. We deliver with senior-level consultants with Principal oversight from day one through final handoff.
               </p>
             </div>
             <ul className="space-y-4">
@@ -196,6 +202,10 @@ export default function HomePage() {
                              rounded-full border border-gold/30 uppercase tracking-wider">
               SDVOSB
             </span>
+            <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
+                             rounded-full border border-gold/30 uppercase tracking-wider">
+              Minority-Owned SB (pending)
+            </span>
             <span className="bg-slate-700 text-slate-300 text-xs font-bold px-4 py-1.5
                              rounded-full border border-slate-600 uppercase tracking-wider">
               SAM.gov Registered
@@ -205,7 +215,7 @@ export default function HomePage() {
             Federal Prime Contractor?
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto leading-relaxed">
-            xlSigma is a certified SDVOSB and Veteran-Owned Small Business -- helping
+            xlSigma is a certified SDVOSB -- helping
             prime contractors meet participation goals while delivering senior-level execution.
           </p>
           <Link

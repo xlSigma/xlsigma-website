@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   title: 'xlSigma LLC | Management Consulting & Technology',
   description:
     'Senior-level management consulting and technology services. ' +
-    'Process improvement, advanced analytics, and automation. ' +
+    'Process improvement, business process automation, strategy deployment, advanced analytics. ' +
     'SDVOSB and Minority-Owned Small Business.',
 };
 
@@ -197,7 +197,7 @@ export default function Footer() {
                 SDVOSB
               </span>
               <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
-                Minority-Owned SB
+                Minority-Owned SB (cert pending)
               </span>
               <span className="bg-navy text-slate-400 text-xs px-3 py-1 rounded-full border border-slate-600">
                 SAM.gov Registered
@@ -233,7 +233,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>Tampa, FL</li>
-              <li>(703) 969-8177</li>
+              <li>(813) 919-9772</li>
               <li>
                 <Link href="/contact" className="hover:text-gold-light transition-colors">
                   Send a Message
@@ -272,7 +272,7 @@ const CAPABILITIES_PREVIEW = [
   {
     Icon:  Bot,
     title: 'AI-Enabled Process Automation',
-    desc:  'RPA and AI solutions that eliminate manual work and reduce cycle times across operations.',
+    desc:  'AI and RPA solutions that eliminate manual work and reduce cycle times across operations.',
   },
   {
     Icon:  TrendingUp,
@@ -286,16 +286,17 @@ const CAPABILITIES_PREVIEW = [
   },
   {
     Icon:  Code2,
-    title: 'End-User Computing Development',
+    title: 'End-User Computing (EUC) Development',
     desc:  'Excel/VBA, Power Platform, and lightweight applications built for real users.',
   },
 ];
 
 const VALUE_PROPS = [
   'Senior-only delivery teams on every engagement -- no juniors, no bench',
-  'Full-stack delivery: strategy, design, build, and training',
-  'Lean Six Sigma Master Black Belt with Fortune 500 track record',
-  'Deep expertise across Accenture, GE, and Emerson',
+  'Workflow Automation Full-stack delivery: strategy, design, build, implement, and training',
+  'Strategy Deployment, Process Improvement, Data Analytics, KPI Dashboards',
+  'Leadership: Lean Six Sigma Master Black Belt with Fortune 500 track record',
+  'Deep expertise across Accenture, GE, Emerson, Citi, Discover, Federal Government agencies',
   'Bilingual delivery: English, Spanish',
 ];
 
@@ -308,14 +309,21 @@ export default function HomePage() {
           <div className="flex justify-center mb-8">
             <Image src="/logo.png" alt="xlSigma" width={120} height={120} priority />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Senior-Level Consulting for
-            <span className="text-gold-light block mt-1">Complex Operations</span>
+
+            <h1 className="leading-tight mb-6">
+            <span className="text-3xl md:text-4xl font-bold block">Senior-Level Consulting for</span>
+            <span className="text-5xl md:text-6xl font-bold text-gold-light block mt-1">Operations Excellence</span>
           </h1>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Process improvement, advanced analytics, and automation -- delivered by
-            practitioners with Fortune 500 depth, not generalists with slide decks.
+          <p className="text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto mb-2 leading-relaxed">
+            Process reengineering / Process improvement
           </p>
+          <p className="text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto mb-8 leading-relaxed">
+            Smart Automation, Advanced Analytics
+          </p>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+            delivered by practitioners with Fortune 500 depth
+          </p>
+
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               href="/capabilities"
@@ -342,14 +350,13 @@ export default function HomePage() {
             Who We Are
           </p>
           <h2 className="text-3xl font-bold text-navy mb-6">
-            Boutique. Senior. Accountable.
+            Operational Excellence. Senior. Accountable.
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <p className="text-slate-600 leading-relaxed mb-4">
                 xlSigma is a boutique management consulting and technology firm that brings
-                Fortune 500 rigor to enterprise and mid-market clients. Our principal has led
-                process transformation, analytics, and automation programs at Accenture, GE, and Emerson.
+                big consulting firm rigor with small firm agility.
               </p>
               <p className="text-slate-600 leading-relaxed">
                 You're never handed off to juniors. Every engagement is staffed with senior consultants and backed by direct principal oversight.
@@ -362,11 +369,7 @@ export default function HomePage() {
               <ul className="space-y-3 text-sm text-slate-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  MBA, University of Michigan (Ross)
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  B.S. Electrical Engineering, FIU
+                  MBA, The University of Michigan (Ross)
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
@@ -374,7 +377,7 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  Experience across Accenture, GE, Emerson
+                  Experience across Accenture, IBM, GE, Emerson, Citi Group, Discover Financial, Federal Government
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
@@ -435,8 +438,7 @@ export default function HomePage() {
               </h2>
               <p className="text-slate-600 leading-relaxed">
                 Large firms send senior partners to sell -- then deliver with junior staff.
-                xlSigma operates differently. The principal who proposes is the practitioner
-                who delivers, from day one through final handoff.
+                xlSigma operates differently. We deliver with senior-level consultants with Principal oversight from day one through final handoff.
               </p>
             </div>
             <ul className="space-y-4">
@@ -461,7 +463,7 @@ export default function HomePage() {
             </span>
             <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
                              rounded-full border border-gold/30 uppercase tracking-wider">
-              Minority-Owned SB
+              Minority-Owned SB (pending)
             </span>
             <span className="bg-slate-700 text-slate-300 text-xs font-bold px-4 py-1.5
                              rounded-full border border-slate-600 uppercase tracking-wider">
@@ -472,7 +474,7 @@ export default function HomePage() {
             Federal Prime Contractor?
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto leading-relaxed">
-            xlSigma is a certified SDVOSB and Minority-Owned Small Business -- helping
+            xlSigma is a certified SDVOSB -- helping
             prime contractors meet participation goals while delivering senior-level execution.
           </p>
           <Link
@@ -516,39 +518,59 @@ import {
 } from 'lucide-react';
 
 const VALUE_PROPS = [
-  'Satisfies SDVOSB and Minority-Owned small-business participation goals',
+  'Satisfies SDVOSB small-business participation goals',
   'Delivers senior-level execution with no ramp-up -- hit the ground running',
-  'Fills capability gaps in process improvement, automation, and analytics',
+  'Fills capability gaps in operations excellence, process improvement, automation, and analytics',
   'Augments proposal teams with differentiated technical content',
   'Scales engagement size to fit subcontract scope and timeline',
 ];
 
 const PAST_PERFORMANCE = [
   {
-    client:  'U.S. Army / DoD',
-    summary: 'Reengineered LOGCAP logistics change-order process in Afghan theater. ' +
+    client:  'U.S. Army / ARCENT',
+    summary: 'Reengineered LOGCAP logistics change-order process in Afghanistan theater' +
+			 '(with Calibre Systems Inc.) ' +
              'Cut cycle time from 150+ days to under 70 days. ' +
-             'Built supporting EUC tools (Excel, SharePoint, SQL).',
+             'Built supporting EUC tools (Excel, SharePoint, SQL database).',
     tags:    ['Process Reengineering', 'EUC Tools', 'DoD'],
   },
   {
+    client:  'CENTCOM / DoD',
+    summary: 'Developed alternate land-routes logistics for the draw-down (retrograde) in ' +
+			 'the Afghanistan theater' +
+			 '(with Calibre Systems Inc.)' +
+             'Risk mitigation imperative for the scenario of Pakistan closing access to the sea. ' +
+             'Designed stochastic multi-node network flow optimizer to minimize cost/time/risk while ' +
+			 'maximizing throughput, safety, and adherence to timelines, subject to constraints (with Calibre Systems)',
+    tags:    ['Logistics', 'Data Analytics', 'DoD'],
+  },
+    {
+    client:  'U.S. Army / DoD',
+    summary: 'Designed and deployed IT infrastructure for reporting the location of 90,000+ ' +
+			 'shipping containers across the war theater in preparation for draw-down (retrograde).' +
+			 '(with Calibre Systems Inc.). ' +
+             'Reduced errors 80%+ and accelerated reporting cycle time x4. ' +
+             'Raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).',
+    tags:    ['Data Analytics', 'Database Design', 'DoD'],
+  },
+  {
     client:  'U.S. Postal Service',
-    summary: 'Enterprise Lean Six Sigma deployment (with Accenture). Built governance, ' +
-             'metrics capture and reporting, IT enablement, and infrastructure for ' +
-             'project management and training.',
+    summary: 'Enterprise Lean Six Sigma deployment. Built governance, metrics capture and reporting, ' +
+			 'IT enablement and infrastructure for project management and training ' +
+			 '(with Accenture). ',
     tags:    ['Lean Six Sigma', 'Enterprise Deployment', 'Federal'],
   },
   {
     client:  'Top-Tier Financial Institutions',
-    summary: 'Designed and deployed AI/RPA solutions automating check processing and ' +
-             'bank operations. Supported regulatory consent-order remediation through ' +
-             'process and data diagnostics.',
-    tags:    ['AI/RPA', 'Regulatory Compliance', 'Financial Services'],
+    summary: 'Designed and deployed AI/RPA solutions automating bank operations ' +
+			 'such as paper check processing, invoicing, and KYC process' +
+             'Supported regulatory consent-order remediation through process and data diagnostics.',
+    tags:    ['AI/RPA', 'Regulatory Compliance', 'KYC', 'Financial Services'],
   },
   {
     client:  'USF Health',
-    summary: 'Process improvement and workflow automation engagements supporting ' +
-             'healthcare operations.',
+    summary: 'Process improvement and workflow automation supporting ' +
+             'referrals process of BRIDGE Clinic operations.',
     tags:    ['Healthcare', 'Process Improvement', 'Workflow Automation'],
   },
 ];
@@ -573,7 +595,7 @@ export default function GovernmentContractingPage() {
             </span>
             <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
                              rounded-full border border-gold/30 uppercase tracking-wider">
-              Minority-Owned SB
+              Minority-Owned SB (pending)
             </span>
             <span className="bg-slate-700 text-slate-300 text-xs font-bold px-4 py-1.5
                              rounded-full border border-slate-600 uppercase tracking-wider">
@@ -585,26 +607,25 @@ export default function GovernmentContractingPage() {
             <span className="text-gold-light block mt-1">SDVOSB Subcontracting Partner</span>
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            xlSigma helps federal prime contractors meet small-business participation
+            xlSigma helps federal prime contractors meet small-business SDVOSB participation
             goals while delivering senior-level consulting and technology capabilities
             with a proven federal track record.
           </p>
         </div>
       </section>
 
-      {/* Dual SB Credit */}
+      {/* SDVOSB Credit */}
       <section className="py-16 px-4 bg-gold-pale border-b border-gold/20">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
             Small Business Credits
           </p>
           <h2 className="text-2xl font-bold text-navy mb-8">
-            Dual Certification -- One Subcontractor
+            Service-Disabled Veteran-Owned Small Business
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { Icon: Shield, label: 'SDVOSB',          sub: 'Service-Disabled Veteran-Owned' },
-              { Icon: Award,  label: 'Minority-Owned',  sub: 'Minority-Owned Small Business'  },
               { Icon: Users,  label: 'SAM.gov',         sub: 'Active Registration'             },
             ].map(({ Icon, label, sub }) => (
               <div key={label}
@@ -745,7 +766,7 @@ const CAPABILITIES = [
     title: 'AI-Enabled & RPA Process Automation',
     desc:  'Design and deployment of intelligent automation solutions using RPA platforms ' +
            'and AI tools. Automates repetitive, rules-based processes to reduce errors, ' +
-           'cut cycle times, and free staff for higher-value work.',
+           'slash cycle times, and free staff for higher-value work.',
   },
   {
     Icon:  TrendingUp,
@@ -758,20 +779,20 @@ const CAPABILITIES = [
     Icon:  BarChart2,
     title: 'Data Analytics, KPI Frameworks & Dashboards',
     desc:  'End-to-end analytics: from defining the right KPIs to building the dashboards ' +
-           'that drive decisions. Power BI, Tableau, and custom Excel-based solutions ' +
-           'tailored to your reporting environment.',
+           'that drive decisions. Power BI, Tableau, custom Excel-based solutions, with optional' +
+		   'integration into your Enterprise IT Systems and tailored to your reporting environment.',
   },
   {
     Icon:  LayoutDashboard,
     title: 'Power BI, Tableau, Power Platform, Excel/VBA',
     desc:  'Deep hands-on expertise across the Microsoft Power Platform and leading BI tools. ' +
-           'Builds production-ready reports, automated workflows, and data models that ' +
+           'Build production-ready reports, automated workflows, and data models that ' +
            'non-technical users can own and maintain.',
   },
   {
     Icon:  Code2,
     title: 'End-User Computing (EUC) Application Development',
-    desc:  'Custom Excel/VBA workbooks, Access databases, SharePoint solutions, and ' +
+    desc:  'Custom Excel/VBA workbooks, Access or SQL databases, SharePoint solutions, and ' +
            'lightweight Power Apps -- purpose-built for specific operational workflows ' +
            'and designed for adoption.',
   },
@@ -799,10 +820,11 @@ const CAPABILITIES = [
 ];
 
 const DIFFERENTIATORS = [
-  'Dual small-business credit: SDVOSB and Minority-Owned',
+  'Small-business credit: SDVOSB',
   'Lean Six Sigma Master Black Belt -- rare at small-business scale',
-  'Proven federal track record: USPS, U.S. Army CENTCOM, U.S. Army JIEDDO',
-  'Full-stack delivery: strategy, design, build, and train',
+  'Proven federal track record: SBA, USPS, CENTCOM,  U.S. Army ARCENT, JIEDDO',
+  'Full-stack delivery: strategy, design, build, implement, and train',
+  'Lower business overhead translates to lower prices for top talent and results',
   'Bilingual: English, Spanish',
 ];
 
@@ -817,8 +839,7 @@ export default function CapabilitiesPage() {
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Core Capabilities</h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Eight integrated practice areas, delivered by senior-only teams with principal oversight
-            who has led each in production environments.
+            Eight integrated practice areas, delivered by senior-only teams with principal oversight.
           </p>
         </div>
       </section>
@@ -1097,7 +1118,7 @@ export default function ContactPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  <span>(703) 969-8177</span>
+                  <span>(813) 919-9772</span>
                 </li>
               </ul>
             </div>
@@ -1110,9 +1131,9 @@ export default function ContactPage() {
                 <li className="text-slate-500 text-xs mb-1">
                   Service-Disabled Veteran-Owned Small Business
                 </li>
-                <li className="font-semibold text-navy">Minority-Owned SB</li>
+                <li className="font-semibold text-navy">Minority-Owned SB (cert pending)</li>
                 <li className="text-slate-500 text-xs mb-1">
-                  Minority-Owned Small Business
+                  Minority-Owned Small Business (cert pending)
                 </li>
                 <li className="font-semibold text-navy">SAM.gov Registered</li>
                 <li className="text-slate-500 text-xs">

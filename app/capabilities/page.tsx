@@ -11,7 +11,7 @@ const CAPABILITIES = [
     title: 'AI-Enabled & RPA Process Automation',
     desc:  'Design and deployment of intelligent automation solutions using RPA platforms ' +
            'and AI tools. Automates repetitive, rules-based processes to reduce errors, ' +
-           'cut cycle times, and free staff for higher-value work.',
+           'slash cycle times, and free staff for higher-value work.',
   },
   {
     Icon:  TrendingUp,
@@ -24,20 +24,20 @@ const CAPABILITIES = [
     Icon:  BarChart2,
     title: 'Data Analytics, KPI Frameworks & Dashboards',
     desc:  'End-to-end analytics: from defining the right KPIs to building the dashboards ' +
-           'that drive decisions. Power BI, Tableau, and custom Excel-based solutions ' +
-           'tailored to your reporting environment.',
+           'that drive decisions. Power BI, Tableau, custom Excel-based solutions, with optional' +
+		   'integration into your Enterprise IT Systems and tailored to your reporting environment.',
   },
   {
     Icon:  LayoutDashboard,
     title: 'Power BI, Tableau, Power Platform, Excel/VBA',
     desc:  'Deep hands-on expertise across the Microsoft Power Platform and leading BI tools. ' +
-           'Builds production-ready reports, automated workflows, and data models that ' +
+           'Build production-ready reports, automated workflows, and data models that ' +
            'non-technical users can own and maintain.',
   },
   {
     Icon:  Code2,
     title: 'End-User Computing (EUC) Application Development',
-    desc:  'Custom Excel/VBA workbooks, Access databases, SharePoint solutions, and ' +
+    desc:  'Custom Excel/VBA workbooks, Access or SQL databases, SharePoint solutions, and ' +
            'lightweight Power Apps -- purpose-built for specific operational workflows ' +
            'and designed for adoption.',
   },
@@ -65,10 +65,11 @@ const CAPABILITIES = [
 ];
 
 const DIFFERENTIATORS = [
-  'Dual set-aside credit: SDVOSB and Veteran-Owned',
+  'Small-business credit: SDVOSB',
   'Lean Six Sigma Master Black Belt -- rare at small-business scale',
-  'Proven federal track record: USPS, U.S. Army CENTCOM, U.S. Army JIEDDO',
-  'Full-stack delivery: strategy, design, build, and train',
+  'Proven federal track record: SBA, USPS, CENTCOM,  U.S. Army ARCENT, JIEDDO',
+  'Full-stack delivery: strategy, design, build, implement, and train',
+  'Lower business overhead translates to lower prices for top talent and results',
   'Bilingual: English, Spanish',
 ];
 
@@ -83,8 +84,7 @@ export default function CapabilitiesPage() {
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Core Capabilities</h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Eight integrated practice areas, delivered by senior-only teams with principal oversight
-            who has led each in production environments.
+            Eight integrated practice areas, delivered by senior-only teams with principal oversight.
           </p>
         </div>
       </section>
