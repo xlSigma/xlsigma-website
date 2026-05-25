@@ -315,7 +315,7 @@ export default function HomePage() {
             <span className="text-5xl md:text-6xl font-bold text-gold-light block mt-1">Operations Excellence</span>
           </h1>
           <p className="text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto mb-2 leading-relaxed">
-            Process reengineering / Process improvement
+            Process reengineering, Process improvement
           </p>
           <p className="text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto mb-8 leading-relaxed">
             Smart Automation, Advanced Analytics
@@ -519,7 +519,7 @@ import {
 
 const VALUE_PROPS = [
   'Satisfies SDVOSB small-business participation goals',
-  'Delivers senior-level execution with no ramp-up -- hit the ground running',
+  'Delivers senior-level execution with no ramp-up. Hit the ground running',
   'Fills capability gaps in operations excellence, process improvement, automation, and analytics',
   'Augments proposal teams with differentiated technical content',
   'Scales engagement size to fit subcontract scope and timeline',
@@ -529,7 +529,7 @@ const PAST_PERFORMANCE = [
   {
     client:  'U.S. Army / ARCENT',
     summary: 'Reengineered LOGCAP logistics change-order process in Afghanistan theater' +
-			 '(with Calibre Systems Inc.) ' +
+			 '(with Calibre Systems Inc.). ' +
              'Cut cycle time from 150+ days to under 70 days. ' +
              'Built supporting EUC tools (Excel, SharePoint, SQL database).',
     tags:    ['Process Reengineering', 'EUC Tools', 'DoD'],
@@ -538,10 +538,10 @@ const PAST_PERFORMANCE = [
     client:  'CENTCOM / DoD',
     summary: 'Developed alternate land-routes logistics for the draw-down (retrograde) in ' +
 			 'the Afghanistan theater' +
-			 '(with Calibre Systems Inc.)' +
+			 '(with Calibre Systems Inc.). ' +
              'Risk mitigation imperative for the scenario of Pakistan closing access to the sea. ' +
              'Designed stochastic multi-node network flow optimizer to minimize cost/time/risk while ' +
-			 'maximizing throughput, safety, and adherence to timelines, subject to constraints (with Calibre Systems)',
+			 'maximizing throughput, safety, and adherence to timelines, subject to constraints (with Calibre Systems). ',
     tags:    ['Logistics', 'Data Analytics', 'DoD'],
   },
     {
@@ -821,7 +821,7 @@ const CAPABILITIES = [
 
 const DIFFERENTIATORS = [
   'Small-business credit: SDVOSB',
-  'Lean Six Sigma Master Black Belt -- rare at small-business scale',
+  'Lean Six Sigma Master Black Belt (rare at small-business scale)',
   'Proven federal track record: SBA, USPS, CENTCOM,  U.S. Army ARCENT, JIEDDO',
   'Full-stack delivery: strategy, design, build, implement, and train',
   'Lower business overhead translates to lower prices for top talent and results',
@@ -839,7 +839,9 @@ export default function CapabilitiesPage() {
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Core Capabilities</h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Eight integrated practice areas, delivered by senior-only teams with principal oversight.
+            Eight integrated practice areas
+            <br />
+           delivered by senior-only teams with principal oversight
           </p>
         </div>
       </section>

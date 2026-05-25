@@ -52,7 +52,7 @@ export default function HomePage() {
             <span className="text-5xl md:text-6xl font-bold text-gold-light block mt-1">Operations Excellence</span>
           </h1>
           <p className="text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto mb-2 leading-relaxed">
-            Process reengineering / Process improvement
+            Process reengineering, Process improvement
           </p>
           <p className="text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto mb-8 leading-relaxed">
             Smart Automation, Advanced Analytics
@@ -93,7 +93,7 @@ export default function HomePage() {
             <div>
               <p className="text-slate-600 leading-relaxed mb-4">
                 xlSigma is a boutique management consulting and technology firm that brings
-                big consulting firm rigor with small firm agility
+                big consulting firm rigor with small firm agility.
               </p>
               <p className="text-slate-600 leading-relaxed">
                 You're never handed off to juniors. Every engagement is staffed with senior consultants and backed by direct principal oversight.
@@ -107,10 +107,6 @@ export default function HomePage() {
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
                   MBA, The University of Michigan (Ross)
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  B.S. Electrical Engineering, Florida International University
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />

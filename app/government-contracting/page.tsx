@@ -5,7 +5,7 @@ import {
 
 const VALUE_PROPS = [
   'Satisfies SDVOSB small-business participation goals',
-  'Delivers senior-level execution with no ramp-up -- hit the ground running',
+  'Delivers senior-level execution with no ramp-up. Hit the ground running',
   'Fills capability gaps in operations excellence, process improvement, automation, and analytics',
   'Augments proposal teams with differentiated technical content',
   'Scales engagement size to fit subcontract scope and timeline',
@@ -15,7 +15,7 @@ const PAST_PERFORMANCE = [
   {
     client:  'U.S. Army / ARCENT',
     summary: 'Reengineered LOGCAP logistics change-order process in Afghanistan theater' +
-			 '(with Calibre Systems Inc.) ' +
+			 '(with Calibre Systems Inc.). ' +
              'Cut cycle time from 150+ days to under 70 days. ' +
              'Built supporting EUC tools (Excel, SharePoint, SQL database).',
     tags:    ['Process Reengineering', 'EUC Tools', 'DoD'],
@@ -24,10 +24,10 @@ const PAST_PERFORMANCE = [
     client:  'CENTCOM / DoD',
     summary: 'Developed alternate land-routes logistics for the draw-down (retrograde) in ' +
 			 'the Afghanistan theater' +
-			 '(with Calibre Systems Inc.)' +
+			 '(with Calibre Systems Inc.). ' +
              'Risk mitigation imperative for the scenario of Pakistan closing access to the sea. ' +
              'Designed stochastic multi-node network flow optimizer to minimize cost/time/risk while ' +
-			 'maximizing throughput, safety, and adherence to timelines, subject to constraints (with Calibre Systems)',
+			 'maximizing throughput, safety, and adherence to timelines, subject to constraints (with Calibre Systems). ',
     tags:    ['Logistics', 'Data Analytics', 'DoD'],
   },
     {
