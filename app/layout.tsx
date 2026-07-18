@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'Senior-level management consulting and technology services. ' +
     'Process improvement, business process automation, strategy deployment, advanced analytics. ' +
-    'SDVOSB and Minority-Owned Small Business.',
+    'SDVOSB and Veteran-Owned Small Business.',
 };
 
 export const viewport: Viewport = {
