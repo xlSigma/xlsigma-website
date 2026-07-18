@@ -43,8 +43,8 @@ export default function HomePage() {
       {/* Hero */}
       <section className="bg-navy text-white py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center mb-8">
-            <Image src="/logo.png" alt="xlSigma" width={120} height={120} priority />
+          <div className="flex justify-center mb-8 w-full">
+            <Image src="/xlsigma_banner_260717.jpg" alt="xlSigma Banner" width={960} height={213} priority className="w-full max-w-3xl h-auto" />
           </div>
 
             <h1 className="leading-tight mb-6">
@@ -200,7 +200,7 @@ export default function HomePage() {
             </span>
             <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
                              rounded-full border border-gold/30 uppercase tracking-wider">
-              Minority-Owned SB (pending)
+              FL OSD Veteran CBE (pending)
             </span>
             <span className="bg-slate-700 text-slate-300 text-xs font-bold px-4 py-1.5
                              rounded-full border border-slate-600 uppercase tracking-wider">

@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   description:
     'Senior-level management consulting and technology services. ' +
     'Process improvement, business process automation, strategy deployment, advanced analytics. ' +
-    'SDVOSB and Minority-Owned Small Business.',
+    'SDVOSB and Veteran-Owned Small Business.',
 };
 
 export const viewport: Viewport = {
@@ -197,7 +197,10 @@ export default function Footer() {
                 SDVOSB
               </span>
               <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
-                Minority-Owned SB (cert pending)
+                Veteran-Owned SB
+              </span>
+              <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
+                FL OSD Veteran CBE (pending)
               </span>
               <span className="bg-navy text-slate-400 text-xs px-3 py-1 rounded-full border border-slate-600">
                 SAM.gov Registered
@@ -306,8 +309,8 @@ export default function HomePage() {
       {/* Hero */}
       <section className="bg-navy text-white py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center mb-8">
-            <Image src="/logo.png" alt="xlSigma" width={120} height={120} priority />
+          <div className="flex justify-center mb-8 w-full">
+            <Image src="/xlsigma_banner_260717.jpg" alt="xlSigma Banner" width={960} height={213} priority className="w-full max-w-3xl h-auto" />
           </div>
 
             <h1 className="leading-tight mb-6">
@@ -463,7 +466,7 @@ export default function HomePage() {
             </span>
             <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
                              rounded-full border border-gold/30 uppercase tracking-wider">
-              Minority-Owned SB (pending)
+              FL OSD Veteran CBE (pending)
             </span>
             <span className="bg-slate-700 text-slate-300 text-xs font-bold px-4 py-1.5
                              rounded-full border border-slate-600 uppercase tracking-wider">
@@ -595,7 +598,7 @@ export default function GovernmentContractingPage() {
             </span>
             <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
                              rounded-full border border-gold/30 uppercase tracking-wider">
-              Minority-Owned SB (pending)
+              FL OSD Veteran CBE (pending)
             </span>
             <span className="bg-slate-700 text-slate-300 text-xs font-bold px-4 py-1.5
                              rounded-full border border-slate-600 uppercase tracking-wider">
@@ -1133,9 +1136,9 @@ export default function ContactPage() {
                 <li className="text-slate-500 text-xs mb-1">
                   Service-Disabled Veteran-Owned Small Business
                 </li>
-                <li className="font-semibold text-navy">Minority-Owned SB (cert pending)</li>
+                <li className="font-semibold text-navy">FL OSD Veteran CBE (pending)</li>
                 <li className="text-slate-500 text-xs mb-1">
-                  Minority-Owned Small Business (cert pending)
+                  Florida OSD Veteran-Owned Business Enterprise (pending)
                 </li>
                 <li className="font-semibold text-navy">SAM.gov Registered</li>
                 <li className="text-slate-500 text-xs">

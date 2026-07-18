@@ -22,7 +22,10 @@ export default function Footer() {
                 SDVOSB
               </span>
               <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
-                Minority-Owned SB (cert pending)
+                Veteran-Owned SB
+              </span>
+              <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
+                FL OSD Veteran CBE (pending)
               </span>
               <span className="bg-navy text-slate-400 text-xs px-3 py-1 rounded-full border border-slate-600">
                 SAM.gov Registered

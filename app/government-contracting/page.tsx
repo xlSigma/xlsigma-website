@@ -81,7 +81,7 @@ export default function GovernmentContractingPage() {
             </span>
             <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
                              rounded-full border border-gold/30 uppercase tracking-wider">
-              Minority-Owned SB (pending)
+              FL OSD Veteran CBE (pending)
             </span>
             <span className="bg-slate-700 text-slate-300 text-xs font-bold px-4 py-1.5
                              rounded-full border border-slate-600 uppercase tracking-wider">
