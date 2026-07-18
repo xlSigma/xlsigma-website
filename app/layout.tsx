@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'xlSigma LLC | Management Consulting & Technology',
+  title: 'xlSigma',
   description:
     'Senior-level management consulting and technology services. ' +
     'Process improvement, business process automation, strategy deployment, advanced analytics. ' +
