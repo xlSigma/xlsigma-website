@@ -1379,9 +1379,9 @@ export default function CareersPage() {
           <div className="bg-gold-pale border border-gold/20 rounded-xl p-6">
             <h2 className="text-lg font-bold text-navy mb-3">Talent Community Opportunity</h2>
             <p className="text-slate-700 text-sm leading-relaxed">
-              This opportunity is part of xlSigma&apos;s talent community. By applying, you are
-              expressing interest in joining our network of trusted consultants and subject-matter
-              experts who may partner with us on a contract basis when client project needs arise.
+              By applying, you are expressing interest in joining our network of trusted consultants
+              and subject-matter experts who may partner with us on a contract basis when client
+              project needs arise.
             </p>
             <p className="text-slate-700 text-sm leading-relaxed mt-3">
               This is not an immediate or guaranteed opening. Engagements are project-based, and
