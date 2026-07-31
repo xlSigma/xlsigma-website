@@ -192,8 +192,8 @@ export default function Footer() {
               <span className="text-white font-bold text-lg">xlSigma LLC</span>
             </div>
             <p className="text-sm leading-relaxed">
-              Senior-level consulting and technology services for enterprise
-              and federal clients.
+              Senior-level consulting and technology services for commercial
+              and government clients.
             </p>
             <div className="flex gap-2 mt-4 flex-wrap">
               <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
