@@ -90,7 +90,10 @@ export default function CareersPage() {
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Talent Community</h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Senior consultants and subject-matter experts who deliver measurable operational results.
+            Senior consultants and subject-matter experts
+          </p>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            who deliver measurable operational results.
           </p>
         </div>
       </section>
