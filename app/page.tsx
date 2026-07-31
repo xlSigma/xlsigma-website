@@ -114,7 +114,7 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  Experience across Accenture, IBM, GE, Emerson, Citi Group, Discover Financial, Federal Government
+                  Experience across Accenture, GE, Emerson, Citi Group, Discover Financial, Federal Government
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
