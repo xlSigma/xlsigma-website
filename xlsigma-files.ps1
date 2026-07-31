@@ -1317,6 +1317,13 @@ export default function CareersPage() {
     setForm(prev => ({ ...prev, phone: formatted }));
   }
 
+  function handleLinkedin(e: ChangeEvent<HTMLInputElement>) {
+    let val = e.target.value;
+    const match = val.match(/linkedin\.com\/in\/([^/?#]+)/i);
+    if (match) val = match[1];
+    setForm(prev => ({ ...prev, linkedin: val.replace(/^\/+|\/+$/g, '') }));
+  }
+
   function handleFile(e: ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0] ?? null;
     setFileError('');
@@ -1349,7 +1356,14 @@ export default function CareersPage() {
 
     setState('sending');
     const data = new FormData();
-    Object.entries(form).forEach(([k, v]) => data.append(k, v));
+    Object.entries(form).forEach(([k, v]) => {
+      if (k === 'linkedin') {
+        const slug = v.trim();
+        data.append(k, slug ? `https://www.linkedin.com/in/${slug}/` : '');
+      } else {
+        data.append(k, v);
+      }
+    });
     data.append('resume', resume);
 
     try {
@@ -1558,15 +1572,22 @@ export default function CareersPage() {
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-navy mb-1.5">
-                    LinkedIn URL
+                    LinkedIn
                     <span className="text-slate-400 font-normal ml-1">(optional)</span>
                   </label>
-                  <input
-                    name="linkedin" type="url" value={form.linkedin} onChange={handleChange}
-                    placeholder="https://linkedin.com/in/..."
-                    className="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm
-                               focus:outline-none focus:ring-2 focus:ring-navy/30 focus:border-navy"
-                  />
+                  <div className="flex rounded-lg border border-slate-300 overflow-hidden
+                                  focus-within:ring-2 focus-within:ring-navy/30 focus-within:border-navy
+                                  transition-shadow">
+                    <span className="flex items-center px-3 bg-slate-50 border-r border-slate-300
+                                     text-slate-400 text-xs whitespace-nowrap select-none">
+                      linkedin.com/in/
+                    </span>
+                    <input
+                      name="linkedin" type="text" value={form.linkedin} onChange={handleLinkedin}
+                      placeholder="yourname"
+                      className="flex-1 min-w-0 px-3 py-2.5 text-sm outline-none bg-white"
+                    />
+                  </div>
                 </div>
               </div>
 
