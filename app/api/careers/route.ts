@@ -1,4 +1,4 @@
-﻿import { put } from '@vercel/blob';
+﻿import { put, issueSignedToken, presignUrl } from '@vercel/blob';
 import { Resend } from 'resend';
 import type { NextRequest } from 'next/server';
 
@@ -7,6 +7,9 @@ const ALLOWED_MIME = [
   'application/msword',
   'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 ];
+
+// 7 days â€” long enough to review an application, not indefinite
+const LINK_EXPIRY_MS = 7 * 24 * 60 * 60 * 1000;
 
 export async function POST(request: NextRequest) {
   try {
@@ -37,7 +40,24 @@ export async function POST(request: NextRequest) {
 
     const stamp    = new Date().toISOString().replace(/[:.]/g, '-');
     const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
-    const blob     = await put(`careers/${stamp}-${safeName}`, file, { access: 'public' });
+
+    // Upload to the private store
+    const blob = await put(`careers/${stamp}-${safeName}`, file, { access: 'private' });
+
+    // Issue a scoped delegation token, then build a 7-day presigned GET URL.
+    // The recipient can open the resume from the email without needing Vercel credentials.
+    const validUntil    = Date.now() + LINK_EXPIRY_MS;
+    const signedToken   = await issueSignedToken({
+      pathname:   blob.pathname,
+      operations: ['get'],
+      validUntil,
+    });
+    const { presignedUrl } = await presignUrl(signedToken, {
+      operation:  'get',
+      pathname:   blob.pathname,
+      access:     'private',
+      validUntil,
+    });
 
     // noreply@xlsigma.com must be a verified sender in your Resend dashboard
     const resend = new Resend(process.env.RESEND_API_KEY);
@@ -79,7 +99,8 @@ export async function POST(request: NextRequest) {
           <tr>
             <td style="padding:6px 20px 6px 0;font-weight:600;color:#1B3F7A;vertical-align:top">Resume</td>
             <td style="padding:6px 0">
-              <a href="${blob.url}" style="color:#B8820A">${file.name}</a>
+              <a href="${presignedUrl}" style="color:#B8820A">${file.name}</a>
+              <span style="color:#888;font-size:12px"> (link valid 7 days)</span>
             </td>
           </tr>
           <tr>
