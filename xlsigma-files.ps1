@@ -1218,7 +1218,9 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY);
     const to     = process.env.JOIN_US_NOTIFY_EMAIL ?? 'talent@xlsigma.com';
 
-    await resend.emails.send({
+    console.log('[careers/route] Sending via Resend to:', to, '| API key present:', !!process.env.RESEND_API_KEY);
+
+    const result = await resend.emails.send({
       from:    'noreply@xlsigma.com',
       to,
       subject: `New Talent Application — ${name}`,
@@ -1265,6 +1267,12 @@ export async function POST(request: NextRequest) {
         </table>
       `,
     });
+
+    console.log('[careers/route] Resend result:', JSON.stringify(result));
+
+    if (result.error) {
+      throw new Error(`Resend API error: ${JSON.stringify(result.error)}`);
+    }
 
     return Response.json({ success: true });
   } catch (err) {
