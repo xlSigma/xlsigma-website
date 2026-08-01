@@ -125,13 +125,6 @@ export default function NavBar() {
               </Link>
             );
           })}
-          <Link
-            href="/contact"
-            className="bg-gold hover:bg-gold-light text-white text-sm font-semibold
-                       px-4 py-2 rounded-lg transition-colors whitespace-nowrap ml-2"
-          >
-            Get in Touch
-          </Link>
         </nav>
 
         {/* Mobile hamburger */}
@@ -157,14 +150,6 @@ export default function NavBar() {
               {label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            onClick={() => setOpen(false)}
-            className="block mt-3 bg-gold text-white text-sm font-semibold px-4 py-2.5
-                       rounded-lg text-center"
-          >
-            Get in Touch
-          </Link>
         </div>
       )}
     </header>
