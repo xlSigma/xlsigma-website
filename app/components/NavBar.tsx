@@ -19,7 +19,7 @@ export default function NavBar() {
 
   return (
     <header className="bg-navy sticky top-0 z-50 shadow-lg">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
 
         {/* Brand */}
         <Link href="/" className="flex items-center gap-3 flex-shrink-0">
