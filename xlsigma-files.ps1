@@ -1216,12 +1216,13 @@ export async function POST(request: NextRequest) {
 
     // noreply@xlsigma.com must be a verified sender in your Resend dashboard
     const resend = new Resend(process.env.RESEND_API_KEY);
+    const from   = process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev';
     const to     = process.env.JOIN_US_NOTIFY_EMAIL ?? 'talent@xlsigma.com';
 
-    console.log('[careers/route] Sending via Resend to:', to, '| API key present:', !!process.env.RESEND_API_KEY);
+    console.log('[careers/route] Sending via Resend to:', to, '| from:', from, '| API key present:', !!process.env.RESEND_API_KEY);
 
     const result = await resend.emails.send({
-      from:    'noreply@xlsigma.com',
+      from,
       to,
       subject: `New Talent Application — ${name}`,
       html: `
