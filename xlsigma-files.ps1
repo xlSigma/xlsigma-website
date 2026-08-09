@@ -747,7 +747,7 @@ Write-Host "Created: app/government-contracting/page.tsx"
 $capPage = @'
 import Link from 'next/link';
 import {
-  Bot, TrendingUp, BarChart2, LayoutDashboard,
+  Bot, Brain, TrendingUp, BarChart2, LayoutDashboard,
   Code2, Landmark, GitBranch, Users,
   CheckCircle, ArrowRight,
 } from 'lucide-react';
@@ -761,11 +761,25 @@ const CAPABILITIES = [
            'slash cycle times, and free staff for higher-value work.',
   },
   {
+    Icon:  Brain,
+    title: 'Knowledge Transformation',
+    desc:  'Enterprise knowledge management and technology-enabled transformation -- ' +
+           'capturing institutional know-how into structured, AI-enabled knowledge bases ' +
+           'and playbooks that scale expertise across the organization.',
+  },
+  {
     Icon:  TrendingUp,
     title: 'Lean Six Sigma / DMAIC / Continuous Improvement',
     desc:  'DMAIC-driven process transformation led by a certified Lean Six Sigma Master ' +
            'Black Belt. From rapid kaizen events to enterprise-wide deployment programs, ' +
            'with governance, metrics, and training infrastructure.',
+  },
+  {
+    Icon:  GitBranch,
+    title: 'Operating Model Design & Strategy Deployment',
+    desc:  'Organizational structure, governance design, role clarity, and strategy ' +
+           'deployment frameworks (Hoshin Kanri). Bridges the gap between executive ' +
+           'strategy and operational execution.',
   },
   {
     Icon:  BarChart2,
@@ -796,13 +810,6 @@ const CAPABILITIES = [
            'programs through prime contractors.',
   },
   {
-    Icon:  GitBranch,
-    title: 'Operating Model Design & Strategy Deployment',
-    desc:  'Organizational structure, governance design, role clarity, and strategy ' +
-           'deployment frameworks (Hoshin Kanri). Bridges the gap between executive ' +
-           'strategy and operational execution.',
-  },
-  {
     Icon:  Users,
     title: 'Agile Delivery, Change & Stakeholder Management',
     desc:  'Agile project delivery combined with structured change management -- ensuring ' +
@@ -831,7 +838,7 @@ export default function CapabilitiesPage() {
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Core Capabilities</h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Eight integrated practice areas
+            Nine integrated practice areas
             <br />
            delivered by senior-only teams with principal oversight
           </p>
