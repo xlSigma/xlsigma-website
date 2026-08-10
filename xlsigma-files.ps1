@@ -748,11 +748,19 @@ $capPage = @'
 import Link from 'next/link';
 import {
   Bot, Brain, TrendingUp, BarChart2, LayoutDashboard,
-  Code2, Landmark, GitBranch, Users,
+  Code2, Landmark, GitBranch, Users, Truck,
   CheckCircle, ArrowRight,
 } from 'lucide-react';
 
 const CAPABILITIES = [
+  {
+    Icon:  TrendingUp,
+    title: 'Lean Six Sigma / DMAIC / Continuous Improvement',
+    desc:  'DMAIC-driven process transformation led by a certified Lean Six Sigma Master ' +
+           'Black Belt. From rapid kaizen events to enterprise-wide deployment programs, ' +
+           'with governance, metrics, and training infrastructure. ' +
+           'This is the discipline behind every other capability on this page.',
+  },
   {
     Icon:  Bot,
     title: 'AI-Enabled & RPA Process Automation',
@@ -761,18 +769,17 @@ const CAPABILITIES = [
            'slash cycle times, and free staff for higher-value work.',
   },
   {
+    Icon:  Truck,
+    title: 'Logistics & Supply Chain',
+    desc:  'Operational excellence and intelligent automation for fulfillment operations, ' +
+           'delivered through process mining and targeted automation.',
+  },
+  {
     Icon:  Brain,
     title: 'Knowledge Transformation',
     desc:  'Enterprise knowledge management and technology-enabled transformation -- ' +
            'capturing institutional know-how into structured, AI-enabled knowledge bases ' +
            'and playbooks that scale expertise across the organization.',
-  },
-  {
-    Icon:  TrendingUp,
-    title: 'Lean Six Sigma / DMAIC / Continuous Improvement',
-    desc:  'DMAIC-driven process transformation led by a certified Lean Six Sigma Master ' +
-           'Black Belt. From rapid kaizen events to enterprise-wide deployment programs, ' +
-           'with governance, metrics, and training infrastructure.',
   },
   {
     Icon:  GitBranch,
@@ -785,8 +792,8 @@ const CAPABILITIES = [
     Icon:  BarChart2,
     title: 'Data Analytics, KPI Frameworks & Dashboards',
     desc:  'End-to-end analytics: from defining the right KPIs to building the dashboards ' +
-           'that drive decisions. Power BI, Tableau, custom Excel-based solutions, with optional' +
-		   'integration into your Enterprise IT Systems and tailored to your reporting environment.',
+           'that drive decisions. Power BI, Tableau, custom Excel-based solutions, with optional ' +
+           'integration into your Enterprise IT Systems and tailored to your reporting environment.',
   },
   {
     Icon:  LayoutDashboard,
@@ -812,9 +819,9 @@ const CAPABILITIES = [
   {
     Icon:  Users,
     title: 'Agile Delivery, Change & Stakeholder Management',
-    desc:  'Agile project delivery combined with structured change management -- ensuring ' +
-           'that new processes and tools are adopted, not just installed. Stakeholder ' +
-           'communication plans, training, and sustainment.',
+    desc:  'Agile project delivery that keeps engagements on schedule, combined with ' +
+           'structured change management -- ensuring that new processes and tools are ' +
+           'adopted, not just installed. Stakeholder communication plans, training, and sustainment.',
   },
 ];
 
@@ -827,6 +834,98 @@ const DIFFERENTIATORS = [
   'Bilingual: English, Spanish',
 ];
 
+function LssDiagram() {
+  return (
+    <svg
+      viewBox="0 0 680 630"
+      className="w-full max-w-2xl mx-auto block"
+      role="img"
+      aria-label="Hub-and-spoke diagram with Lean Six Sigma at center connected to nine capability areas"
+    >
+      {/* Lines from hub to spokes — drawn first so rects render on top */}
+      <line x1="340" y1="315" x2="340" y2="95"  stroke="#CBD5E1" strokeWidth="1.5" />
+      <line x1="340" y1="315" x2="481" y2="147" stroke="#CBD5E1" strokeWidth="1.5" />
+      <line x1="340" y1="315" x2="557" y2="277" stroke="#CBD5E1" strokeWidth="1.5" />
+      <line x1="340" y1="315" x2="531" y2="425" stroke="#CBD5E1" strokeWidth="1.5" />
+      <line x1="340" y1="315" x2="415" y2="522" stroke="#CBD5E1" strokeWidth="1.5" />
+      <line x1="340" y1="315" x2="265" y2="522" stroke="#CBD5E1" strokeWidth="1.5" />
+      <line x1="340" y1="315" x2="150" y2="425" stroke="#CBD5E1" strokeWidth="1.5" />
+      <line x1="340" y1="315" x2="123" y2="277" stroke="#CBD5E1" strokeWidth="1.5" />
+      <line x1="340" y1="315" x2="199" y2="147" stroke="#CBD5E1" strokeWidth="1.5" />
+
+      {/* Hub */}
+      <rect x="255" y="272" width="170" height="86" rx="16" fill="#1B3F7A" />
+      <text x="340" y="307" textAnchor="middle" dominantBaseline="central"
+            fill="#FFFFFF" fontSize="15" fontWeight="700" fontFamily="system-ui,sans-serif">Lean Six Sigma</text>
+      <text x="340" y="327" textAnchor="middle" dominantBaseline="central"
+            fill="#D4A017" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">DMAIC discipline</text>
+
+      {/* AI & RPA — top (270 deg) */}
+      <rect x="273" y="69" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      <text x="340" y="87"  textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">AI &amp; RPA</text>
+      <text x="340" y="105" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Process Automation</text>
+
+      {/* Logistics — upper-right (310 deg) */}
+      <rect x="414" y="121" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      <text x="481" y="139" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Logistics &amp;</text>
+      <text x="481" y="157" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Supply Chain</text>
+
+      {/* Knowledge — right (350 deg) */}
+      <rect x="490" y="251" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      <text x="557" y="269" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Knowledge</text>
+      <text x="557" y="287" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Transformation</text>
+
+      {/* Operating Model — lower-right (30 deg) */}
+      <rect x="464" y="399" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      <text x="531" y="417" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Operating Model</text>
+      <text x="531" y="435" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">&amp; Strategy</text>
+
+      {/* Data Analytics — bottom-right (70 deg) */}
+      <rect x="348" y="496" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      <text x="415" y="514" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Data Analytics</text>
+      <text x="415" y="532" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">KPIs &amp; Dashboards</text>
+
+      {/* Power BI — bottom-left (110 deg) */}
+      <rect x="198" y="496" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      <text x="265" y="514" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Power BI / Tableau</text>
+      <text x="265" y="532" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Power Platform</text>
+
+      {/* EUC — lower-left (150 deg) */}
+      <rect x="83" y="399" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      <text x="150" y="417" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">EUC App</text>
+      <text x="150" y="435" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Development</text>
+
+      {/* Federal — left (190 deg) */}
+      <rect x="56" y="251" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      <text x="123" y="269" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Federal Program</text>
+      <text x="123" y="287" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Perf. Mgmt</text>
+
+      {/* Agile/Change — upper-left (230 deg) */}
+      <rect x="132" y="121" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      <text x="199" y="139" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Agile Delivery</text>
+      <text x="199" y="157" textAnchor="middle" dominantBaseline="central"
+            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">&amp; Change Mgmt</text>
+    </svg>
+  );
+}
+
 export default function CapabilitiesPage() {
   return (
     <>
@@ -838,10 +937,21 @@ export default function CapabilitiesPage() {
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Core Capabilities</h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Nine integrated practice areas
+            Ten integrated practice areas
             <br />
-           delivered by senior-only teams with principal oversight
+            delivered by senior-only teams with principal oversight
           </p>
+        </div>
+      </section>
+
+      {/* Framing + Hub-and-Spoke Diagram */}
+      <section className="py-16 px-4 bg-slate-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-slate-600 italic text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+            Every capability is applied through a disciplined Lean Six Sigma lens &mdash;
+            fact-based, waste-eliminating, and built for repeatable results.
+          </p>
+          <LssDiagram />
         </div>
       </section>
 
