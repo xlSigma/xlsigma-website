@@ -886,7 +886,7 @@ function LssDiagram() {
       <text x="531" y="417" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Operating Model</text>
       <text x="531" y="435" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">&amp; Strategy</text>
+            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">&amp; Strategy Deployment</text>
 
       {/* Data Analytics — bottom-right (70 deg) */}
       <rect x="348" y="496" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
