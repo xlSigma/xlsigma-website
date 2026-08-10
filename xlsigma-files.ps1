@@ -947,9 +947,11 @@ export default function CapabilitiesPage() {
       {/* Framing + Hub-and-Spoke Diagram */}
       <section className="py-16 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto text-center">
+          <p className="text-slate-600 italic text-lg leading-relaxed mb-1 max-w-2xl mx-auto">
+            Every capability is applied through a disciplined Lean Six Sigma lens
+          </p>
           <p className="text-slate-600 italic text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-            Every capability is applied through a disciplined Lean Six Sigma lens &mdash;
-            fact-based, waste-eliminating, and built for repeatable results.
+            Fact-based, waste-eliminating, and built for repeatable results.
           </p>
           <LssDiagram />
         </div>
