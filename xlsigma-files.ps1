@@ -955,6 +955,13 @@ export default function ContactPage() {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
+  function formatPhone(value: string): string {
+    const digits = value.replace(/\D/g, '').slice(0, 10);
+    if (digits.length <= 3) return digits.length ? `(${digits}` : '';
+    if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setState('sending');
@@ -1060,7 +1067,7 @@ export default function ContactPage() {
                       name="phone"
                       type="tel"
                       value={form.phone}
-                      onChange={handleChange}
+                      onChange={e => setForm(prev => ({ ...prev, phone: formatPhone(e.target.value) }))}
                       placeholder="(555) 123-4567"
                       className="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm
                                  focus:outline-none focus:ring-2 focus:ring-navy/30 focus:border-navy"
