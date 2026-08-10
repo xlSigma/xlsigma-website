@@ -2,10 +2,6 @@
 import { useState } from 'react';
 import { MapPin, Phone, Send, CheckCircle } from 'lucide-react';
 
-// TODO: Replace YOUR_FORM_ID with your Formspree form ID
-// Sign up at formspree.io, create a form, and paste the ID here
-const FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID';
-
 type FormState = 'idle' | 'sending' | 'success' | 'error';
 
 export default function ContactPage() {
@@ -26,9 +22,9 @@ export default function ContactPage() {
     e.preventDefault();
     setState('sending');
     try {
-      const res = await fetch(FORMSPREE_URL, {
+      const res = await fetch('/api/contact', {
         method:  'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify(form),
       });
       if (res.ok) {

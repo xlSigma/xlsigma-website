@@ -939,10 +939,6 @@ $contactPage = @'
 import { useState } from 'react';
 import { MapPin, Phone, Send, CheckCircle } from 'lucide-react';
 
-// TODO: Replace YOUR_FORM_ID with your Formspree form ID
-// Sign up at formspree.io, create a form, and paste the ID here
-const FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID';
-
 type FormState = 'idle' | 'sending' | 'success' | 'error';
 
 export default function ContactPage() {
@@ -963,9 +959,9 @@ export default function ContactPage() {
     e.preventDefault();
     setState('sending');
     try {
-      const res = await fetch(FORMSPREE_URL, {
+      const res = await fetch('/api/contact', {
         method:  'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify(form),
       });
       if (res.ok) {
@@ -1710,8 +1706,7 @@ Write-Host "All files created!" -ForegroundColor Green
 Write-Host ""
 Write-Host "Before running dev:" -ForegroundColor Yellow
 Write-Host "  1. Make sure you copied your logo to: public\logo.png"
-Write-Host "  2. Set up Formspree (formspree.io) and replace YOUR_FORM_ID"
-Write-Host "     in app\contact\page.tsx with your real form ID"
+Write-Host "  2. Set CONTACT_NOTIFY_EMAIL in Vercel env vars (contact form recipient)"
 Write-Host ""
 Write-Host "Then run:" -ForegroundColor Green
 Write-Host "  npm run dev   ->   http://localhost:3000"
