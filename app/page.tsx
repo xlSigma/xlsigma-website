@@ -1,30 +1,30 @@
 ﻿import Link  from 'next/link';
 import Image from 'next/image';
 import {
-  TrendingUp, BarChart2, Bot, LayoutDashboard,
-  Code2, Users, CheckCircle, ArrowRight,
+  TrendingUp, BarChart2, Bot, Brain,
+  CheckCircle, ArrowRight,
 } from 'lucide-react';
 
 const CAPABILITIES_PREVIEW = [
-  {
-    Icon:  Bot,
-    title: 'AI-Enabled Process Automation',
-    desc:  'AI and RPA solutions that eliminate manual work and reduce cycle times across operations.',
-  },
   {
     Icon:  TrendingUp,
     title: 'Lean Six Sigma / Continuous Improvement',
     desc:  'DMAIC-driven transformation led by a certified Master Black Belt.',
   },
   {
+    Icon:  Brain,
+    title: 'Enterprise Knowledge & Semantic Transformation',
+    desc:  'AI-ready knowledge and semantic foundations that connect enterprise concepts, institutional knowledge, and system context.',
+  },
+  {
+    Icon:  Bot,
+    title: 'AI, Agents & Intelligent Automation',
+    desc:  'AI agents, RPA, and intelligent automation that orchestrate work, reduce repetitive effort, and operate within defined controls.',
+  },
+  {
     Icon:  BarChart2,
     title: 'Data Analytics & KPI Dashboards',
     desc:  'Power BI, Tableau, and custom frameworks that turn data into decisions.',
-  },
-  {
-    Icon:  Code2,
-    title: 'End-User Computing (EUC) Development',
-    desc:  'Excel/VBA, Power Platform, and lightweight applications built for real users.',
   },
 ];
 

@@ -16,10 +16,10 @@ const CAPABILITIES = [
   },
   {
     Icon:  Bot,
-    title: 'AI-Enabled & RPA Process Automation',
-    desc:  'Design and deployment of intelligent automation solutions using RPA platforms ' +
-           'and AI tools. Automates repetitive, rules-based processes to reduce errors, ' +
-           'slash cycle times, and free staff for higher-value work.',
+    title: 'AI, Agents & Intelligent Automation',
+    desc:  'Design and deployment of AI agents, RPA, and intelligent automation solutions that ' +
+           'orchestrate work across systems, apply business rules, support human-in-the-loop ' +
+           'decisions, and reduce repetitive effort while preserving appropriate controls and oversight.',
   },
   {
     Icon:  Truck,
@@ -29,10 +29,11 @@ const CAPABILITIES = [
   },
   {
     Icon:  Brain,
-    title: 'Knowledge Transformation',
-    desc:  'Enterprise knowledge management and technology-enabled transformation -- ' +
-           'capturing institutional know-how into structured, AI-enabled knowledge bases ' +
-           'and playbooks that scale expertise across the organization.',
+    title: 'Enterprise Knowledge & Semantic Transformation',
+    desc:  'Transform fragmented enterprise knowledge, data, processes, and business definitions ' +
+           'into structured, AI-ready foundations. xlSigma captures institutional knowledge, ' +
+           'creates governed business semantics, maps concepts across systems, and develops the ' +
+           'knowledge and semantic models AI needs to understand how the enterprise actually operates.',
   },
   {
     Icon:  GitBranch,
@@ -116,9 +117,9 @@ function LssDiagram() {
       {/* AI & RPA â€” top (270 deg) */}
       <rect x="273" y="69" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
       <text x="340" y="87"  textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">AI &amp; RPA</text>
+            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">AI, Agents &amp;</text>
       <text x="340" y="105" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Process Automation</text>
+            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Automation</text>
 
       {/* Logistics â€” upper-right (310 deg) */}
       <rect x="414" y="121" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
@@ -130,7 +131,7 @@ function LssDiagram() {
       {/* Knowledge â€” right (350 deg) */}
       <rect x="490" y="251" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
       <text x="557" y="269" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Knowledge</text>
+            fill="#1B3F7A" fontSize="11" fontWeight="600" fontFamily="system-ui,sans-serif">Knowledge &amp; Semantic</text>
       <text x="557" y="287" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Transformation</text>
 
