@@ -1,4 +1,4 @@
-﻿import { ArrowDown, ArrowRight } from 'lucide-react';
+import { ArrowDown, ArrowRight } from 'lucide-react';
 
 type Stage = {
   num:      string;

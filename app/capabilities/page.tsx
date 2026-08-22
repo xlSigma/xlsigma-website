@@ -1,9 +1,10 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import {
   Bot, Brain, TrendingUp, BarChart2, LayoutDashboard,
   Code2, Landmark, GitBranch, Users, Truck,
   CheckCircle, ArrowRight,
 } from 'lucide-react';
+import SemanticToActionDiagram from '../components/SemanticToActionDiagram';
 
 const CAPABILITIES = [
   {
@@ -96,7 +97,7 @@ function LssDiagram() {
       role="img"
       aria-label="Hub-and-spoke diagram with Lean Six Sigma at center connected to nine capability areas"
     >
-      {/* Lines from hub to spokes â€” drawn first so rects render on top */}
+      {/* Lines from hub to spokes — drawn first so rects render on top */}
       <line x1="340" y1="315" x2="340" y2="95"  stroke="#CBD5E1" strokeWidth="1.5" />
       <line x1="340" y1="315" x2="481" y2="147" stroke="#CBD5E1" strokeWidth="1.5" />
       <line x1="340" y1="315" x2="557" y2="277" stroke="#CBD5E1" strokeWidth="1.5" />
@@ -114,63 +115,63 @@ function LssDiagram() {
       <text x="340" y="327" textAnchor="middle" dominantBaseline="central"
             fill="#D4A017" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">DMAIC discipline</text>
 
-      {/* AI & RPA â€” top (270 deg) */}
+      {/* AI & RPA — top (270 deg) */}
       <rect x="273" y="69" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
       <text x="340" y="87"  textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">AI, Agents &amp;</text>
       <text x="340" y="105" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Automation</text>
 
-      {/* Logistics â€” upper-right (310 deg) */}
+      {/* Logistics — upper-right (310 deg) */}
       <rect x="414" y="121" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
       <text x="481" y="139" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Logistics &amp;</text>
       <text x="481" y="157" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Supply Chain</text>
 
-      {/* Knowledge â€” right (350 deg) */}
+      {/* Knowledge — right (350 deg) */}
       <rect x="490" y="251" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
       <text x="557" y="269" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="11" fontWeight="600" fontFamily="system-ui,sans-serif">Knowledge &amp; Semantic</text>
       <text x="557" y="287" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Transformation</text>
 
-      {/* Operating Model â€” lower-right (30 deg) */}
+      {/* Operating Model — lower-right (30 deg) */}
       <rect x="464" y="399" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
       <text x="531" y="417" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Operating Model</text>
       <text x="531" y="435" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">&amp; Strategy Deployment</text>
 
-      {/* Data Analytics â€” bottom-right (70 deg) */}
+      {/* Data Analytics — bottom-right (70 deg) */}
       <rect x="348" y="496" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
       <text x="415" y="514" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Data Analytics</text>
       <text x="415" y="532" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">KPIs &amp; Dashboards</text>
 
-      {/* Power BI â€” bottom-left (110 deg) */}
+      {/* Power BI — bottom-left (110 deg) */}
       <rect x="198" y="496" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
       <text x="265" y="514" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Power BI / Tableau</text>
       <text x="265" y="532" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Power Platform</text>
 
-      {/* EUC â€” lower-left (150 deg) */}
+      {/* EUC — lower-left (150 deg) */}
       <rect x="83" y="399" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
       <text x="150" y="417" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">EUC App</text>
       <text x="150" y="435" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Development</text>
 
-      {/* Federal â€” left (190 deg) */}
+      {/* Federal — left (190 deg) */}
       <rect x="56" y="251" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
       <text x="123" y="269" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Federal Program</text>
       <text x="123" y="287" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Perf. Mgmt</text>
 
-      {/* Agile/Change â€” upper-left (230 deg) */}
+      {/* Agile/Change — upper-left (230 deg) */}
       <rect x="132" y="121" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
       <text x="199" y="139" textAnchor="middle" dominantBaseline="central"
             fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Agile Delivery</text>
@@ -208,6 +209,40 @@ export default function CapabilitiesPage() {
             Fact-based, waste-eliminating, and built for repeatable results.
           </p>
           <LssDiagram />
+        </div>
+      </section>
+
+      {/* Semantic-to-Action Architecture */}
+      <section
+        id="semantic-to-action"
+        className="scroll-mt-20 py-20 px-4 bg-navy"
+      >
+        <div className="max-w-4xl mx-auto text-center mb-10">
+          <p className="text-gold-light text-sm font-semibold uppercase tracking-widest mb-3">
+            How Our Capabilities Work Together
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+            The xlSigma Semantic-to-Action Architecture
+          </h2>
+          <p className="text-slate-300 leading-relaxed mb-4 max-w-3xl mx-auto">
+            xlSigma's capabilities work together through our Semantic-to-Action Architecture -- a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
+          </p>
+          <p className="text-slate-300 leading-relaxed mb-3 max-w-3xl mx-auto">
+            Rather than deploying AI as another disconnected tool, we build the operational foundation required for trusted, scalable AI-enabled transformation.
+          </p>
+          <p className="text-white font-semibold leading-relaxed max-w-3xl mx-auto">
+            Lean Six Sigma provides the transformation discipline. Semantic-to-Action provides the architecture.
+          </p>
+        </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <SemanticToActionDiagram />
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto text-center mt-8">
+          <p className="text-gold-light text-lg font-medium italic">
+            Domain by domain. Process by process. Outcome by outcome.
+          </p>
         </div>
       </section>
 

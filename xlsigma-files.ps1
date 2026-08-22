@@ -860,6 +860,7 @@ import {
   Code2, Landmark, GitBranch, Users, Truck,
   CheckCircle, ArrowRight,
 } from 'lucide-react';
+import SemanticToActionDiagram from '../components/SemanticToActionDiagram';
 
 const CAPABILITIES = [
   {
@@ -1064,6 +1065,40 @@ export default function CapabilitiesPage() {
             Fact-based, waste-eliminating, and built for repeatable results.
           </p>
           <LssDiagram />
+        </div>
+      </section>
+
+      {/* Semantic-to-Action Architecture */}
+      <section
+        id="semantic-to-action"
+        className="scroll-mt-20 py-20 px-4 bg-navy"
+      >
+        <div className="max-w-4xl mx-auto text-center mb-10">
+          <p className="text-gold-light text-sm font-semibold uppercase tracking-widest mb-3">
+            How Our Capabilities Work Together
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+            The xlSigma Semantic-to-Action Architecture
+          </h2>
+          <p className="text-slate-300 leading-relaxed mb-4 max-w-3xl mx-auto">
+            xlSigma's capabilities work together through our Semantic-to-Action Architecture -- a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
+          </p>
+          <p className="text-slate-300 leading-relaxed mb-3 max-w-3xl mx-auto">
+            Rather than deploying AI as another disconnected tool, we build the operational foundation required for trusted, scalable AI-enabled transformation.
+          </p>
+          <p className="text-white font-semibold leading-relaxed max-w-3xl mx-auto">
+            Lean Six Sigma provides the transformation discipline. Semantic-to-Action provides the architecture.
+          </p>
+        </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <SemanticToActionDiagram />
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto text-center mt-8">
+          <p className="text-gold-light text-lg font-medium italic">
+            Domain by domain. Process by process. Outcome by outcome.
+          </p>
         </div>
       </section>
 
