@@ -1,23 +1,25 @@
-﻿# xlSigma Website - Technical Handoff
+# xlSigma Website - Technical Handoff
 
 Marketing website for xlSigma LLC (SDVOSB and Minority-Owned Small Business).
-Built with Next.js 15 App Router, TypeScript strict, Tailwind CSS v4.
+Built with Next.js 16.2.4 App Router, TypeScript strict, Tailwind CSS v4.
 Live at: https://xlsigma.com
 
 ---
 
 ## Stack
 
-| Layer      | Technology                                      |
-|------------|-------------------------------------------------|
-| Framework  | Next.js 15 (App Router, React 19)               |
-| Language   | TypeScript (strict)                             |
-| Styling    | Tailwind CSS v4 with custom @theme colors       |
-| Forms      | Formspree (contact form submissions)            |
-| Deploy     | Vercel                                          |
-| DNS        | Vercel DNS (ns1.vercel-dns.com / ns2.vercel-dns.com) |
-| Email      | Microsoft 365 Exchange                          |
-| Domain     | Registered at DomainsPricedRight                |
+| Layer      | Technology                                                          |
+|------------|---------------------------------------------------------------------|
+| Framework  | Next.js 16.2.4 (App Router, React 19)                               |
+| Language   | TypeScript (strict)                                                 |
+| Styling    | Tailwind CSS v4 with custom @theme colors                           |
+| Icons      | lucide-react                                                        |
+| Forms      | Resend API (server-side, via /api/contact and /api/careers)         |
+| File Store | Vercel Blob (resume uploads on careers form)                        |
+| Deploy     | Vercel                                                              |
+| DNS        | Vercel DNS (ns1.vercel-dns.com / ns2.vercel-dns.com)                |
+| Email      | Microsoft 365 Exchange                                              |
+| Domain     | Registered at DomainsPricedRight                                    |
 
 ---
 
@@ -25,9 +27,9 @@ Live at: https://xlsigma.com
 
 GitHub org: xlSigma
 Repo: https://github.com/xlSigma/xlsigma-website
-Local path: C:\Users\andre\dev\xlsigma-website
+Local path: C:\dev\xlsigma-website
 Default branch: main
-Vercel auto-deploys on push to main.
+Vercel auto-deploys on push to main. Feature branches get Vercel preview deployments automatically.
 
 ---
 
@@ -36,23 +38,53 @@ Vercel auto-deploys on push to main.
     npm install
     npm run dev        # http://localhost:3000
     npx tsc --noEmit   # type-check only
+    npm run build      # full production build check
 
 ---
 
-## Pages
+## Pages & Routes
 
-| Route                    | File                                    | Description                              |
-|--------------------------|-----------------------------------------|------------------------------------------|
-| /                        | app/page.tsx                            | Homepage - private sector audience       |
-| /government-contracting  | app/government-contracting/page.tsx     | Federal primes audience                  |
-| /capabilities            | app/capabilities/page.tsx               | All 8 service capabilities               |
-| /contact                 | app/contact/page.tsx                    | Contact form with interest checkboxes    |
+| Route                    | File                                    | Description                                              |
+|--------------------------|-----------------------------------------|----------------------------------------------------------|
+| /                        | app/page.tsx                            | Homepage -- private sector audience                      |
+| /capabilities            | app/capabilities/page.tsx               | All 10 service capabilities + Semantic-to-Action diagram |
+| /government-contracting  | app/government-contracting/page.tsx     | Federal primes audience                                  |
+| /contact                 | app/contact/page.tsx                    | Contact form (client component, posts to /api/contact)   |
+| /careers                 | app/careers/page.tsx                    | Join us / talent form (posts to /api/careers)            |
+| /api/contact             | app/api/contact/route.ts                | Server route: sends email via Resend                     |
+| /api/careers             | app/api/careers/route.ts                | Server route: uploads resume to Vercel Blob, sends email |
 
 Shared components:
-- app/components/NavBar.tsx  - Sticky navy header with mobile hamburger
-- app/components/Footer.tsx  - Navy-dark footer with certifications and NAICS codes
-- app/layout.tsx             - Root layout with Inter font, NavBar + Footer wrapper
-- app/globals.css            - Tailwind v4 @theme custom color tokens
+- app/components/NavBar.tsx                  - Sticky navy header with mobile hamburger
+- app/components/Footer.tsx                  - Navy-dark footer with certifications and NAICS codes
+- app/components/SemanticToActionDiagram.tsx - Architecture diagram (server component, used on /capabilities)
+- app/layout.tsx                             - Root layout with Inter font, NavBar + Footer wrapper
+- app/globals.css                            - Tailwind v4 @theme custom color tokens
+
+---
+
+## Code Generation Workflow
+
+IMPORTANT: All .tsx site files are generated by xlsigma-files.ps1.
+Never edit .tsx files directly -- the script overwrites them.
+
+Workflow:
+1. Edit xlsigma-files.ps1
+2. Run: .\xlsigma-files.ps1
+3. Verify: npm run dev
+4. Commit and push
+
+Scripts in project root:
+- xlsigma-files.ps1              - MAIN: generates all site .tsx files (source of truth)
+- xlsigma-write-handoff.ps1      - Generates HANDOFF.md (source of truth for this file)
+- xlsigma-contact-checkboxes.ps1 - Legacy patch script (predates Resend integration; kept for reference)
+
+PowerShell encoding rules for all scripts:
+- Use single-quoted here-strings -- double-quoted here-strings expand variables
+- Use only ASCII characters inside here-strings (no bullets, arrows, em-dashes, smart quotes)
+- Node.js is used internally for file writes to avoid Windows-1252 encoding issues
+- PowerShell 5.1 reads PS1 files as Windows-1252 unless the file has a UTF-8 BOM;
+  any non-ASCII literal in a here-string will be corrupted in the output file
 
 ---
 
@@ -65,32 +97,61 @@ Shared components:
     --color-gold-light: #D4A017
     --color-gold-pale:  #FDF6E3
 
-Usage in Tailwind classes: bg-navy, text-gold, border-gold/20, etc.
+Usage in Tailwind classes: bg-navy, text-gold, border-gold/20, bg-gold-pale, etc.
 
 ---
 
 ## Contact Form
 
-File: app/contact/page.tsx
-Form handler: Formspree
-Formspree account email: info@xlsigma.com
-FORMSPREE_URL constant is at the top of contact/page.tsx.
+File: app/contact/page.tsx (client component)
+API route: app/api/contact/route.ts
 
 Form fields:
 - Full Name (required)
 - Company (required)
 - Email (required)
 - Phone (optional)
-- Interest checkboxes - 3 categories, 5 items each:
+- Interest checkboxes -- 3 categories, 5 items each:
   - Strategic Outcomes
   - Process-Specific Pain Points
   - Technical Methodology
 - Message (required)
 
-Checked items are submitted to Formspree as a semicolon-separated
-"interests" field alongside the other form fields.
+Submissions trigger an HTML email via Resend to CONTACT_NOTIFY_EMAIL.
 
-Submissions are delivered to: info@xlsigma.com
+---
+
+## Careers / Join Us Form
+
+File: app/careers/page.tsx (client component)
+API route: app/api/careers/route.ts
+
+Form fields:
+- Full Name (required)
+- Email (required)
+- Phone (required)
+- LinkedIn URL (optional)
+- Area of Expertise (required)
+- Resume PDF (required, uploaded to Vercel Blob)
+- Cover message (required)
+
+Submissions upload the resume to Vercel Blob (signed URL) and send
+an HTML notification email via Resend to JOIN_US_NOTIFY_EMAIL.
+
+---
+
+## Environment Variables (Vercel)
+
+| Variable              | Purpose                                              | Default fallback          |
+|-----------------------|------------------------------------------------------|---------------------------|
+| RESEND_API_KEY        | Resend API authentication                            | none (forms fail without) |
+| RESEND_FROM_EMAIL     | Sender address for outbound emails                   | onboarding@resend.dev     |
+| CONTACT_NOTIFY_EMAIL  | Inbox for contact form submissions                   | andresslack@xlsigma.com   |
+| JOIN_US_NOTIFY_EMAIL  | Inbox for careers form submissions                   | talent@xlsigma.com        |
+| BLOB_READ_WRITE_TOKEN | Vercel Blob token for resume file storage            | (Vercel provides this)    |
+
+Note: RESEND_FROM_EMAIL should be noreply@xlsigma.com once xlsigma.com is verified in Resend.
+Until then, onboarding@resend.dev is used as a safe interim sender.
 
 ---
 
@@ -124,7 +185,7 @@ Microsoft 365 records (added manually):
 
 Domain registrar: DomainsPricedRight
 Nameservers: ns1.vercel-dns.com / ns2.vercel-dns.com
-Note: DomainsPricedRight no longer manages DNS - all DNS is in Vercel.
+Note: DomainsPricedRight no longer manages DNS -- all DNS is in Vercel.
 
 ---
 
@@ -132,63 +193,85 @@ Note: DomainsPricedRight no longer manages DNS - all DNS is in Vercel.
 
 Name: xlSigma LLC
 Location: Tampa, FL
-Phone: (703) 969-8177
+Phone: (813) 919-9772
 Email: info@xlsigma.com
 Certifications: SDVOSB, Minority-Owned Small Business, SAM.gov Registered
 NAICS codes: 541511 | 541611 | 541614 | 541618
 
 ---
 
-## Capabilities (8 total, shown on /capabilities page)
+## Capabilities (10 total, shown on /capabilities page)
 
-1. AI-Enabled Process Automation
-2. Lean Six Sigma / Continuous Improvement
-3. Advanced Analytics & Business Intelligence
-4. Digital Transformation Strategy
-5. Enterprise Technology Integration
-6. Organizational Change Management
-7. Financial Operations & Cost Optimization
-8. Program & Project Management
+ 1. Lean Six Sigma / DMAIC / Continuous Improvement
+ 2. AI, Agents & Intelligent Automation
+ 3. Logistics & Supply Chain
+ 4. Enterprise Knowledge & Semantic Transformation
+ 5. Operating Model Design & Strategy Deployment
+ 6. Data Analytics, KPI Frameworks & Dashboards
+ 7. Power BI, Tableau, Power Platform, Excel/VBA
+ 8. End-User Computing (EUC) Application Development
+ 9. Federal Program & Performance Management Support
+10. Agile Delivery, Change & Stakeholder Management
 
 ---
 
-## PowerShell Scripts (in project root)
+## Semantic-to-Action Architecture
 
-These scripts were used to build the site and are committed to the repo.
-They use Node.js embedded in PS1 single-quoted here-strings to avoid
-Windows PowerShell 5.x UTF-8 encoding issues.
+The xlSigma Semantic-to-Action Architecture is the strategic positioning framework
+connecting all capabilities. It is surfaced in two places on the site:
 
-- xlsigma-files.ps1               - Creates/overwrites all site files
-- xlsigma-contact-checkboxes.ps1  - Patches contact/page.tsx (preserves Formspree URL)
+1. Home page (/): Teaser section with prose, stage chip chain (hidden on mobile),
+   and CTA button linking to /capabilities#semantic-to-action
 
-If making large changes, update xlsigma-files.ps1 and re-run it.
-For targeted patches to contact/page.tsx, use or update xlsigma-contact-checkboxes.ps1.
+2. Capabilities page (/capabilities): Full section (id="semantic-to-action",
+   scroll-mt-20) with navy background, explanatory copy, and the
+   SemanticToActionDiagram component rendered inside a white card.
+
+SemanticToActionDiagram (app/components/SemanticToActionDiagram.tsx):
+- Server component (no "use client")
+- 6 stages in an ordered list (role="list"):
+    01 Enterprise Systems & Knowledge
+    02 Enterprise Semantic Foundation  [featured: gold-pale background]
+    03 Process & Policy
+    04 Role & Authority
+    05 AI Agents & Intelligent Automation
+    06 Business Outcomes
+- Layout: vertical by default, horizontal (xl:flex-row) at 1280px+
+- Connector arrows between stages: ArrowDown (mobile), ArrowRight (xl+)
+- scroll-mt-20 on the section offsets the sticky NavBar when navigating via anchor
 
 ---
 
 ## Known Quirks
 
-- PowerShell encoding: all PS1 scripts use single-quoted here-strings (@'...'@)
-  and Node.js for file writes to avoid Windows-1252 encoding issues with
-  non-ASCII characters. Never use double-quoted here-strings or Write-Output
-  to write file content.
+- PowerShell encoding: all PS1 scripts use single-quoted here-strings and ASCII-only
+  content to avoid Windows-1252 encoding issues. Never use double-quoted here-strings
+  or Write-Output to write file content. Never use non-ASCII characters in here-strings
+  (bullets, arrows, em-dashes, smart quotes, etc.).
 
 - Tailwind v4: uses @theme in globals.css instead of tailwind.config.js.
   Custom color tokens (navy, gold, etc.) are available as utility classes.
 
-- Logo: public/logo.png - the xlSigma logo PNG file.
-
-- $home is a reserved PowerShell variable - the homepage content variable
+- $home is a reserved PowerShell variable -- the homepage content variable
   is named $homePage in xlsigma-files.ps1.
+
+- Logo: public/logo.png -- the xlSigma logo PNG file.
+
+- "use client" directive: contact/page.tsx, careers/page.tsx, and NavBar.tsx are
+  client components. All other pages and components are server components.
 
 ---
 
 ## Deployment
 
-Push to main branch triggers automatic Vercel deployment.
-No environment variables are required in Vercel - Formspree is client-side only.
+Push to main branch triggers automatic Vercel production deployment.
+Push to any feature branch triggers a Vercel preview deployment (preview URL
+visible in the Vercel dashboard and on GitHub PRs).
 
-To deploy manually:
+Required environment variables must be set in Vercel project settings
+(Settings > Environment Variables) for both Production and Preview environments.
+
+To deploy:
     git add -A
     git commit -m "your message"
     git push
