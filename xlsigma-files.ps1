@@ -526,6 +526,59 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Semantic-to-Action Teaser */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="max-w-3xl">
+            <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
+              Our Transformation Architecture
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6 leading-tight">
+              From Enterprise Meaning to Intelligent Action
+            </h2>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              AI can access enterprise information without truly understanding how the business works. xlSigma's Semantic-to-Action Architecture connects enterprise systems and knowledge to a shared Semantic Foundation, then adds the processes, policies, roles, decision authority, and controls AI needs to operate effectively.
+            </p>
+            <p className="text-slate-600 leading-relaxed mb-6">
+              The result is a governed business architecture that allows AI to move beyond isolated tools and begin reasoning across operations and acting within defined boundaries.
+            </p>
+            <p className="border-l-4 border-gold pl-4 text-navy font-semibold text-lg leading-snug mb-8">
+              We don't start with the AI agent. We model the business the agent must understand.
+            </p>
+            <div className="flex flex-wrap gap-x-1.5 gap-y-2 items-center mb-8" aria-hidden="true">
+              {[
+                'Systems & Knowledge',
+                'Semantic Foundation',
+                'Process & Policy',
+                'Role & Authority',
+                'AI & Automation',
+                'Outcomes',
+              ].flatMap((label, i, arr) => {
+                const chip = (
+                  <span
+                    key={label}
+                    className="text-xs font-medium px-2.5 py-1 rounded-full bg-navy/5 border border-navy/20 text-navy whitespace-nowrap"
+                  >
+                    {label}
+                  </span>
+                );
+                if (i < arr.length - 1) {
+                  return [chip, <span key={`sep-${i}`} className="text-slate-300 text-xs select-none font-light">{'>'}</span>];
+                }
+                return [chip];
+              })}
+            </div>
+            <Link
+              href="/capabilities#semantic-to-action"
+              className="inline-flex items-center gap-2 bg-navy hover:bg-navy-light
+                         text-white font-semibold px-7 py-3 rounded-lg transition-colors"
+            >
+              Explore the Semantic-to-Action Architecture <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Why xlSigma */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
