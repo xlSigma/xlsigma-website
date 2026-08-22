@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import { useState, useRef } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
 import { CheckCircle, Upload, Loader2 } from 'lucide-react';

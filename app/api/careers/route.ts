@@ -1,4 +1,4 @@
-﻿import { put, issueSignedToken, presignUrl } from '@vercel/blob';
+import { put, issueSignedToken, presignUrl } from '@vercel/blob';
 import { Resend } from 'resend';
 import type { NextRequest } from 'next/server';
 
@@ -8,7 +8,7 @@ const ALLOWED_MIME = [
   'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 ];
 
-// 7 days â€” long enough to review an application, not indefinite
+// 7 days — long enough to review an application, not indefinite
 const LINK_EXPIRY_MS = 7 * 24 * 60 * 60 * 1000;
 
 export async function POST(request: NextRequest) {
@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
     const result = await resend.emails.send({
       from,
       to,
-      subject: `New Talent Application â€” ${name}`,
+      subject: `New Talent Application — ${name}`,
       html: `
         <h2 style="font-family:sans-serif;color:#1B3F7A;margin-bottom:16px">
           New Talent Community Application

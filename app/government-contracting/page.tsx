@@ -1,4 +1,4 @@
-﻿import Link  from 'next/link';
+import Link  from 'next/link';
 import {
   CheckCircle, Shield, Award, Users, ArrowRight, Building2,
 } from 'lucide-react';
