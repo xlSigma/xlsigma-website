@@ -1154,7 +1154,8 @@ export default function CapabilitiesPage() {
             Rather than deploying AI as another disconnected tool, we build the operational foundation required for trusted, scalable AI-enabled transformation.
           </p>
           <p className="text-white font-semibold leading-relaxed max-w-3xl mx-auto">
-            Lean Six Sigma provides the transformation discipline. Semantic-to-Action provides the architecture.
+            Lean Six Sigma provides the transformation discipline.<br />
+            Semantic-to-Action provides the architecture.
           </p>
         </div>
         <div className="max-w-6xl mx-auto">
