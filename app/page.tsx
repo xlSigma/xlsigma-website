@@ -170,7 +170,7 @@ export default function HomePage() {
       </section>
 
       {/* Semantic-to-Action Teaser */}
-      <section className="py-20 px-4 bg-white">
+      <section className="pt-20 pb-14 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="max-w-3xl">
             <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
@@ -188,7 +188,7 @@ export default function HomePage() {
             <p className="border-l-4 border-gold pl-4 text-navy font-semibold text-lg leading-snug mb-8">
               We don't start with the AI agent. We model the business the agent must understand.
             </p>
-            <div className="flex flex-wrap gap-x-1.5 gap-y-2 items-center mb-8" aria-hidden="true">
+            <div className="hidden md:flex flex-wrap gap-x-1.5 gap-y-2 items-center mb-8" aria-hidden="true">
               {[
                 'Systems & Knowledge',
                 'Semantic Foundation',
