@@ -362,12 +362,19 @@ Write-Host "Created: app/components/SemanticToActionDiagram.tsx"
 
 # ── app/page.tsx - Homepage (private sector) ─────────────────
 $homePage = @'
+import type { Metadata } from 'next';
 import Link  from 'next/link';
 import Image from 'next/image';
 import {
   TrendingUp, BarChart2, Bot, Brain,
   CheckCircle, ArrowRight,
 } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'xlSigma | Operational Excellence, AI & Enterprise Transformation',
+  description:
+    'xlSigma helps commercial and government organizations improve performance through Lean Six Sigma, enterprise knowledge and semantic transformation, AI agents, intelligent automation, analytics, and technology-enabled transformation.',
+};
 
 const CAPABILITIES_PREVIEW = [
   {
@@ -907,6 +914,7 @@ Write-Host "Created: app/government-contracting/page.tsx"
 
 # ── capabilities/page.tsx ─────────────────────────────────────
 $capPage = @'
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
   Bot, Brain, TrendingUp, BarChart2, LayoutDashboard,
@@ -914,6 +922,12 @@ import {
   CheckCircle, ArrowRight,
 } from 'lucide-react';
 import SemanticToActionDiagram from '../components/SemanticToActionDiagram';
+
+export const metadata: Metadata = {
+  title: 'Capabilities & Semantic-to-Action Architecture | xlSigma',
+  description:
+    'Explore xlSigma capabilities in Lean Six Sigma, enterprise knowledge and semantic transformation, AI agents and intelligent automation, operating model design, analytics, digital solutions, and federal program support.',
+};
 
 const CAPABILITIES = [
   {

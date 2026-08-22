@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
   Bot, Brain, TrendingUp, BarChart2, LayoutDashboard,
@@ -5,6 +6,12 @@ import {
   CheckCircle, ArrowRight,
 } from 'lucide-react';
 import SemanticToActionDiagram from '../components/SemanticToActionDiagram';
+
+export const metadata: Metadata = {
+  title: 'Capabilities & Semantic-to-Action Architecture | xlSigma',
+  description:
+    'Explore xlSigma capabilities in Lean Six Sigma, enterprise knowledge and semantic transformation, AI agents and intelligent automation, operating model design, analytics, digital solutions, and federal program support.',
+};
 
 const CAPABILITIES = [
   {

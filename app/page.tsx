@@ -1,9 +1,16 @@
+import type { Metadata } from 'next';
 import Link  from 'next/link';
 import Image from 'next/image';
 import {
   TrendingUp, BarChart2, Bot, Brain,
   CheckCircle, ArrowRight,
 } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'xlSigma | Operational Excellence, AI & Enterprise Transformation',
+  description:
+    'xlSigma helps commercial and government organizations improve performance through Lean Six Sigma, enterprise knowledge and semantic transformation, AI agents, intelligent automation, analytics, and technology-enabled transformation.',
+};
 
 const CAPABILITIES_PREVIEW = [
   {
