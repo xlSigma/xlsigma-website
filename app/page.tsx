@@ -108,24 +108,29 @@ export default function HomePage() {
             </div>
             <div className="bg-gold-pale border border-gold/20 rounded-xl p-6">
               <h3 className="font-bold text-navy mb-4 text-sm uppercase tracking-wide">
-                Credentials
+                Leadership Credentials
               </h3>
-              <ul className="space-y-3 text-sm text-slate-700">
+              <ul className="space-y-4 text-sm text-slate-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  MBA, The University of Michigan (Ross)
+                  <div>
+                    <p className="font-semibold text-navy">President</p>
+                    <p>MBA, Michigan Ross &middot; Lean Six Sigma Master Black Belt &middot; BS Electrical Engineering, FIU</p>
+                  </div>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  Lean Six Sigma Master Black Belt
+                  <div>
+                    <p className="font-semibold text-navy">Chief Growth &amp; Transformation Officer</p>
+                    <p>BS Economics and Accounting, Elizabethtown College &middot; Lean Six Sigma Master Black Belt (PwC) &middot; Former Big 4 Strategy Partner &middot; Led $300M CENTCOM enterprise transformation</p>
+                  </div>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  Experience across Accenture, GE, Emerson, Citi Group, Discover Financial, Federal Government
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  English, Spanish
+                  <div>
+                    <p className="font-semibold text-navy">Chief Technology Officer</p>
+                    <p>MS Computer Science, Washington University in St. Louis &middot; 25+ years enterprise software architecture &middot; Azure platform serving 200,000+ users</p>
+                  </div>
                 </li>
               </ul>
             </div>
