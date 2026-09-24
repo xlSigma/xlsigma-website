@@ -54,10 +54,12 @@ const PAST_PERFORMANCE = [
     tags:    ['AI/RPA', 'Regulatory Compliance', 'KYC', 'Financial Services'],
   },
   {
-    client:  'USF Health',
-    summary: 'Process improvement and workflow automation supporting ' +
-             'referrals process of BRIDGE Clinic operations.',
-    tags:    ['Healthcare', 'Process Improvement', 'Workflow Automation'],
+    client:  'CENTCOM Enterprise Transformation / DoD',
+    summary: 'Led a $300M enterprise-wide Lean Six Sigma transformation initiative ' +
+             'across CENTCOM theater operations (with Calibre Systems Inc.). ' +
+             'Directed 23 Master/Black Belts to drive theater-wide readiness, ' +
+             'operational alignment, and Warfighter protection outcomes.',
+    tags:    ['Enterprise Transformation', 'Lean Six Sigma', 'DoD'],
   },
   {
     client:  'U.S. Forces-Afghanistan / DoD',
@@ -70,12 +72,10 @@ const PAST_PERFORMANCE = [
     tags:    ['Process Reengineering', 'Data Analytics', 'DoD'],
   },
   {
-    client:  'CENTCOM Enterprise Transformation / DoD',
-    summary: 'Led a $300M enterprise-wide Lean Six Sigma transformation initiative ' +
-             'across CENTCOM theater operations (with Calibre Systems Inc.). ' +
-             'Directed 23 Master/Black Belts to drive theater-wide readiness, ' +
-             'operational alignment, and Warfighter protection outcomes.',
-    tags:    ['Enterprise Transformation', 'Lean Six Sigma', 'DoD'],
+    client:  'USF Health',
+    summary: 'Process improvement and workflow automation supporting ' +
+             'referrals process of BRIDGE Clinic operations.',
+    tags:    ['Healthcare', 'Process Improvement', 'Workflow Automation'],
   },
 ];
 
