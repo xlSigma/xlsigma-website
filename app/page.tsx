@@ -99,11 +99,11 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <p className="text-slate-600 leading-relaxed mb-4">
-                xlSigma is a boutique management consulting and technology firm that brings
-                big consulting firm rigor with small firm agility.
+                xlSigma is a management consulting and technology firm built to deliver
+                enterprise-grade expertise with small-firm agility and direct accountability.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                You're never handed off to juniors. Every engagement is staffed with senior consultants and backed by direct principal oversight.
+                You won't be handed off to a junior delivery team. Every engagement is led by senior practitioners and backed by direct principal oversight.
               </p>
             </div>
             <div className="bg-gold-pale border border-gold/20 rounded-xl p-6">
