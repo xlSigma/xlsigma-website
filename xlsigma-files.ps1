@@ -84,8 +84,8 @@ import { Menu, X }       from 'lucide-react';
 const LINKS = [
   { href: '/',                       label: 'Home'         },
   { href: '/capabilities',           label: 'Capabilities' },
-  { href: '/government-contracting', label: 'Government'   },
   { href: '/commercial',             label: 'Commercial'   },
+  { href: '/government-contracting', label: 'Government'   },
   { href: '/careers',                label: 'Careers'      },
   { href: '/contact',                label: 'Contact'      },
 ];
@@ -209,8 +209,8 @@ export default function Footer() {
               {[
                 { href: '/',                       label: 'Home'         },
                 { href: '/capabilities',           label: 'Capabilities' },
-                { href: '/government-contracting', label: 'Government'   },
                 { href: '/commercial',             label: 'Commercial'   },
+                { href: '/government-contracting', label: 'Government'   },
                 { href: '/careers',                label: 'Careers'      },
                 { href: '/contact',                label: 'Contact'      },
               ].map(({ href, label }) => (
@@ -743,6 +743,24 @@ const PAST_PERFORMANCE = [
     summary: 'Process improvement and workflow automation supporting ' +
              'referrals process of BRIDGE Clinic operations.',
     tags:    ['Healthcare', 'Process Improvement', 'Workflow Automation'],
+  },
+  {
+    client:  'U.S. Forces-Afghanistan / DoD',
+    summary: 'Supported the initial standup of the U.S. Forces-Afghanistan Fusion Cell ' +
+             '(with Calibre Systems Inc.). ' +
+             'Built foundational business-process design mapping PBUSE and SARSS/SASSY ' +
+             'logistics systems, identifying data sources and owners, establishing ' +
+             'collection frequencies, and aligning reporting outputs with the ' +
+             'commander\'s information requirements.',
+    tags:    ['Process Reengineering', 'Data Analytics', 'DoD'],
+  },
+  {
+    client:  'CENTCOM Enterprise Transformation / DoD',
+    summary: 'Led a $300M enterprise-wide Lean Six Sigma transformation initiative ' +
+             'across CENTCOM theater operations (with Calibre Systems Inc.). ' +
+             'Directed 23 Master/Black Belts to drive theater-wide readiness, ' +
+             'operational alignment, and Warfighter protection outcomes.',
+    tags:    ['Enterprise Transformation', 'Lean Six Sigma', 'DoD'],
   },
 ];
 

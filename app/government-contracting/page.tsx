@@ -59,6 +59,24 @@ const PAST_PERFORMANCE = [
              'referrals process of BRIDGE Clinic operations.',
     tags:    ['Healthcare', 'Process Improvement', 'Workflow Automation'],
   },
+  {
+    client:  'U.S. Forces-Afghanistan / DoD',
+    summary: 'Supported the initial standup of the U.S. Forces-Afghanistan Fusion Cell ' +
+             '(with Calibre Systems Inc.). ' +
+             'Built foundational business-process design mapping PBUSE and SARSS/SASSY ' +
+             'logistics systems, identifying data sources and owners, establishing ' +
+             'collection frequencies, and aligning reporting outputs with the ' +
+             'commander\'s information requirements.',
+    tags:    ['Process Reengineering', 'Data Analytics', 'DoD'],
+  },
+  {
+    client:  'CENTCOM Enterprise Transformation / DoD',
+    summary: 'Led a $300M enterprise-wide Lean Six Sigma transformation initiative ' +
+             'across CENTCOM theater operations (with Calibre Systems Inc.). ' +
+             'Directed 23 Master/Black Belts to drive theater-wide readiness, ' +
+             'operational alignment, and Warfighter protection outcomes.',
+    tags:    ['Enterprise Transformation', 'Lean Six Sigma', 'DoD'],
+  },
 ];
 
 const NAICS = [
