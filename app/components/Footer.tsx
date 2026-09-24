@@ -40,11 +40,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               {[
-                { href: '/',                       label: 'Home'                   },
-                { href: '/government-contracting', label: 'Government Contracting' },
-                { href: '/capabilities',           label: 'Capabilities'           },
-                { href: '/careers',                label: 'Careers'                },
-                { href: '/contact',                label: 'Contact'                },
+                { href: '/',                       label: 'Home'         },
+                { href: '/capabilities',           label: 'Capabilities' },
+                { href: '/government-contracting', label: 'Government'   },
+                { href: '/commercial',             label: 'Commercial'   },
+                { href: '/careers',                label: 'Careers'      },
+                { href: '/contact',                label: 'Contact'      },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="hover:text-gold-light transition-colors">
