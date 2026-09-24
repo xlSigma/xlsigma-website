@@ -433,8 +433,8 @@ export default function HomePage() {
           <p className="text-base md:text-lg lg:text-xl font-bold text-white max-w-4xl mx-auto mb-8 leading-relaxed text-balance md:whitespace-nowrap">
             Enterprise Knowledge Transformation &bull; Advanced Analytics
           </p>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-            delivered by practitioners with Fortune 500 depth
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed text-balance">
+            Backed by Fortune 500 experience in transformation and operational excellence
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center">
