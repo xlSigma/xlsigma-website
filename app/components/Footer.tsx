@@ -42,8 +42,8 @@ export default function Footer() {
               {[
                 { href: '/',                       label: 'Home'         },
                 { href: '/capabilities',           label: 'Capabilities' },
-                { href: '/government-contracting', label: 'Government'   },
                 { href: '/commercial',             label: 'Commercial'   },
+                { href: '/government-contracting', label: 'Government'   },
                 { href: '/careers',                label: 'Careers'      },
                 { href: '/contact',                label: 'Contact'      },
               ].map(({ href, label }) => (
