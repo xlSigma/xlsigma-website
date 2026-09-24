@@ -211,7 +211,7 @@ export default function ContactPage() {
             <div>
               <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">NAICS</p>
               <p className="text-sm text-slate-600">
-                541511 | 541611 | 541614 | 541618
+                541511 | 541512 | 541611 | 541614 | 541618
               </p>
             </div>
           </div>

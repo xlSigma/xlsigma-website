@@ -72,7 +72,7 @@ export default function Footer() {
             </ul>
             <div className="mt-6">
               <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">NAICS</p>
-              <p className="text-xs text-slate-400">541511 | 541611 | 541614 | 541618</p>
+              <p className="text-xs text-slate-400">541511 | 541512 | 541611 | 541614 | 541618</p>
             </div>
           </div>
 

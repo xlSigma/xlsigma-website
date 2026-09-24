@@ -239,7 +239,7 @@ export default function Footer() {
             </ul>
             <div className="mt-6">
               <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">NAICS</p>
-              <p className="text-xs text-slate-400">541511 | 541611 | 541614 | 541618</p>
+              <p className="text-xs text-slate-400">541511 | 541512 | 541611 | 541614 | 541618</p>
             </div>
           </div>
 
@@ -748,6 +748,7 @@ const PAST_PERFORMANCE = [
 
 const NAICS = [
   { code: '541511', desc: 'Custom Computer Programming Services'         },
+  { code: '541512', desc: 'Computer Systems Design Services'             },
   { code: '541611', desc: 'Administrative Management Consulting'         },
   { code: '541614', desc: 'Process, Distribution & Logistics Consulting' },
   { code: '541618', desc: 'Other Management Consulting Services'         },
@@ -881,11 +882,12 @@ export default function GovernmentContractingPage() {
             </p>
             <h2 className="text-3xl font-bold text-navy">Registered Capabilities</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             {NAICS.map(({ code, desc }) => (
               <div key={code}
                    className="flex items-center gap-4 bg-slate-50 rounded-xl px-6 py-4
-                              border border-slate-200">
+                              border border-slate-200 w-full sm:w-[calc(50%-0.5rem)]
+                              lg:w-[calc(33.333%-0.667rem)]">
                 <span className="text-gold font-bold text-lg font-mono flex-shrink-0">
                   {code}
                 </span>
@@ -1599,7 +1601,7 @@ export default function ContactPage() {
             <div>
               <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">NAICS</p>
               <p className="text-sm text-slate-600">
-                541511 | 541611 | 541614 | 541618
+                541511 | 541512 | 541611 | 541614 | 541618
               </p>
             </div>
           </div>
