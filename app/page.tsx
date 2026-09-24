@@ -59,10 +59,10 @@ export default function HomePage() {
             <span className="text-5xl md:text-6xl font-bold text-gold-light block mt-1">Operations Excellence</span>
           </h1>
           <p className="text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto mb-2 leading-relaxed">
-            Process reengineering, Process improvement
+            Process discipline meets AI execution
           </p>
           <p className="text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto mb-8 leading-relaxed">
-            Smart Automation, Advanced Analytics
+            Built on Lean Six Sigma. Powered by Semantic-to-Action.
           </p>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
             delivered by practitioners with Fortune 500 depth
