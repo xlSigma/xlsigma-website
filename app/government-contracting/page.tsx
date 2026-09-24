@@ -131,6 +131,7 @@ export default function GovernmentContractingPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { Icon: Shield, label: 'SDVOSB',          sub: 'Service-Disabled Veteran-Owned' },
+              { Icon: Award,  label: 'VOSB',            sub: 'Veteran-Owned Small Business'    },
               { Icon: Users,  label: 'SAM.gov',         sub: 'Active Registration'             },
             ].map(({ Icon, label, sub }) => (
               <div key={label}
