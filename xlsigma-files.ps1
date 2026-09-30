@@ -686,6 +686,7 @@ $govPage = @'
 import Link  from 'next/link';
 import {
   CheckCircle, Shield, Award, Users, ArrowRight, Building2,
+  Truck, Landmark, HeartPulse,
 } from 'lucide-react';
 
 const VALUE_PROPS = [
@@ -762,6 +763,13 @@ const PAST_PERFORMANCE = [
              'referrals process of BRIDGE Clinic operations.',
     tags:    ['Healthcare', 'Process Improvement', 'Workflow Automation'],
   },
+];
+
+const AGENCIES = [
+  { Icon: Shield,     label: 'Department of Defense', sub: 'Combatant commands & theater support operations' },
+  { Icon: Truck,      label: 'U.S. Army',             sub: 'Logistics, sustainment & retrograde'      },
+  { Icon: Landmark,   label: 'Federal Civilian',      sub: 'Enterprise Lean Six Sigma deployment'     },
+  { Icon: HeartPulse, label: 'Healthcare',            sub: 'Process improvement & workflow automation' },
 ];
 
 const NAICS = [
@@ -892,8 +900,30 @@ export default function GovernmentContractingPage() {
         </div>
       </section>
 
-      {/* NAICS Codes */}
+      {/* Who We Support */}
       <section className="py-20 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
+              Who We Support
+            </p>
+            <h2 className="text-3xl font-bold text-navy">Agencies & Mission Areas</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {AGENCIES.map(({ Icon, label, sub }) => (
+              <div key={label}
+                   className="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm text-center">
+                <Icon size={32} className="text-gold mx-auto mb-3" />
+                <div className="font-bold text-navy text-lg">{label}</div>
+                <div className="text-slate-500 text-sm mt-1">{sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NAICS Codes */}
+      <section className="py-20 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
