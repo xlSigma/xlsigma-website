@@ -49,7 +49,7 @@ Enterprise Knowledge Transformation • Advanced Analytics
 Backed by Fortune 500 experience in transformation and operational excellence
 View Capabilities{{→ /capabilities}}Get in Touch{{→ /contact}}
 Who We Are
-## Operational Excellence. Senior. Accountable.
+## Operational Excellence Senior Accountable
 xlSigma is a management consulting and technology firm built to deliver enterprise-grade expertise with small-firm agility and direct accountability.
 You won't be handed off to a junior delivery team. Every engagement is led by senior practitioners and backed by direct principal oversight.
 ### Leadership Credentials

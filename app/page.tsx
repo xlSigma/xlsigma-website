@@ -136,9 +136,9 @@ export default function HomePage() {
               <Eyebrow className="mb-5">Who We Are</Eyebrow>
               <Rule variant="gold" className="mb-6" />
               <Headline id="who-we-are" level={2} size="xl">
-                <span className="block">Operational Excellence.</span>
-                <span className="mt-5 block">Senior.</span>
-                <span className="mt-5 block">Accountable.</span>
+                <span className="block">Operational Excellence</span>
+                <span className="mt-5 block">Senior</span>
+                <span className="mt-5 block">Accountable</span>
               </Headline>
             </div>
 
