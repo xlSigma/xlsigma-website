@@ -68,6 +68,14 @@ const VALUE_PROPS = [
   'Bilingual delivery: English, Spanish',
 ];
 
+const SERVICE_LINES = [
+  'Process Reengineering',
+  'Lean Six Sigma',
+  'AI & Intelligent Automation',
+  'Enterprise Knowledge Transformation',
+  'Advanced Analytics',
+];
+
 const CREDENTIAL_TAGS = ['SDVOSB', 'FL OSD Veteran CBE (pending)', 'SAM.gov Registered'];
 
 export default function HomePage() {
@@ -108,12 +116,14 @@ export default function HomePage() {
               </Headline>
 
               <div className="lg:col-span-5 lg:border-l lg:border-gold/50 lg:pl-10">
-                <p className="text-lead font-semibold leading-snug text-(--fg)">
-                  Process Reengineering &bull; Lean Six Sigma &bull; AI &amp; Intelligent Automation
-                </p>
-                <p className="mt-3 text-lead font-semibold leading-snug text-(--fg)">
-                  Enterprise Knowledge Transformation &bull; Advanced Analytics
-                </p>
+                <ul className="space-y-2 text-lead font-semibold leading-snug text-(--fg)">
+                  {SERVICE_LINES.map((line) => (
+                    <li key={line} className="flex items-start gap-3">
+                      <span aria-hidden="true" className="mt-[0.45em] h-2 w-2 flex-shrink-0 bg-gold" />
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
                 <Rule variant="gold" className="my-7" />
                 <p className="text-base leading-relaxed text-(--fg-muted)">
                   Backed by Fortune 500 experience in transformation and operational excellence

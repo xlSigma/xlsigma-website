@@ -44,8 +44,11 @@ Meta description: xlSigma helps commercial and government organizations improve 
 
 [image alt: xlSigma Banner]
 # Senior-Level Consulting for Operations Excellence
-Process Reengineering • Lean Six Sigma • AI & Intelligent Automation
-Enterprise Knowledge Transformation • Advanced Analytics
+- Process Reengineering
+- Lean Six Sigma
+- AI & Intelligent Automation
+- Enterprise Knowledge Transformation
+- Advanced Analytics
 Backed by Fortune 500 experience in transformation and operational excellence
 View Capabilities{{→ /capabilities}}Get in Touch{{→ /contact}}
 Who We Are
