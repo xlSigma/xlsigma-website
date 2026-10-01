@@ -110,11 +110,6 @@ export default function GovernmentContractingPage() {
     <>
       {/* Hero */}
       <MedallionHero>
-        <ul className="mb-8 flex flex-wrap justify-center gap-3">
-          {['SDVOSB', 'FL OSD Veteran CBE (pending)', 'SAM.gov Registered'].map((tag) => (
-            <li key={tag}><Tag>{tag}</Tag></li>
-          ))}
-        </ul>
         <Headline level={1} size="display" className="mx-auto max-w-4xl">
           <span className="block">Your Trusted</span>
           <span className="mt-2 block text-gold">SDVOSB Subcontracting Partner</span>

@@ -215,7 +215,6 @@ Meta title: xlSigma LLC | Management Consulting & Technology
 Meta description: Senior-level management consulting and technology services. Process improvement, business process automation, strategy deployment, advanced analytics. SDVOSB and Veteran-Owned Small Business.
 
 [image alt: xlSigma medallion]
-SDVOSB FL OSD Veteran CBE (pending) SAM.gov Registered
 # Your Trusted SDVOSB Subcontracting Partner
 xlSigma helps federal prime contractors meet small-business SDVOSB participation goals while delivering senior-level consulting and technology capabilities with a proven federal track record.
 Small Business Credits
