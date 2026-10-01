@@ -28,6 +28,7 @@
   --color-ink-muted:  #465163;
   --color-rule:       #D8D4C6;
   --color-rule-navy:  #2B4162;
+  --color-input-line:      #7A8394;
 
   /* Banner edge colors, sampled from public/xlsigma_banner_260717.jpg.
      They let the hero background continue the banner with no visible seam. */

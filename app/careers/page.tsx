@@ -1,8 +1,15 @@
 'use client';
-import Medallion from '../components/Medallion';
 import { useState, useRef } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
 import { CheckCircle, Upload, Loader2 } from 'lucide-react';
+import Section from '../components/ui/Section';
+import ContentContainer from '../components/ui/ContentContainer';
+import MedallionHero from '../components/ui/MedallionHero';
+import Eyebrow from '../components/ui/Eyebrow';
+import Headline from '../components/ui/Headline';
+import Rule from '../components/ui/Rule';
+import Button from '../components/ui/Button';
+import { Field, INPUT_CLASS } from '../components/ui/form';
 
 type FormState = 'idle' | 'sending' | 'success' | 'error';
 
@@ -111,43 +118,50 @@ export default function CareersPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy text-white py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <Medallion />
-          <p className="text-gold-light text-sm font-semibold uppercase tracking-widest mb-3">
-            Opportunities
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Talent Community</h1>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Senior consultants and subject-matter experts
-          </p>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            who deliver measurable operational results.
-          </p>
-        </div>
-      </section>
+      <MedallionHero>
+        <Eyebrow className="mb-4">Opportunities</Eyebrow>
+        <Headline level={1} size="display" className="mb-6">Join Our Talent Community</Headline>
+        <p className="mx-auto max-w-2xl text-lead text-(--fg-muted)">
+          Senior consultants and subject-matter experts
+        </p>
+        <p className="mx-auto max-w-2xl text-lead text-(--fg-muted)">
+          who deliver measurable operational results.
+        </p>
+      </MedallionHero>
 
-      {/* Body Copy */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-4xl mx-auto space-y-12">
-
-          <div className="bg-gold-pale border border-gold/20 rounded-xl p-6">
-            <h2 className="text-lg font-bold text-navy mb-3">Talent Community Opportunity</h2>
-            <p className="text-slate-700 text-sm leading-relaxed">
-              By applying, you are expressing interest in joining our network of trusted consultants
-              and subject-matter experts who may partner with us on a contract basis when client
-              project needs arise.
-            </p>
-            <p className="text-slate-700 text-sm leading-relaxed mt-3">
-              This is not an immediate or guaranteed opening. Engagements are project-based, and
-              xlSigma will reach out when an opportunity aligns with your experience, availability,
-              location, and client requirements.
-            </p>
+      {/* Talent Community Opportunity */}
+      <Section variant="paper" aria-labelledby="talent-community">
+        <ContentContainer>
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-4">
+              <Rule variant="gold" className="mb-6" />
+              <Headline id="talent-community" level={2} size="md">Talent Community Opportunity</Headline>
+            </div>
+            <div className="space-y-5 text-lead text-(--fg-muted) lg:col-span-8">
+              <p>
+                By applying, you are expressing interest in joining our network of trusted consultants
+                and subject-matter experts who may partner with us on a contract basis when client
+                project needs arise.
+              </p>
+              <p>
+                This is not an immediate or guaranteed opening. Engagements are project-based, and
+                xlSigma will reach out when an opportunity aligns with your experience, availability,
+                location, and client requirements.
+              </p>
+            </div>
           </div>
+        </ContentContainer>
+      </Section>
 
-          <div>
-            <h2 className="text-xl font-bold text-navy mb-4">Company Description</h2>
-            <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
+      {/* Company Description */}
+      <Section variant="white" aria-labelledby="company-description">
+        <ContentContainer>
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-4">
+              <Rule variant="gold" className="mb-6" />
+              <Headline id="company-description" level={2} size="md">Company Description</Headline>
+            </div>
+            <div className="space-y-5 text-base leading-relaxed text-(--fg-muted) lg:col-span-8">
               <p>
                 xlSigma LLC is a management consulting firm that delivers solutions at the
                 intersection of operational excellence, AI, automation, enterprise knowledge
@@ -180,12 +194,20 @@ export default function CareersPage() {
               </p>
             </div>
           </div>
+        </ContentContainer>
+      </Section>
 
-          <div>
-            <h2 className="text-xl font-bold text-navy mb-4">
-              Role Description: Senior Management Consultant / SME &mdash; Talent Pool
-            </h2>
-            <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
+      {/* Role Description */}
+      <Section variant="paper" aria-labelledby="role-description">
+        <ContentContainer>
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-4">
+              <Rule variant="gold" className="mb-6" />
+              <Headline id="role-description" level={2} size="md">
+                Role Description: Senior Management Consultant / SME &mdash; Talent Pool
+              </Headline>
+            </div>
+            <div className="space-y-5 text-base leading-relaxed text-(--fg-muted) lg:col-span-8">
               <p>
                 The Senior Management Consultant is a senior practitioner role supporting future
                 full-time, part-time, remote, hybrid, and client on-site consulting opportunities
@@ -221,189 +243,149 @@ export default function CareersPage() {
               </p>
             </div>
           </div>
+        </ContentContainer>
+      </Section>
 
-          <div>
-            <h2 className="text-xl font-bold text-navy mb-4">Qualifications</h2>
-            <ul className="space-y-3">
-              {QUALIFICATIONS.map((q, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="text-gold font-bold flex-shrink-0 mt-0.5">&#8226;</span>
-                  <span className="text-slate-600 text-sm leading-relaxed">{q}</span>
+      {/* Qualifications */}
+      <Section variant="white" aria-labelledby="qualifications">
+        <ContentContainer>
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-4">
+              <Rule variant="gold" className="mb-6" />
+              <Headline id="qualifications" level={2} size="md">Qualifications</Headline>
+            </div>
+            <ul className="border-b border-(--rule) lg:col-span-8">
+              {QUALIFICATIONS.map((q) => (
+                <li key={q} className="border-t border-(--rule) py-5 text-base leading-relaxed text-(--fg)">
+                  {q}
                 </li>
               ))}
             </ul>
           </div>
-
-        </div>
-      </section>
+        </ContentContainer>
+      </Section>
 
       {/* Application Form */}
-      <section className="py-16 px-4 bg-slate-50">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-2">
-              Apply Now
-            </p>
-            <h2 className="text-3xl font-bold text-navy">Submit Your Interest</h2>
-          </div>
-
-          {state === 'success' ? (
-            <div className="flex flex-col items-center justify-center py-16 text-center
-                            bg-white rounded-xl border border-slate-200 px-8">
-              <CheckCircle size={48} className="text-green-500 mb-4" />
-              <h3 className="text-2xl font-bold text-navy mb-3">Application Received</h3>
-              <p className="text-slate-600 max-w-md leading-relaxed">
-                Thanks &mdash; we&apos;ve received your information and will reach out when a
-                fitting opportunity arises.
-              </p>
+      <Section variant="paper" aria-labelledby="apply-heading">
+        <ContentContainer>
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-4">
+              <Eyebrow className="mb-5">Apply Now</Eyebrow>
+              <Rule variant="gold" className="mb-6" />
+              <Headline id="apply-heading" level={2} size="xl">Submit Your Interest</Headline>
             </div>
-          ) : (
-            <form onSubmit={handleSubmit}
-                  className="bg-white rounded-xl border border-slate-200 p-8 space-y-6">
 
-              <div className="grid md:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-semibold text-navy mb-1.5">
-                    Full Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    name="name" value={form.name} onChange={handleChange} required
-                    placeholder="Jane Smith"
-                    className="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm
-                               focus:outline-none focus:ring-2 focus:ring-navy/30 focus:border-navy"
-                  />
+            <div className="lg:col-span-8">
+              {state === 'success' ? (
+                <div className="border border-(--rule) bg-white px-8 py-16 text-center" role="status">
+                  <CheckCircle size={44} className="mx-auto mb-5 text-gold-ink" aria-hidden="true" />
+                  <h3 className="mb-3 font-serif text-title font-medium text-ink">Application Received</h3>
+                  <p className="mx-auto max-w-md leading-relaxed text-ink-muted">
+                    Thanks &mdash; we&apos;ve received your information and will reach out when a
+                    fitting opportunity arises.
+                  </p>
                 </div>
-                <div>
-                  <label className="block text-sm font-semibold text-navy mb-1.5">
-                    Email <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    name="email" type="email" value={form.email} onChange={handleChange} required
-                    placeholder="jane@company.com"
-                    className="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm
-                               focus:outline-none focus:ring-2 focus:ring-navy/30 focus:border-navy"
-                  />
-                </div>
-              </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6 border border-(--rule) bg-white p-6 md:p-10">
 
-              <div className="grid md:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-semibold text-navy mb-1.5">
-                    Phone <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    name="phone" type="tel" value={form.phone} onChange={handlePhone} required
-                    placeholder="(555) 123-4567"
-                    className="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm
-                               focus:outline-none focus:ring-2 focus:ring-navy/30 focus:border-navy"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-navy mb-1.5">
-                    LinkedIn
-                    <span className="text-slate-400 font-normal ml-1">(optional)</span>
-                  </label>
-                  <div className="flex rounded-lg border border-slate-300 overflow-hidden
-                                  focus-within:ring-2 focus-within:ring-navy/30 focus-within:border-navy
-                                  transition-shadow">
-                    <span className="flex items-center px-3 bg-slate-50 border-r border-slate-300
-                                     text-slate-400 text-xs whitespace-nowrap select-none">
-                      linkedin.com/in/
-                    </span>
-                    <input
-                      name="linkedin" type="text" value={form.linkedin} onChange={handleLinkedin}
-                      placeholder="yourname"
-                      className="flex-1 min-w-0 px-3 py-2.5 text-sm outline-none bg-white"
-                    />
+                  <div className="grid gap-6 md:grid-cols-2">
+                    <Field id="careers-name" label="Full Name" required>
+                      <input
+                        id="careers-name" name="name" value={form.name} onChange={handleChange} required
+                        placeholder="Jane Smith" className={INPUT_CLASS}
+                      />
+                    </Field>
+                    <Field id="careers-email" label="Email" required>
+                      <input
+                        id="careers-email" name="email" type="email" value={form.email} onChange={handleChange} required
+                        placeholder="jane@company.com" className={INPUT_CLASS}
+                      />
+                    </Field>
                   </div>
-                </div>
-              </div>
 
-              <div>
-                <label className="block text-sm font-semibold text-navy mb-1.5">
-                  Area of Expertise / Certifications
-                  <span className="text-slate-400 font-normal ml-1">(optional)</span>
-                </label>
-                <input
-                  name="expertise" value={form.expertise} onChange={handleChange}
-                  placeholder="e.g. Lean Six Sigma MBB, PMP, RPA, Power BI..."
-                  className="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm
-                             focus:outline-none focus:ring-2 focus:ring-navy/30 focus:border-navy"
-                />
-              </div>
+                  <div className="grid gap-6 md:grid-cols-2">
+                    <Field id="careers-phone" label="Phone" required>
+                      <input
+                        id="careers-phone" name="phone" type="tel" value={form.phone} onChange={handlePhone} required
+                        placeholder="(555) 123-4567" className={INPUT_CLASS}
+                      />
+                    </Field>
+                    <Field id="careers-linkedin" label="LinkedIn" optional>
+                      <div className="flex overflow-hidden rounded-sm border border-input-line focus-within:border-navy">
+                        <span className="flex select-none items-center whitespace-nowrap border-r border-input-line bg-paper px-3 text-xs text-ink-muted">
+                          linkedin.com/in/
+                        </span>
+                        <input
+                          id="careers-linkedin" name="linkedin" type="text" value={form.linkedin} onChange={handleLinkedin}
+                          placeholder="yourname"
+                          className="min-w-0 flex-1 bg-white px-3 py-3 text-[0.9375rem] text-ink placeholder:text-ink-muted/80"
+                        />
+                      </div>
+                    </Field>
+                  </div>
 
-              <div>
-                <label className="block text-sm font-semibold text-navy mb-1.5">
-                  Message / Cover Note
-                  <span className="text-slate-400 font-normal ml-1">(optional)</span>
-                </label>
-                <textarea
-                  name="message" value={form.message} onChange={handleChange} rows={4}
-                  placeholder="Tell us about your background, availability, or the type of work you are interested in..."
-                  className="w-full border border-slate-300 rounded-lg px-4 py-2.5 text-sm
-                             focus:outline-none focus:ring-2 focus:ring-navy/30 focus:border-navy
-                             resize-none"
-                />
-              </div>
+                  <Field id="careers-expertise" label="Area of Expertise / Certifications" optional>
+                    <input
+                      id="careers-expertise" name="expertise" value={form.expertise} onChange={handleChange}
+                      placeholder="e.g. Lean Six Sigma MBB, PMP, RPA, Power BI..." className={INPUT_CLASS}
+                    />
+                  </Field>
 
-              <div>
-                <label className="block text-sm font-semibold text-navy mb-1.5">
-                  Resume <span className="text-red-500">*</span>
-                  <span className="text-slate-400 font-normal ml-1">
-                    PDF, DOC, or DOCX &middot; max 5 MB
-                  </span>
-                </label>
-                <label
-                  className={`flex items-center gap-3 border-2 border-dashed rounded-lg px-4 py-4
-                              cursor-pointer transition-colors
-                              ${resume
-                                ? 'border-green-400 bg-green-50'
-                                : 'border-slate-300 hover:border-navy/40 bg-white'}`}
-                >
-                  <Upload size={18} className={resume ? 'text-green-600' : 'text-slate-400'} />
-                  <span className={`text-sm truncate
-                                   ${resume ? 'text-green-700 font-medium' : 'text-slate-500'}`}>
-                    {resume ? resume.name : 'Click to upload'}
-                  </span>
-                  <input
-                    ref={fileRef}
-                    type="file"
-                    accept=".pdf,.doc,.docx"
-                    onChange={handleFile}
-                    className="sr-only"
-                  />
-                </label>
-                {fileError && (
-                  <p className="text-red-500 text-xs mt-1">{fileError}</p>
-                )}
-              </div>
+                  <Field id="careers-message" label="Message / Cover Note" optional>
+                    <textarea
+                      id="careers-message" name="message" value={form.message} onChange={handleChange} rows={4}
+                      placeholder="Tell us about your background, availability, or the type of work you are interested in..."
+                      className={`${INPUT_CLASS} resize-none`}
+                    />
+                  </Field>
 
-              {state === 'error' && errorMsg && (
-                <p className="text-red-600 text-sm bg-red-50 border border-red-200
-                               rounded-lg px-4 py-3">
-                  {errorMsg}
-                </p>
+                  <Field id="careers-resume" label="Resume" required hint={'PDF, DOC, or DOCX · max 5 MB'}>
+                    <label
+                      htmlFor="careers-resume"
+                      className={`flex cursor-pointer items-center gap-3 rounded-sm border-2 border-dashed px-4 py-4
+                                  transition-colors focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-gold-ink
+                                  ${resume
+                                    ? 'border-gold-ink bg-gold-pale'
+                                    : 'border-input-line bg-white hover:border-navy'}`}
+                    >
+                      <Upload size={18} className={resume ? 'text-gold-ink' : 'text-ink-muted'} aria-hidden="true" />
+                      <span className={`truncate text-sm ${resume ? 'font-medium text-ink' : 'text-ink-muted'}`}>
+                        {resume ? resume.name : 'Click to upload'}
+                      </span>
+                      <input
+                        id="careers-resume"
+                        ref={fileRef}
+                        type="file"
+                        accept=".pdf,.doc,.docx"
+                        onChange={handleFile}
+                        className="sr-only"
+                      />
+                    </label>
+                    {fileError && (
+                      <p className="mt-2 text-xs text-red-700" role="alert">{fileError}</p>
+                    )}
+                  </Field>
+
+                  {state === 'error' && errorMsg && (
+                    <p className="border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">
+                      {errorMsg}
+                    </p>
+                  )}
+
+                  <Button type="submit" variant="primary" disabled={state === 'sending'} className="w-full">
+                    {state === 'sending' ? (
+                      <>
+                        <Loader2 size={16} className="animate-spin" aria-hidden="true" />
+                        Submitting...
+                      </>
+                    ) : 'Submit Application'}
+                  </Button>
+                </form>
               )}
-
-              <button
-                type="submit"
-                disabled={state === 'sending'}
-                className="w-full flex items-center justify-center gap-2 bg-navy
-                           hover:bg-navy-light text-white font-semibold px-6 py-3
-                           rounded-lg transition-colors
-                           disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                {state === 'sending' ? (
-                  <>
-                    <Loader2 size={16} className="animate-spin" />
-                    Submitting...
-                  </>
-                ) : 'Submit Application'}
-              </button>
-            </form>
-          )}
-        </div>
-      </section>
+            </div>
+          </div>
+        </ContentContainer>
+      </Section>
     </>
   );
 }
