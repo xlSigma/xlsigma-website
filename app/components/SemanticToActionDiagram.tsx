@@ -54,19 +54,19 @@ export default function SemanticToActionDiagram() {
             <li
               key={stage.title}
               className={[
-                'flex-1 min-w-0 rounded-xl p-4 xl:p-5 flex flex-col gap-2',
+                'flex-1 min-w-0 rounded-sm p-4 xl:p-5 flex flex-col gap-2',
                 stage.featured
-                  ? 'bg-gold-pale border-2 border-gold'
-                  : 'bg-white border-2 border-slate-200 hover:border-gold/50 hover:shadow-sm transition-all',
+                  ? 'bg-gold-pale border border-gold'
+                  : 'bg-white border border-rule hover:border-gold transition-colors',
               ].join(' ')}
             >
-              <span className="text-xs font-mono font-semibold text-gold tracking-widest">
+              <span className="font-serif text-lg font-medium text-(--accent) tracking-wide">
                 {stage.num}
               </span>
-              <h3 className="font-bold text-navy text-sm leading-snug">
+              <h3 className="font-serif text-lg font-medium text-ink leading-snug">
                 {stage.title}
               </h3>
-              <p className="text-xs text-slate-500 leading-relaxed">
+              <p className="text-sm text-ink-muted leading-relaxed">
                 {stage.desc}
               </p>
             </li>
@@ -84,12 +84,12 @@ export default function SemanticToActionDiagram() {
                 <ArrowDown
                   size={16}
                   strokeWidth={1.5}
-                  className="xl:hidden text-slate-300"
+                  className="xl:hidden text-gold"
                 />
                 <ArrowRight
                   size={16}
                   strokeWidth={1.5}
-                  className="hidden xl:block text-slate-300"
+                  className="hidden xl:block text-gold"
                 />
               </li>
             );

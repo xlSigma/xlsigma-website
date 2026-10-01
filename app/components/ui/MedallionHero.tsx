@@ -6,8 +6,8 @@ import ContentContainer from './ContentContainer';
 /** Navy hero panel for interior pages: medallion centered at the top, content below. */
 export default function MedallionHero({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
-    <Section variant="navy" className={className}>
-      <ContentContainer className="text-center">
+    <Section variant="navy" padded={false} className={className}>
+      <ContentContainer className="py-16 text-center md:py-24">
         <Image
           src="/medallion.png"
           alt="xlSigma medallion"

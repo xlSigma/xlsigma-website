@@ -1,9 +1,12 @@
-import Medallion from '../components/Medallion';
-import Link  from 'next/link';
-import {
-  CheckCircle, Shield, Award, Users, ArrowRight, Building2,
-  Truck, Landmark, HeartPulse,
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import Section from '../components/ui/Section';
+import ContentContainer from '../components/ui/ContentContainer';
+import MedallionHero from '../components/ui/MedallionHero';
+import Eyebrow from '../components/ui/Eyebrow';
+import Headline from '../components/ui/Headline';
+import Rule from '../components/ui/Rule';
+import Button from '../components/ui/Button';
+import Tag from '../components/ui/Tag';
 
 const VALUE_PROPS = [
   'Satisfies SDVOSB small-business participation goals',
@@ -82,10 +85,10 @@ const PAST_PERFORMANCE = [
 ];
 
 const AGENCIES = [
-  { Icon: Shield,     label: 'Department of War',     sub: 'Combatant commands & theater support operations' },
-  { Icon: Truck,      label: 'U.S. Army',             sub: 'Logistics, sustainment & retrograde'      },
-  { Icon: Landmark,   label: 'Federal Civilian',      sub: 'Enterprise Lean Six Sigma deployment'     },
-  { Icon: HeartPulse, label: 'Public Health',         sub: 'Process improvement, workflow automation.\nPHAB assessment' },
+  { label: 'Department of War',     sub: 'Combatant commands & theater support operations' },
+  { label: 'U.S. Army',             sub: 'Logistics, sustainment & retrograde'      },
+  { label: 'Federal Civilian',      sub: 'Enterprise Lean Six Sigma deployment'     },
+  { label: 'Public Health',         sub: 'Process improvement, workflow automation.\nPHAB assessment' },
 ];
 
 const NAICS = [
@@ -96,193 +99,167 @@ const NAICS = [
   { code: '541618', desc: 'Other Management Consulting Services'         },
 ];
 
+const CREDITS = [
+  { label: 'SDVOSB',  sub: 'Service-Disabled Veteran-Owned' },
+  { label: 'VOSB',    sub: 'Veteran-Owned Small Business'   },
+  { label: 'SAM.gov', sub: 'Active Registration'            },
+];
+
 export default function GovernmentContractingPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy text-white py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <Medallion />
-          <div className="flex justify-center gap-3 mb-6 flex-wrap">
-            <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
-                             rounded-full border border-gold/30 uppercase tracking-wider">
-              SDVOSB
-            </span>
-            <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
-                             rounded-full border border-gold/30 uppercase tracking-wider">
-              FL OSD Veteran CBE (pending)
-            </span>
-            <span className="bg-slate-700 text-slate-300 text-xs font-bold px-4 py-1.5
-                             rounded-full border border-slate-600 uppercase tracking-wider">
-              SAM.gov Registered
-            </span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Your Trusted
-            <span className="text-gold-light block mt-1">SDVOSB Subcontracting Partner</span>
-          </h1>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            xlSigma helps federal prime contractors meet small-business SDVOSB participation
-            goals while delivering senior-level consulting and technology capabilities
-            with a proven federal track record.
-          </p>
-        </div>
-      </section>
+      <MedallionHero>
+        <ul className="mb-8 flex flex-wrap justify-center gap-3">
+          {['SDVOSB', 'FL OSD Veteran CBE (pending)', 'SAM.gov Registered'].map((tag) => (
+            <li key={tag}><Tag>{tag}</Tag></li>
+          ))}
+        </ul>
+        <Headline level={1} size="display" className="mx-auto max-w-4xl">
+          <span className="block">Your Trusted</span>
+          <span className="mt-2 block text-gold">SDVOSB Subcontracting Partner</span>
+        </Headline>
+        <p className="mx-auto mt-8 max-w-2xl text-lead text-(--fg-muted)">
+          xlSigma helps federal prime contractors meet small-business SDVOSB participation
+          goals while delivering senior-level consulting and technology capabilities
+          with a proven federal track record.
+        </p>
+      </MedallionHero>
 
       {/* SDVOSB Credit */}
-      <section className="py-16 px-4 bg-gold-pale border-b border-gold/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
-            Small Business Credits
-          </p>
-          <h2 className="text-2xl font-bold text-navy mb-8">
-            Service-Disabled Veteran-Owned Small Business
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { Icon: Shield, label: 'SDVOSB',          sub: 'Service-Disabled Veteran-Owned' },
-              { Icon: Award,  label: 'VOSB',            sub: 'Veteran-Owned Small Business'    },
-              { Icon: Users,  label: 'SAM.gov',         sub: 'Active Registration'             },
-            ].map(({ Icon, label, sub }) => (
-              <div key={label}
-                   className="bg-white rounded-xl p-6 border border-gold/20 shadow-sm text-center">
-                <Icon size={32} className="text-gold mx-auto mb-3" />
-                <div className="font-bold text-navy text-lg">{label}</div>
-                <div className="text-slate-500 text-sm mt-1">{sub}</div>
-              </div>
-            ))}
+      <Section variant="paper" aria-labelledby="sb-credits">
+        <ContentContainer>
+          <div className="mb-12 lg:mb-16">
+            <Eyebrow className="mb-5">Small Business Credits</Eyebrow>
+            <Rule variant="gold" className="mb-6" />
+            <Headline id="sb-credits" level={2} size="lg" className="max-w-3xl">
+              Service-Disabled Veteran-Owned Small Business
+            </Headline>
           </div>
-        </div>
-      </section>
+          <ul className="grid gap-x-10 gap-y-8 md:grid-cols-3">
+            {CREDITS.map(({ label, sub }) => (
+              <li key={label} className="border-t border-gold pt-6">
+                <p className="font-serif text-headline font-medium text-(--fg)">{label}</p>
+                <p className="mt-2 text-base text-(--fg-muted)">{sub}</p>
+              </li>
+            ))}
+          </ul>
+        </ContentContainer>
+      </Section>
 
       {/* Value to Primes */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div>
-              <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
-                Value to Prime Contractors
-              </p>
-              <h2 className="text-3xl font-bold text-navy mb-4">
+      <Section variant="white" aria-labelledby="why-primes">
+        <ContentContainer>
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <Eyebrow className="mb-5">Value to Prime Contractors</Eyebrow>
+              <Rule variant="gold" className="mb-6" />
+              <Headline id="why-primes" level={2} size="xl" className="mb-8">
                 Why Primes Choose xlSigma
-              </h2>
-              <p className="text-slate-600 leading-relaxed">
+              </Headline>
+              <p className="text-lead text-(--fg-muted)">
                 We understand the prime-sub relationship. xlSigma integrates seamlessly
                 into your delivery model -- providing certified small-business credits,
                 senior technical talent, and zero ramp-up time.
               </p>
             </div>
-            <ul className="space-y-4 pt-2">
+            <ul className="border-b border-(--rule) lg:col-span-7">
               {VALUE_PROPS.map((prop) => (
-                <li key={prop} className="flex items-start gap-3">
-                  <CheckCircle size={18} className="text-gold mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700 text-sm leading-relaxed">{prop}</span>
+                <li key={prop} className="border-t border-(--rule) py-5 text-base leading-relaxed text-(--fg) md:py-6">
+                  {prop}
                 </li>
               ))}
             </ul>
           </div>
-        </div>
-      </section>
+        </ContentContainer>
+      </Section>
 
       {/* Past Performance */}
-      <section className="py-20 px-4 bg-slate-50">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
-              Track Record
-            </p>
-            <h2 className="text-3xl font-bold text-navy">Selected Past Performance</h2>
+      <Section variant="paper" aria-labelledby="past-performance">
+        <ContentContainer>
+          <div className="mb-12 lg:mb-16">
+            <Eyebrow className="mb-5">Track Record</Eyebrow>
+            <Rule variant="gold" className="mb-6" />
+            <Headline id="past-performance" level={2} size="xl">Selected Past Performance</Headline>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <ol className="border-b border-(--rule)">
             {PAST_PERFORMANCE.map(({ client, summary, tags }) => (
-              <div key={client}
-                   className="bg-white rounded-xl p-6 border border-slate-200
-                              hover:border-gold/40 hover:shadow-md transition-all">
-                <div className="flex items-start gap-3 mb-3">
-                  <Building2 size={20} className="text-navy mt-0.5 flex-shrink-0" />
-                  <h3 className="font-bold text-navy">{client}</h3>
+              <li key={client} className="grid gap-x-12 gap-y-4 border-t border-(--rule) py-9 lg:grid-cols-12">
+                <h3 className="font-serif text-title font-medium text-(--fg) lg:col-span-4">{client}</h3>
+                <div className="lg:col-span-8">
+                  <p className="text-base leading-relaxed text-(--fg-muted)">{summary}</p>
+                  <ul className="mt-5 flex flex-wrap gap-2">
+                    {tags.map((tag) => (
+                      <li key={tag}><Tag>{tag}</Tag></li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="text-slate-600 text-sm leading-relaxed mb-4">{summary}</p>
-                <div className="flex flex-wrap gap-2">
-                  {tags.map((tag) => (
-                    <span key={tag}
-                          className="bg-navy/5 text-navy text-xs font-medium px-3 py-1 rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              </li>
             ))}
-          </div>
-        </div>
-      </section>
+          </ol>
+        </ContentContainer>
+      </Section>
 
       {/* Who We Support */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
-              Who We Support
-            </p>
-            <h2 className="text-3xl font-bold text-navy">Agencies & Mission Areas</h2>
+      <Section variant="white" aria-labelledby="who-we-support">
+        <ContentContainer>
+          <div className="mb-12 lg:mb-16">
+            <Eyebrow className="mb-5">Who We Support</Eyebrow>
+            <Rule variant="gold" className="mb-6" />
+            <Headline id="who-we-support" level={2} size="xl">Agencies &amp; Mission Areas</Headline>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {AGENCIES.map(({ Icon, label, sub }) => (
-              <div key={label}
-                   className="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm text-center">
-                <Icon size={32} className="text-gold mx-auto mb-3" />
-                <div className="font-bold text-navy text-lg">{label}</div>
-                <div className="text-slate-500 text-sm mt-1 whitespace-pre-line">{sub}</div>
-              </div>
+          <ul className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+            {AGENCIES.map(({ label, sub }) => (
+              <li key={label} className="border-t border-gold pt-6">
+                <h3 className="font-serif text-title font-medium text-(--fg)">{label}</h3>
+                <p className="mt-2 whitespace-pre-line text-base leading-relaxed text-(--fg-muted)">{sub}</p>
+              </li>
             ))}
-          </div>
-        </div>
-      </section>
+          </ul>
+        </ContentContainer>
+      </Section>
 
       {/* NAICS Codes */}
-      <section className="py-20 px-4 bg-slate-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
-              NAICS Codes
-            </p>
-            <h2 className="text-3xl font-bold text-navy">Registered Capabilities</h2>
+      <Section variant="paper" aria-labelledby="naics">
+        <ContentContainer>
+          <div className="mb-12 lg:mb-16">
+            <Eyebrow className="mb-5">NAICS Codes</Eyebrow>
+            <Rule variant="gold" className="mb-6" />
+            <Headline id="naics" level={2} size="xl">Registered Capabilities</Headline>
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
+          <ul className="border-b border-(--rule)">
             {NAICS.map(({ code, desc }) => (
-              <div key={code}
-                   className="flex items-center gap-4 bg-slate-50 rounded-xl px-6 py-4
-                              border border-slate-200 w-full sm:w-[calc(50%-0.5rem)]
-                              lg:w-[calc(33.333%-0.667rem)]">
-                <span className="text-gold font-bold text-lg font-mono flex-shrink-0">
-                  {code}
-                </span>
-                <span className="text-slate-700 text-sm">{desc}</span>
-              </div>
+              <li key={code} className="grid gap-x-8 gap-y-1 border-t border-(--rule) py-5 md:grid-cols-12 md:items-baseline">
+                <span className="font-serif text-title font-medium tabular-nums text-(--accent) md:col-span-3">{code}</span>
+                <span className="text-base text-(--fg) md:col-span-9">{desc}</span>
+              </li>
             ))}
-          </div>
-        </div>
-      </section>
+          </ul>
+        </ContentContainer>
+      </Section>
 
       {/* CTA */}
-      <section className="bg-navy py-16 px-4 text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Let&apos;s Talk Teaming
-          </h2>
-          <p className="text-slate-300 mb-8 leading-relaxed">
-            Whether you need a compliant subcontractor for an active bid or
-            a long-term teaming partner, xlSigma is ready to engage.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light
-                       text-white font-semibold px-7 py-3 rounded-lg transition-colors"
-          >
-            Start the Conversation <ArrowRight size={16} />
-          </Link>
-        </div>
-      </section>
+      <Section variant="navy" aria-labelledby="teaming">
+        <ContentContainer>
+          <div className="grid items-end gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-7">
+              <Rule variant="gold" className="mb-6" />
+              <Headline id="teaming" level={2} size="xl" className="mb-5">
+                Let&apos;s Talk Teaming
+              </Headline>
+              <p className="max-w-xl text-lead text-(--fg-muted)">
+                Whether you need a compliant subcontractor for an active bid or
+                a long-term teaming partner, xlSigma is ready to engage.
+              </p>
+            </div>
+            <div className="lg:col-span-5 lg:justify-self-end">
+              <Button href="/contact" variant="primary">
+                Start the Conversation <ArrowRight size={16} aria-hidden="true" />
+              </Button>
+            </div>
+          </div>
+        </ContentContainer>
+      </Section>
     </>
   );
 }
