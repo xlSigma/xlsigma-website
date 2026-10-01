@@ -8,8 +8,6 @@
 
 ---
 
-## How to Work on This Site
-
 ## Redesign Guardrails (apply to every session)
 
 The `redesign` branch changes PRESENTATION ONLY, to an editorial look (white and paper sections, navy bands, serif display headlines).
