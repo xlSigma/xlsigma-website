@@ -3,6 +3,7 @@ import { Newsreader, Hanken_Grotesk } from 'next/font/google';
 import './globals.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 const newsreader = Newsreader({
   subsets: ['latin'],
@@ -31,8 +32,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${hanken.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${newsreader.variable} ${hanken.variable}`}>
       <body className="bg-white font-sans text-ink antialiased">
+        <ScrollToTop />
         <NavBar />
         <main>{children}</main>
         <Footer />
