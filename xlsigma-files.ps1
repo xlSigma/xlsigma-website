@@ -244,7 +244,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>Tampa, FL</li>
-              <li>(813) 919-9772</li>
+              <li>(813) 539-8229</li>
               <li>
                 <Link href="/contact" className="hover:text-gold-light transition-colors">
                   Send a Message
@@ -1646,7 +1646,7 @@ export default function ContactPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone size={16} className="text-gold mt-0.5 flex-shrink-0" />
-                  <span>(813) 919-9772</span>
+                  <span>(813) 539-8229</span>
                 </li>
               </ul>
             </div>

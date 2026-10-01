@@ -193,7 +193,7 @@ Note: DomainsPricedRight no longer manages DNS -- all DNS is in Vercel.
 
 Name: xlSigma LLC
 Location: Tampa, FL
-Phone: (813) 919-9772
+Phone: (813) 539-8229
 Email: info@xlsigma.com
 Certifications: SDVOSB, Minority-Owned Small Business, SAM.gov Registered
 NAICS codes: 541511 | 541611 | 541614 | 541618
