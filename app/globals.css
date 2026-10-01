@@ -1,14 +1,106 @@
 @import "tailwindcss";
 
+/* Fonts are loaded in layout.tsx with next/font and exposed as CSS variables. */
+@theme inline {
+  --font-sans:  var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
+}
+
 @theme {
-  --color-navy:       #1B3F7A;
-  --color-navy-dark:  #122A54;
-  --color-navy-light: #2A5298;
-  --color-gold:       #B8820A;
-  --color-gold-light: #D4A017;
-  --color-gold-pale:  #FDF6E3;
+  /* Navy (bands, hero, footer) */
+  --color-navy:       #0B1F3A;
+  --color-navy-dark:  #07162A;
+  --color-navy-light: #1B3A66;
+
+  /* Paper (warm off-white editorial sections) */
+  --color-paper: #F4F2EA;
+
+  /* Gold. Use --color-gold on navy and for rules and buttons.
+     Use --color-gold-ink on white or paper for small text and numerals. */
+  --color-gold:        #C9A24B;
+  --color-gold-light:  #C9A24B;
+  --color-gold-bright: #D9B965;
+  --color-gold-ink:    #8A6A1F;
+  --color-gold-pale:   #FDF6E3;
+
+  /* Ink (text on light sections) and rules */
+  --color-ink:        #14202F;
+  --color-ink-muted:  #465163;
+  --color-rule:       #D8D4C6;
+  --color-rule-navy:  #2B4162;
+
+  /* Banner edge colors, sampled from public/xlsigma_banner_260717.jpg.
+     They let the hero background continue the banner with no visible seam. */
+  --color-banner-top:    #071319;
+  --color-banner-bottom: #061018;
+
+  /* Type scale (display and headline sizes are fluid) */
+  --text-display: clamp(2.75rem, 1.6rem + 4.6vw, 5.25rem);
+  --text-display--line-height: 1.02;
+  --text-headline: clamp(2rem, 1.35rem + 2.2vw, 3.25rem);
+  --text-headline--line-height: 1.08;
+  --text-title: clamp(1.375rem, 1.15rem + 0.9vw, 1.875rem);
+  --text-title--line-height: 1.2;
+  --text-lead: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --text-lead--line-height: 1.6;
+
+  /* Spacing and widths */
+  --spacing-section: clamp(4.5rem, 3rem + 6vw, 8rem);
+  --container-content: 76rem;
+  --container-prose: 42rem;
+}
+
+/* Section tone variables: primitives read these so they work on any background. */
+.tone-light {
+  --fg:        var(--color-ink);
+  --fg-muted:  var(--color-ink-muted);
+  --accent:    var(--color-gold-ink);
+  --rule:      var(--color-rule);
+  --btn-line:  var(--color-navy);
+  --btn-inv:   #ffffff;
+  --focus:     var(--color-gold-ink);
+}
+/* Paper is slightly darker than white, so gold-on-white sits right at 4.5:1 there.
+   Nudge the accent a touch darker to keep a safe margin. */
+.tone-paper { --accent: #826318; }
+.tone-navy {
+  --fg:        #ffffff;
+  --fg-muted:  #C3CCDA;
+  --accent:    var(--color-gold);
+  --rule:      var(--color-rule-navy);
+  --btn-line:  #ffffff;
+  --btn-inv:   var(--color-navy);
+  --focus:     var(--color-gold);
+}
+
+:root { --focus: var(--color-gold-ink); }
+header, footer { --focus: var(--color-gold); }
+
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
 }
 
 html { scroll-behavior: smooth; }
 
-body { @apply text-slate-800; }
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Fades all four edges of the home banner into the hero background. */
+.banner-mask {
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, #000 8%, #000 92%, transparent),
+    linear-gradient(to bottom, transparent, #000 7%, #000 95%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent, #000 8%, #000 92%, transparent),
+    linear-gradient(to bottom, transparent, #000 7%, #000 95%, transparent);
+  mask-composite: intersect;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
