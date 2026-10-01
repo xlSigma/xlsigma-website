@@ -14,18 +14,18 @@ const NAV_LINKS = [
 
 const CERTIFICATIONS = ['SDVOSB', 'Veteran-Owned SB', 'FL OSD Veteran CBE (pending)', 'SAM.gov Registered'];
 
-const HEADING = 'mb-5 text-[0.8125rem] font-semibold uppercase tracking-[0.18em] text-(--accent)';
+const HEADING = 'mb-3 text-[0.8125rem] font-semibold uppercase tracking-[0.18em] text-(--accent)';
 const LINK    = 'underline-offset-4 transition-colors hover:text-gold hover:underline';
 
 export default function Footer() {
   return (
     <footer className="tone-navy border-t border-gold/40 bg-navy-dark text-(--fg-muted)">
-      <ContentContainer className="pb-10 pt-16 md:pt-20">
-        <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
+      <ContentContainer className="pb-8 pt-10 md:pt-12">
+        <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
 
           {/* Brand */}
           <div className="lg:col-span-5">
-            <div className="mb-6 flex items-center gap-4">
+            <div className="mb-4 flex items-center gap-4">
               <Image src="/logo.png" alt="xlSigma" width={48} height={48} className="rounded-sm" />
               <span className="font-serif text-title font-medium text-(--fg)">xlSigma LLC</span>
             </div>
@@ -33,7 +33,7 @@ export default function Footer() {
               Senior-level consulting and technology services for commercial
               and government clients.
             </p>
-            <ul className="mt-7 flex flex-wrap gap-2">
+            <ul className="mt-5 flex flex-wrap gap-2">
               {CERTIFICATIONS.map((c) => (
                 <li key={c}><Tag>{c}</Tag></li>
               ))}
@@ -46,7 +46,7 @@ export default function Footer() {
             <ul className="border-b border-(--rule)">
               {NAV_LINKS.map(({ href, label }) => (
                 <li key={href} className="border-t border-(--rule)">
-                  <Link href={href} className={`block py-3 text-[0.9375rem] ${LINK}`}>
+                  <Link href={href} className={`block py-1.5 text-[0.9375rem] ${LINK}`}>
                     {label}
                   </Link>
                 </li>
@@ -57,14 +57,14 @@ export default function Footer() {
           {/* Contact */}
           <div className="lg:col-span-4">
             <h2 className={HEADING}>Contact</h2>
-            <ul className="space-y-3 text-[0.9375rem]">
+            <ul className="space-y-1.5 text-[0.9375rem]">
               <li>Tampa, FL</li>
               <li>(813) 539-8229</li>
               <li>
                 <Link href="/contact" className={LINK}>Send a Message</Link>
               </li>
             </ul>
-            <div className="mt-10">
+            <div className="mt-6">
               <h2 className={HEADING}>NAICS</h2>
               <p className="text-[0.9375rem]">541511 | 541512 | 541611 | 541614 | 541618</p>
             </div>
@@ -72,7 +72,7 @@ export default function Footer() {
 
         </div>
 
-        <div className="mt-14 border-t border-(--rule) pt-6 text-sm text-(--fg-muted)">
+        <div className="mt-8 border-t border-(--rule) pt-5 text-sm text-(--fg-muted)">
           (c) 2026 xlSigma LLC. All rights reserved. Tampa, FL.
         </div>
       </ContentContainer>
