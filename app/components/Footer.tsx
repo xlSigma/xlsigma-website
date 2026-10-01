@@ -58,8 +58,7 @@ export default function Footer() {
           <div className="lg:col-span-4">
             <h2 className={HEADING}>Contact</h2>
             <ul className="space-y-1.5 text-[0.9375rem]">
-              <li>Call or text:</li>
-              <li>(813) 539-8229</li>
+              <li>Call or text: (813) 539-8229</li>
               <li>
                 <Link href="/contact" className={LINK}>Send a Message</Link>
               </li>
