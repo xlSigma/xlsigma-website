@@ -90,7 +90,7 @@ const DIFFERENTIATORS = [
   'Bilingual: English, Spanish',
 ];
 
-const SPOKE_STROKE = '#BDB8A6';
+const SPOKE_STROKE = '#C9A24B';
 const NAVY = '#0B1F3A';
 const GOLD = '#C9A24B';
 
@@ -98,86 +98,115 @@ function LssDiagram() {
   return (
     <svg
       viewBox="0 0 680 630"
-      className="mx-auto block w-full max-w-2xl font-sans"
+      className="mx-auto block w-full max-w-4xl font-sans"
       role="img"
       aria-label="Hub-and-spoke diagram with Lean Six Sigma at center connected to nine capability areas"
     >
+      <defs>
+        <radialGradient id="lss-hub" cx="50%" cy="35%" r="75%">
+          <stop offset="0%" stopColor="#1B3A66" />
+          <stop offset="100%" stopColor="#07162A" />
+        </radialGradient>
+        <radialGradient id="lss-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#C9A24B" stopOpacity="0.28" />
+          <stop offset="100%" stopColor="#C9A24B" stopOpacity="0" />
+        </radialGradient>
+        <filter id="lss-shadow" x="-20%" y="-30%" width="140%" height="190%">
+          <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="#0B1F3A" floodOpacity="0.22" />
+        </filter>
+      </defs>
+
+      {/* Concentric guide rings and glow */}
+      <circle cx="340" cy="315" r="250" fill="url(#lss-glow)" />
+      <circle cx="340" cy="315" r="110" fill="none" stroke="#C9A24B" strokeOpacity="0.45" strokeWidth="1" strokeDasharray="3 6" />
+      <circle cx="340" cy="315" r="222" fill="none" stroke="#C9A24B" strokeOpacity="0.35" strokeWidth="1" strokeDasharray="3 6" />
+
       {/* Lines from hub to spokes, drawn first so rects render on top */}
-      <line x1="340" y1="315" x2="340" y2="95"  stroke={SPOKE_STROKE} strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="481" y2="147" stroke={SPOKE_STROKE} strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="557" y2="277" stroke={SPOKE_STROKE} strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="531" y2="425" stroke={SPOKE_STROKE} strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="415" y2="522" stroke={SPOKE_STROKE} strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="265" y2="522" stroke={SPOKE_STROKE} strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="150" y2="425" stroke={SPOKE_STROKE} strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="123" y2="277" stroke={SPOKE_STROKE} strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="199" y2="147" stroke={SPOKE_STROKE} strokeWidth="1.5" />
+      <line x1="340" y1="315" x2="340" y2="95"  stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="481" y2="147" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="557" y2="277" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="531" y2="425" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="415" y2="522" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="265" y2="522" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="150" y2="425" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="123" y2="277" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="199" y2="147" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
 
       {/* Hub */}
-      <rect x="255" y="272" width="170" height="86" rx="3" fill={NAVY} />
+      <circle cx="340" cy="315" r="70" fill="url(#lss-hub)" stroke={GOLD} strokeWidth="3" filter="url(#lss-shadow)" />
+      <circle cx="340" cy="315" r="62" fill="none" stroke={GOLD} strokeOpacity="0.5" strokeWidth="1" />
       <text x="340" y="307" textAnchor="middle" dominantBaseline="central"
             fill="#FFFFFF" fontSize="15" fontWeight="700">Lean Six Sigma</text>
       <text x="340" y="327" textAnchor="middle" dominantBaseline="central"
             fill={GOLD} fontSize="12" fontWeight="600">DMAIC discipline</text>
 
       {/* AI & RPA, top */}
-      <rect x="273" y="69" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1.5" />
+      <rect x="273" y="69" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="273" y="69" width="134" height="4" rx="2" fill={GOLD} />
       <text x="340" y="87"  textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="12" fontWeight="600">AI, Agents &amp;</text>
       <text x="340" y="105" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="11">Automation</text>
 
       {/* Logistics, upper-right */}
-      <rect x="414" y="121" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1.5" />
+      <rect x="414" y="121" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="414" y="121" width="134" height="4" rx="2" fill={GOLD} />
       <text x="481" y="139" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="12" fontWeight="600">Logistics &amp;</text>
       <text x="481" y="157" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="11">Supply Chain</text>
 
       {/* Knowledge, right */}
-      <rect x="490" y="251" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1.5" />
+      <rect x="490" y="251" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="490" y="251" width="134" height="4" rx="2" fill={GOLD} />
       <text x="557" y="269" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="11" fontWeight="600">Knowledge &amp; Semantic</text>
       <text x="557" y="287" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="11">Transformation</text>
 
       {/* Operating Model, lower-right */}
-      <rect x="464" y="399" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1.5" />
+      <rect x="464" y="399" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="464" y="399" width="134" height="4" rx="2" fill={GOLD} />
       <text x="531" y="417" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="12" fontWeight="600">Operating Model</text>
       <text x="531" y="435" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="11">&amp; Strategy Deployment</text>
 
       {/* Data Analytics, bottom-right */}
-      <rect x="348" y="496" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1.5" />
+      <rect x="348" y="496" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="348" y="496" width="134" height="4" rx="2" fill={GOLD} />
       <text x="415" y="514" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="12" fontWeight="600">Data Analytics</text>
       <text x="415" y="532" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="11">KPIs &amp; Dashboards</text>
 
       {/* Power BI, bottom-left */}
-      <rect x="198" y="496" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1.5" />
+      <rect x="198" y="496" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="198" y="496" width="134" height="4" rx="2" fill={GOLD} />
       <text x="265" y="514" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="12" fontWeight="600">Power BI / Tableau</text>
       <text x="265" y="532" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="11">Power Platform</text>
 
       {/* EUC, lower-left */}
-      <rect x="83" y="399" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1.5" />
+      <rect x="83" y="399" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="83" y="399" width="134" height="4" rx="2" fill={GOLD} />
       <text x="150" y="417" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="12" fontWeight="600">EUC App</text>
       <text x="150" y="435" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="11">Development</text>
 
       {/* Federal, left */}
-      <rect x="56" y="251" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1.5" />
+      <rect x="56" y="251" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="56" y="251" width="134" height="4" rx="2" fill={GOLD} />
       <text x="123" y="269" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="12" fontWeight="600">Federal Program</text>
       <text x="123" y="287" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="11">Perf. Mgmt</text>
 
       {/* Agile/Change, upper-left */}
-      <rect x="132" y="121" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1.5" />
+      <rect x="132" y="121" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="132" y="121" width="134" height="4" rx="2" fill={GOLD} />
       <text x="199" y="139" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="12" fontWeight="600">Agile Delivery</text>
       <text x="199" y="157" textAnchor="middle" dominantBaseline="central"
