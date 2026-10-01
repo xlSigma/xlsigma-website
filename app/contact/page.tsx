@@ -141,26 +141,19 @@ export default function ContactPage() {
                 </h2>
                 <ul className="space-y-2 font-serif text-title font-medium text-(--fg)">
                   <li>Tampa, FL</li>
-                  <li>(813) 919-9772</li>
+                  <li>(813) 539-8229</li>
                 </ul>
               </div>
 
               <div>
-                <h2 className="mb-2 text-[0.8125rem] font-semibold uppercase tracking-[0.18em] text-(--accent)">
-                  Certifications
+                <h2 className="mb-4 text-[0.8125rem] font-semibold uppercase tracking-[0.18em] text-(--accent)">
+                  Mailing Address
                 </h2>
-                <dl className="border-b border-(--rule)">
-                  {[
-                    ['SDVOSB', 'Service-Disabled Veteran-Owned Small Business'],
-                    ['FL OSD Veteran CBE (pending)', 'Florida OSD Veteran-Owned Business Enterprise (pending)'],
-                    ['SAM.gov Registered', 'Active federal registration'],
-                  ].map(([title, sub]) => (
-                    <div key={title} className="border-t border-(--rule) py-4">
-                      <dt className="font-semibold text-(--fg)">{title}</dt>
-                      <dd className="mt-1 text-sm text-(--fg-muted)">{sub}</dd>
-                    </div>
-                  ))}
-                </dl>
+                <address className="font-serif text-title font-medium not-italic text-(--fg)">
+                  4522 W Village Dr<br />
+                  Unit #1563<br />
+                  Tampa, FL 33624
+                </address>
               </div>
 
               <div>
