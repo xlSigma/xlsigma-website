@@ -59,7 +59,9 @@ export default function ContactPage() {
         <Eyebrow className="mb-4">Reach Out</Eyebrow>
         <Headline level={1} size="display" className="mb-6">Contact xlSigma</Headline>
         <p className="mx-auto max-w-xl text-lead text-(--fg-muted)">
-          Tell us about your challenge. We respond within one business day.
+          Tell us about your challenge.
+          <br />
+          We respond within one business day.
         </p>
       </MedallionHero>
 
