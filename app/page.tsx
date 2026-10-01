@@ -159,7 +159,7 @@ export default function HomePage() {
                 </h3>
                 <dl className="border-b border-(--rule)">
                   {LEADERSHIP.map(({ role, details }) => (
-                    <div key={role} className="grid gap-2 border-t border-(--rule) py-6 md:grid-cols-12 md:gap-8">
+                    <div key={role} className="grid gap-2 border-t border-(--rule) py-9 md:grid-cols-12 md:gap-8 md:py-11">
                       <dt className="font-serif text-xl font-medium text-(--fg) md:col-span-5">{role}</dt>
                       <dd className="text-[0.9375rem] leading-relaxed text-(--fg-muted) md:col-span-7">{details}</dd>
                     </div>
