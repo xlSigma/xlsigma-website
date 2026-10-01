@@ -35,7 +35,7 @@ export default function NavBar() {
                 {i > 0 && <span className="text-slate-600">|</span>}
                 <Link
                   href={href}
-                  className={`text-[0.9375rem] font-light tracking-[0.005em] transition-colors whitespace-nowrap
+                  className={`text-sm font-normal transition-colors whitespace-nowrap
                     ${active
                       ? 'text-gold-light border-b-2 border-gold-light pb-0.5'
                       : 'text-slate-300 hover:text-white'}`}
