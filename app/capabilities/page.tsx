@@ -1,3 +1,4 @@
+import Medallion from '../components/Medallion';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
@@ -194,6 +195,7 @@ export default function CapabilitiesPage() {
       {/* Header */}
       <section className="bg-navy text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <Medallion />
           <p className="text-gold-light text-sm font-semibold uppercase tracking-widest mb-3">
             What We Deliver
           </p>

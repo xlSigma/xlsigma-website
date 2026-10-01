@@ -1,7 +1,6 @@
 'use client';
 import { useState }      from 'react';
 import Link              from 'next/link';
-import Image             from 'next/image';
 import { usePathname }   from 'next/navigation';
 import { Menu, X }       from 'lucide-react';
 
@@ -24,13 +23,6 @@ export default function NavBar() {
 
         {/* Brand */}
         <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-          <Image
-            src="/logo.png"
-            alt="xlSigma logo"
-            width={44}
-            height={44}
-            className="rounded-sm"
-          />
           <span className="text-white font-bold text-lg tracking-wide">xlSigma</span>
         </Link>
 

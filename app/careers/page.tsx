@@ -1,4 +1,5 @@
 'use client';
+import Medallion from '../components/Medallion';
 import { useState, useRef } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
 import { CheckCircle, Upload, Loader2 } from 'lucide-react';
@@ -112,6 +113,7 @@ export default function CareersPage() {
       {/* Hero */}
       <section className="bg-navy text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <Medallion />
           <p className="text-gold-light text-sm font-semibold uppercase tracking-widest mb-3">
             Opportunities
           </p>

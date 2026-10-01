@@ -77,7 +77,6 @@ $navbar = @'
 'use client';
 import { useState }      from 'react';
 import Link              from 'next/link';
-import Image             from 'next/image';
 import { usePathname }   from 'next/navigation';
 import { Menu, X }       from 'lucide-react';
 
@@ -100,13 +99,6 @@ export default function NavBar() {
 
         {/* Brand */}
         <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-          <Image
-            src="/logo.png"
-            alt="xlSigma logo"
-            width={44}
-            height={44}
-            className="rounded-sm"
-          />
           <span className="text-white font-bold text-lg tracking-wide">xlSigma</span>
         </Link>
 
@@ -162,6 +154,28 @@ export default function NavBar() {
 '@
 Set-Content -LiteralPath "app\components\NavBar.tsx" -Value $navbar -Encoding utf8
 Write-Host "Created: app/components/NavBar.tsx"
+
+# ── Medallion.tsx ─────────────────────────────────────────────
+$medallion = @'
+import Image from 'next/image';
+
+export default function Medallion() {
+  return (
+    <div className="flex justify-center -mt-14 mb-6">
+      <Image
+        src="/medallion.png"
+        alt="xlSigma medallion"
+        width={112}
+        height={112}
+        priority
+        className="h-24 w-24 md:h-28 md:w-28 drop-shadow-lg"
+      />
+    </div>
+  );
+}
+'@
+Set-Content -LiteralPath "app\components\Medallion.tsx" -Value $medallion -Encoding utf8
+Write-Host "Created: app/components/Medallion.tsx"
 
 # ── Footer.tsx ────────────────────────────────────────────────
 $footer = @'
@@ -683,6 +697,7 @@ Write-Host "Updated: app/page.tsx"
 
 # ── government-contracting/page.tsx ──────────────────────────
 $govPage = @'
+import Medallion from '../components/Medallion';
 import Link  from 'next/link';
 import {
   CheckCircle, Shield, Award, Users, ArrowRight, Building2,
@@ -786,6 +801,7 @@ export default function GovernmentContractingPage() {
       {/* Hero */}
       <section className="bg-navy text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <Medallion />
           <div className="flex justify-center gap-3 mb-6 flex-wrap">
             <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
                              rounded-full border border-gold/30 uppercase tracking-wider">
@@ -975,6 +991,7 @@ Write-Host "Created: app/government-contracting/page.tsx"
 
 # ── commercial/page.tsx ───────────────────────────────────────
 $commercialPage = @'
+import Medallion from '../components/Medallion';
 import Link  from 'next/link';
 import {
   CheckCircle, TrendingUp, Bot, BarChart2, ArrowRight,
@@ -1000,6 +1017,7 @@ export default function CommercialPage() {
       {/* Hero */}
       <section className="bg-navy text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <Medallion />
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Operational Excellence for
             <span className="text-gold-light block mt-1">Commercial Enterprises</span>
@@ -1091,6 +1109,7 @@ Write-Host "Created: app/commercial/page.tsx"
 
 # ── capabilities/page.tsx ─────────────────────────────────────
 $capPage = @'
+import Medallion from '../components/Medallion';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
@@ -1287,6 +1306,7 @@ export default function CapabilitiesPage() {
       {/* Header */}
       <section className="bg-navy text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <Medallion />
           <p className="text-gold-light text-sm font-semibold uppercase tracking-widest mb-3">
             What We Deliver
           </p>
@@ -1438,6 +1458,7 @@ Write-Host "Created: app/capabilities/page.tsx"
 # ── contact/page.tsx ──────────────────────────────────────────
 $contactPage = @'
 'use client';
+import Medallion from '../components/Medallion';
 import { useState } from 'react';
 import { MapPin, Phone, Send, CheckCircle } from 'lucide-react';
 
@@ -1489,6 +1510,7 @@ export default function ContactPage() {
       {/* Header */}
       <section className="bg-navy text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <Medallion />
           <p className="text-gold-light text-sm font-semibold uppercase tracking-widest mb-3">
             Reach Out
           </p>
@@ -1800,6 +1822,7 @@ Write-Host "Created: app/api/careers/route.ts"
 # ── careers/page.tsx ──────────────────────────────────────────
 $careersPage = @'
 'use client';
+import Medallion from '../components/Medallion';
 import { useState, useRef } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
 import { CheckCircle, Upload, Loader2 } from 'lucide-react';
@@ -1913,6 +1936,7 @@ export default function CareersPage() {
       {/* Hero */}
       <section className="bg-navy text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <Medallion />
           <p className="text-gold-light text-sm font-semibold uppercase tracking-widest mb-3">
             Opportunities
           </p>

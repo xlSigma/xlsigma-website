@@ -1,3 +1,4 @@
+import Medallion from '../components/Medallion';
 import Link  from 'next/link';
 import {
   CheckCircle, Shield, Award, Users, ArrowRight, Building2,
@@ -101,6 +102,7 @@ export default function GovernmentContractingPage() {
       {/* Hero */}
       <section className="bg-navy text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <Medallion />
           <div className="flex justify-center gap-3 mb-6 flex-wrap">
             <span className="bg-gold/20 text-gold-light text-xs font-bold px-4 py-1.5
                              rounded-full border border-gold/30 uppercase tracking-wider">

@@ -1,4 +1,5 @@
 'use client';
+import Medallion from '../components/Medallion';
 import { useState } from 'react';
 import { MapPin, Phone, Send, CheckCircle } from 'lucide-react';
 
@@ -50,6 +51,7 @@ export default function ContactPage() {
       {/* Header */}
       <section className="bg-navy text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <Medallion />
           <p className="text-gold-light text-sm font-semibold uppercase tracking-widest mb-3">
             Reach Out
           </p>

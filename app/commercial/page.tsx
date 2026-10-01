@@ -1,3 +1,4 @@
+import Medallion from '../components/Medallion';
 import Link  from 'next/link';
 import {
   CheckCircle, TrendingUp, Bot, BarChart2, ArrowRight,
@@ -23,6 +24,7 @@ export default function CommercialPage() {
       {/* Hero */}
       <section className="bg-navy text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <Medallion />
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Operational Excellence for
             <span className="text-gold-light block mt-1">Commercial Enterprises</span>
