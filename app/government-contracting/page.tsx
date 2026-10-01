@@ -81,10 +81,10 @@ const PAST_PERFORMANCE = [
 ];
 
 const AGENCIES = [
-  { Icon: Shield,     label: 'Department of Defense', sub: 'Combatant commands & theater support operations' },
+  { Icon: Shield,     label: 'Department of War',     sub: 'Combatant commands & theater support operations' },
   { Icon: Truck,      label: 'U.S. Army',             sub: 'Logistics, sustainment & retrograde'      },
   { Icon: Landmark,   label: 'Federal Civilian',      sub: 'Enterprise Lean Six Sigma deployment'     },
-  { Icon: HeartPulse, label: 'Healthcare',            sub: 'Process improvement & workflow automation' },
+  { Icon: HeartPulse, label: 'Public Health',         sub: 'Process improvement, workflow automation.\nPHAB assessment' },
 ];
 
 const NAICS = [
@@ -230,7 +230,7 @@ export default function GovernmentContractingPage() {
                    className="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm text-center">
                 <Icon size={32} className="text-gold mx-auto mb-3" />
                 <div className="font-bold text-navy text-lg">{label}</div>
-                <div className="text-slate-500 text-sm mt-1">{sub}</div>
+                <div className="text-slate-500 text-sm mt-1 whitespace-pre-line">{sub}</div>
               </div>
             ))}
           </div>
@@ -266,7 +266,7 @@ export default function GovernmentContractingPage() {
       <section className="bg-navy py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Let's Talk Teaming
+            Let&apos;s Talk Teaming
           </h2>
           <p className="text-slate-300 mb-8 leading-relaxed">
             Whether you need a compliant subcontractor for an active bid or
