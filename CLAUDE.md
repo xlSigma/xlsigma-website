@@ -10,9 +10,28 @@
 
 ## How to Work on This Site
 
-### The Golden Rule
-**Always edit `xlsigma-files.ps1`, never edit `.tsx` files directly.**
-Running the script overwrites all site files. Manual edits to `.tsx` files will be lost.
+## Redesign Guardrails (apply to every session)
+
+The `redesign` branch changes PRESENTATION ONLY, to an editorial look (white and paper sections, navy bands, serif display headlines).
+
+- **Source of truth is the TSX files.**: running it overwrites the redesign. Do not run it on this branch.
+- **Copy freeze.** `CONTENT-INVENTORY.md` is the verbatim copy checkpoint. No new text, no rewrites, no new sections. Report copy that does not fit a layout; do not edit it.
+- **Git.** Never push. Never touch `main`. Do not delete files without asking.
+- **Business facts.** Never reference MBE or minority-owned status. Active certifications only: SDVOSB, Veteran-Owned SB, Florida OSD Veteran CBE (pending). NAICS codes: 541511, 541611, 541614, 541618 only; flag any other code, do not silently fix. Company history references: Accenture, GE, Emerson (IBM removed).
+- **Preserve recent copy.** "Department of War" and "Public Health" labels; the Semantic-to-Action signature line placements (homepage teaser, Capabilities under the diagram, Commercial pull quote; not in the homepage hero); lint and typo fixes.
+- **No em dashes** in site copy or in comments you add.
+- **Branding.** Home uses the banner image in the hero (no medallion). Interior pages use the medallion centered at the top of the navy hero. No small XL icon in the navbar; the "xlSigma" wordmark stays. Footer logo stays.
+- **Color.** Gold #C9A24B on navy and for rules and buttons. Gold-on-white #8A6A1F for small text and numerals on light backgrounds. Use the Tailwind @theme tokens in `app/globals.css`; no hardcoded burnt-yellow values.
+- **Accessibility.** Real buttons and links, 4.5:1 text contrast, visible focus states, sensible alt text.
+- **Scope.** Rebuild pages one at a time after approval. Home first; Capabilities, Government, Commercial, and others follow.
+
+---
+
+## How to Work on This Site
+
+### Legacy Note
+
+The old workflow below (edit `xlsigma-files.ps1`, then regenerate) predates the redesign and no longer applies on the `redesign` branch.
 
 ### Workflow Every Session
 1. cd C:\Users\andre\dev\xlsigma-website
