@@ -155,15 +155,6 @@ export default function ContactPage() {
                   Tampa, FL 33624
                 </address>
               </div>
-
-              <div>
-                <h2 className="mb-2 text-[0.8125rem] font-semibold uppercase tracking-[0.18em] text-(--accent)">
-                  NAICS
-                </h2>
-                <p className="text-(--fg-muted)">
-                  541511 | 541512 | 541611 | 541614 | 541618
-                </p>
-              </div>
             </aside>
           </div>
         </ContentContainer>
