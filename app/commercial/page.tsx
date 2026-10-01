@@ -51,6 +51,9 @@ export default function CommercialPage() {
                 to organizations of any size -- pairing Lean Six Sigma discipline with
                 modern AI and automation capability.
               </p>
+              <p className="border-l-4 border-gold pl-4 text-navy font-semibold text-lg leading-snug mt-6">
+                We don&apos;t start with the AI agent. We model the business the agent must understand.
+              </p>
             </div>
             <ul className="space-y-4 pt-2">
               {VALUE_PROPS.map((prop) => (
@@ -90,10 +93,10 @@ export default function CommercialPage() {
       <section className="bg-navy py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Let's Talk Transformation
+            Let&apos;s Talk Transformation
           </h2>
           <p className="text-slate-300 mb-8 leading-relaxed">
-            Whether you're tackling a single process bottleneck or a
+            Whether you&apos;re tackling a single process bottleneck or an
             enterprise-wide transformation, xlSigma is ready to engage.
           </p>
           <Link

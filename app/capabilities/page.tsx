@@ -232,7 +232,7 @@ export default function CapabilitiesPage() {
             The xlSigma Semantic-to-Action Architecture
           </h2>
           <p className="text-slate-300 leading-relaxed mb-4 max-w-3xl mx-auto">
-            xlSigma's capabilities work together through our Semantic-to-Action Architecture -- a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
+            xlSigma&apos;s capabilities work together through our Semantic-to-Action Architecture -- a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
           </p>
           <p className="text-slate-300 leading-relaxed mb-3 max-w-3xl mx-auto">
             Rather than deploying AI as another disconnected tool, we build the operational foundation required for trusted, scalable AI-enabled transformation.
@@ -247,7 +247,10 @@ export default function CapabilitiesPage() {
             <SemanticToActionDiagram />
           </div>
         </div>
-        <div className="max-w-4xl mx-auto text-center mt-8">
+        <div className="max-w-5xl mx-auto text-center mt-8">
+          <p className="text-white text-lg md:text-xl font-semibold leading-snug mb-4 text-balance lg:whitespace-nowrap">
+            We don&apos;t start with the AI agent. We model the business the agent must understand.
+          </p>
           <p className="text-gold-light text-lg font-medium italic">
             Domain by domain. Process by process. Outcome by outcome.
           </p>
