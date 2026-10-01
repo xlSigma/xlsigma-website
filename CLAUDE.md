@@ -14,7 +14,7 @@
 
 The `redesign` branch changes PRESENTATION ONLY, to an editorial look (white and paper sections, navy bands, serif display headlines).
 
-- **Source of truth is the TSX files.**: running it overwrites the redesign. Do not run it on this branch.
+- **Source of truth is the TSX files.** `xlsigma-files.ps1` is legacy: running it overwrites the redesign. Do not run it on this branch.
 - **Copy freeze.** `CONTENT-INVENTORY.md` is the verbatim copy checkpoint. No new text, no rewrites, no new sections. Report copy that does not fit a layout; do not edit it.
 - **Git.** Never push. Never touch `main`. Do not delete files without asking.
 - **Business facts.** Never reference MBE or minority-owned status. Active certifications only: SDVOSB, Veteran-Owned SB, Florida OSD Veteran CBE (pending). NAICS codes: 541511, 541611, 541614, 541618 only; flag any other code, do not silently fix. Company history references: Accenture, GE, Emerson (IBM removed).
