@@ -140,7 +140,7 @@ export default function ContactPage() {
                   Contact Information
                 </h2>
                 <ul className="space-y-2 font-serif text-title font-medium text-(--fg)">
-                  <li>Tampa, FL</li>
+                  <li>Call or text:</li>
                   <li>(813) 539-8229</li>
                 </ul>
               </div>
