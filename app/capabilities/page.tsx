@@ -116,10 +116,8 @@ function LssDiagram() {
         </filter>
       </defs>
 
-      {/* Concentric guide rings and glow */}
+      {/* Glow */}
       <circle cx="340" cy="315" r="250" fill="url(#lss-glow)" />
-      <circle cx="340" cy="315" r="110" fill="none" stroke="#C9A24B" strokeOpacity="0.45" strokeWidth="1" strokeDasharray="3 6" />
-      <circle cx="340" cy="315" r="222" fill="none" stroke="#C9A24B" strokeOpacity="0.35" strokeWidth="1" strokeDasharray="3 6" />
 
       {/* Lines from hub to spokes, drawn first so rects render on top */}
       <line x1="340" y1="315" x2="340" y2="95"  stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
