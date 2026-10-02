@@ -1,6 +1,6 @@
 # xlSigma Website - Technical Handoff
 
-Marketing website for xlSigma LLC (SDVOSB and Minority-Owned Small Business).
+Marketing website for xlSigma LLC (SDVOSB and Veteran-Owned Small Business).
 Built with Next.js 16.2.4 App Router, TypeScript strict, Tailwind CSS v4.
 Live at: https://xlsigma.com
 
@@ -111,10 +111,6 @@ Form fields:
 - Company (required)
 - Email (required)
 - Phone (optional)
-- Interest checkboxes -- 3 categories, 5 items each:
-  - Strategic Outcomes
-  - Process-Specific Pain Points
-  - Technical Methodology
 - Message (required)
 
 Submissions trigger an HTML email via Resend to CONTACT_NOTIFY_EMAIL.
@@ -195,7 +191,7 @@ Name: xlSigma LLC
 Location: Tampa, FL
 Phone: (813) 539-8229
 Email: info@xlsigma.com
-Certifications: SDVOSB, Minority-Owned Small Business, SAM.gov Registered
+Certifications: SDVOSB, Veteran-Owned Small Business, Florida OSD Veteran CBE (pending), SAM.gov Registered
 NAICS codes: 541511 | 541611 | 541614 | 541618
 
 ---

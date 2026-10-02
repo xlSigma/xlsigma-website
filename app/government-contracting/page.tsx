@@ -20,7 +20,7 @@ const PAST_PERFORMANCE = [
   {
     client:  'U.S. Army / ARCENT',
     summary: 'Reengineered LOGCAP logistics change-order process in Afghanistan theater' +
-			 '(with Calibre Systems Inc.). ' +
+			 ' (with Calibre Systems Inc.). ' +
              'Cut cycle time from 150+ days to under 70 days. ' +
              'Built supporting EUC tools (Excel, SharePoint, SQL database).',
     tags:    ['Process Reengineering', 'EUC Tools', 'DoD'],
@@ -29,7 +29,7 @@ const PAST_PERFORMANCE = [
     client:  'CENTCOM / DoD',
     summary: 'Developed alternate land-routes logistics for the draw-down (retrograde) in ' +
 			 'the Afghanistan theater' +
-			 '(with Calibre Systems Inc.). ' +
+			 ' (with Calibre Systems Inc.). ' +
              'Risk mitigation imperative for the scenario of Pakistan closing access to the sea. ' +
              'Designed stochastic multi-node network flow optimizer to minimize cost/time/risk while ' +
 			 'maximizing throughput, safety, and adherence to timelines, subject to constraints (with Calibre Systems). ',
@@ -39,7 +39,7 @@ const PAST_PERFORMANCE = [
     client:  'U.S. Army / DoD',
     summary: 'Designed and deployed IT infrastructure for reporting the location of 90,000+ ' +
 			 'shipping containers across the war theater in preparation for draw-down (retrograde).' +
-			 '(with Calibre Systems Inc.). ' +
+			 ' (with Calibre Systems Inc.). ' +
              'Reduced errors 80%+ and accelerated reporting cycle time x4. ' +
              'Raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).',
     tags:    ['Data Analytics', 'Database Design', 'DoD'],
@@ -54,7 +54,7 @@ const PAST_PERFORMANCE = [
   {
     client:  'Top-Tier Financial Institutions',
     summary: 'Designed and deployed AI/RPA solutions automating bank operations ' +
-			 'such as paper check processing, invoicing, and KYC process' +
+			 'such as paper check processing, invoicing, and KYC process. ' +
              'Supported regulatory consent-order remediation through process and data diagnostics.',
     tags:    ['AI/RPA', 'Regulatory Compliance', 'KYC', 'Financial Services'],
   },
@@ -93,7 +93,6 @@ const AGENCIES = [
 
 const NAICS = [
   { code: '541511', desc: 'Custom Computer Programming Services'         },
-  { code: '541512', desc: 'Computer Systems Design Services'             },
   { code: '541611', desc: 'Administrative Management Consulting'         },
   { code: '541614', desc: 'Process, Distribution & Logistics Consulting' },
   { code: '541618', desc: 'Other Management Consulting Services'         },

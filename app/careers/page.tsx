@@ -204,7 +204,7 @@ export default function CareersPage() {
             <div className="lg:col-span-4">
               <Rule variant="gold" className="mb-6" />
               <Headline id="role-description" level={2} size="md">
-                Role Description: Senior Management Consultant / SME &mdash; Talent Pool
+                Role Description: Senior Management Consultant / SME - Talent Pool
               </Headline>
             </div>
             <div className="space-y-5 text-base leading-relaxed text-(--fg-muted) lg:col-span-8">
@@ -281,7 +281,7 @@ export default function CareersPage() {
                   <CheckCircle size={44} className="mx-auto mb-5 text-gold-ink" aria-hidden="true" />
                   <h3 className="mb-3 font-serif text-title font-medium text-ink">Application Received</h3>
                   <p className="mx-auto max-w-md leading-relaxed text-ink-muted">
-                    Thanks &mdash; we&apos;ve received your information and will reach out when a
+                    Thanks, we&apos;ve received your information and will reach out when a
                     fitting opportunity arises.
                   </p>
                 </div>

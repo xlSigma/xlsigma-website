@@ -34,7 +34,7 @@ Senior-level consulting and technology services for commercial and government cl
 - Call or text: (813) 539-8229
 - Send a Message{{→ /contact}}
 ## NAICS
-541511 | 541512 | 541611 | 541614 | 541618
+541511 | 541611 | 541614 | 541618
 (c) 2026 xlSigma LLC. All rights reserved. Tampa, FL.
 
 ---
@@ -589,19 +589,19 @@ Track Record
 ## Selected Past Performance
 -
 ### U.S. Army / ARCENT
-Reengineered LOGCAP logistics change-order process in Afghanistan theater(with Calibre Systems Inc.). Cut cycle time from 150+ days to under 70 days. Built supporting EUC tools (Excel, SharePoint, SQL database).
+Reengineered LOGCAP logistics change-order process in Afghanistan theater (with Calibre Systems Inc.). Cut cycle time from 150+ days to under 70 days. Built supporting EUC tools (Excel, SharePoint, SQL database).
 - Process Reengineering
 - EUC Tools
 - DoD
 -
 ### CENTCOM / DoD
-Developed alternate land-routes logistics for the draw-down (retrograde) in the Afghanistan theater(with Calibre Systems Inc.). Risk mitigation imperative for the scenario of Pakistan closing access to the sea. Designed stochastic multi-node network flow optimizer to minimize cost/time/risk while maximizing throughput, safety, and adherence to timelines, subject to constraints (with Calibre Systems).
+Developed alternate land-routes logistics for the draw-down (retrograde) in the Afghanistan theater (with Calibre Systems Inc.). Risk mitigation imperative for the scenario of Pakistan closing access to the sea. Designed stochastic multi-node network flow optimizer to minimize cost/time/risk while maximizing throughput, safety, and adherence to timelines, subject to constraints (with Calibre Systems).
 - Logistics
 - Data Analytics
 - DoD
 -
 ### U.S. Army / DoD
-Designed and deployed IT infrastructure for reporting the location of 90,000+ shipping containers across the war theater in preparation for draw-down (retrograde).(with Calibre Systems Inc.). Reduced errors 80%+ and accelerated reporting cycle time x4. Raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).
+Designed and deployed IT infrastructure for reporting the location of 90,000+ shipping containers across the war theater in preparation for draw-down (retrograde). (with Calibre Systems Inc.). Reduced errors 80%+ and accelerated reporting cycle time x4. Raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).
 - Data Analytics
 - Database Design
 - DoD
@@ -613,7 +613,7 @@ Enterprise Lean Six Sigma deployment. Built governance, metrics capture and repo
 - Federal
 -
 ### Top-Tier Financial Institutions
-Designed and deployed AI/RPA solutions automating bank operations such as paper check processing, invoicing, and KYC processSupported regulatory consent-order remediation through process and data diagnostics.
+Designed and deployed AI/RPA solutions automating bank operations such as paper check processing, invoicing, and KYC process. Supported regulatory consent-order remediation through process and data diagnostics.
 - AI/RPA
 - Regulatory Compliance
 - KYC
@@ -654,7 +654,6 @@ PHAB assessment
 NAICS Codes
 ## Registered Capabilities
 - 541511 Custom Computer Programming Services
-- 541512 Computer Systems Design Services
 - 541611 Administrative Management Consulting
 - 541614 Process, Distribution & Logistics Consulting
 - 541618 Other Management Consulting Services
@@ -683,7 +682,7 @@ We help private-sector and government organizations improve performance by integ
 xlSigma serves clients across industries including manufacturing, healthcare, financial services, and government. Engagements are led by experienced practitioners with backgrounds at organizations such as GE, Emerson, TD Bank, Citi, and major consulting firms.
 Headquartered in the Greater Tampa Bay Area, xlSigma serves commercial clients directly and partners with federal prime contractors as a strategic subcontracting partner. The firm is building a talent pool of senior consultants, subject-matter experts, and delivery practitioners who can support high-impact transformation, automation, process improvement, and knowledge-management initiatives.
 xlSigma is especially interested in experienced consultants who bring practical delivery expertise, client-facing judgment, and the ability to convert strategy into measurable operational results.
-## Role Description: Senior Management Consultant / SME — Talent Pool
+## Role Description: Senior Management Consultant / SME - Talent Pool
 The Senior Management Consultant is a senior practitioner role supporting future full-time, part-time, remote, hybrid, and client on-site consulting opportunities as client needs, prime-contractor teaming opportunities, and federal or commercial engagements develop.
 This role is responsible for leading or supporting consulting engagements that diagnose client challenges and design practical, data-driven solutions integrating AI, automation, Lean Six Sigma, and operational excellence methods. Depending on the engagement, the Senior Management Consultant may serve as an engagement lead, workstream lead, subject-matter expert, or specialized delivery practitioner.
 Day-to-day activities may include conducting assessments and analyses, mapping and optimizing business processes, facilitating workshops with client leadership and cross-functional teams, and preparing clear, actionable deliverables such as roadmaps, business cases, operating models, requirements documents, and performance dashboards.
@@ -753,13 +752,17 @@ Tampa, FL 33624
 
 These conflict with, or sit near, the project constraints. Nothing here was edited.
 
-1. NAICS 541512 appears in the Footer (all pages) and the `/government-contracting` "Registered Capabilities" list. Approved codes are 541511, 541611, 541614, 541618 only.
-2. "SAM.gov Registered" appears on Home, the Footer, and Government ("SAM.gov / Active Registration"). The active certification list is SDVOSB, Veteran-Owned SB, and Florida OSD Veteran CBE (pending). SAM.gov is a registration, not a certification, but confirm it should stay.
-3. `HANDOFF.md` still lists "Minority-Owned Small Business" (header and Company Information). No site copy mentions it.
-4. Em dashes exist in existing copy: the `/careers` role heading ("Senior Management Consultant / SME — Talent Pool") and the success message (`&mdash;`). Also in API email templates and code comments.
-5. Possible missing spaces in Government past-performance copy: "theater(with Calibre", "(retrograde).(with Accenture", "KYC processSupported". Likely line-break artifacts in the TSX source.
-6. Home value prop "Workflow Automation Full-stack delivery: strategy, design, build, implement, and training" reads as two fragments merged.
-7. HANDOFF.md says the contact form has interest checkboxes; the current `/contact` page has none.
-8. The signature line "We don't start with the AI agent. We model the business the agent must understand." now also appears in the `/semantic-to-action` hero (in addition to the Home teaser, Capabilities, and Commercial).
-9. The footer says "Tampa, FL" in the copyright line while Contact lists a full mailing address.
-10. No references to MBE or IBM were found in site files.
+1. "SAM.gov Registered" appears on Home, the Footer, and Government ("SAM.gov / Active Registration"). The active certification list is SDVOSB, Veteran-Owned SB, and Florida OSD Veteran CBE (pending). SAM.gov is a registration, not a certification; confirm it should stay.
+2. Home value prop "Workflow Automation Full-stack delivery: strategy, design, build, implement, and training" reads as two fragments merged.
+3. The footer copyright line says "Tampa, FL" while Contact lists a full mailing address.
+4. Government past performance, U.S. Army / DoD entry: "reporting functionality)." has an unmatched closing parenthesis.
+5. The signature line "We don't start with the AI agent. We model the business the agent must understand." appears on Home (teaser), Capabilities, Commercial, and the `/semantic-to-action` hero. This is approved.
+
+## Resolved
+
+- NAICS 541512 removed from the Footer and the Government list. Approved codes: 541511, 541611, 541614, 541618.
+- Minority-owned wording removed from `HANDOFF.md`.
+- Em dashes removed from Careers copy, API email templates, and code comments.
+- Spacing and punctuation fixed in Government past performance ("theater (with", "(retrograde). (with", "KYC process. Supported").
+- Hardcoded `#B8820A` in the careers email template replaced with `#8A6A1F`.
+- Stale contact-form checkbox section removed from `HANDOFF.md`.

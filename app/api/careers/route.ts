@@ -8,7 +8,7 @@ const ALLOWED_MIME = [
   'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 ];
 
-// 7 days — long enough to review an application, not indefinite
+// 7 days: long enough to review an application, not indefinite
 const LINK_EXPIRY_MS = 7 * 24 * 60 * 60 * 1000;
 
 export async function POST(request: NextRequest) {
@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
     const result = await resend.emails.send({
       from,
       to,
-      subject: `New Talent Application — ${name}`,
+      subject: `New Talent Application - ${name}`,
       html: `
         <h2 style="font-family:sans-serif;color:#1B3F7A;margin-bottom:16px">
           New Talent Community Application
@@ -89,20 +89,20 @@ export async function POST(request: NextRequest) {
           </tr>
           <tr>
             <td style="padding:6px 20px 6px 0;font-weight:600;color:#1B3F7A;vertical-align:top">LinkedIn</td>
-            <td style="padding:6px 0">${linkedin || '&mdash;'}</td>
+            <td style="padding:6px 0">${linkedin || '-'}</td>
           </tr>
           <tr>
             <td style="padding:6px 20px 6px 0;font-weight:600;color:#1B3F7A;vertical-align:top">Expertise</td>
-            <td style="padding:6px 0">${expertise || '&mdash;'}</td>
+            <td style="padding:6px 0">${expertise || '-'}</td>
           </tr>
           <tr>
             <td style="padding:6px 20px 6px 0;font-weight:600;color:#1B3F7A;vertical-align:top">Message</td>
-            <td style="padding:6px 0;white-space:pre-wrap">${message || '&mdash;'}</td>
+            <td style="padding:6px 0;white-space:pre-wrap">${message || '-'}</td>
           </tr>
           <tr>
             <td style="padding:6px 20px 6px 0;font-weight:600;color:#1B3F7A;vertical-align:top">Resume</td>
             <td style="padding:6px 0">
-              <a href="${presignedUrl}" style="color:#B8820A">${file.name}</a>
+              <a href="${presignedUrl}" style="color:#8A6A1F">${file.name}</a>
               <span style="color:#888;font-size:12px"> (link valid 7 days)</span>
             </td>
           </tr>
