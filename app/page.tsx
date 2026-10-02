@@ -61,11 +61,11 @@ const STAGES = [
 
 const VALUE_PROPS = [
   'Senior-only delivery teams on every engagement -- no juniors, no bench',
-  'Workflow Automation Full-stack delivery: strategy, design, build, implement, and training',
+  'Workflow Automation',
+  'Full-stack delivery: strategy, design, build, implement, and training',
   'Strategy Deployment, Process Improvement, Data Analytics, KPI Dashboards',
   'Leadership: Lean Six Sigma Master Black Belt with Fortune 500 track record',
   'Deep expertise across Accenture, GE, Emerson, Citi, Discover, Federal Government agencies',
-  'Bilingual delivery: English, Spanish',
 ];
 
 const SERVICE_LINES = [

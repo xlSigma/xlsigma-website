@@ -92,11 +92,11 @@ Why xlSigma
 ## The Engagement Model Makes the Difference
 Large firms send senior partners to sell -- then deliver with junior staff. xlSigma operates differently. We deliver with senior-level consultants with Principal oversight from day one through final handoff.
 - Senior-only delivery teams on every engagement -- no juniors, no bench
-- Workflow Automation Full-stack delivery: strategy, design, build, implement, and training
+- Workflow Automation
+- Full-stack delivery: strategy, design, build, implement, and training
 - Strategy Deployment, Process Improvement, Data Analytics, KPI Dashboards
 - Leadership: Lean Six Sigma Master Black Belt with Fortune 500 track record
 - Deep expertise across Accenture, GE, Emerson, Citi, Discover, Federal Government agencies
-- Bilingual delivery: English, Spanish
 - SDVOSB
 - FL OSD Veteran CBE (pending)
 -
@@ -752,13 +752,13 @@ Tampa, FL 33624
 
 These conflict with, or sit near, the project constraints. Nothing here was edited.
 
-1. Home value prop "Workflow Automation Full-stack delivery: strategy, design, build, implement, and training" reads as two fragments merged.
-2. The footer copyright line says "Tampa, FL" while Contact lists a full mailing address.
-3. Government past performance, U.S. Army / DoD entry: "reporting functionality)." has an unmatched closing parenthesis.
-4. The signature line "We don't start with the AI agent. We model the business the agent must understand." appears on Home (teaser), Capabilities, Commercial, and the `/semantic-to-action` hero. This is approved.
+1. The footer copyright line says "Tampa, FL" while Contact lists a full mailing address.
+2. Government past performance, U.S. Army / DoD entry: "reporting functionality)." has an unmatched closing parenthesis.
+3. The signature line "We don't start with the AI agent. We model the business the agent must understand." appears on Home (teaser), Capabilities, Commercial, and the `/semantic-to-action` hero. This is approved.
 
 ## Resolved
 
+- Home "Why xlSigma" list: "Workflow Automation" and "Full-stack delivery: ..." split into two bullets; "Bilingual delivery: English, Spanish" removed from Home (it remains on Capabilities).
 - "SAM.gov Registered" now appears only on the Government page (the SAM.gov / Active Registration card). Removed from the Home federal section and the Footer.
 - NAICS 541512 removed from the Footer and the Government list. Approved codes: 541511, 541611, 541614, 541618.
 - Minority-owned wording removed from `HANDOFF.md`.
