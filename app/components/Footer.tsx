@@ -12,7 +12,7 @@ const NAV_LINKS = [
   { href: '/contact',                label: 'Contact'      },
 ];
 
-const CERTIFICATIONS = ['SDVOSB', 'Veteran-Owned SB', 'FL OSD Veteran CBE (pending)', 'SAM.gov Registered'];
+const CERTIFICATIONS = ['SDVOSB', 'Veteran-Owned SB', 'FL OSD Veteran CBE (pending)'];
 
 const HEADING = 'mb-3 text-[0.8125rem] font-semibold uppercase tracking-[0.18em] text-(--accent)';
 const LINK    = 'underline-offset-4 transition-colors hover:text-gold hover:underline';

@@ -76,7 +76,7 @@ const SERVICE_LINES = [
   'Advanced Analytics',
 ];
 
-const CREDENTIAL_TAGS = ['SDVOSB', 'FL OSD Veteran CBE (pending)', 'SAM.gov Registered'];
+const CREDENTIAL_TAGS = ['SDVOSB', 'FL OSD Veteran CBE (pending)'];
 
 export default function HomePage() {
   return (

@@ -22,7 +22,7 @@ Senior-level consulting and technology services for commercial and government cl
 - SDVOSB
 - Veteran-Owned SB
 - FL OSD Veteran CBE (pending)
-- SAM.gov Registered
+-
 ## Navigation
 - Home{{→ /}}
 - Capabilities{{→ /capabilities}}
@@ -99,7 +99,7 @@ Large firms send senior partners to sell -- then deliver with junior staff. xlSi
 - Bilingual delivery: English, Spanish
 - SDVOSB
 - FL OSD Veteran CBE (pending)
-- SAM.gov Registered
+-
 ## Federal Prime Contractor?
 xlSigma is a certified SDVOSB -- helping prime contractors meet participation goals while delivering senior-level execution.
 View Federal Contracting Credentials {{→ /government-contracting}}
@@ -752,14 +752,14 @@ Tampa, FL 33624
 
 These conflict with, or sit near, the project constraints. Nothing here was edited.
 
-1. "SAM.gov Registered" appears on Home, the Footer, and Government ("SAM.gov / Active Registration"). The active certification list is SDVOSB, Veteran-Owned SB, and Florida OSD Veteran CBE (pending). SAM.gov is a registration, not a certification; confirm it should stay.
-2. Home value prop "Workflow Automation Full-stack delivery: strategy, design, build, implement, and training" reads as two fragments merged.
-3. The footer copyright line says "Tampa, FL" while Contact lists a full mailing address.
-4. Government past performance, U.S. Army / DoD entry: "reporting functionality)." has an unmatched closing parenthesis.
-5. The signature line "We don't start with the AI agent. We model the business the agent must understand." appears on Home (teaser), Capabilities, Commercial, and the `/semantic-to-action` hero. This is approved.
+1. Home value prop "Workflow Automation Full-stack delivery: strategy, design, build, implement, and training" reads as two fragments merged.
+2. The footer copyright line says "Tampa, FL" while Contact lists a full mailing address.
+3. Government past performance, U.S. Army / DoD entry: "reporting functionality)." has an unmatched closing parenthesis.
+4. The signature line "We don't start with the AI agent. We model the business the agent must understand." appears on Home (teaser), Capabilities, Commercial, and the `/semantic-to-action` hero. This is approved.
 
 ## Resolved
 
+- "SAM.gov Registered" now appears only on the Government page (the SAM.gov / Active Registration card). Removed from the Home federal section and the Footer.
 - NAICS 541512 removed from the Footer and the Government list. Approved codes: 541511, 541611, 541614, 541618.
 - Minority-owned wording removed from `HANDOFF.md`.
 - Em dashes removed from Careers copy, API email templates, and code comments.

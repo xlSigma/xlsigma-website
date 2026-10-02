@@ -15,7 +15,7 @@ The `redesign` branch changes PRESENTATION ONLY, to an editorial look (white and
 - **Source of truth is the TSX files.** `xlsigma-files.ps1` is legacy: running it overwrites the redesign. Do not run it on this branch.
 - **Copy freeze.** `CONTENT-INVENTORY.md` is the verbatim copy checkpoint. No new text, no rewrites, no new sections. Report copy that does not fit a layout; do not edit it.
 - **Git.** Never push. Never touch `main`. Do not delete files without asking.
-- **Business facts.** Never reference MBE or minority-owned status. Active certifications only: SDVOSB, Veteran-Owned SB, Florida OSD Veteran CBE (pending). NAICS codes: 541511, 541611, 541614, 541618 only; flag any other code, do not silently fix. Company history references: Accenture, GE, Emerson (IBM removed).
+- **Business facts.** Never reference MBE or minority-owned status. Active certifications only: SDVOSB, Veteran-Owned SB, Florida OSD Veteran CBE (pending). SAM.gov registration appears only on the Government page. NAICS codes: 541511, 541611, 541614, 541618 only; flag any other code, do not silently fix. Company history references: Accenture, GE, Emerson (IBM removed).
 - **Preserve recent copy.** "Department of War" and "Public Health" labels; the Semantic-to-Action signature line placements (homepage teaser, Capabilities under the diagram, Commercial pull quote, and the Semantic-to-Action page hero; not in the homepage hero); lint and typo fixes.
 - **No em dashes** in site copy or in comments you add.
 - **Branding.** Home uses the banner image in the hero (no medallion). Interior pages use the medallion centered at the top of the navy hero. No small XL icon in the navbar; the "xlSigma" wordmark stays. Footer logo stays.
