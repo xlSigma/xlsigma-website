@@ -82,12 +82,11 @@ const CAPABILITIES = [
 ];
 
 const DIFFERENTIATORS = [
-  'Small-business credit: SDVOSB',
+  'Senior-only delivery teams on every engagement -- no juniors, no bench',
   'Lean Six Sigma Master Black Belt (rare at small-business scale)',
-  'Proven federal track record: SBA, USPS, CENTCOM,  U.S. Army ARCENT, JIEDDO',
   'Full-stack delivery: strategy, design, build, implement, and train',
+  'AI transformation grounded in operational excellence',
   'Lower business overhead translates to lower prices for top talent and results',
-  'Bilingual: English, Spanish',
 ];
 
 const SPOKE_STROKE = '#C9A24B';

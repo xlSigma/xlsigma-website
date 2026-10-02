@@ -186,12 +186,11 @@ Agile project delivery that keeps engagements on schedule, combined with structu
 Differentiators
 ## What Sets xlSigma Apart
 These are not marketing claims -- they are structural advantages built into how xlSigma operates.
-- Small-business credit: SDVOSB
+- Senior-only delivery teams on every engagement -- no juniors, no bench
 - Lean Six Sigma Master Black Belt (rare at small-business scale)
-- Proven federal track record: SBA, USPS, CENTCOM, U.S. Army ARCENT, JIEDDO
 - Full-stack delivery: strategy, design, build, implement, and train
+- AI transformation grounded in operational excellence
 - Lower business overhead translates to lower prices for top talent and results
-- Bilingual: English, Spanish
 ## See How These Apply to Your Situation
 Every engagement starts with understanding your specific challenge. Let us show you what senior-level delivery looks like in practice.
 Contact Us {{→ /contact}}Federal Contracting{{→ /government-contracting}}
