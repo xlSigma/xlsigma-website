@@ -601,7 +601,7 @@ Developed alternate land-routes logistics for the draw-down (retrograde) in the 
 - DoD
 -
 ### U.S. Army / DoD
-Designed and deployed IT infrastructure for reporting the location of 90,000+ shipping containers across the war theater in preparation for draw-down (retrograde). (with Calibre Systems Inc.). Reduced errors 80%+ and accelerated reporting cycle time x4. Raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).
+Designed and deployed IT infrastructure for reporting the location of 90,000+ shipping containers across the war theater in preparation for draw-down (retrograde). (with Calibre Systems Inc.). Reduced errors 80%+ and accelerated reporting cycle time x4. (Raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).
 - Data Analytics
 - Database Design
 - DoD
@@ -752,11 +752,11 @@ Tampa, FL 33624
 
 These conflict with, or sit near, the project constraints. Nothing here was edited.
 
-1. Government past performance, U.S. Army / DoD entry: "reporting functionality)." has an unmatched closing parenthesis.
-2. The signature line "We don't start with the AI agent. We model the business the agent must understand." appears on Home (teaser), Capabilities, Commercial, and the `/semantic-to-action` hero. This is approved.
+1. The signature line "We don't start with the AI agent. We model the business the agent must understand." appears on Home (teaser), Capabilities, Commercial, and the `/semantic-to-action` hero. This is approved.
 
 ## Resolved
 
+- Government past performance, U.S. Army / DoD entry: added the missing opening parenthesis before "Raw data intake" so the closing one matches.
 - Footer copyright line keeps "Tampa, FL." (approved); it is consistent with the Contact mailing address.
 - Home "Why xlSigma" list: "Workflow Automation" and "Full-stack delivery: ..." split into two bullets; "Bilingual delivery: English, Spanish" removed from Home (it remains on Capabilities).
 - "SAM.gov Registered" now appears only on the Government page (the SAM.gov / Active Registration card). Removed from the Home federal section and the Footer.

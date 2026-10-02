@@ -296,8 +296,7 @@ Outcomes). Vertical by default, horizontal at 1280px and up. It expects a tone-l
   after resizing the viewport, or check pages structurally.
 - "use client" components: NavBar, ScrollToTop, contact/page.tsx, careers/page.tsx. All others
   are server components.
-- Open copy flags are listed in CONTENT-INVENTORY.md (for example an unmatched parenthesis in one
-  Government past-performance entry).
+- Open copy flags (if any) are listed in CONTENT-INVENTORY.md.
 
 ---
 

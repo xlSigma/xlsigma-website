@@ -107,7 +107,6 @@ is merged into `main`. These rules hold on that branch and after the merge.
 ## Pending / Future Work
 
 - [ ] Review the Vercel preview for PR #1 on desktop and mobile, then mark it ready and merge to `main`
-- [ ] Government past performance, U.S. Army / DoD entry: "reporting functionality)." has an unmatched closing parenthesis (needs the author's intent)
 - [ ] Decide whether to commit `.claude/launch.json` or add `.claude/` to `.gitignore`
 - [ ] Consider a higher-resolution home banner (the current one is 1128x191 and soft on high-density screens)
 - [ ] Confirm RESEND_FROM_EMAIL is set to noreply@xlsigma.com once the domain is verified in Resend
