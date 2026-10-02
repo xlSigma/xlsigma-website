@@ -28,11 +28,11 @@ export default function NavBar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-3">
+        <nav className="hidden md:flex items-center gap-2 lg:gap-3">
           {LINKS.map(({ href, label }, i) => {
             const active = pathname === href || pathname.startsWith(href + '/');
             return (
-              <span key={href} className="flex items-center gap-3">
+              <span key={href} className="flex items-center gap-2 lg:gap-3">
                 {i > 0 && <span className="text-slate-600">|</span>}
                 <Link
                   href={href}

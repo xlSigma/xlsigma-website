@@ -1,15 +1,15 @@
 # CONTENT-INVENTORY
 
-Copy-freeze checkpoint for the `redesign` branch. Text is extracted from the rendered HTML of each route as of commit 567500c, in document order. `{{→ href}}` marks link targets; `[image alt: ...]` marks images; `[placeholder: ...]` marks form placeholders. Headings use `#` levels as rendered. Bullet and chip glyphs are shown as rendered.
+Copy-freeze checkpoint for the `redesign` branch. Text is extracted from the rendered HTML of each route refreshed after the redesign of every page and the addition of `/semantic-to-action` (commit bec1b51 plus later edits), in document order. `{{→ href}}` marks link targets; `[image alt: ...]` marks images; `[placeholder: ...]` marks form placeholders. Headings use `#` levels as rendered. Bullet and chip glyphs are shown as rendered.
 
-Any visible copy change after this point must be an intentional, approved edit. The redesign changes presentation only.
+Any visible copy change after this point must be an intentional, approved edit. The redesign changes presentation only. The original freeze at commit 567500c is in git history (`git show 43ba77d:CONTENT-INVENTORY.md`). Approved copy edits since then: Who We Are headline (periods removed), Home hero services as a bullet list, Government hero pills removed, Contact (phone, "Call or text:", mailing address, NAICS and certifications removed), Footer (phone, "Call or text:").
 
 ---
 
 ## Global: Navigation bar (all pages)
 
 
-xlSigma {{→ /}} Home{{→ /}} | Capabilities{{→ /capabilities}} | Commercial{{→ /commercial}} | Government{{→ /government-contracting}} | Careers{{→ /careers}} | Contact{{→ /contact}}
+xlSigma {{→ /}} Home{{→ /}} | Capabilities{{→ /capabilities}} | Semantic-to-Action™{{→ /semantic-to-action}} | Commercial{{→ /commercial}} | Government{{→ /government-contracting}} | Careers{{→ /careers}} | Contact{{→ /contact}}
 
 ---
 
@@ -19,19 +19,21 @@ xlSigma {{→ /}} Home{{→ /}} | Capabilities{{→ /capabilities}} | Commercial
 [image alt: xlSigma]
 xlSigma LLC
 Senior-level consulting and technology services for commercial and government clients.
-SDVOSB Veteran-Owned SB FL OSD Veteran CBE (pending) SAM.gov Registered
-#### Navigation
+- SDVOSB
+- Veteran-Owned SB
+- FL OSD Veteran CBE (pending)
+- SAM.gov Registered
+## Navigation
 - Home{{→ /}}
 - Capabilities{{→ /capabilities}}
 - Commercial{{→ /commercial}}
 - Government{{→ /government-contracting}}
 - Careers{{→ /careers}}
 - Contact{{→ /contact}}
-#### Contact
-- Tampa, FL
-- (813) 539-8229
+## Contact
+- Call or text: (813) 539-8229
 - Send a Message{{→ /contact}}
-NAICS
+## NAICS
 541511 | 541512 | 541611 | 541614 | 541618
 (c) 2026 xlSigma LLC. All rights reserved. Tampa, FL.
 
@@ -42,7 +44,7 @@ NAICS
 Meta title: xlSigma | Operational Excellence, AI & Enterprise Transformation
 Meta description: xlSigma helps commercial and government organizations improve performance through Lean Six Sigma, enterprise knowledge and semantic transformation, AI agents, intelligent automation, analytics, and technology-enabled transformation.
 
-[image alt: xlSigma Banner]
+[image alt: xlSigma: AI, Automation and Enterprise Knowledge Transformation. Powered by Lean Six Sigma. Service-Disabled Veteran-Owned Small Business, SDVOSB.]
 # Senior-Level Consulting for Operations Excellence
 - Process Reengineering
 - Lean Six Sigma
@@ -56,33 +58,36 @@ Who We Are
 xlSigma is a management consulting and technology firm built to deliver enterprise-grade expertise with small-firm agility and direct accountability.
 You won't be handed off to a junior delivery team. Every engagement is led by senior practitioners and backed by direct principal oversight.
 ### Leadership Credentials
--
-President
-MBA, Michigan Ross · Lean Six Sigma Master Black Belt · BS Electrical Engineering, FIU
--
-Chief Growth & Transformation Officer
-BS Economics and Accounting, Elizabethtown College · Lean Six Sigma Master Black Belt (PwC) · Former Big 4 Strategy Partner · Led $300M CENTCOM enterprise transformation
--
-Chief Technology Officer
-MS Computer Science, Washington University in St. Louis · 25+ years enterprise software architecture · Azure platform serving 200,000+ users
+President MBA, Michigan Ross · Lean Six Sigma Master Black Belt · BS Electrical Engineering, FIU
+Chief Growth & Transformation Officer BS Economics and Accounting, Elizabethtown College · Lean Six Sigma Master Black Belt (PwC) · Former Big 4 Strategy Partner · Led $300M CENTCOM enterprise transformation
+Chief Technology Officer MS Computer Science, Washington University in St. Louis · 25+ years enterprise software architecture · Azure platform serving 200,000+ users
 Core Capabilities
 ## What We Do
+- 01
 ### Lean Six Sigma / Continuous Improvement
 DMAIC-driven transformation led by a certified Master Black Belt.
+- 02
 ### Enterprise Knowledge & Semantic Transformation
 AI-ready knowledge and semantic foundations that connect enterprise concepts, institutional knowledge, and system context.
+- 03
 ### AI, Agents & Intelligent Automation
 AI agents, RPA, and intelligent automation that orchestrate work, reduce repetitive effort, and operate within defined controls.
+- 04
 ### Data Analytics & KPI Dashboards
 Power BI, Tableau, and custom frameworks that turn data into decisions.
 View All Capabilities {{→ /capabilities}}
 Our Transformation Architecture
 ## From Enterprise Meaning to Intelligent Action
-AI can access enterprise information without truly understanding how the business works. xlSigma's Semantic-to-Action Architecture connects enterprise systems and knowledge to a shared Semantic Foundation, then adds the processes, policies, roles, decision authority, and controls AI needs to operate effectively.
+AI can access enterprise information without truly understanding how the business works. xlSigma's Semantic-to-Action™ Architecture connects enterprise systems and knowledge to a shared Semantic Foundation, then adds the processes, policies, roles, decision authority, and controls AI needs to operate effectively.
 The result is a governed business architecture that allows AI to move beyond isolated tools and begin reasoning across operations and acting within defined boundaries.
 We don't start with the AI agent. We model the business the agent must understand.
-Systems & Knowledge > Semantic Foundation > Process & Policy > Role & Authority > AI & Automation > Outcomes
-Explore the Semantic-to-Action Architecture {{→ /capabilities#semantic-to-action}}
+- Systems & Knowledge
+- Semantic Foundation
+- Process & Policy
+- Role & Authority
+- AI & Automation
+- Outcomes
+Explore the Semantic-to-Action™ Architecture {{→ /semantic-to-action}}
 Why xlSigma
 ## The Engagement Model Makes the Difference
 Large firms send senior partners to sell -- then deliver with junior staff. xlSigma operates differently. We deliver with senior-level consultants with Principal oversight from day one through final handoff.
@@ -92,7 +97,9 @@ Large firms send senior partners to sell -- then deliver with junior staff. xlSi
 - Leadership: Lean Six Sigma Master Black Belt with Fortune 500 track record
 - Deep expertise across Accenture, GE, Emerson, Citi, Discover, Federal Government agencies
 - Bilingual delivery: English, Spanish
-SDVOSB FL OSD Veteran CBE (pending) SAM.gov Registered
+- SDVOSB
+- FL OSD Veteran CBE (pending)
+- SAM.gov Registered
 ## Federal Prime Contractor?
 xlSigma is a certified SDVOSB -- helping prime contractors meet participation goals while delivering senior-level execution.
 View Federal Contracting Credentials {{→ /government-contracting}}
@@ -104,7 +111,7 @@ Contact Us{{→ /contact}}
 
 ## Capabilities (`/capabilities`)
 
-Meta title: Capabilities & Semantic-to-Action Architecture | xlSigma
+Meta title: Capabilities & Semantic-to-Action™ Architecture | xlSigma
 Meta description: Explore xlSigma capabilities in Lean Six Sigma, enterprise knowledge and semantic transformation, AI agents and intelligent automation, operating model design, analytics, digital solutions, and federal program support.
 
 [image alt: xlSigma medallion]
@@ -116,11 +123,11 @@ Every capability is applied through a disciplined Lean Six Sigma lens
 Fact-based, waste-eliminating, and built for repeatable results.
 Lean Six Sigma DMAIC discipline AI, Agents & Automation Logistics & Supply Chain Knowledge & Semantic Transformation Operating Model & Strategy Deployment Data Analytics KPIs & Dashboards Power BI / Tableau Power Platform EUC App Development Federal Program Perf. Mgmt Agile Delivery & Change Mgmt
 How Our Capabilities Work Together
-## The xlSigma Semantic-to-Action Architecture
-xlSigma's capabilities work together through our Semantic-to-Action Architecture -- a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
+## The xlSigma Semantic-to-Action™ Architecture
+xlSigma's capabilities work together through our Semantic-to-Action™ Architecture -- a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
 Rather than deploying AI as another disconnected tool, we build the operational foundation required for trusted, scalable AI-enabled transformation.
 Lean Six Sigma provides the transformation discipline.
-Semantic-to-Action provides the architecture.
+Semantic-to-Action™ provides the architecture.
 - 01
 ### Enterprise Systems & Knowledge
 Data / Documents / Platforms
@@ -146,24 +153,34 @@ Agents / Orchestration / RPA
 Speed / Adaptability / Control
 We don't start with the AI agent. We model the business the agent must understand.
 Domain by domain. Process by process. Outcome by outcome.
+- 01
 ### Lean Six Sigma / DMAIC / Continuous Improvement
 DMAIC-driven process transformation led by a certified Lean Six Sigma Master Black Belt. From rapid kaizen events to enterprise-wide deployment programs, with governance, metrics, and training infrastructure. This is the discipline behind every other capability on this page.
+- 02
 ### AI, Agents & Intelligent Automation
 Design and deployment of AI agents, RPA, and intelligent automation solutions that orchestrate work across systems, apply business rules, support human-in-the-loop decisions, and reduce repetitive effort while preserving appropriate controls and oversight.
+- 03
 ### Logistics & Supply Chain
 Operational excellence and intelligent automation for fulfillment operations, delivered through process mining and targeted automation.
+- 04
 ### Enterprise Knowledge & Semantic Transformation
 Transform fragmented enterprise knowledge, data, processes, and business definitions into structured, AI-ready foundations. xlSigma captures institutional knowledge, creates governed business semantics, maps concepts across systems, and develops the knowledge and semantic models AI needs to understand how the enterprise actually operates.
+- 05
 ### Operating Model Design & Strategy Deployment
 Organizational structure, governance design, role clarity, and strategy deployment frameworks (Hoshin Kanri). Bridges the gap between executive strategy and operational execution.
+- 06
 ### Data Analytics, KPI Frameworks & Dashboards
 End-to-end analytics: from defining the right KPIs to building the dashboards that drive decisions. Power BI, Tableau, custom Excel-based solutions, with optional integration into your Enterprise IT Systems and tailored to your reporting environment.
+- 07
 ### Power BI, Tableau, Power Platform, Excel/VBA
 Deep hands-on expertise across the Microsoft Power Platform and leading BI tools. Build production-ready reports, automated workflows, and data models that non-technical users can own and maintain.
+- 08
 ### End-User Computing (EUC) Application Development
 Custom Excel/VBA workbooks, Access or SQL databases, SharePoint solutions, and lightweight Power Apps -- purpose-built for specific operational workflows and designed for adoption.
+- 09
 ### Federal Program & Performance Management Support
 Program management, performance metrics, and reporting frameworks for federal agency engagements. Experienced supporting DoD and civilian agency programs through prime contractors.
+- 10
 ### Agile Delivery, Change & Stakeholder Management
 Agile project delivery that keeps engagements on schedule, combined with structured change management -- ensuring that new processes and tools are adopted, not just installed. Stakeholder communication plans, training, and sustainment.
 Differentiators
@@ -178,6 +195,332 @@ These are not marketing claims -- they are structural advantages built into how 
 ## See How These Apply to Your Situation
 Every engagement starts with understanding your specific challenge. Let us show you what senior-level delivery looks like in practice.
 Contact Us {{→ /contact}}Federal Contracting{{→ /government-contracting}}
+
+---
+
+## Semantic-to-Action (`/semantic-to-action`)
+
+Meta title: Semantic-to-Action™ | AI Transformation Architecture | xlSigma
+Meta description: xlSigma Semantic-to-Action™ connects enterprise knowledge, processes, policies, decision authority, and AI to turn business understanding into governed action and measurable outcomes.
+
+[image alt: xlSigma medallion]
+xlSigma
+# Semantic-to-Action™
+We don't start with the AI agent. We model the business the agent must understand.
+AI can only act effectively when it understands the organization around it.
+Semantic-to-Action™ is xlSigma's approach for connecting enterprise knowledge, business processes, policies, decision authority, and AI-enabled automation into a coherent operating architecture.
+The goal is not simply better AI.
+The goal is better business performance enabled by AI.
+Explore the approach below
+The Problem
+## AI is advancing faster than most organizations' ability to operationalize it.
+Many organizations have valuable data, capable technology, experienced people, documented processes, and growing access to AI.
+What they often lack is a common structure connecting them.
+- Information is fragmented across systems and documents.
+- Business terminology varies by function.
+- Policies are difficult to interpret consistently.
+- Processes contain unwritten knowledge.
+- Decision rights may depend on experience rather than explicit rules.
+Then an AI agent is introduced and expected to understand all of it.
+That creates a fundamental problem:
+An AI agent cannot reliably operate a business it does not understand.
+Simply connecting an AI model to more data does not solve that problem.
+The organization itself must become understandable.
+The Core Idea
+## From semantic understanding to operational action
+A traditional semantic layer helps create consistent meaning across enterprise information.
+That is important, but xlSigma takes the concept further.
+Semantic-to-Action™ connects what the organization knows with how the organization operates.
+It establishes the context needed to answer questions such as:
+- 01 What does this information mean?
+- 02 How are these business concepts related?
+- 03 What process applies?
+- 04 What policy governs the situation?
+- 05 What decision needs to be made?
+- 06 Who has authority to make it?
+- 07 What can AI recommend?
+- 08 What can AI execute?
+- 09 When must a human approve or intervene?
+- 10 What action should happen next?
+- 11 Did that action improve the intended outcome?
+The result is a structured path from enterprise meaning to governed action.
+Architecture
+## The Semantic-to-Action™ Architecture
+- 01
+### Enterprise Systems & Knowledge
+Data / Documents / Platforms
+-
+- 02
+### Enterprise Semantic Foundation
+Meaning / Entities / Relationships
+-
+- 03
+### Process & Policy
+Workflows / Rules / Controls
+-
+- 04
+### Role & Authority
+Responsibilities / Decisions / Approvals
+-
+- 05
+### AI Agents & Intelligent Automation
+Agents / Orchestration / RPA
+-
+- 06
+### Business Outcomes
+Speed / Adaptability / Control
+- 01
+### Enterprise Systems & Knowledge
+The information the organization already relies on.
+Examples
+- Enterprise applications
+- Databases
+- Documents
+- Policies
+- Procedures
+- APIs
+- Analytics
+- Institutional knowledge
+- 02
+### Enterprise Semantic Foundation
+A shared representation of what the business means.
+It connects
+- Business entities
+- Terminology
+- Relationships
+- Definitions
+- Rules
+- Context
+- Structured and unstructured knowledge
+The objective is not to move everything into one new system.
+It is to create enough shared meaning for people, systems, analytics, and AI to operate from a consistent understanding of the enterprise.
+- 03
+### Process & Policy
+Understanding meaning is not enough.
+Semantic-to-Action™ also models how work is performed and what governs it:
+- Processes
+- Workflows
+- Business rules
+- Policies
+- Exceptions
+- Controls
+- Escalation paths
+This converts enterprise knowledge into operational context.
+- 04
+### Role & Authority
+Knowing what should happen does not automatically determine who should do it.
+Semantic-to-Action™ explicitly addresses decision rights:
+- Who can decide?
+- Who can approve?
+- What may AI recommend?
+- What may AI execute?
+- When is human approval required?
+- What must be escalated?
+This creates the governance needed to move safely from AI assistance toward AI-enabled execution.
+- 05
+### AI Agents & Intelligent Automation
+AI can now operate within meaningful business context.
+Depending on the use case, AI may
+- Find
+- Interpret
+- Analyze
+- Recommend
+- Coordinate
+- Trigger
+- Execute
+- Monitor
+- Escalate
+Automation is introduced where it improves the operating model, not simply where technology makes automation possible.
+- 06
+### Business Outcomes
+Technology only creates value when something important improves.
+Semantic-to-Action™ connects AI transformation to measurable outcomes such as
+- Cycle time
+- Cost
+- Quality
+- Service
+- Capacity
+- Compliance
+- Risk
+- Revenue
+- Mission performance
+The Difference
+## More than a semantic layer
+### Traditional Semantic Layer
+Primarily helps systems, analytics, and AI understand enterprise information.
+Often focuses on
+- Common definitions
+- Metrics
+- Entities and relationships
+- Data consistency
+- Metadata
+- Knowledge representation
+- AI grounding
+### xlSigma Semantic-to-Action™
+Builds on semantic understanding and connects it to the operating model.
+Adds
+- Business processes
+- Policies and rules
+- Decisions
+- Roles and responsibilities
+- Decision authority
+- Human and AI boundaries
+- Workflow execution
+- Controls and escalation
+- Measurable operational outcomes
+The Enterprise Semantic Foundation makes the business understandable. Semantic-to-Action™ makes that understanding operational.
+Outcome-Backward
+## We start with the outcome, not the technology.
+A Semantic-to-Action™ engagement does not begin by asking:
+“Where can we deploy AI?”
+It begins by asking:
+“What needs to materially improve?”
+Then we work backward.
+-
+01 Outcome What business or mission result must improve?
+-
+02 Action What actions produce that result?
+-
+03 Decision What decisions determine those actions?
+-
+04 Authority Who or what should be allowed to make those decisions?
+-
+05 Process & Policy What workflow, rules, controls, and exceptions govern them?
+-
+06 Enterprise Meaning What information and context are required to make the decision correctly?
+-
+07 Technology What combination of data, systems, automation, and AI can best enable it?
+Technology becomes an enabler of the operating model, rather than the starting point for redesigning it.
+Lean Six Sigma Connection
+## AI transformation grounded in operational excellence
+Lean Six Sigma is xlSigma's transformation discipline. Semantic-to-Action™ is our AI transformation architecture.
+Together they connect two questions organizations increasingly need to answer:
+How should the work operate?
+and
+How can AI help it operate better?
+xlSigma combines process analysis, performance improvement, semantic architecture, operating-model design, and AI enablement to identify where technology can materially improve performance.
+That means AI opportunities are evaluated in the context of:
+- Customer and mission value
+- Process performance
+- Cycle time
+- Quality and defects
+- Capacity
+- Decision latency
+- Handoffs
+- Controls
+- Exceptions
+- Risk
+- Measurable business outcomes
+We are not trying to automate the current process faster. We are determining how the process should work when people, data, automation, and AI can operate together.
+Human + AI Operating Model
+## Not every decision belongs to an AI agent.
+Responsible AI implementation requires more than determining what AI can do.
+Organizations must determine what AI should do.
+Semantic-to-Action™ helps define operating boundaries such as:
+- 01
+### AI may inform
+Retrieve information, summarize context, surface relevant policies, identify patterns.
+- 02
+### AI may recommend
+Analyze alternatives, prepare recommendations, prioritize work, propose decisions.
+- 03
+### AI may act within authority
+Execute defined actions when conditions and authority thresholds are satisfied.
+- 04
+### Human approval required
+Route consequential, ambiguous, high-risk, or policy-defined decisions for human authorization.
+- 05
+### Escalation required
+Identify conditions where neither routine automation nor normal human decision paths are appropriate.
+The objective is not maximum autonomy. It is the right level of autonomy for the business situation.
+Example
+## What does Semantic-to-Action™ look like in practice?
+Imagine a customer service request that requires an exception.
+A conventional AI assistant might:
+- 1. Find the customer's information,
+- 2. Retrieve the applicable policy,
+- 3. Summarize the situation,
+- 4. Suggest a response.
+Useful, but the work still stops with a recommendation.
+A Semantic-to-Action™ operating model could understand:
+Customer Who is requesting service?
+Situation What happened and what business entities are involved?
+Policy Which rules govern the request?
+Process What workflow applies?
+Exception Does this situation fall outside the normal path?
+Authority Who may authorize the exception, and within what limits?
+AI role May the agent recommend, approve, execute, or only prepare the case?
+Action What should happen in the operational system?
+Outcome Was the issue resolved faster, at lower cost, with appropriate control?
+That is the difference between AI that understands a question and an enterprise that can use AI to perform work.
+Technology Neutrality
+## Built around your enterprise, not a predetermined technology stack
+Semantic-to-Action™ is an architecture and transformation approach, not a requirement to replace your existing technology environment.
+The Enterprise Semantic Foundation may use capabilities already available within your ecosystem or incorporate technologies such as:
+- Knowledge graphs
+- Ontologies
+- APIs
+- Enterprise applications
+- Data platforms
+- Vector databases
+- Document repositories
+- Workflow platforms
+- AI models
+- Agent frameworks
+xlSigma helps determine what architecture is appropriate for the business problem.
+We do not begin with a preferred AI tool and search for somewhere to deploy it.
+We begin with the business and determine what technology is required.
+How Clients Can Engage
+## Start where the business case justifies starting
+- 01
+### Semantic-to-Action™ Opportunity Assessment
+Identify high-value processes and decisions where AI-enabled transformation could materially improve performance.
+Potential outputs
+- Prioritized opportunities
+- Current-state assessment
+- AI and automation suitability
+- Value hypothesis
+- Risk and governance considerations
+- Recommended roadmap
+- 02
+### Domain Semantic Blueprint
+Model the knowledge, processes, policies, decisions, roles, and authority required for a defined business domain.
+Potential outputs
+- Semantic business model
+- Process and decision architecture
+- Policy mapping
+- Authority model
+- Source-system mapping
+- AI operating boundaries
+- 03
+### Operational Pilot
+Implement Semantic-to-Action™ around a targeted use case and validate value before scaling.
+Potential outputs
+- Target operating model
+- Semantic foundation
+- Workflow integration
+- AI-enabled decision or action
+- Governance controls
+- Performance measurement
+- 04
+### Enterprise Scale
+Extend proven patterns across processes, business units, technologies, and AI use cases while establishing appropriate semantic and AI governance.
+Why xlSigma
+## Business transformation first. Technology where it creates value.
+AI transformation sits at the intersection of strategy, operations, data, technology, and organizational change.
+xlSigma brings those disciplines together.
+Our approach combines:
+- Enterprise transformation Design around the operating model and measurable business result.
+- Lean Six Sigma discipline Understand how value flows, where performance is lost, and what should change.
+- Semantic architecture Create the shared business meaning AI and automation require.
+- Process and decision design Connect knowledge to real operational work.
+- AI enablement Apply AI where it can improve decisions, execution, and outcomes.
+- Governance by design Define authority, controls, human oversight, and escalation as part of the architecture.
+The objective is not to add AI to the enterprise. It is to build an enterprise capable of using AI effectively.
+## Move from AI experimentation to operational impact.
+If your organization is exploring AI but struggling to connect pilots, data, processes, governance, and measurable business value, Semantic-to-Action™ provides a structured path forward.
+Let's identify where AI can materially improve how your organization operates.
+Talk With xlSigma {{→ /contact}}Explore Our AI & Technology Capabilities{{→ /capabilities}}
 
 ---
 
@@ -200,11 +543,14 @@ We don't start with the AI agent. We model the business the agent must understan
 - Full-stack delivery: strategy, design, build, implementation, and training
 Where We Deliver
 ## Industries We Serve
-Financial Services
+-
+### Financial Services
 Banking, KYC, regulatory operations
-Healthcare
+-
+### Healthcare
 Clinical & administrative workflows
-Manufacturing
+-
+### Manufacturing
 Operations & supply chain
 ## Let's Talk Transformation
 Whether you're tackling a single process bottleneck or an enterprise-wide transformation, xlSigma is ready to engage.
@@ -222,10 +568,13 @@ Meta description: Senior-level management consulting and technology services. Pr
 xlSigma helps federal prime contractors meet small-business SDVOSB participation goals while delivering senior-level consulting and technology capabilities with a proven federal track record.
 Small Business Credits
 ## Service-Disabled Veteran-Owned Small Business
+-
 SDVOSB
 Service-Disabled Veteran-Owned
+-
 VOSB
 Veteran-Owned Small Business
+-
 SAM.gov
 Active Registration
 Value to Prime Contractors
@@ -238,48 +587,77 @@ We understand the prime-sub relationship. xlSigma integrates seamlessly into you
 - Scales engagement size to fit subcontract scope and timeline
 Track Record
 ## Selected Past Performance
+-
 ### U.S. Army / ARCENT
 Reengineered LOGCAP logistics change-order process in Afghanistan theater(with Calibre Systems Inc.). Cut cycle time from 150+ days to under 70 days. Built supporting EUC tools (Excel, SharePoint, SQL database).
-Process Reengineering EUC Tools DoD
+- Process Reengineering
+- EUC Tools
+- DoD
+-
 ### CENTCOM / DoD
 Developed alternate land-routes logistics for the draw-down (retrograde) in the Afghanistan theater(with Calibre Systems Inc.). Risk mitigation imperative for the scenario of Pakistan closing access to the sea. Designed stochastic multi-node network flow optimizer to minimize cost/time/risk while maximizing throughput, safety, and adherence to timelines, subject to constraints (with Calibre Systems).
-Logistics Data Analytics DoD
+- Logistics
+- Data Analytics
+- DoD
+-
 ### U.S. Army / DoD
 Designed and deployed IT infrastructure for reporting the location of 90,000+ shipping containers across the war theater in preparation for draw-down (retrograde).(with Calibre Systems Inc.). Reduced errors 80%+ and accelerated reporting cycle time x4. Raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).
-Data Analytics Database Design DoD
+- Data Analytics
+- Database Design
+- DoD
+-
 ### U.S. Postal Service
 Enterprise Lean Six Sigma deployment. Built governance, metrics capture and reporting, IT enablement and infrastructure for project management and training (with Accenture).
-Lean Six Sigma Enterprise Deployment Federal
+- Lean Six Sigma
+- Enterprise Deployment
+- Federal
+-
 ### Top-Tier Financial Institutions
 Designed and deployed AI/RPA solutions automating bank operations such as paper check processing, invoicing, and KYC processSupported regulatory consent-order remediation through process and data diagnostics.
-AI/RPA Regulatory Compliance KYC Financial Services
+- AI/RPA
+- Regulatory Compliance
+- KYC
+- Financial Services
+-
 ### CENTCOM Enterprise Transformation / DoD
 Led a $300M enterprise-wide Lean Six Sigma transformation initiative across CENTCOM theater operations (with Calibre Systems Inc.). Directed 23 Master/Black Belts to drive theater-wide readiness, operational alignment, and Warfighter protection outcomes.
-Enterprise Transformation Lean Six Sigma DoD
+- Enterprise Transformation
+- Lean Six Sigma
+- DoD
+-
 ### U.S. Forces-Afghanistan / DoD
 Supported the initial standup of the U.S. Forces-Afghanistan Fusion Cell (with Calibre Systems Inc.). Built foundational business-process design mapping PBUSE and SARSS/SASSY logistics systems, identifying data sources and owners, establishing collection frequencies, and aligning reporting outputs with the commander's information requirements.
-Process Reengineering Data Analytics DoD
+- Process Reengineering
+- Data Analytics
+- DoD
+-
 ### USF Health
 Process improvement and workflow automation supporting referrals process of BRIDGE Clinic operations.
-Healthcare Process Improvement Workflow Automation
+- Healthcare
+- Process Improvement
+- Workflow Automation
 Who We Support
 ## Agencies & Mission Areas
-Department of War
+-
+### Department of War
 Combatant commands & theater support operations
-U.S. Army
+-
+### U.S. Army
 Logistics, sustainment & retrograde
-Federal Civilian
+-
+### Federal Civilian
 Enterprise Lean Six Sigma deployment
-Public Health
+-
+### Public Health
 Process improvement, workflow automation.
 PHAB assessment
 NAICS Codes
 ## Registered Capabilities
-541511 Custom Computer Programming Services
-541512 Computer Systems Design Services
-541611 Administrative Management Consulting
-541614 Process, Distribution & Logistics Consulting
-541618 Other Management Consulting Services
+- 541511 Custom Computer Programming Services
+- 541512 Computer Systems Design Services
+- 541611 Administrative Management Consulting
+- 541614 Process, Distribution & Logistics Consulting
+- 541618 Other Management Consulting Services
 ## Let's Talk Teaming
 Whether you need a compliant subcontractor for an active bid or a long-term teaming partner, xlSigma is ready to engage.
 Start the Conversation {{→ /contact}}
@@ -312,14 +690,14 @@ Day-to-day activities may include conducting assessments and analyses, mapping a
 The Senior Management Consultant will collaborate with technical and business stakeholders, mentor project team members, and help build reusable frameworks, tools, and methodologies that support xlSigma's service offerings. This role may also contribute to business development efforts by supporting proposals, participating in client presentations, and identifying opportunities to expand engagement scope and impact.
 Selected consultants will be considered for future project-based opportunities as client needs, prime-contractor teaming opportunities, and federal or commercial engagements develop.
 ## Qualifications
-- • Strong analytical skills with the ability to interpret complex data, develop insights, and translate findings into practical recommendations.
-- • Demonstrated expertise in management consulting and consulting practices, including client-facing leadership, engagement delivery, and stakeholder management.
-- • Experience in finance-related analysis, such as building business cases, ROI models, and cost-benefit analyses to support transformation initiatives.
-- • Expertise in business process design and improvement, including current-state / future-state process mapping, performance measurement, and application of Lean Six Sigma methods.
-- • Solid understanding of AI, automation, and RPA concepts and their application in operational and process improvement contexts, including the ability to develop benefit, cost, and risk analyses and define detailed requirements for SMEs who design or implement technical AI/automation/RPA solutions.
-- • Proven track record leading or supporting projects in one or more domains such as manufacturing, healthcare, financial services, IT, or government programs.
-- • Excellent communication, presentation, and facilitation skills, with the ability to work collaboratively with senior leadership and diverse cross-functional teams.
-- • Advanced degree and professional certifications, such as MBA, Lean Six Sigma Master Black Belt, PMP, or related credentials, are a plus.
+- Strong analytical skills with the ability to interpret complex data, develop insights, and translate findings into practical recommendations.
+- Demonstrated expertise in management consulting and consulting practices, including client-facing leadership, engagement delivery, and stakeholder management.
+- Experience in finance-related analysis, such as building business cases, ROI models, and cost-benefit analyses to support transformation initiatives.
+- Expertise in business process design and improvement, including current-state / future-state process mapping, performance measurement, and application of Lean Six Sigma methods.
+- Solid understanding of AI, automation, and RPA concepts and their application in operational and process improvement contexts, including the ability to develop benefit, cost, and risk analyses and define detailed requirements for SMEs who design or implement technical AI/automation/RPA solutions.
+- Proven track record leading or supporting projects in one or more domains such as manufacturing, healthcare, financial services, IT, or government programs.
+- Excellent communication, presentation, and facilitation skills, with the ability to work collaboratively with senior leadership and diverse cross-functional teams.
+- Advanced degree and professional certifications, such as MBA, Lean Six Sigma Master Black Belt, PMP, or related credentials, are a plus.
 Apply Now
 ## Submit Your Interest
 Full Name *
@@ -348,7 +726,8 @@ Meta description: Senior-level management consulting and technology services. Pr
 [image alt: xlSigma medallion]
 Reach Out
 # Contact xlSigma
-Tell us about your challenge. We respond within one business day.
+Tell us about your challenge.
+We respond within one business day.
 Full Name *
 [placeholder: Jane Smith]
 Company *
@@ -360,30 +739,27 @@ Phone (optional)
 Message *
 [placeholder: Describe your challenge or what you are looking for...]
 Send Message
-### Contact Information
-- Tampa, FL
+## Contact Information
+- Call or text:
 - (813) 539-8229
-#### Certifications
-- SDVOSB
-- Service-Disabled Veteran-Owned Small Business
-- FL OSD Veteran CBE (pending)
-- Florida OSD Veteran-Owned Business Enterprise (pending)
-- SAM.gov Registered
-- Active federal registration
-NAICS
-541511 | 541512 | 541611 | 541614 | 541618
+## Mailing Address
+4522 W Village Dr
+Unit #1563
+Tampa, FL 33624
 
 ---
 
-## Flags (observed at freeze, not changed)
+## Flags (observed, not changed)
 
 These conflict with, or sit near, the project constraints. Nothing here was edited.
 
-1. NAICS 541512 appears in the Footer (all pages), `/contact`, and the `/government-contracting` "Registered Capabilities" list. Approved codes are 541511, 541611, 541614, 541618 only.
-2. "SAM.gov Registered" chips and the "SAM.gov / Active Registration" card appear on Home, Footer, Government, and Contact. The active certification list is SDVOSB, Veteran-Owned SB, and Florida OSD Veteran CBE (pending). SAM.gov is a registration, not a certification, but confirm it should stay.
+1. NAICS 541512 appears in the Footer (all pages) and the `/government-contracting` "Registered Capabilities" list. Approved codes are 541511, 541611, 541614, 541618 only.
+2. "SAM.gov Registered" appears on Home, the Footer, and Government ("SAM.gov / Active Registration"). The active certification list is SDVOSB, Veteran-Owned SB, and Florida OSD Veteran CBE (pending). SAM.gov is a registration, not a certification, but confirm it should stay.
 3. `HANDOFF.md` still lists "Minority-Owned Small Business" (header and Company Information). No site copy mentions it.
-4. Em dashes exist in existing copy: `/careers` role heading ("Senior Management Consultant / SME — Talent Pool") and the success message (`&mdash;`). Also in API email templates and code comments.
+4. Em dashes exist in existing copy: the `/careers` role heading ("Senior Management Consultant / SME — Talent Pool") and the success message (`&mdash;`). Also in API email templates and code comments.
 5. Possible missing spaces in Government past-performance copy: "theater(with Calibre", "(retrograde).(with Accenture", "KYC processSupported". Likely line-break artifacts in the TSX source.
 6. Home value prop "Workflow Automation Full-stack delivery: strategy, design, build, implement, and training" reads as two fragments merged.
 7. HANDOFF.md says the contact form has interest checkboxes; the current `/contact` page has none.
-8. No references to MBE or IBM were found in site files.
+8. The signature line "We don't start with the AI agent. We model the business the agent must understand." now also appears in the `/semantic-to-action` hero (in addition to the Home teaser, Capabilities, and Commercial).
+9. The footer says "Tampa, FL" in the copyright line while Contact lists a full mailing address.
+10. No references to MBE or IBM were found in site files.
