@@ -45,11 +45,12 @@ Meta title: xlSigma | Operational Excellence, AI & Enterprise Transformation
 Meta description: xlSigma helps commercial and government organizations improve performance through Lean Six Sigma, enterprise knowledge and semantic transformation, AI agents, intelligent automation, analytics, and technology-enabled transformation.
 
 [image alt: xlSigma: AI, Automation and Enterprise Knowledge Transformation. Powered by Lean Six Sigma. Service-Disabled Veteran-Owned Small Business, SDVOSB.]
-# Senior-Level Consulting for Operations Excellence
-- Process Reengineering
-- Lean Six Sigma
+# Senior-Level Consulting for AI-Enabled Operations
+- Operationalizing AI
 - AI & Intelligent Automation
 - Enterprise Knowledge Transformation
+- Process Reengineering
+- Lean Six Sigma
 - Advanced Analytics
 Backed by Fortune 500 experience in transformation and operational excellence
 View Capabilities{{→ /capabilities}}Get in Touch{{→ /contact}}

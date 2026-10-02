@@ -69,10 +69,11 @@ const VALUE_PROPS = [
 ];
 
 const SERVICE_LINES = [
-  'Process Reengineering',
-  'Lean Six Sigma',
+  'Operationalizing AI',
   'AI & Intelligent Automation',
   'Enterprise Knowledge Transformation',
+  'Process Reengineering',
+  'Lean Six Sigma',
   'Advanced Analytics',
 ];
 
@@ -105,13 +106,13 @@ export default function HomePage() {
           }}
         >
           <ContentContainer className="pb-20 pt-14 md:pb-28 md:pt-20">
-            <div className="grid items-end gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
               <Headline level={1} size="xl" className="lg:col-span-7">
                 <span className="block text-title font-normal text-(--fg-muted)">
                   Senior-Level Consulting for
                 </span>
                 <span className="mt-3 block text-display text-gold">
-                  Operations Excellence
+                  <span className="whitespace-nowrap">AI-Enabled</span> Operations
                 </span>
               </Headline>
 
