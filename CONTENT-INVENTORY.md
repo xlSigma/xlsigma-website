@@ -34,7 +34,7 @@ Senior-level consulting and technology services for commercial and government cl
 - Call or text: (813) 539-8229
 - Send a Message{{→ /contact}}
 ## NAICS
-541511 | 541611 | 541614 | 541618
+541511 | 541512 | 541611 | 541614 | 541618
 (c) 2026 xlSigma LLC. All rights reserved. Tampa, FL.
 
 ---
@@ -653,6 +653,7 @@ PHAB assessment
 NAICS Codes
 ## Registered Capabilities
 - 541511 Custom Computer Programming Services
+- 541512 Computer Systems Design Services
 - 541611 Administrative Management Consulting
 - 541614 Process, Distribution & Logistics Consulting
 - 541618 Other Management Consulting Services
@@ -759,7 +760,7 @@ These conflict with, or sit near, the project constraints. Nothing here was edit
 - Footer copyright line keeps "Tampa, FL." (approved); it is consistent with the Contact mailing address.
 - Home "Why xlSigma" list: "Workflow Automation" and "Full-stack delivery: ..." split into two bullets; "Bilingual delivery: English, Spanish" removed from Home (it remains on Capabilities).
 - "SAM.gov Registered" now appears only on the Government page (the SAM.gov / Active Registration card). Removed from the Home federal section and the Footer.
-- NAICS 541512 removed from the Footer and the Government list. Approved codes: 541511, 541611, 541614, 541618.
+- NAICS 541512 removed from the Footer and the Government list. Approved codes: 541511, 541611, 541614, 541618. Update 2026-10-02: 541512 (Computer Systems Design Services) re-added to the Footer and the Government list at Andres's direction; approved codes are now 541511, 541512, 541611, 541614, 541618.
 - Minority-owned wording removed from `HANDOFF.md`.
 - Em dashes removed from Careers copy, API email templates, and code comments.
 - Spacing and punctuation fixed in Government past performance ("theater (with", "(retrograde). (with", "KYC process. Supported").
