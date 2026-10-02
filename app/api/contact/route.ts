@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
           </tr>
           <tr>
             <td style="padding:6px 20px 6px 0;font-weight:600;color:#1B3F7A;vertical-align:top">Company</td>
-            <td style="padding:6px 0">${company || '&mdash;'}</td>
+            <td style="padding:6px 0">${company || '-'}</td>
           </tr>
           <tr>
             <td style="padding:6px 20px 6px 0;font-weight:600;color:#1B3F7A;vertical-align:top">Email</td>
@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
           </tr>
           <tr>
             <td style="padding:6px 20px 6px 0;font-weight:600;color:#1B3F7A;vertical-align:top">Phone</td>
-            <td style="padding:6px 0">${phone || '&mdash;'}</td>
+            <td style="padding:6px 0">${phone || '-'}</td>
           </tr>
           <tr>
             <td style="padding:6px 20px 6px 0;font-weight:600;color:#1B3F7A;vertical-align:top">Message</td>

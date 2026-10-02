@@ -1,87 +1,80 @@
 import Link  from 'next/link';
 import Image from 'next/image';
+import Tag   from './ui/Tag';
+import ContentContainer from './ui/ContentContainer';
+
+const NAV_LINKS = [
+  { href: '/',                       label: 'Home'         },
+  { href: '/capabilities',           label: 'Capabilities' },
+  { href: '/commercial',             label: 'Commercial'   },
+  { href: '/government-contracting', label: 'Government'   },
+  { href: '/careers',                label: 'Careers'      },
+  { href: '/contact',                label: 'Contact'      },
+];
+
+const CERTIFICATIONS = ['SDVOSB', 'Veteran-Owned SB', 'FL OSD Veteran CBE (pending)'];
+
+const HEADING = 'mb-3 text-[0.8125rem] font-semibold uppercase tracking-[0.18em] text-(--accent)';
+const LINK    = 'underline-offset-4 transition-colors hover:text-gold hover:underline';
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-dark text-slate-400">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-3 gap-10 mb-10">
+    <footer className="tone-navy border-t border-gold/40 bg-navy-dark text-(--fg-muted)">
+      <ContentContainer className="pb-8 pt-10 md:pt-12">
+        <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
 
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <Image src="/logo.png" alt="xlSigma" width={40} height={40} className="rounded-sm" />
-              <span className="text-white font-bold text-lg">xlSigma LLC</span>
+          <div className="lg:col-span-5">
+            <div className="mb-4 flex items-center gap-4">
+              <Image src="/logo.png" alt="xlSigma" width={48} height={48} className="rounded-sm" />
+              <span className="font-serif text-title font-medium text-(--fg)">xlSigma LLC</span>
             </div>
-            <p className="text-sm leading-relaxed">
+            <p className="max-w-sm leading-relaxed">
               Senior-level consulting and technology services for commercial
               and government clients.
             </p>
-            <div className="flex gap-2 mt-4 flex-wrap">
-              <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
-                SDVOSB
-              </span>
-              <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
-                Veteran-Owned SB
-              </span>
-              <span className="bg-navy text-gold-light text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">
-                FL OSD Veteran CBE (pending)
-              </span>
-              <span className="bg-navy text-slate-400 text-xs px-3 py-1 rounded-full border border-slate-600">
-                SAM.gov Registered
-              </span>
-            </div>
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {CERTIFICATIONS.map((c) => (
+                <li key={c}><Tag>{c}</Tag></li>
+              ))}
+            </ul>
           </div>
 
           {/* Links */}
-          <div>
-            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-              Navigation
-            </h4>
-            <ul className="space-y-2.5 text-sm">
-              {[
-                { href: '/',                       label: 'Home'         },
-                { href: '/capabilities',           label: 'Capabilities' },
-                { href: '/commercial',             label: 'Commercial'   },
-                { href: '/government-contracting', label: 'Government'   },
-                { href: '/careers',                label: 'Careers'      },
-                { href: '/contact',                label: 'Contact'      },
-              ].map(({ href, label }) => (
-                <li key={href}>
-                  <Link href={href} className="hover:text-gold-light transition-colors">
+          <nav aria-label="Footer" className="lg:col-span-3">
+            <h2 className={HEADING}>Navigation</h2>
+            <ul className="border-b border-(--rule)">
+              {NAV_LINKS.map(({ href, label }) => (
+                <li key={href} className="border-t border-(--rule)">
+                  <Link href={href} className={`block py-1.5 text-[0.9375rem] ${LINK}`}>
                     {label}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Contact */}
-          <div>
-            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-              Contact
-            </h4>
-            <ul className="space-y-2.5 text-sm">
-              <li>Tampa, FL</li>
-              <li>(813) 919-9772</li>
+          <div className="lg:col-span-4">
+            <h2 className={HEADING}>Contact</h2>
+            <ul className="space-y-1.5 text-[0.9375rem]">
+              <li>Call or text: (813) 539-8229</li>
               <li>
-                <Link href="/contact" className="hover:text-gold-light transition-colors">
-                  Send a Message
-                </Link>
+                <Link href="/contact" className={LINK}>Send a Message</Link>
               </li>
             </ul>
             <div className="mt-6">
-              <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">NAICS</p>
-              <p className="text-xs text-slate-400">541511 | 541512 | 541611 | 541614 | 541618</p>
+              <h2 className={HEADING}>NAICS</h2>
+              <p className="text-[0.9375rem]">541511 | 541611 | 541614 | 541618</p>
             </div>
           </div>
 
         </div>
 
-        <div className="border-t border-slate-700 pt-6 text-sm text-slate-500 text-center">
+        <div className="mt-8 border-t border-(--rule) pt-5 text-sm text-(--fg-muted)">
           (c) 2026 xlSigma LLC. All rights reserved. Tampa, FL.
         </div>
-      </div>
+      </ContentContainer>
     </footer>
   );
 }

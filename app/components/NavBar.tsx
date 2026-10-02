@@ -7,6 +7,7 @@ import { Menu, X }       from 'lucide-react';
 const LINKS = [
   { href: '/',                       label: 'Home'         },
   { href: '/capabilities',           label: 'Capabilities' },
+  { href: '/semantic-to-action',     label: 'Semantic-to-Action™' },
   { href: '/commercial',             label: 'Commercial'   },
   { href: '/government-contracting', label: 'Government'   },
   { href: '/careers',                label: 'Careers'      },
@@ -27,15 +28,15 @@ export default function NavBar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-3">
+        <nav className="hidden md:flex items-center gap-2 lg:gap-3">
           {LINKS.map(({ href, label }, i) => {
             const active = pathname === href || pathname.startsWith(href + '/');
             return (
-              <span key={href} className="flex items-center gap-3">
+              <span key={href} className="flex items-center gap-2 lg:gap-3">
                 {i > 0 && <span className="text-slate-600">|</span>}
                 <Link
                   href={href}
-                  className={`text-sm font-medium transition-colors whitespace-nowrap
+                  className={`text-sm font-normal transition-colors whitespace-nowrap
                     ${active
                       ? 'text-gold-light border-b-2 border-gold-light pb-0.5'
                       : 'text-slate-300 hover:text-white'}`}

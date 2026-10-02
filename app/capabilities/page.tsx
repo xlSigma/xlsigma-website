@@ -1,22 +1,24 @@
-import Medallion from '../components/Medallion';
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import {
-  Bot, Brain, TrendingUp, BarChart2, LayoutDashboard,
-  Code2, Landmark, GitBranch, Users, Truck,
-  CheckCircle, ArrowRight,
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import SemanticToActionDiagram from '../components/SemanticToActionDiagram';
+import Section from '../components/ui/Section';
+import ContentContainer from '../components/ui/ContentContainer';
+import MedallionHero from '../components/ui/MedallionHero';
+import Eyebrow from '../components/ui/Eyebrow';
+import Headline from '../components/ui/Headline';
+import Rule from '../components/ui/Rule';
+import Button from '../components/ui/Button';
+import PullQuote from '../components/ui/PullQuote';
+import { CapabilityList, CapabilityRow } from '../components/ui/CapabilityRow';
 
 export const metadata: Metadata = {
-  title: 'Capabilities & Semantic-to-Action Architecture | xlSigma',
+  title: 'Capabilities & Semantic-to-Action™ Architecture | xlSigma',
   description:
     'Explore xlSigma capabilities in Lean Six Sigma, enterprise knowledge and semantic transformation, AI agents and intelligent automation, operating model design, analytics, digital solutions, and federal program support.',
 };
 
 const CAPABILITIES = [
   {
-    Icon:  TrendingUp,
     title: 'Lean Six Sigma / DMAIC / Continuous Improvement',
     desc:  'DMAIC-driven process transformation led by a certified Lean Six Sigma Master ' +
            'Black Belt. From rapid kaizen events to enterprise-wide deployment programs, ' +
@@ -24,20 +26,17 @@ const CAPABILITIES = [
            'This is the discipline behind every other capability on this page.',
   },
   {
-    Icon:  Bot,
     title: 'AI, Agents & Intelligent Automation',
     desc:  'Design and deployment of AI agents, RPA, and intelligent automation solutions that ' +
            'orchestrate work across systems, apply business rules, support human-in-the-loop ' +
            'decisions, and reduce repetitive effort while preserving appropriate controls and oversight.',
   },
   {
-    Icon:  Truck,
     title: 'Logistics & Supply Chain',
     desc:  'Operational excellence and intelligent automation for fulfillment operations, ' +
            'delivered through process mining and targeted automation.',
   },
   {
-    Icon:  Brain,
     title: 'Enterprise Knowledge & Semantic Transformation',
     desc:  'Transform fragmented enterprise knowledge, data, processes, and business definitions ' +
            'into structured, AI-ready foundations. xlSigma captures institutional knowledge, ' +
@@ -45,42 +44,36 @@ const CAPABILITIES = [
            'knowledge and semantic models AI needs to understand how the enterprise actually operates.',
   },
   {
-    Icon:  GitBranch,
     title: 'Operating Model Design & Strategy Deployment',
     desc:  'Organizational structure, governance design, role clarity, and strategy ' +
            'deployment frameworks (Hoshin Kanri). Bridges the gap between executive ' +
            'strategy and operational execution.',
   },
   {
-    Icon:  BarChart2,
     title: 'Data Analytics, KPI Frameworks & Dashboards',
     desc:  'End-to-end analytics: from defining the right KPIs to building the dashboards ' +
            'that drive decisions. Power BI, Tableau, custom Excel-based solutions, with optional ' +
            'integration into your Enterprise IT Systems and tailored to your reporting environment.',
   },
   {
-    Icon:  LayoutDashboard,
     title: 'Power BI, Tableau, Power Platform, Excel/VBA',
     desc:  'Deep hands-on expertise across the Microsoft Power Platform and leading BI tools. ' +
            'Build production-ready reports, automated workflows, and data models that ' +
            'non-technical users can own and maintain.',
   },
   {
-    Icon:  Code2,
     title: 'End-User Computing (EUC) Application Development',
     desc:  'Custom Excel/VBA workbooks, Access or SQL databases, SharePoint solutions, and ' +
            'lightweight Power Apps -- purpose-built for specific operational workflows ' +
            'and designed for adoption.',
   },
   {
-    Icon:  Landmark,
     title: 'Federal Program & Performance Management Support',
     desc:  'Program management, performance metrics, and reporting frameworks for ' +
            'federal agency engagements. Experienced supporting DoD and civilian agency ' +
            'programs through prime contractors.',
   },
   {
-    Icon:  Users,
     title: 'Agile Delivery, Change & Stakeholder Management',
     desc:  'Agile project delivery that keeps engagements on schedule, combined with ' +
            'structured change management -- ensuring that new processes and tools are ' +
@@ -97,94 +90,125 @@ const DIFFERENTIATORS = [
   'Bilingual: English, Spanish',
 ];
 
+const SPOKE_STROKE = '#C9A24B';
+const NAVY = '#0B1F3A';
+const GOLD = '#C9A24B';
+
 function LssDiagram() {
   return (
     <svg
       viewBox="0 0 680 630"
-      className="w-full max-w-2xl mx-auto block"
+      className="mx-auto block w-full max-w-4xl font-sans"
       role="img"
       aria-label="Hub-and-spoke diagram with Lean Six Sigma at center connected to nine capability areas"
     >
-      {/* Lines from hub to spokes — drawn first so rects render on top */}
-      <line x1="340" y1="315" x2="340" y2="95"  stroke="#CBD5E1" strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="481" y2="147" stroke="#CBD5E1" strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="557" y2="277" stroke="#CBD5E1" strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="531" y2="425" stroke="#CBD5E1" strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="415" y2="522" stroke="#CBD5E1" strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="265" y2="522" stroke="#CBD5E1" strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="150" y2="425" stroke="#CBD5E1" strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="123" y2="277" stroke="#CBD5E1" strokeWidth="1.5" />
-      <line x1="340" y1="315" x2="199" y2="147" stroke="#CBD5E1" strokeWidth="1.5" />
+      <defs>
+        <radialGradient id="lss-hub" cx="50%" cy="35%" r="75%">
+          <stop offset="0%" stopColor="#1B3A66" />
+          <stop offset="100%" stopColor="#07162A" />
+        </radialGradient>
+        <radialGradient id="lss-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#C9A24B" stopOpacity="0.28" />
+          <stop offset="100%" stopColor="#C9A24B" stopOpacity="0" />
+        </radialGradient>
+        <filter id="lss-shadow" x="-20%" y="-30%" width="140%" height="190%">
+          <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="#0B1F3A" floodOpacity="0.22" />
+        </filter>
+      </defs>
+
+      {/* Glow */}
+      <circle cx="340" cy="315" r="250" fill="url(#lss-glow)" />
+
+      {/* Lines from hub to spokes, drawn first so rects render on top */}
+      <line x1="340" y1="315" x2="340" y2="95"  stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="481" y2="147" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="557" y2="277" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="531" y2="425" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="415" y2="522" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="265" y2="522" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="150" y2="425" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="123" y2="277" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
+      <line x1="340" y1="315" x2="199" y2="147" stroke={SPOKE_STROKE} strokeWidth="2" strokeOpacity="0.75" />
 
       {/* Hub */}
-      <rect x="255" y="272" width="170" height="86" rx="16" fill="#1B3F7A" />
+      <circle cx="340" cy="315" r="70" fill="url(#lss-hub)" stroke={GOLD} strokeWidth="3" filter="url(#lss-shadow)" />
+      <circle cx="340" cy="315" r="62" fill="none" stroke={GOLD} strokeOpacity="0.5" strokeWidth="1" />
       <text x="340" y="307" textAnchor="middle" dominantBaseline="central"
-            fill="#FFFFFF" fontSize="15" fontWeight="700" fontFamily="system-ui,sans-serif">Lean Six Sigma</text>
+            fill="#FFFFFF" fontSize="15" fontWeight="700">Lean Six Sigma</text>
       <text x="340" y="327" textAnchor="middle" dominantBaseline="central"
-            fill="#D4A017" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">DMAIC discipline</text>
+            fill={GOLD} fontSize="12" fontWeight="600">DMAIC discipline</text>
 
-      {/* AI & RPA — top (270 deg) */}
-      <rect x="273" y="69" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      {/* AI & RPA, top */}
+      <rect x="273" y="69" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="273" y="69" width="134" height="4" rx="2" fill={GOLD} />
       <text x="340" y="87"  textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">AI, Agents &amp;</text>
+            fill={NAVY} fontSize="12" fontWeight="600">AI, Agents &amp;</text>
       <text x="340" y="105" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Automation</text>
+            fill={NAVY} fontSize="11">Automation</text>
 
-      {/* Logistics — upper-right (310 deg) */}
-      <rect x="414" y="121" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      {/* Logistics, upper-right */}
+      <rect x="414" y="121" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="414" y="121" width="134" height="4" rx="2" fill={GOLD} />
       <text x="481" y="139" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Logistics &amp;</text>
+            fill={NAVY} fontSize="12" fontWeight="600">Logistics &amp;</text>
       <text x="481" y="157" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Supply Chain</text>
+            fill={NAVY} fontSize="11">Supply Chain</text>
 
-      {/* Knowledge — right (350 deg) */}
-      <rect x="490" y="251" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      {/* Knowledge, right */}
+      <rect x="490" y="251" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="490" y="251" width="134" height="4" rx="2" fill={GOLD} />
       <text x="557" y="269" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="11" fontWeight="600" fontFamily="system-ui,sans-serif">Knowledge &amp; Semantic</text>
+            fill={NAVY} fontSize="11" fontWeight="600">Knowledge &amp; Semantic</text>
       <text x="557" y="287" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Transformation</text>
+            fill={NAVY} fontSize="11">Transformation</text>
 
-      {/* Operating Model — lower-right (30 deg) */}
-      <rect x="464" y="399" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      {/* Operating Model, lower-right */}
+      <rect x="464" y="399" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="464" y="399" width="134" height="4" rx="2" fill={GOLD} />
       <text x="531" y="417" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Operating Model</text>
+            fill={NAVY} fontSize="12" fontWeight="600">Operating Model</text>
       <text x="531" y="435" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">&amp; Strategy Deployment</text>
+            fill={NAVY} fontSize="11">&amp; Strategy Deployment</text>
 
-      {/* Data Analytics — bottom-right (70 deg) */}
-      <rect x="348" y="496" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      {/* Data Analytics, bottom-right */}
+      <rect x="348" y="496" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="348" y="496" width="134" height="4" rx="2" fill={GOLD} />
       <text x="415" y="514" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Data Analytics</text>
+            fill={NAVY} fontSize="12" fontWeight="600">Data Analytics</text>
       <text x="415" y="532" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">KPIs &amp; Dashboards</text>
+            fill={NAVY} fontSize="11">KPIs &amp; Dashboards</text>
 
-      {/* Power BI — bottom-left (110 deg) */}
-      <rect x="198" y="496" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      {/* Power BI, bottom-left */}
+      <rect x="198" y="496" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="198" y="496" width="134" height="4" rx="2" fill={GOLD} />
       <text x="265" y="514" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Power BI / Tableau</text>
+            fill={NAVY} fontSize="12" fontWeight="600">Power BI / Tableau</text>
       <text x="265" y="532" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Power Platform</text>
+            fill={NAVY} fontSize="11">Power Platform</text>
 
-      {/* EUC — lower-left (150 deg) */}
-      <rect x="83" y="399" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      {/* EUC, lower-left */}
+      <rect x="83" y="399" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="83" y="399" width="134" height="4" rx="2" fill={GOLD} />
       <text x="150" y="417" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">EUC App</text>
+            fill={NAVY} fontSize="12" fontWeight="600">EUC App</text>
       <text x="150" y="435" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Development</text>
+            fill={NAVY} fontSize="11">Development</text>
 
-      {/* Federal — left (190 deg) */}
-      <rect x="56" y="251" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      {/* Federal, left */}
+      <rect x="56" y="251" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="56" y="251" width="134" height="4" rx="2" fill={GOLD} />
       <text x="123" y="269" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Federal Program</text>
+            fill={NAVY} fontSize="12" fontWeight="600">Federal Program</text>
       <text x="123" y="287" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">Perf. Mgmt</text>
+            fill={NAVY} fontSize="11">Perf. Mgmt</text>
 
-      {/* Agile/Change — upper-left (230 deg) */}
-      <rect x="132" y="121" width="134" height="52" rx="8" fill="#FFFFFF" stroke="#1B3F7A" strokeWidth="1.5" />
+      {/* Agile/Change, upper-left */}
+      <rect x="132" y="121" width="134" height="52" rx="3" fill="#FFFFFF" stroke={NAVY} strokeWidth="1" filter="url(#lss-shadow)" />
+      <rect x="132" y="121" width="134" height="4" rx="2" fill={GOLD} />
       <text x="199" y="139" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="12" fontWeight="600" fontFamily="system-ui,sans-serif">Agile Delivery</text>
+            fill={NAVY} fontSize="12" fontWeight="600">Agile Delivery</text>
       <text x="199" y="157" textAnchor="middle" dominantBaseline="central"
-            fill="#1B3F7A" fontSize="11" fontFamily="system-ui,sans-serif">&amp; Change Mgmt</text>
+            fill={NAVY} fontSize="11">&amp; Change Mgmt</text>
     </svg>
   );
 }
@@ -193,153 +217,131 @@ export default function CapabilitiesPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-navy text-white py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <Medallion />
-          <p className="text-gold-light text-sm font-semibold uppercase tracking-widest mb-3">
-            What We Deliver
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Core Capabilities</h1>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Ten integrated practice areas
-            <br />
-            delivered by senior-only teams with principal oversight
-          </p>
-        </div>
-      </section>
+      <MedallionHero>
+        <Eyebrow className="mb-4">What We Deliver</Eyebrow>
+        <Headline level={1} size="display" className="mb-6">Core Capabilities</Headline>
+        <p className="mx-auto max-w-2xl text-lead text-(--fg-muted)">
+          Ten integrated practice areas
+          <br />
+          delivered by senior-only teams with principal oversight
+        </p>
+      </MedallionHero>
 
       {/* Framing + Hub-and-Spoke Diagram */}
-      <section className="py-16 px-4 bg-slate-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-slate-600 italic text-lg leading-relaxed mb-1 max-w-2xl mx-auto">
+      <Section variant="paper">
+        <ContentContainer className="text-center">
+          <p className="mx-auto max-w-2xl font-serif text-title italic text-(--fg)">
             Every capability is applied through a disciplined Lean Six Sigma lens
           </p>
-          <p className="text-slate-600 italic text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="mx-auto mb-12 mt-3 max-w-2xl font-serif text-title italic text-(--fg-muted)">
             Fact-based, waste-eliminating, and built for repeatable results.
           </p>
           <LssDiagram />
-        </div>
-      </section>
+        </ContentContainer>
+      </Section>
 
       {/* Semantic-to-Action Architecture */}
-      <section
-        id="semantic-to-action"
-        className="scroll-mt-20 py-20 px-4 bg-navy"
-      >
-        <div className="max-w-4xl mx-auto text-center mb-10">
-          <p className="text-gold-light text-sm font-semibold uppercase tracking-widest mb-3">
-            How Our Capabilities Work Together
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
-            The xlSigma Semantic-to-Action Architecture
-          </h2>
-          <p className="text-slate-300 leading-relaxed mb-4 max-w-3xl mx-auto">
-            xlSigma&apos;s capabilities work together through our Semantic-to-Action Architecture -- a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
-          </p>
-          <p className="text-slate-300 leading-relaxed mb-3 max-w-3xl mx-auto">
-            Rather than deploying AI as another disconnected tool, we build the operational foundation required for trusted, scalable AI-enabled transformation.
-          </p>
-          <p className="text-white font-semibold leading-relaxed max-w-3xl mx-auto">
-            Lean Six Sigma provides the transformation discipline.<br />
-            Semantic-to-Action provides the architecture.
-          </p>
-        </div>
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+      <Section variant="navy" id="semantic-to-action" className="scroll-mt-20" aria-labelledby="s2a-heading">
+        <ContentContainer>
+          <div className="mb-14 grid gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <Eyebrow className="mb-5">How Our Capabilities Work Together</Eyebrow>
+              <Rule variant="gold" className="mb-6" />
+              <Headline id="s2a-heading" level={2} size="xl">
+                The xlSigma Semantic-to-Action™ Architecture
+              </Headline>
+            </div>
+            <div className="lg:col-span-7">
+              <div className="space-y-5 text-lead text-(--fg-muted)">
+                <p>
+                  xlSigma&apos;s capabilities work together through our Semantic-to-Action™ Architecture -- a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
+                </p>
+                <p>
+                  Rather than deploying AI as another disconnected tool, we build the operational foundation required for trusted, scalable AI-enabled transformation.
+                </p>
+              </div>
+              <p className="mt-8 text-lead font-semibold leading-snug text-(--fg)">
+                Lean Six Sigma provides the transformation discipline.<br />
+                Semantic-to-Action™ provides the architecture.
+              </p>
+            </div>
+          </div>
+
+          <div className="tone-light tone-paper bg-paper p-6 md:p-10">
             <SemanticToActionDiagram />
           </div>
-        </div>
-        <div className="max-w-5xl mx-auto text-center mt-8">
-          <p className="text-white text-lg md:text-xl font-semibold leading-snug mb-4 text-balance lg:whitespace-nowrap">
-            We don&apos;t start with the AI agent. We model the business the agent must understand.
-          </p>
-          <p className="text-gold-light text-lg font-medium italic">
-            Domain by domain. Process by process. Outcome by outcome.
-          </p>
-        </div>
-      </section>
 
-      {/* Capabilities Grid */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            {CAPABILITIES.map(({ Icon, title, desc }) => (
-              <div
-                key={title}
-                className="flex gap-5 p-6 rounded-xl border border-slate-200
-                           hover:border-gold/40 hover:shadow-md transition-all bg-white"
-              >
-                <div className="w-12 h-12 bg-navy/5 rounded-xl flex items-center
-                                justify-center flex-shrink-0 mt-0.5">
-                  <Icon size={24} className="text-navy" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-navy mb-2">{title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{desc}</p>
-                </div>
-              </div>
-            ))}
+          <div className="mt-14 grid gap-8 lg:grid-cols-12 lg:gap-16">
+            <PullQuote className="lg:col-span-7">
+              We don&apos;t start with the AI agent. We model the business the agent must understand.
+            </PullQuote>
+            <p className="font-serif text-title italic text-gold lg:col-span-5 lg:self-end">
+              Domain by domain. Process by process. Outcome by outcome.
+            </p>
           </div>
-        </div>
-      </section>
+        </ContentContainer>
+      </Section>
+
+      {/* Capabilities List */}
+      <Section variant="white">
+        <ContentContainer>
+          <CapabilityList>
+            {CAPABILITIES.map(({ title, desc }, i) => (
+              <CapabilityRow key={title} index={i + 1} title={title}>{desc}</CapabilityRow>
+            ))}
+          </CapabilityList>
+        </ContentContainer>
+      </Section>
 
       {/* Differentiators */}
-      <section className="py-20 px-4 bg-slate-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">
-                Differentiators
-              </p>
-              <h2 className="text-3xl font-bold text-navy mb-4">
+      <Section variant="paper" aria-labelledby="differentiators">
+        <ContentContainer>
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <Eyebrow className="mb-5">Differentiators</Eyebrow>
+              <Rule variant="gold" className="mb-6" />
+              <Headline id="differentiators" level={2} size="xl" className="mb-8">
                 What Sets xlSigma Apart
-              </h2>
-              <p className="text-slate-600 leading-relaxed">
+              </Headline>
+              <p className="text-lead text-(--fg-muted)">
                 These are not marketing claims -- they are structural advantages
                 built into how xlSigma operates.
               </p>
             </div>
-            <ul className="space-y-4">
+            <ul className="border-b border-(--rule) lg:col-span-7">
               {DIFFERENTIATORS.map((d) => (
-                <li key={d} className="flex items-start gap-3">
-                  <CheckCircle size={18} className="text-gold mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700 text-sm leading-relaxed">{d}</span>
+                <li key={d} className="border-t border-(--rule) py-5 text-base leading-relaxed text-(--fg) md:py-6">
+                  {d}
                 </li>
               ))}
             </ul>
           </div>
-        </div>
-      </section>
+        </ContentContainer>
+      </Section>
 
       {/* CTA */}
-      <section className="py-20 px-4 bg-white text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-navy mb-4">
-            See How These Apply to Your Situation
-          </h2>
-          <p className="text-slate-600 mb-8 leading-relaxed">
-            Every engagement starts with understanding your specific challenge.
-            Let us show you what senior-level delivery looks like in practice.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-navy hover:bg-navy-light
-                         text-white font-semibold px-7 py-3 rounded-lg transition-colors"
-            >
-              Contact Us <ArrowRight size={16} />
-            </Link>
-            <Link
-              href="/government-contracting"
-              className="inline-flex items-center gap-2 border border-navy text-navy
-                         hover:bg-navy hover:text-white font-semibold px-7 py-3
-                         rounded-lg transition-colors"
-            >
-              Federal Contracting
-            </Link>
+      <Section variant="navy" aria-labelledby="cap-cta">
+        <ContentContainer>
+          <div className="grid items-end gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-7">
+              <Rule variant="gold" className="mb-6" />
+              <Headline id="cap-cta" level={2} size="xl" className="mb-5">
+                See How These Apply to Your Situation
+              </Headline>
+              <p className="max-w-xl text-lead text-(--fg-muted)">
+                Every engagement starts with understanding your specific challenge.
+                Let us show you what senior-level delivery looks like in practice.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4 lg:col-span-5 lg:justify-end">
+              <Button href="/contact" variant="primary">
+                Contact Us <ArrowRight size={16} aria-hidden="true" />
+              </Button>
+              <Button href="/government-contracting" variant="secondary">Federal Contracting</Button>
+            </div>
           </div>
-        </div>
-      </section>
+        </ContentContainer>
+      </Section>
     </>
   );
 }
