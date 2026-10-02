@@ -7,6 +7,7 @@ import { Menu, X }       from 'lucide-react';
 const LINKS = [
   { href: '/',                       label: 'Home'         },
   { href: '/capabilities',           label: 'Capabilities' },
+  { href: '/semantic-to-action',     label: 'Semantic-to-Action™' },
   { href: '/commercial',             label: 'Commercial'   },
   { href: '/government-contracting', label: 'Government'   },
   { href: '/careers',                label: 'Careers'      },

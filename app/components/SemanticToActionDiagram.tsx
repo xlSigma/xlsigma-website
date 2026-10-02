@@ -46,7 +46,7 @@ export default function SemanticToActionDiagram() {
     <div className="w-full overflow-x-hidden">
       <ol
         role="list"
-        aria-label="Semantic-to-Action Architecture stages"
+        aria-label="Semantic-to-Action™ Architecture stages"
         className="list-none p-0 m-0 flex flex-col xl:flex-row xl:items-stretch"
       >
         {STAGES.flatMap((stage, i) => {

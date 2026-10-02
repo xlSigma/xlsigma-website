@@ -221,7 +221,7 @@ export default function HomePage() {
             <div className="lg:col-span-7">
               <div className="space-y-5 text-lead text-(--fg-muted)">
                 <p>
-                  AI can access enterprise information without truly understanding how the business works. xlSigma&apos;s Semantic-to-Action Architecture connects enterprise systems and knowledge to a shared Semantic Foundation, then adds the processes, policies, roles, decision authority, and controls AI needs to operate effectively.
+                  AI can access enterprise information without truly understanding how the business works. xlSigma&apos;s Semantic-to-Action™ Architecture connects enterprise systems and knowledge to a shared Semantic Foundation, then adds the processes, policies, roles, decision authority, and controls AI needs to operate effectively.
                 </p>
                 <p>
                   The result is a governed business architecture that allows AI to move beyond isolated tools and begin reasoning across operations and acting within defined boundaries.
@@ -245,8 +245,8 @@ export default function HomePage() {
           </ol>
 
           <div className="mt-12">
-            <Button href="/capabilities#semantic-to-action" variant="primary">
-              Explore the Semantic-to-Action Architecture <ArrowRight size={16} aria-hidden="true" />
+            <Button href="/semantic-to-action" variant="primary">
+              Explore the Semantic-to-Action™ Architecture <ArrowRight size={16} aria-hidden="true" />
             </Button>
           </div>
         </ContentContainer>

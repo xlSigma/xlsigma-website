@@ -12,7 +12,7 @@ import PullQuote from '../components/ui/PullQuote';
 import { CapabilityList, CapabilityRow } from '../components/ui/CapabilityRow';
 
 export const metadata: Metadata = {
-  title: 'Capabilities & Semantic-to-Action Architecture | xlSigma',
+  title: 'Capabilities & Semantic-to-Action™ Architecture | xlSigma',
   description:
     'Explore xlSigma capabilities in Lean Six Sigma, enterprise knowledge and semantic transformation, AI agents and intelligent automation, operating model design, analytics, digital solutions, and federal program support.',
 };
@@ -248,13 +248,13 @@ export default function CapabilitiesPage() {
               <Eyebrow className="mb-5">How Our Capabilities Work Together</Eyebrow>
               <Rule variant="gold" className="mb-6" />
               <Headline id="s2a-heading" level={2} size="xl">
-                The xlSigma Semantic-to-Action Architecture
+                The xlSigma Semantic-to-Action™ Architecture
               </Headline>
             </div>
             <div className="lg:col-span-7">
               <div className="space-y-5 text-lead text-(--fg-muted)">
                 <p>
-                  xlSigma&apos;s capabilities work together through our Semantic-to-Action Architecture -- a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
+                  xlSigma&apos;s capabilities work together through our Semantic-to-Action™ Architecture -- a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
                 </p>
                 <p>
                   Rather than deploying AI as another disconnected tool, we build the operational foundation required for trusted, scalable AI-enabled transformation.
@@ -262,7 +262,7 @@ export default function CapabilitiesPage() {
               </div>
               <p className="mt-8 text-lead font-semibold leading-snug text-(--fg)">
                 Lean Six Sigma provides the transformation discipline.<br />
-                Semantic-to-Action provides the architecture.
+                Semantic-to-Action™ provides the architecture.
               </p>
             </div>
           </div>
