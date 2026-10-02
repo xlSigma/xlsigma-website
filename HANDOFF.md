@@ -78,7 +78,6 @@ Shared components (app/components/):
 - Footer.tsx                  - Navy footer: brand, certifications, navigation, contact, NAICS
 - ScrollToTop.tsx             - Forces scroll to the very top on every route change (skipped for #anchors)
 - SemanticToActionDiagram.tsx - Six-stage architecture diagram (server component)
-- Medallion.tsx               - Old medallion component; no longer used (MedallionHero replaced it)
 
 UI primitives (app/components/ui/):
 - Section             - page band; variants white, paper, navy; sets the tone variables below
@@ -96,10 +95,10 @@ Layout: app/layout.tsx sets the fonts, wraps pages in NavBar, ScrollToTop, and F
 
 ## Source of Truth and Workflow
 
-The TSX files are the source of truth for all copy and layout. The old generator scripts
-(`xlsigma-files.ps1`, `xlsigma-write-handoff.ps1`, `xlsigma-contact-checkboxes.ps1`) are legacy:
-running `xlsigma-files.ps1` would overwrite the redesign with the old pages. Do not run them.
-This file is now edited directly.
+The TSX files are the source of truth for all copy and layout. The old PowerShell generator scripts
+(`xlsigma-files.ps1`, `xlsigma-write-handoff.ps1`, `xlsigma-contact-checkboxes.ps1`) were removed from the
+repo because running them would have overwritten the redesign; they remain in git history. This file is
+edited directly.
 
 Typical change:
 1. git pull
@@ -297,7 +296,6 @@ Outcomes). Vertical by default, horizontal at 1280px and up. It expects a tone-l
   after resizing the viewport, or check pages structurally.
 - "use client" components: NavBar, ScrollToTop, contact/page.tsx, careers/page.tsx. All others
   are server components.
-- The legacy PowerShell generators contain the old pages. Treat them as reference only.
 - Open copy flags are listed in CONTENT-INVENTORY.md (for example an unmatched parenthesis in one
   Government past-performance entry).
 

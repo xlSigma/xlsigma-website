@@ -14,7 +14,7 @@ The site was redesigned (presentation only) to an editorial look: white and pape
 bands, serif display headlines. The work lives on the `redesign` branch and in draft PR #1 until it
 is merged into `main`. These rules hold on that branch and after the merge.
 
-- **Source of truth is the TSX files.** `xlsigma-files.ps1`, `xlsigma-write-handoff.ps1`, and `xlsigma-contact-checkboxes.ps1` are legacy: running `xlsigma-files.ps1` overwrites the redesign. Do not run them. HANDOFF.md is edited directly.
+- **Source of truth is the TSX files.** The old generator scripts (`xlsigma-files.ps1` and friends) were removed; they are in git history only. Do not restore or run them. HANDOFF.md is edited directly.
 - **Copy freeze.** `CONTENT-INVENTORY.md` is the verbatim copy checkpoint for every page. No new text, no rewrites, no new sections unless the user asks. Report copy that does not fit a layout; do not edit it. When an approved copy change is made, update the inventory in the same commit.
 - **Git.** Push only when the user asks in chat. Never merge into or push to `main` without explicit approval. Do not delete files without asking.
 - **Business facts.** Never reference MBE or minority-owned status. Active certifications only: SDVOSB, Veteran-Owned SB, Florida OSD Veteran CBE (pending). SAM.gov registration appears only on the Government page. NAICS codes: 541511, 541611, 541614, 541618 only; flag any other code, do not silently fix. Company history references: Accenture, GE, Emerson (IBM removed).
@@ -55,7 +55,6 @@ is merged into `main`. These rules hold on that branch and after the merge.
 | `app/components/NavBar.tsx`, `Footer.tsx`, `ScrollToTop.tsx` | Shared chrome |
 | `CONTENT-INVENTORY.md` | Verbatim copy checkpoint and open flags |
 | `HANDOFF.md` | Architecture, stack, DNS, deployment reference |
-| `xlsigma-*.ps1` | Legacy generators. Do not run. |
 
 ### Tools Andres Has
 - **VS Code** - preferred editor (`code filename` from terminal)
@@ -94,6 +93,7 @@ is merged into `main`. These rules hold on that branch and after the merge.
 - Added `ScrollToTop`, tightened the navbar at 768px, restyled both diagrams
 - Resolved flagged items: removed NAICS 541512, minority wording, em dashes, and Government spacing typos; kept SAM.gov on the Government page only
 - Approved copy edits: Home headline without periods, Home hero services as a bullet list, Home bullets split and Bilingual removed, Government hero pills removed, Contact phone / "Call or text:" / mailing address, footer phone and "Call or text:"
+- Removed the unused `Medallion.tsx` and the three legacy `xlsigma-*.ps1` scripts (approved)
 - Opened draft PR #1 against `main`; Vercel preview is Ready
 
 **Decisions made:**
@@ -109,7 +109,6 @@ is merged into `main`. These rules hold on that branch and after the merge.
 - [ ] Review the Vercel preview for PR #1 on desktop and mobile, then mark it ready and merge to `main`
 - [ ] Government past performance, U.S. Army / DoD entry: "reporting functionality)." has an unmatched closing parenthesis (needs the author's intent)
 - [ ] Decide whether to commit `.claude/launch.json` or add `.claude/` to `.gitignore`
-- [ ] Decide whether to delete the unused `app/components/Medallion.tsx` and the legacy `xlsigma-*.ps1` scripts (ask first)
 - [ ] Consider a higher-resolution home banner (the current one is 1128x191 and soft on high-density screens)
 - [ ] Confirm RESEND_FROM_EMAIL is set to noreply@xlsigma.com once the domain is verified in Resend
 - [ ] Add more sessions to this log as work continues
