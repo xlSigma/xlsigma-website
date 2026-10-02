@@ -147,8 +147,8 @@ export default function HomePage() {
               <Rule variant="gold" className="mb-6" />
               <Headline id="who-we-are" level={2} size="xl">
                 <span className="block">Operational Excellence</span>
-                <span className="mt-8 block">Senior</span>
-                <span className="mt-8 block">Accountable</span>
+                <span className="mt-14 block">Senior</span>
+                <span className="mt-14 block">Accountable</span>
               </Headline>
             </div>
 
