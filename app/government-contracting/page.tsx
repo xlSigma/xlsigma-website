@@ -93,6 +93,7 @@ const AGENCIES = [
 
 const NAICS = [
   { code: '541511', desc: 'Custom Computer Programming Services'         },
+  { code: '541512', desc: 'Computer Systems Design Services'              },
   { code: '541611', desc: 'Administrative Management Consulting'         },
   { code: '541614', desc: 'Process, Distribution & Logistics Consulting' },
   { code: '541618', desc: 'Other Management Consulting Services'         },

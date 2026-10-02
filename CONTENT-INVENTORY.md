@@ -34,7 +34,7 @@ Senior-level consulting and technology services for commercial and government cl
 - Call or text: (813) 539-8229
 - Send a Message{{→ /contact}}
 ## NAICS
-541511 | 541611 | 541614 | 541618
+541511 | 541512 | 541611 | 541614 | 541618
 (c) 2026 xlSigma LLC. All rights reserved. Tampa, FL.
 
 ---
@@ -45,14 +45,14 @@ Meta title: xlSigma | Operational Excellence, AI & Enterprise Transformation
 Meta description: xlSigma helps commercial and government organizations improve performance through Lean Six Sigma, enterprise knowledge and semantic transformation, AI agents, intelligent automation, analytics, and technology-enabled transformation.
 
 [image alt: xlSigma: AI, Automation and Enterprise Knowledge Transformation. Powered by Lean Six Sigma. Service-Disabled Veteran-Owned Small Business, SDVOSB.]
-# Senior-Level Consulting for Operations Excellence
-- Process Reengineering
-- Lean Six Sigma
+# Senior-Level Consulting for AI-Enabled Operations
+- Operationalizing AI
 - AI & Intelligent Automation
 - Enterprise Knowledge Transformation
+- Process Reengineering
+- Lean Six Sigma
 - Advanced Analytics
 Backed by Fortune 500 experience in transformation and operational excellence
-View Capabilities{{→ /capabilities}}Get in Touch{{→ /contact}}
 Who We Are
 ## Operational Excellence Senior Accountable
 xlSigma is a management consulting and technology firm built to deliver enterprise-grade expertise with small-firm agility and direct accountability.
@@ -186,12 +186,11 @@ Agile project delivery that keeps engagements on schedule, combined with structu
 Differentiators
 ## What Sets xlSigma Apart
 These are not marketing claims -- they are structural advantages built into how xlSigma operates.
-- Small-business credit: SDVOSB
+- Senior-only delivery teams on every engagement -- no juniors, no bench
 - Lean Six Sigma Master Black Belt (rare at small-business scale)
-- Proven federal track record: SBA, USPS, CENTCOM, U.S. Army ARCENT, JIEDDO
 - Full-stack delivery: strategy, design, build, implement, and train
+- AI transformation grounded in operational excellence
 - Lower business overhead translates to lower prices for top talent and results
-- Bilingual: English, Spanish
 ## See How These Apply to Your Situation
 Every engagement starts with understanding your specific challenge. Let us show you what senior-level delivery looks like in practice.
 Contact Us {{→ /contact}}Federal Contracting{{→ /government-contracting}}
@@ -654,6 +653,7 @@ PHAB assessment
 NAICS Codes
 ## Registered Capabilities
 - 541511 Custom Computer Programming Services
+- 541512 Computer Systems Design Services
 - 541611 Administrative Management Consulting
 - 541614 Process, Distribution & Logistics Consulting
 - 541618 Other Management Consulting Services
@@ -760,7 +760,7 @@ These conflict with, or sit near, the project constraints. Nothing here was edit
 - Footer copyright line keeps "Tampa, FL." (approved); it is consistent with the Contact mailing address.
 - Home "Why xlSigma" list: "Workflow Automation" and "Full-stack delivery: ..." split into two bullets; "Bilingual delivery: English, Spanish" removed from Home (it remains on Capabilities).
 - "SAM.gov Registered" now appears only on the Government page (the SAM.gov / Active Registration card). Removed from the Home federal section and the Footer.
-- NAICS 541512 removed from the Footer and the Government list. Approved codes: 541511, 541611, 541614, 541618.
+- NAICS 541512 removed from the Footer and the Government list. Approved codes: 541511, 541611, 541614, 541618. Update 2026-10-02: 541512 (Computer Systems Design Services) re-added to the Footer and the Government list at Andres's direction; approved codes are now 541511, 541512, 541611, 541614, 541618.
 - Minority-owned wording removed from `HANDOFF.md`.
 - Em dashes removed from Careers copy, API email templates, and code comments.
 - Spacing and punctuation fixed in Government past performance ("theater (with", "(retrograde). (with", "KYC process. Supported").

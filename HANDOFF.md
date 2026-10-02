@@ -243,7 +243,7 @@ Phone: (813) 539-8229 (call or text)
 Email: info@xlsigma.com
 Certifications: SDVOSB, Veteran-Owned Small Business, Florida OSD Veteran CBE (pending)
 Registration: SAM.gov (shown on the Government page only)
-NAICS codes: 541511 | 541611 | 541614 | 541618
+NAICS codes: 541511 | 541512 | 541611 | 541614 | 541618
 Company history references: Accenture, GE, Emerson
 
 Business rules for copy: do not reference MBE or minority-owned status, and do not use em dashes.
