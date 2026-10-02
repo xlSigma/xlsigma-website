@@ -11,8 +11,8 @@
 ## Redesign Guardrails (apply to every session)
 
 The site was redesigned (presentation only) to an editorial look: white and paper sections, navy
-bands, serif display headlines. The work lives on the `redesign` branch and in draft PR #1 until it
-is merged into `main`. These rules hold on that branch and after the merge.
+bands, serif display headlines. The redesign is merged into `main` (PR #1, with follow-ups in PRs #2
+and #3) and is live on xlsigma.com. These rules hold on `main` and on any working branch.
 
 - **Source of truth is the TSX files.** The old generator scripts (`xlsigma-files.ps1` and friends) were removed; they are in git history only. Do not restore or run them. HANDOFF.md is edited directly.
 - **Copy freeze.** `CONTENT-INVENTORY.md` is the verbatim copy checkpoint for every page. No new text, no rewrites, no new sections unless the user asks. Report copy that does not fit a layout; do not edit it. When an approved copy change is made, update the inventory in the same commit.
@@ -102,12 +102,26 @@ is merged into `main`. These rules hold on that branch and after the merge.
 - Footer copyright keeps "Tampa, FL."
 - Leave the seven-link navbar and the length of the Semantic-to-Action page as they are
 
+### Session 3 - October 2026 (ship the redesign)
+**Goal:** Push the redesign, review the preview, and merge to `main`.
+
+**What was done:**
+- Pushed `redesign` and reviewed the Vercel preview (Ready, checks passing)
+- PR #1 was merged at the older head `335e821` before the last four approved commits were pushed, so they missed `main`: home hero reposition, hero CTA removal, Capabilities "What Sets xlSigma Apart" bullets, NAICS 541512
+- Opened and merged PR #2 with those four commits; confirmed the production deploy (`fc01178`) succeeded and 541512 is live on the Government page and footer
+- Added `.claude/` to `.gitignore`, shipped in PR #3 (`e7d3f2c`)
+- Captured the NAICS 541512 decision in OB1
+
+**Decisions made:**
+- NAICS list is 541511, 541512, 541611, 541614, 541618; flag any other code
+- `.claude/` is gitignored, so `launch.json` stays local
+
+**Lesson:** After a PR is merged, new commits on its branch need a new PR. Check `git log origin/main..origin/redesign` before assuming everything shipped.
+
 ---
 
 ## Pending / Future Work
 
-- [ ] Review the Vercel preview for PR #1 on desktop and mobile, then mark it ready and merge to `main`
-- [ ] Decide whether to commit `.claude/launch.json` or add `.claude/` to `.gitignore`
 - [ ] Consider a higher-resolution home banner (the current one is 1128x191 and soft on high-density screens)
 - [ ] Confirm RESEND_FROM_EMAIL is set to noreply@xlsigma.com once the domain is verified in Resend
 - [ ] Add more sessions to this log as work continues
