@@ -311,25 +311,23 @@ export default function SemanticToActionPage() {
           We don&apos;t start with the AI agent.{' '}
           <span className="text-gold">We model the business the agent must understand.</span>
         </p>
-        <div className="mx-auto max-w-2xl space-y-5 text-lead text-(--fg-muted)">
-          <p>AI can only act effectively when it understands the organization around it.</p>
-          <p>
+        <div className="mx-auto space-y-5 text-lead text-(--fg-muted)">
+          <p className="mx-auto max-w-4xl">AI can only act effectively when it understands the organization around it.</p>
+          <p className="mx-auto max-w-2xl">
             Semantic-to-Action™ is xlSigma&apos;s approach for connecting enterprise knowledge, business
             processes, policies, decision authority, and AI-enabled automation into a coherent
             operating architecture.
           </p>
         </div>
-        <p className="mx-auto mt-8 max-w-2xl font-serif text-title font-medium text-(--fg)">
+        <p className="mx-auto mt-8 max-w-4xl font-serif text-title font-medium text-(--fg)">
           The goal is not simply better AI.
           <br />
           <span className="text-gold">The goal is better business performance enabled by AI.</span>
         </p>
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Button href="#architecture" variant="primary">
-            Explore the Approach <ArrowDown size={16} aria-hidden="true" />
-          </Button>
-          <Button href="/contact" variant="secondary">Talk With xlSigma</Button>
-        </div>
+        <p className="mt-12 flex items-center justify-center gap-2 text-[0.8125rem] font-semibold uppercase tracking-[0.18em] text-(--accent)">
+          Explore the approach below
+          <ArrowDown size={16} aria-hidden="true" />
+        </p>
       </MedallionHero>
 
       {/* 1. THE PROBLEM */}
@@ -566,7 +564,7 @@ export default function SemanticToActionPage() {
                 How can AI help it operate better?
               </p>
             </div>
-            <div className="lg:col-span-6">
+            <div className="lg:col-span-6 lg:self-end">
               <p className="mb-6 text-lead text-(--fg-muted)">
                 xlSigma combines process analysis, performance improvement, semantic architecture,
                 operating-model design, and AI enablement to identify where technology can materially
@@ -576,8 +574,13 @@ export default function SemanticToActionPage() {
                 That means AI opportunities are evaluated in the context of:
               </p>
               <ul className="grid gap-x-8 sm:grid-cols-2">
-                {LSS_FACTORS.map((f) => (
-                  <li key={f} className="border-t border-(--rule) py-3 text-base text-(--fg)">{f}</li>
+                {LSS_FACTORS.map((f, i) => (
+                  <li
+                    key={f}
+                    className={`border-t border-(--rule) py-3 text-base text-(--fg) ${i >= LSS_FACTORS.length - 2 ? 'border-b' : ''}`}
+                  >
+                    {f}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -639,14 +642,14 @@ export default function SemanticToActionPage() {
       <Section variant="paper" aria-labelledby="example-heading">
         <ContentContainer>
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-5">
+            <div className="flex flex-col lg:col-span-5">
               <SectionIntro eyebrow="Example" id="example-heading" className="mb-8">
                 What does Semantic-to-Action™ look like in practice?
               </SectionIntro>
               <p className="mb-8 text-lead text-(--fg-muted)">
                 Imagine a customer service request that requires an exception.
               </p>
-              <div className="rounded-sm border border-(--rule) bg-white p-6">
+              <div className="rounded-sm border border-(--rule) bg-white p-6 lg:mt-auto">
                 <p className="mb-4 text-base font-semibold text-(--fg)">A conventional AI assistant might:</p>
                 <ol className="space-y-2.5">
                   {CONVENTIONAL_AI.map((c, i) => (
@@ -661,15 +664,15 @@ export default function SemanticToActionPage() {
                 </p>
               </div>
             </div>
-            <div className="lg:col-span-7">
+            <div className="flex flex-col lg:col-span-7">
               <p className="mb-5 text-lead font-semibold text-(--fg)">
                 A Semantic-to-Action™ operating model could understand:
               </p>
-              <dl className="border-b border-(--rule)">
+              <dl className="flex flex-1 flex-col border-b border-(--rule)">
                 {EXAMPLE_ELEMENTS.map((e) => (
                   <div
                     key={e.title}
-                    className="grid gap-x-6 gap-y-1 border-t border-(--rule) py-3.5 sm:grid-cols-[9rem_1fr]"
+                    className="grid flex-1 content-center gap-x-6 gap-y-1 border-t border-(--rule) py-3.5 sm:grid-cols-[9rem_1fr]"
                   >
                     <dt className="font-serif text-lg font-medium text-(--fg)">{e.title}</dt>
                     <dd className="text-base text-(--fg-muted)">{e.q}</dd>
@@ -687,11 +690,13 @@ export default function SemanticToActionPage() {
       {/* 9. TECHNOLOGY NEUTRALITY */}
       <Section variant="white" aria-labelledby="tech-heading">
         <ContentContainer>
+          <Eyebrow className="mb-5">Technology Neutrality</Eyebrow>
+          <Rule variant="gold" className="mb-6" />
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">
-              <SectionIntro eyebrow="Technology Neutrality" id="tech-heading" className="mb-8">
+              <Headline id="tech-heading" level={2} size="xl" className="mb-8">
                 Built around your enterprise, not a predetermined technology stack
-              </SectionIntro>
+              </Headline>
               <div className="space-y-5 text-lead text-(--fg-muted)">
                 <p>
                   Semantic-to-Action™ is an architecture and transformation approach, not a requirement to
@@ -762,20 +767,22 @@ export default function SemanticToActionPage() {
                   organizational change.
                 </p>
                 <p className="font-semibold text-(--fg)">xlSigma brings those disciplines together.</p>
-                <p>Our approach combines:</p>
               </div>
             </div>
-            <ul className="border-b border-(--rule) lg:col-span-7">
-              {WHY.map((w) => (
-                <li
-                  key={w.title}
-                  className="grid gap-x-6 gap-y-1 border-t border-(--rule) py-5 sm:grid-cols-[14rem_1fr]"
-                >
-                  <span className="font-serif text-xl font-medium text-(--fg)">{w.title}</span>
-                  <span className="text-base text-(--fg-muted)">{w.desc}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="lg:col-span-7 lg:self-end">
+              <p className="mb-4 text-lead font-semibold text-(--fg)">Our approach combines:</p>
+              <ul className="border-b border-(--rule)">
+                {WHY.map((w) => (
+                  <li
+                    key={w.title}
+                    className="grid gap-x-6 gap-y-1 border-t border-(--rule) py-2.5 sm:grid-cols-[14rem_1fr] lg:grid-cols-[17rem_1fr]"
+                  >
+                    <span className="font-serif text-xl font-medium text-(--fg)">{w.title}</span>
+                    <span className="text-base text-(--fg-muted)">{w.desc}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           <div className="mt-14 border-t-2 border-gold pt-8">
             <p className="max-w-4xl font-serif text-headline font-medium leading-tight text-balance text-(--fg)">
