@@ -93,11 +93,45 @@ const SPOKE_STROKE = '#C9A24B';
 const NAVY = '#0B1F3A';
 const GOLD = '#C9A24B';
 
+const LSS_AREAS: [string, string][] = [
+  ['AI, Agents &', 'Automation'],
+  ['Logistics &', 'Supply Chain'],
+  ['Knowledge & Semantic', 'Transformation'],
+  ['Operating Model', '& Strategy Deployment'],
+  ['Data Analytics', 'KPIs & Dashboards'],
+  ['Power BI / Tableau', 'Power Platform'],
+  ['EUC App', 'Development'],
+  ['Federal Program', 'Perf. Mgmt'],
+  ['Agile Delivery', '& Change Mgmt'],
+];
+
+/** Phone layout: the SVG's labels shrink below 7px at this width, so list the same areas instead. */
+function LssDiagramMobile() {
+  return (
+    <div className="mx-auto max-w-sm md:hidden">
+      <div className="rounded-sm border-2 border-gold bg-navy px-6 py-5 text-center">
+        <p className="font-sans text-lg font-bold text-white">Lean Six Sigma</p>
+        <p className="font-sans text-sm font-semibold text-gold">DMAIC discipline</p>
+      </div>
+      <ul className="mt-4 space-y-3">
+        {LSS_AREAS.map(([title, sub]) => (
+          <li key={title} className="rounded-sm border border-rule bg-white px-4 py-3 text-center border-t-4 border-t-gold">
+            <p className="font-sans text-base font-semibold text-navy">{title}</p>
+            <p className="font-sans text-sm text-ink-muted">{sub}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function LssDiagram() {
   return (
+    <>
+    <LssDiagramMobile />
     <svg
       viewBox="0 0 680 630"
-      className="mx-auto block w-full max-w-4xl font-sans"
+      className="mx-auto hidden w-full max-w-4xl font-sans md:block"
       role="img"
       aria-label="Hub-and-spoke diagram with Lean Six Sigma at center connected to nine capability areas"
     >
@@ -209,6 +243,7 @@ function LssDiagram() {
       <text x="199" y="157" textAnchor="middle" dominantBaseline="central"
             fill={NAVY} fontSize="11">&amp; Change Mgmt</text>
     </svg>
+    </>
   );
 }
 

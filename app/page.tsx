@@ -11,7 +11,7 @@ import PullQuote from './components/ui/PullQuote';
 import { CapabilityList, CapabilityRow } from './components/ui/CapabilityRow';
 
 export const metadata: Metadata = {
-  title: 'xlSigma | Operational Excellence, AI & Enterprise Transformation',
+  title: 'xlSigma | AI-Enabled Operations, Automation & Enterprise Transformation',
   description:
     'xlSigma helps commercial and government organizations improve performance through Lean Six Sigma, enterprise knowledge and semantic transformation, AI agents, intelligent automation, analytics, and technology-enabled transformation.',
 };
