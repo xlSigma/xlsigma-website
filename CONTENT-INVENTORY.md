@@ -90,8 +90,8 @@ We don't start with the AI agent. We model the business the agent must understan
 Explore the Semantic-to-Action™ Architecture {{→ /semantic-to-action}}
 Why xlSigma
 ## The Engagement Model Makes the Difference
-Large firms send senior partners to sell -- then deliver with junior staff. xlSigma operates differently. We deliver with senior-level consultants with Principal oversight from day one through final handoff.
-- Senior-only delivery teams on every engagement -- no juniors, no bench
+Large firms send senior partners to sell — then deliver with junior staff. xlSigma operates differently. We deliver with senior-level consultants with Principal oversight from day one through final handoff.
+- Senior-only delivery teams on every engagement — no juniors, no bench
 - Workflow Automation
 - Full-stack delivery: strategy, design, build, implement, and training
 - Strategy Deployment, Process Improvement, Data Analytics, KPI Dashboards
@@ -101,7 +101,7 @@ Large firms send senior partners to sell -- then deliver with junior staff. xlSi
 - FL OSD Veteran CBE (pending)
 -
 ## Federal Prime Contractor?
-xlSigma is a certified SDVOSB -- helping prime contractors meet participation goals while delivering senior-level execution.
+xlSigma is a certified SDVOSB — helping prime contractors meet participation goals while delivering senior-level execution.
 View Federal Contracting Credentials {{→ /government-contracting}}
 ## Ready to Get Started?
 Tell us about your challenge. We will respond within one business day.
@@ -124,7 +124,7 @@ Fact-based, waste-eliminating, and built for repeatable results.
 Lean Six Sigma DMAIC discipline AI, Agents & Automation Logistics & Supply Chain Knowledge & Semantic Transformation Operating Model & Strategy Deployment Data Analytics KPIs & Dashboards Power BI / Tableau Power Platform EUC App Development Federal Program Perf. Mgmt Agile Delivery & Change Mgmt
 How Our Capabilities Work Together
 ## The xlSigma Semantic-to-Action™ Architecture
-xlSigma's capabilities work together through our Semantic-to-Action™ Architecture -- a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
+xlSigma's capabilities work together through our Semantic-to-Action™ Architecture — a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
 Rather than deploying AI as another disconnected tool, we build the operational foundation required for trusted, scalable AI-enabled transformation.
 Lean Six Sigma provides the transformation discipline.
 Semantic-to-Action™ provides the architecture.
@@ -176,17 +176,17 @@ End-to-end analytics: from defining the right KPIs to building the dashboards th
 Deep hands-on expertise across the Microsoft Power Platform and leading BI tools. Build production-ready reports, automated workflows, and data models that non-technical users can own and maintain.
 - 08
 ### End-User Computing (EUC) Application Development
-Custom Excel/VBA workbooks, Access or SQL databases, SharePoint solutions, and lightweight Power Apps -- purpose-built for specific operational workflows and designed for adoption.
+Custom Excel/VBA workbooks, Access or SQL databases, SharePoint solutions, and lightweight Power Apps — purpose-built for specific operational workflows and designed for adoption.
 - 09
 ### Federal Program & Performance Management Support
 Program management, performance metrics, and reporting frameworks for federal agency engagements. Experienced supporting DoD and civilian agency programs through prime contractors.
 - 10
 ### Agile Delivery, Change & Stakeholder Management
-Agile project delivery that keeps engagements on schedule, combined with structured change management -- ensuring that new processes and tools are adopted, not just installed. Stakeholder communication plans, training, and sustainment.
+Agile project delivery that keeps engagements on schedule, combined with structured change management — ensuring that new processes and tools are adopted, not just installed. Stakeholder communication plans, training, and sustainment.
 Differentiators
 ## What Sets xlSigma Apart
-These are not marketing claims -- they are structural advantages built into how xlSigma operates.
-- Senior-only delivery teams on every engagement -- no juniors, no bench
+These are not marketing claims — they are structural advantages built into how xlSigma operates.
+- Senior-only delivery teams on every engagement — no juniors, no bench
 - Lean Six Sigma Master Black Belt (rare at small-business scale)
 - Full-stack delivery: strategy, design, build, implement, and train
 - AI transformation grounded in operational excellence
@@ -533,9 +533,9 @@ Meta description: Senior-level management consulting and technology services. Pr
 xlSigma partners with private-sector organizations to reengineer processes, deploy AI and intelligent automation, and build the enterprise knowledge foundations that make transformation stick.
 Why Commercial Clients Choose xlSigma
 ## Practitioner-Led Transformation
-We bring the same senior-level rigor used across Fortune 500 engagements to organizations of any size -- pairing Lean Six Sigma discipline with modern AI and automation capability.
+We bring the same senior-level rigor used across Fortune 500 engagements to organizations of any size — pairing Lean Six Sigma discipline with modern AI and automation capability.
 We don't start with the AI agent. We model the business the agent must understand.
-- Senior-only delivery teams with Fortune 500 depth -- no juniors, no bench
+- Senior-only delivery teams with Fortune 500 depth — no juniors, no bench
 - Lean Six Sigma-led process reengineering that drives measurable cycle-time and cost results
 - AI, agents, and intelligent automation deployed on real operational workflows
 - Enterprise knowledge and semantic transformation that makes systems and data AI-ready
@@ -578,7 +578,7 @@ SAM.gov
 Active Registration
 Value to Prime Contractors
 ## Why Primes Choose xlSigma
-We understand the prime-sub relationship. xlSigma integrates seamlessly into your delivery model -- providing certified small-business credits, senior technical talent, and zero ramp-up time.
+We understand the prime-sub relationship. xlSigma integrates seamlessly into your delivery model — providing certified small-business credits, senior technical talent, and zero ramp-up time.
 - Satisfies SDVOSB small-business participation goals
 - Delivers senior-level execution with no ramp-up. Hit the ground running
 - Fills capability gaps in operations excellence, process improvement, automation, and analytics

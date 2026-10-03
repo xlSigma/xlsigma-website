@@ -64,7 +64,7 @@ const CAPABILITIES = [
   {
     title: 'End-User Computing (EUC) Application Development',
     desc:  'Custom Excel/VBA workbooks, Access or SQL databases, SharePoint solutions, and ' +
-           'lightweight Power Apps -- purpose-built for specific operational workflows ' +
+           'lightweight Power Apps — purpose-built for specific operational workflows ' +
            'and designed for adoption.',
   },
   {
@@ -76,13 +76,13 @@ const CAPABILITIES = [
   {
     title: 'Agile Delivery, Change & Stakeholder Management',
     desc:  'Agile project delivery that keeps engagements on schedule, combined with ' +
-           'structured change management -- ensuring that new processes and tools are ' +
+           'structured change management — ensuring that new processes and tools are ' +
            'adopted, not just installed. Stakeholder communication plans, training, and sustainment.',
   },
 ];
 
 const DIFFERENTIATORS = [
-  'Senior-only delivery teams on every engagement -- no juniors, no bench',
+  'Senior-only delivery teams on every engagement — no juniors, no bench',
   'Lean Six Sigma Master Black Belt (rare at small-business scale)',
   'Full-stack delivery: strategy, design, build, implement, and train',
   'AI transformation grounded in operational excellence',
@@ -288,7 +288,7 @@ export default function CapabilitiesPage() {
             <div className="lg:col-span-7">
               <div className="space-y-5 text-lead text-(--fg-muted)">
                 <p>
-                  xlSigma&apos;s capabilities work together through our Semantic-to-Action™ Architecture -- a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
+                  xlSigma&apos;s capabilities work together through our Semantic-to-Action™ Architecture — a structured approach that transforms fragmented enterprise systems, data, knowledge, processes, rules, and organizational expertise into the business context AI needs to understand, reason, and act.
                 </p>
                 <p>
                   Rather than deploying AI as another disconnected tool, we build the operational foundation required for trusted, scalable AI-enabled transformation.
@@ -338,7 +338,7 @@ export default function CapabilitiesPage() {
                 What Sets xlSigma Apart
               </Headline>
               <p className="text-lead text-(--fg-muted)">
-                These are not marketing claims -- they are structural advantages
+                These are not marketing claims — they are structural advantages
                 built into how xlSigma operates.
               </p>
             </div>

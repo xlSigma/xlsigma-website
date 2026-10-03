@@ -60,7 +60,7 @@ const STAGES = [
 ];
 
 const VALUE_PROPS = [
-  'Senior-only delivery teams on every engagement -- no juniors, no bench',
+  'Senior-only delivery teams on every engagement — no juniors, no bench',
   'Workflow Automation',
   'Full-stack delivery: strategy, design, build, implement, and training',
   'Strategy Deployment, Process Improvement, Data Analytics, KPI Dashboards',
@@ -260,7 +260,7 @@ export default function HomePage() {
                 The Engagement Model Makes the Difference
               </Headline>
               <p className="text-lead text-(--fg-muted)">
-                Large firms send senior partners to sell -- then deliver with junior staff.
+                Large firms send senior partners to sell — then deliver with junior staff.
                 xlSigma operates differently. We deliver with senior-level consultants with Principal oversight from day one through final handoff.
               </p>
             </div>
@@ -298,7 +298,7 @@ export default function HomePage() {
                 Federal Prime Contractor?
               </Headline>
               <p className="max-w-xl text-lead text-(--fg-muted)">
-                xlSigma is a certified SDVOSB -- helping
+                xlSigma is a certified SDVOSB — helping
                 prime contractors meet participation goals while delivering senior-level execution.
               </p>
             </div>
