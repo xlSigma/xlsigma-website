@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Section from '../components/ui/Section';
 import ContentContainer from '../components/ui/ContentContainer';
@@ -7,6 +8,10 @@ import Headline from '../components/ui/Headline';
 import Rule from '../components/ui/Rule';
 import Button from '../components/ui/Button';
 import PullQuote from '../components/ui/PullQuote';
+
+export const metadata: Metadata = {
+  title: 'Operational Excellence for Commercial Enterprises | xlSigma',
+};
 
 const VALUE_PROPS = [
   'Senior-only delivery teams with Fortune 500 depth — no juniors, no bench',

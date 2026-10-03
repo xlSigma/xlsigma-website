@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Section from '../components/ui/Section';
 import ContentContainer from '../components/ui/ContentContainer';
@@ -7,6 +8,10 @@ import Headline from '../components/ui/Headline';
 import Rule from '../components/ui/Rule';
 import Button from '../components/ui/Button';
 import Tag from '../components/ui/Tag';
+
+export const metadata: Metadata = {
+  title: 'SDVOSB Subcontracting Partner | xlSigma',
+};
 
 const VALUE_PROPS = [
   'Satisfies SDVOSB small-business participation goals',

@@ -525,7 +525,7 @@ Talk With xlSigma {{→ /contact}}Explore Our AI & Technology Capabilities{{→ 
 
 ## Commercial (`/commercial`)
 
-Meta title: xlSigma LLC | Management Consulting & Technology
+Meta title: Operational Excellence for Commercial Enterprises | xlSigma
 Meta description: Senior-level management consulting and technology services. Process improvement, business process automation, strategy deployment, advanced analytics. SDVOSB and Veteran-Owned Small Business.
 
 [image alt: xlSigma medallion]
@@ -559,7 +559,7 @@ Start the Conversation {{→ /contact}}
 
 ## Government Contracting (`/government-contracting`)
 
-Meta title: xlSigma LLC | Management Consulting & Technology
+Meta title: SDVOSB Subcontracting Partner | xlSigma
 Meta description: Senior-level management consulting and technology services. Process improvement, business process automation, strategy deployment, advanced analytics. SDVOSB and Veteran-Owned Small Business.
 
 [image alt: xlSigma medallion]
@@ -665,7 +665,7 @@ Start the Conversation {{→ /contact}}
 
 ## Careers (`/careers`)
 
-Meta title: xlSigma LLC | Management Consulting & Technology
+Meta title: Join Our Talent Community | xlSigma
 Meta description: Senior-level management consulting and technology services. Process improvement, business process automation, strategy deployment, advanced analytics. SDVOSB and Veteran-Owned Small Business.
 
 [image alt: xlSigma medallion]
@@ -719,7 +719,7 @@ Submit Application
 
 ## Contact (`/contact`)
 
-Meta title: xlSigma LLC | Management Consulting & Technology
+Meta title: Contact | xlSigma
 Meta description: Senior-level management consulting and technology services. Process improvement, business process automation, strategy deployment, advanced analytics. SDVOSB and Veteran-Owned Small Business.
 
 [image alt: xlSigma medallion]
