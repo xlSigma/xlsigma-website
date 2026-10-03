@@ -9,7 +9,7 @@ import Button from '../components/ui/Button';
 import PullQuote from '../components/ui/PullQuote';
 
 const VALUE_PROPS = [
-  'Senior-only delivery teams with Fortune 500 depth -- no juniors, no bench',
+  'Senior-only delivery teams with Fortune 500 depth — no juniors, no bench',
   'Lean Six Sigma-led process reengineering that drives measurable cycle-time and cost results',
   'AI, agents, and intelligent automation deployed on real operational workflows',
   'Enterprise knowledge and semantic transformation that makes systems and data AI-ready',
@@ -50,7 +50,7 @@ export default function CommercialPage() {
               </Headline>
               <p className="text-lead text-(--fg-muted)">
                 We bring the same senior-level rigor used across Fortune 500 engagements
-                to organizations of any size -- pairing Lean Six Sigma discipline with
+                to organizations of any size — pairing Lean Six Sigma discipline with
                 modern AI and automation capability.
               </p>
               <PullQuote className="mt-10">

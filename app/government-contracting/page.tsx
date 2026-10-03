@@ -154,7 +154,7 @@ export default function GovernmentContractingPage() {
               </Headline>
               <p className="text-lead text-(--fg-muted)">
                 We understand the prime-sub relationship. xlSigma integrates seamlessly
-                into your delivery model -- providing certified small-business credits,
+                into your delivery model — providing certified small-business credits,
                 senior technical talent, and zero ramp-up time.
               </p>
             </div>
