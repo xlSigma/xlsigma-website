@@ -132,4 +132,5 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 ## Pending / Future Work
 
 - [ ] Confirm RESEND_FROM_EMAIL is set to noreply@xlsigma.com once the domain is verified in Resend
+- [ ] Give Commercial, Government, Careers, and Contact their own browser tab titles (they all show the generic "xlSigma LLC | Management Consulting & Technology"; only Home, Capabilities, and Semantic-to-Action have page titles). New text, so it needs approved wording and a CONTENT-INVENTORY.md update in the same commit
 - [ ] Add more sessions to this log as work continues
