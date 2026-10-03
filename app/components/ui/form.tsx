@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 export const INPUT_CLASS =
-  'w-full rounded-sm border border-input-line bg-white px-4 py-3 text-[0.9375rem] text-ink ' +
+  'w-full rounded-sm border border-input-line bg-white px-4 py-3 text-base md:text-[0.9375rem] text-ink' +
   'placeholder:text-ink-muted/80 focus:border-navy';
 
 type FieldProps = {
