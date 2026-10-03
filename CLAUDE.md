@@ -116,6 +116,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - Commit `42e7a69` (home meta title "AI-Enabled Operations, Automation & Enterprise Transformation", approved) landed on `main` from another session; pulled it in
 - Deleted the merged or stale branches `redesign`, `feature/semantic-to-action`, `fix/mobile-inputs-hub-labels`, `home-title-ai-enabled`
 - Converted the 12 `--` stand-ins to em dashes across Home, Capabilities, Commercial, and Government, and updated CONTENT-INVENTORY.md in the same commit
+- Gave Commercial, Government, Careers, and Contact their own tab titles (approved wording, built from each page H1; descriptions still inherit the root layout). Careers and Contact are client components, so their metadata lives in a small `layout.tsx` beside each page
 
 **Decisions made:**
 - NAICS list is 541511, 541512, 541611, 541614, 541618; flag any other code
@@ -132,5 +133,4 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 ## Pending / Future Work
 
 - [ ] Confirm RESEND_FROM_EMAIL is set to noreply@xlsigma.com once the domain is verified in Resend
-- [ ] Give Commercial, Government, Careers, and Contact their own browser tab titles (they all show the generic "xlSigma LLC | Management Consulting & Technology"; only Home, Capabilities, and Semantic-to-Action have page titles). New text, so it needs approved wording and a CONTENT-INVENTORY.md update in the same commit
 - [ ] Add more sessions to this log as work continues
