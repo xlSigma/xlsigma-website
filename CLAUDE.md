@@ -20,7 +20,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - **Business facts.** Never reference MBE or minority-owned status. Active certifications only: SDVOSB, Veteran-Owned SB, Florida OSD Veteran CBE (pending). SAM.gov registration appears only on the Government page. NAICS codes: 541511, 541512, 541611, 541614, 541618 only (541512 re-added 2026-10-02 at Andres's direction); flag any other code, do not silently fix. Company history references: Accenture, GE, Emerson (IBM removed).
 - **Contact facts.** Phone (813) 539-8229 ("Call or text"). Mailing address: 4522 W Village Dr, Unit #1563, Tampa, FL 33624. Update every place if these change (footer, contact page, HANDOFF.md).
 - **Preserve recent copy.** "Department of War" and "Public Health" labels; the Semantic-to-Action signature line placements (homepage teaser, Capabilities under the diagram, Commercial pull quote, and the Semantic-to-Action page hero; not in the homepage hero); lint and typo fixes. Write the trademark as Semantic-to-Action™.
-- **No em dashes** in site copy or in comments you add.
+- **Em dashes.** Allowed in site copy (approved 2026-10-03; the `--` stand-ins were converted). Never write `--` as a dash. Do not add em dashes to code comments.
 - **Branding.** Home uses the banner image in the hero (no medallion). Interior pages use MedallionHero (medallion centered at the top of the navy hero). No small XL icon in the navbar; the "xlSigma" wordmark stays. Footer logo stays.
 - **Color.** Gold #C9A24B on navy and for rules and buttons. Gold-on-white #8A6A1F for small text and numerals on light backgrounds. Use the Tailwind @theme tokens in `app/globals.css`; no hardcoded burnt-yellow values. Do not name a token `field` (Tailwind did not generate its classes); the input border token is `input-line`.
 - **Accessibility.** Real buttons and links, 4.5:1 text contrast, visible focus states, labels tied to inputs by id, sensible alt text.
@@ -111,17 +111,25 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - Opened and merged PR #2 with those four commits; confirmed the production deploy (`fc01178`) succeeded and 541512 is live on the Government page and footer
 - Added `.claude/` to `.gitignore`, shipped in PR #3 (`e7d3f2c`)
 - Captured the NAICS 541512 decision in OB1
+- Ran a mobile review of every page at 390px (no overflow, no console errors)
+- PR #4: this Session 3 log. PR #5 (`46861ed`): form inputs 16px below `md` (stops iOS focus zoom) and the Capabilities hub SVG replaced by a list of the same nine areas below `md`; also gitignored `Claude outputs/`
+- Commit `42e7a69` (home meta title "AI-Enabled Operations, Automation & Enterprise Transformation", approved) landed on `main` from another session; pulled it in
+- Deleted the merged or stale branches `redesign`, `feature/semantic-to-action`, `fix/mobile-inputs-hub-labels`, `home-title-ai-enabled`
+- Converted the 12 `--` stand-ins to em dashes across Home, Capabilities, Commercial, and Government, and updated CONTENT-INVENTORY.md in the same commit
 
 **Decisions made:**
 - NAICS list is 541511, 541512, 541611, 541614, 541618; flag any other code
-- `.claude/` is gitignored, so `launch.json` stays local
+- `.claude/` and `Claude outputs/` are gitignored, so they stay local
+- Keep the current home banner as-is
+- Em dashes are allowed in site copy (reverses the earlier no-em-dash rule)
 
-**Lesson:** After a PR is merged, new commits on its branch need a new PR. Check `git log origin/main..origin/redesign` before assuming everything shipped.
+**Lessons:**
+- After a PR is merged, new commits on its branch need a new PR. Check `git log origin/main..origin/<branch>` before assuming everything shipped.
+- Pull before starting work: a commit from another session reached `main` while this session was open.
 
 ---
 
 ## Pending / Future Work
 
-- [ ] Consider a higher-resolution home banner (the current one is 1128x191 and soft on high-density screens)
 - [ ] Confirm RESEND_FROM_EMAIL is set to noreply@xlsigma.com once the domain is verified in Resend
 - [ ] Add more sessions to this log as work continues
