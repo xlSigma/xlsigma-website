@@ -329,10 +329,9 @@ a preview deployment (the URL is in the Vercel dashboard and in the bot comment 
 Required environment variables must be set in Vercel project settings
 (Settings > Environment Variables) for both Production and Preview environments.
 
-To ship the redesign: review the preview for pull request #1 on desktop and mobile, mark the
-pull request ready, and merge it into main.
-
 To deploy a normal change:
-    git add -A
-    git commit -m "your message"
-    git push
+1. Pull main, then create a branch.
+2. Commit the change, push the branch, and open a pull request against main. The push creates a Vercel preview.
+3. Wait for the Vercel check on the pull request to pass, then merge it. The merge deploys to production.
+4. Delete the branch after the merge.
+Do not push directly to main without explicit approval.

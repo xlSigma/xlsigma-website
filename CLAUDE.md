@@ -19,6 +19,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - **Git.** Push only when the user asks in chat. Never merge into or push to `main` without explicit approval. Do not delete files without asking.
 - **Business facts.** Never reference MBE or minority-owned status. Active certifications only: SDVOSB, Veteran-Owned SB, Florida OSD Veteran CBE (pending). SAM.gov registration appears only on the Government page. NAICS codes: 541511, 541512, 541611, 541614, 541618 only (541512 re-added 2026-10-02 at Andres's direction); flag any other code, do not silently fix. Company history references: Accenture, GE, Emerson (IBM removed).
 - **Contact facts.** Phone (813) 539-8229 ("Call or text"). Mailing address: 4522 W Village Dr, Unit #1563, Tampa, FL 33624. Update every place if these change (footer, contact page, HANDOFF.md).
+- **No pricing on the website.** Pricing is never published. No prices, rates, fees, price ranges, "starting at" figures, or rate-card details in site copy, metadata, or `CONTENT-INVENTORY.md`, for any offering.
 - **Preserve recent copy.** "Department of War" and "Public Health" labels; the Semantic-to-Action signature line placements (homepage teaser, Capabilities under the diagram, Commercial pull quote, and the Semantic-to-Action page hero; not in the homepage hero); lint and typo fixes. Write the trademark as Semantic-to-Action™.
 - **Em dashes.** Allowed in site copy (approved 2026-10-03; the `--` stand-ins were converted). Never write `--` as a dash. Do not add em dashes to code comments.
 - **Branding.** Home uses the banner image in the hero (no medallion). Interior pages use MedallionHero (medallion centered at the top of the navy hero). No small XL icon in the navbar; the "xlSigma" wordmark stays. Footer logo stays.
@@ -144,6 +145,23 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 **Open items (out of scope here):**
 - OB1 suggests a one-line website note tying "Business Outcomes" to "Outcomes & Measurement" when the page is next edited; this is live website copy, so it needs separate approval
 - HANDOFF.md still has an outdated "To ship the redesign" paragraph in the Deployment section
+
+### Session 5 - 2026-10-04 (Outcomes note and deploy docs)
+**Goal:** Tie the website's "Business Outcomes" to the formal "Outcomes & Measurement" name, and clear the stale deploy documentation.
+
+**What was done:**
+- Shipped the approved one-line note under the six-stage diagram (PR #13, merged as `9e96711`): "Business Outcomes, formally Outcomes & Measurement in our reference architecture, is where results are measured and fed back so each use case can build on the last." It lives in the shared `SemanticToActionDiagram` component, so it shows on /capabilities and /semantic-to-action, and CONTENT-INVENTORY.md mirrors it in both places. Confirmed in the production HTML of both pages and checked at 390px
+- Replaced the stale "To ship the redesign" and "To deploy a normal change" paragraphs in the HANDOFF.md Deployment section with a branch, pull request, Vercel check, merge, and delete-branch list
+- Added a content guardrail that pricing is never published on the website
+- Resolved both Session 4 open items (the website note and the outdated HANDOFF.md paragraph)
+
+**Decisions made:**
+- The Home teaser and the Government page were intentionally left unchanged. The Home teaser row is decorative and hidden from assistive technology, and the Government page has no six-stage chain
+- "Mission Outcomes" does not appear anywhere on the live site, so there is no federal-variant line
+
+**Open items:**
+- Optional: point JOIN_US_NOTIFY_EMAIL at talent@xlsigma.com (see Pending)
+- The Capabilities differentiator "Lower business overhead translates to lower prices for top talent and results" mentions prices in general terms and publishes no figures; decide whether it fits the new pricing guardrail
 
 ---
 
