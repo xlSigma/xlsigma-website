@@ -10,6 +10,7 @@ import Headline from '../components/ui/Headline';
 import Rule from '../components/ui/Rule';
 import Button from '../components/ui/Button';
 import PullQuote from '../components/ui/PullQuote';
+import Disclosure from '../components/ui/Disclosure';
 
 export const metadata: Metadata = {
   title: 'Semantic-to-Action™ | AI Transformation Architecture | xlSigma',
@@ -113,10 +114,10 @@ const ARCH_STAGES: ArchStage[] = [
   {
     num: '05',
     title: 'AI Agents & Intelligent Automation',
-    lead: 'AI can now operate within meaningful business context.',
+    lead: 'AI acts on governed context, within defined authority.',
     label: 'Depending on the use case, AI may',
     items: ['Find', 'Interpret', 'Analyze', 'Recommend', 'Coordinate', 'Trigger', 'Execute', 'Monitor', 'Escalate'],
-    body: ['Automation is introduced where it improves the operating model, not simply where technology makes automation possible.'],
+    body: ['Rather than navigating every system on its own, AI receives the context it needs through Context Services and acts within the authority the business has defined. Automation is introduced where it improves the operating model, not simply where technology makes automation possible.'],
   },
   {
     num: '06',
@@ -155,6 +156,8 @@ const S2A_ADDS = [
   'Workflow execution',
   'Controls and escalation',
   'Measurable operational outcomes',
+  'Context Services that deliver the right context to AI at runtime',
+  'Authority that is enforced where action happens, not left to the agent',
 ];
 
 const BACKWARD = [
@@ -203,7 +206,7 @@ const EXAMPLE_ELEMENTS = [
   { title: 'Process',   q: 'What workflow applies?' },
   { title: 'Exception', q: 'Does this situation fall outside the normal path?' },
   { title: 'Authority', q: 'Who may authorize the exception, and within what limits?' },
-  { title: 'AI role',   q: 'May the agent recommend, approve, execute, or only prepare the case?' },
+  { title: 'AI role',   q: 'May the agent recommend, prepare the case, act within its authority, or escalate?' },
   { title: 'Action',    q: 'What should happen in the operational system?' },
   { title: 'Outcome',   q: 'Was the issue resolved faster, at lower cost, with appropriate control?' },
 ];
@@ -252,6 +255,62 @@ const WHY = [
   { title: 'Process and decision design', desc: 'Connect knowledge to real operational work.' },
   { title: 'AI enablement',              desc: 'Apply AI where it can improve decisions, execution, and outcomes.' },
   { title: 'Governance by design',       desc: 'Define authority, controls, human oversight, and escalation as part of the architecture.' },
+];
+
+const CONTEXT_COLUMNS = [
+  {
+    title: 'Semantic context',
+    q: 'What is this, what does it mean, and how is it related?',
+    body: 'Business entities, definitions, relationships, authoritative facts, and the knowledge behind them. Drawn from the Enterprise Semantic Foundation.',
+  },
+  {
+    title: 'Operational context',
+    q: 'What is happening, how is the work supposed to proceed, and what governs it?',
+    body: 'Current process state, applicable policy, business rules, exceptions, controls, and escalation paths. Drawn from Process & Policy.',
+  },
+  {
+    title: 'Authority context',
+    q: 'Who or what is permitted to decide, approve, recommend, execute, or escalate?',
+    body: 'Decision rights, approval thresholds, limits, prohibited actions, and required human approvals. Drawn from Role & Authority.',
+  },
+];
+
+const CONTEXT_FUNCTIONS = [
+  { title: 'Resolve',   desc: 'Identify the right customer, case, contract, or asset across systems.' },
+  { title: 'Retrieve',  desc: 'Locate the authoritative policies, records, and evidence that apply.' },
+  { title: 'Interpret', desc: 'Apply shared enterprise meaning so similar terms are not confused.' },
+  { title: 'Determine', desc: 'Establish the process, rules, exceptions, and controls that apply.' },
+  { title: 'Authorize', desc: 'Establish what the requesting person or agent may do.' },
+  { title: 'Deliver',   desc: 'Provide the assembled context to the agent, application, workflow, or person.' },
+];
+
+const RUNTIME_EXAMPLES = [
+  {
+    title: 'In a commercial setting',
+    request: 'A customer requests a $475 refund.',
+    steps: [
+      { name: 'Resolve',   text: 'identifies the customer and the order across systems.' },
+      { name: 'Retrieve',  text: 'pulls the transaction, contract terms, current refund policy, and evidence.' },
+      { name: 'Interpret', text: 'determines the applicable policy version, jurisdiction, and authoritative sources.' },
+      { name: 'Determine', text: 'evaluates the refund rule against the facts. The eligibility conditions are met.' },
+      { name: 'Authorize', text: 'illustrative limits are AI agent up to $50, service representative up to $100, supervisor up to $1,000. A $475 refund requires human approval.' },
+      { name: 'Deliver',   text: 'returns the context package to the AI agent.' },
+    ],
+    result: "The agent recognizes the amount exceeds its authority, prepares the evidence, and routes the request to a supervisor. Independently, the refund workflow verifies the approver's authority and blocks any refund above the approver's limit. After approval, the workflow issues the refund, notifies the customer, records the transaction, and measures the outcome.",
+  },
+  {
+    title: 'In a federal setting',
+    request: 'An applicant requests a 60-day extension on a filing deadline.',
+    steps: [
+      { name: 'Resolve',   text: 'identifies the applicant and the case across records and case management systems.' },
+      { name: 'Retrieve',  text: 'pulls the case file, governing regulation, current extension policy, and documentation.' },
+      { name: 'Interpret', text: 'determines the applicable policy version, program context, and authoritative sources.' },
+      { name: 'Determine', text: 'evaluates the extension rule against the facts. The qualifying conditions are met.' },
+      { name: 'Authorize', text: 'illustrative limits are analyst up to 30 days, supervisor up to 90 days. A 60-day extension requires supervisor approval.' },
+      { name: 'Deliver',   text: 'returns the context package to the AI agent.' },
+    ],
+    result: "The agent assembles the case summary and routes the request to a supervisor. Independently, the case workflow verifies the approver's authority and blocks any extension beyond the approver's limit. After approval, the workflow records the determination, notifies the applicant, and measures timeliness and compliance.",
+  },
 ];
 
 /* ---------- Small local pieces ---------- */
@@ -451,6 +510,104 @@ export default function SemanticToActionPage() {
         </ContentContainer>
       </Section>
 
+      {/* CONTEXT SERVICES */}
+      <Section variant="white" id="context-services" className="scroll-mt-20" aria-labelledby="context-heading">
+        <ContentContainer>
+          <div className="mb-12 grid gap-10 lg:grid-cols-12 lg:gap-16">
+            <SectionIntro eyebrow="Context Services" id="context-heading" className="lg:col-span-5">
+              How AI gets the context it needs
+            </SectionIntro>
+            <p className="text-lead text-(--fg-muted) lg:col-span-7 lg:self-end">
+              AI agents should not have to navigate every database, application, and document repository
+              on their own. Context Services are the governed runtime interface that assembles and
+              delivers the minimum sufficient semantic, operational, and authority context people,
+              applications, automation, and AI need to interpret, decide, and act consistently.
+            </p>
+          </div>
+
+          <ul className="grid list-none gap-5 p-0 lg:grid-cols-3">
+            {CONTEXT_COLUMNS.map((c) => (
+              <li key={c.title} className="flex flex-col gap-4 rounded-sm border border-(--rule) bg-white p-7">
+                <h3 className="font-serif text-title font-medium leading-snug text-(--fg)">{c.title}</h3>
+                <p className="font-serif text-lg font-medium italic leading-snug text-(--fg)">{c.q}</p>
+                <p className="text-base leading-relaxed text-(--fg-muted)">{c.body}</p>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-8 max-w-4xl text-lead font-semibold text-(--fg)">
+            Delivered context is governed, traceable, version-aware, source-aware, permission-aware,
+            scoped to the situation, and auditable. Only the context the situation requires is delivered.
+          </p>
+          <Disclosure summary="What an actionable context package contains" className="mt-6 max-w-4xl">
+            <p>
+              For a given situation, the package may contain resolved business entities, authoritative
+              facts, relevant relationships, applicable policies, governing rules, current process
+              state, exceptions, controls, authority thresholds, permitted actions, required approvals,
+              supporting evidence, provenance, effective versions, and escalation options.
+            </p>
+          </Disclosure>
+
+          <div className="mt-12 rounded-sm border border-l-4 border-gold bg-gold-pale p-7 md:p-9">
+            <p className="max-w-4xl font-serif text-title font-medium leading-snug text-(--fg)">
+              Context Services deliver authority context. They do not enforce it on their own.
+              Enforcement happens at the action boundary, where the approval gate, workflow, or target
+              system independently verifies authority before anything is executed. An AI agent is never
+              the sole control on its own authority.
+            </p>
+          </div>
+
+          <div className="mt-14">
+            <p className="mb-6 max-w-3xl text-lead text-(--fg-muted)">
+              Six conceptual capabilities, not a fixed sequence. Implementations may combine, reorder,
+              or repeat them.
+            </p>
+            <ul className="grid list-none gap-5 p-0 md:grid-cols-2 lg:grid-cols-3">
+              {CONTEXT_FUNCTIONS.map((f) => (
+                <li key={f.title} className="flex flex-col gap-3 rounded-sm border border-(--rule) bg-white p-6">
+                  <h3 className="font-serif text-xl font-medium leading-snug text-(--fg)">{f.title}</h3>
+                  <p className="text-base leading-relaxed text-(--fg-muted)">{f.desc}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </ContentContainer>
+      </Section>
+
+      {/* CONTEXT SERVICES: RUNTIME EXAMPLES */}
+      <Section variant="paper" aria-labelledby="runtime-label">
+        <ContentContainer>
+          <p
+            id="runtime-label"
+            className="mb-8 font-sans text-[0.8125rem] font-semibold uppercase tracking-[0.18em] text-(--accent)"
+          >
+            Illustrative example. All figures and thresholds are fictional.
+          </p>
+          <div className="grid gap-6 lg:grid-cols-2">
+            {RUNTIME_EXAMPLES.map((ex) => (
+              <article key={ex.title} className="flex flex-col gap-5 rounded-sm border border-(--rule) bg-white p-7 md:p-9">
+                <h3 className="font-serif text-title font-medium leading-snug text-(--fg)">{ex.title}</h3>
+                <p className="text-lead font-semibold text-(--fg)">{ex.request}</p>
+                <ol className="list-none border-b border-(--rule) p-0">
+                  {ex.steps.map((st, i) => (
+                    <li key={st.name} className="grid grid-cols-[2rem_1fr] gap-x-2 border-t border-(--rule) py-3 text-base leading-relaxed">
+                      <span className="font-serif text-lg font-medium text-(--accent)">{i + 1}</span>
+                      <span className="text-(--fg-muted)">
+                        <span className="font-semibold text-(--fg)">{st.name}:</span> {st.text}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+                <div className="border-l-2 border-gold pl-5">
+                  <p className="mb-2 text-[0.8125rem] font-semibold uppercase tracking-[0.14em] text-(--accent)">Result</p>
+                  <p className="text-base leading-relaxed text-(--fg)">{ex.result}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </ContentContainer>
+      </Section>
+
       {/* 4. THE DIFFERENCE */}
       <Section variant="white" aria-labelledby="difference-heading">
         <ContentContainer>
@@ -483,8 +640,9 @@ export default function SemanticToActionPage() {
 
           <div className="mt-12 border-t-2 border-gold pt-8">
             <p className="max-w-4xl font-serif text-headline font-medium leading-tight text-balance text-(--fg)">
-              The Enterprise Semantic Foundation makes the business understandable.{' '}
-              <span className="text-(--accent)">Semantic-to-Action™ makes that understanding operational.</span>
+              Within Semantic-to-Action™, the Enterprise Semantic Foundation makes the business
+              understandable, Context Services make that understanding usable at runtime,{' '}
+              <span className="text-(--accent)">and governed AI acts on it within defined authority.</span>
             </p>
           </div>
         </ContentContainer>
@@ -538,6 +696,33 @@ export default function SemanticToActionPage() {
           <p className="mt-12 max-w-3xl border-l-2 border-gold pl-6 font-serif text-title font-medium leading-snug text-(--fg) md:pl-8">
             Technology becomes an enabler of the operating model, rather than the starting point for redesigning it.
           </p>
+        </ContentContainer>
+      </Section>
+
+      {/* MINIMUM SUFFICIENT SEMANTICS */}
+      <Section variant="white" aria-labelledby="msp-heading">
+        <ContentContainer>
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+            <SectionIntro eyebrow="Design principle" id="msp-heading" className="lg:col-span-5">
+              The Principle of Minimum Sufficient Semantics
+            </SectionIntro>
+            <div className="space-y-6 text-lead text-(--fg-muted) lg:col-span-7">
+              <p className="font-serif text-title font-medium leading-snug text-(--fg)">
+                Model only enough of the enterprise to support the targeted decisions, actions,
+                governance, and outcomes, then expand through reuse.
+              </p>
+              <p>
+                Minimum sufficient does not mean minimal effort or reduced rigor. It means the smallest
+                semantic and operational representation that is complete enough to support the intended
+                decisions and actions with the required reliability, governance, context, and
+                measurability.
+              </p>
+              <p className="border-l-2 border-gold pl-6 text-(--fg)">
+                The same rule applies at runtime. Context Services deliver only the context needed to
+                interpret, decide, and act correctly for the current situation.
+              </p>
+            </div>
+          </div>
         </ContentContainer>
       </Section>
 
@@ -699,6 +884,17 @@ export default function SemanticToActionPage() {
               </Headline>
               <div className="space-y-5 text-lead text-(--fg-muted)">
                 <p>
+                  The Enterprise Semantic Foundation is a logical capability, not a single database or
+                  product. It is logically unified but physically distributed. It contains and connects
+                  enterprise meaning across the platforms you already own, while your systems of record
+                  remain authoritative. Context Services work the same way, as a logical runtime layer
+                  that draws context from wherever it already lives.
+                </p>
+                <p>
+                  Together they are a reference design, not a product. xlSigma specifies the design and
+                  guides implementation on your technology stack.
+                </p>
+                <p>
                   Semantic-to-Action™ is an architecture and transformation approach, not a requirement to
                   replace your existing technology environment.
                 </p>
@@ -714,6 +910,23 @@ export default function SemanticToActionPage() {
                 xlSigma helps determine what architecture is appropriate for the business problem.
               </p>
             </div>
+          </div>
+          <div className="mt-12 grid items-start gap-x-10 gap-y-4 lg:grid-cols-2">
+            <Disclosure summary="What the Enterprise Semantic Foundation is made of">
+              <p>
+                It may physically consist of several components across several platforms. Typical
+                logical components include a business glossary or semantic catalog, a knowledge graph or
+                ontology, entity resolution, metadata and lineage, and a knowledge and document index,
+                along with the mappings that identify the authoritative source for each fact.
+              </p>
+            </Disclosure>
+            <Disclosure summary="How Context Services are implemented">
+              <p>
+                Illustratively, through combinations of APIs, retrieval, policy and decision services,
+                entity resolution, workflow, and authorization services, built on the technology you
+                already have. No single product is required.
+              </p>
+            </Disclosure>
           </div>
           <div className="mt-12 border-l-2 border-gold pl-6 md:pl-8">
             <p className="max-w-3xl font-serif text-title font-medium leading-snug text-(--fg)">

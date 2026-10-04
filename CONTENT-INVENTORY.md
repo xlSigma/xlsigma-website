@@ -330,7 +330,7 @@ Semantic-to-Action™ explicitly addresses decision rights:
 This creates the governance needed to move safely from AI assistance toward AI-enabled execution.
 - 05
 ### AI Agents & Intelligent Automation
-AI can now operate within meaningful business context.
+AI acts on governed context, within defined authority.
 Depending on the use case, AI may
 - Find
 - Interpret
@@ -341,7 +341,7 @@ Depending on the use case, AI may
 - Execute
 - Monitor
 - Escalate
-Automation is introduced where it improves the operating model, not simply where technology makes automation possible.
+Rather than navigating every system on its own, AI receives the context it needs through Context Services and acts within the authority the business has defined. Automation is introduced where it improves the operating model, not simply where technology makes automation possible.
 - 06
 ### Business Outcomes
 Technology only creates value when something important improves.
@@ -355,6 +355,56 @@ Semantic-to-Action™ connects AI transformation to measurable outcomes such as
 - Risk
 - Revenue
 - Mission performance
+Context Services
+## How AI gets the context it needs
+AI agents should not have to navigate every database, application, and document repository on their own. Context Services are the governed runtime interface that assembles and delivers the minimum sufficient semantic, operational, and authority context people, applications, automation, and AI need to interpret, decide, and act consistently.
+- ### Semantic context
+  What is this, what does it mean, and how is it related?
+  Business entities, definitions, relationships, authoritative facts, and the knowledge behind them. Drawn from the Enterprise Semantic Foundation.
+- ### Operational context
+  What is happening, how is the work supposed to proceed, and what governs it?
+  Current process state, applicable policy, business rules, exceptions, controls, and escalation paths. Drawn from Process & Policy.
+- ### Authority context
+  Who or what is permitted to decide, approve, recommend, execute, or escalate?
+  Decision rights, approval thresholds, limits, prohibited actions, and required human approvals. Drawn from Role & Authority.
+Delivered context is governed, traceable, version-aware, source-aware, permission-aware, scoped to the situation, and auditable. Only the context the situation requires is delivered.
+[drawer, collapsed] What an actionable context package contains
+For a given situation, the package may contain resolved business entities, authoritative facts, relevant relationships, applicable policies, governing rules, current process state, exceptions, controls, authority thresholds, permitted actions, required approvals, supporting evidence, provenance, effective versions, and escalation options.
+[callout] Context Services deliver authority context. They do not enforce it on their own. Enforcement happens at the action boundary, where the approval gate, workflow, or target system independently verifies authority before anything is executed. An AI agent is never the sole control on its own authority.
+Six conceptual capabilities, not a fixed sequence. Implementations may combine, reorder, or repeat them.
+- ### Resolve
+  Identify the right customer, case, contract, or asset across systems.
+- ### Retrieve
+  Locate the authoritative policies, records, and evidence that apply.
+- ### Interpret
+  Apply shared enterprise meaning so similar terms are not confused.
+- ### Determine
+  Establish the process, rules, exceptions, and controls that apply.
+- ### Authorize
+  Establish what the requesting person or agent may do.
+- ### Deliver
+  Provide the assembled context to the agent, application, workflow, or person.
+Illustrative example. All figures and thresholds are fictional.
+### In a commercial setting
+A customer requests a $475 refund.
+1. Resolve: identifies the customer and the order across systems.
+2. Retrieve: pulls the transaction, contract terms, current refund policy, and evidence.
+3. Interpret: determines the applicable policy version, jurisdiction, and authoritative sources.
+4. Determine: evaluates the refund rule against the facts. The eligibility conditions are met.
+5. Authorize: illustrative limits are AI agent up to $50, service representative up to $100, supervisor up to $1,000. A $475 refund requires human approval.
+6. Deliver: returns the context package to the AI agent.
+Result
+The agent recognizes the amount exceeds its authority, prepares the evidence, and routes the request to a supervisor. Independently, the refund workflow verifies the approver's authority and blocks any refund above the approver's limit. After approval, the workflow issues the refund, notifies the customer, records the transaction, and measures the outcome.
+### In a federal setting
+An applicant requests a 60-day extension on a filing deadline.
+1. Resolve: identifies the applicant and the case across records and case management systems.
+2. Retrieve: pulls the case file, governing regulation, current extension policy, and documentation.
+3. Interpret: determines the applicable policy version, program context, and authoritative sources.
+4. Determine: evaluates the extension rule against the facts. The qualifying conditions are met.
+5. Authorize: illustrative limits are analyst up to 30 days, supervisor up to 90 days. A 60-day extension requires supervisor approval.
+6. Deliver: returns the context package to the AI agent.
+Result
+The agent assembles the case summary and routes the request to a supervisor. Independently, the case workflow verifies the approver's authority and blocks any extension beyond the approver's limit. After approval, the workflow records the determination, notifies the applicant, and measures timeliness and compliance.
 The Difference
 ## More than a semantic layer
 ### Traditional Semantic Layer
@@ -379,7 +429,9 @@ Adds
 - Workflow execution
 - Controls and escalation
 - Measurable operational outcomes
-The Enterprise Semantic Foundation makes the business understandable. Semantic-to-Action™ makes that understanding operational.
+- Context Services that deliver the right context to AI at runtime
+- Authority that is enforced where action happens, not left to the agent
+Within Semantic-to-Action™, the Enterprise Semantic Foundation makes the business understandable, Context Services make that understanding usable at runtime, and governed AI acts on it within defined authority.
 Outcome-Backward
 ## We start with the outcome, not the technology.
 A Semantic-to-Action™ engagement does not begin by asking:
@@ -402,6 +454,11 @@ Then we work backward.
 -
 07 Technology What combination of data, systems, automation, and AI can best enable it?
 Technology becomes an enabler of the operating model, rather than the starting point for redesigning it.
+Design principle
+## The Principle of Minimum Sufficient Semantics
+Model only enough of the enterprise to support the targeted decisions, actions, governance, and outcomes, then expand through reuse.
+Minimum sufficient does not mean minimal effort or reduced rigor. It means the smallest semantic and operational representation that is complete enough to support the intended decisions and actions with the required reliability, governance, context, and measurability.
+The same rule applies at runtime. Context Services deliver only the context needed to interpret, decide, and act correctly for the current situation.
 Lean Six Sigma Connection
 ## AI transformation grounded in operational excellence
 Lean Six Sigma is xlSigma's transformation discipline. Semantic-to-Action™ is our AI transformation architecture.
@@ -460,12 +517,14 @@ Policy Which rules govern the request?
 Process What workflow applies?
 Exception Does this situation fall outside the normal path?
 Authority Who may authorize the exception, and within what limits?
-AI role May the agent recommend, approve, execute, or only prepare the case?
+AI role May the agent recommend, prepare the case, act within its authority, or escalate?
 Action What should happen in the operational system?
 Outcome Was the issue resolved faster, at lower cost, with appropriate control?
 That is the difference between AI that understands a question and an enterprise that can use AI to perform work.
 Technology Neutrality
 ## Built around your enterprise, not a predetermined technology stack
+The Enterprise Semantic Foundation is a logical capability, not a single database or product. It is logically unified but physically distributed. It contains and connects enterprise meaning across the platforms you already own, while your systems of record remain authoritative. Context Services work the same way, as a logical runtime layer that draws context from wherever it already lives.
+Together they are a reference design, not a product. xlSigma specifies the design and guides implementation on your technology stack.
 Semantic-to-Action™ is an architecture and transformation approach, not a requirement to replace your existing technology environment.
 The Enterprise Semantic Foundation may use capabilities already available within your ecosystem or incorporate technologies such as:
 - Knowledge graphs
@@ -479,6 +538,10 @@ The Enterprise Semantic Foundation may use capabilities already available within
 - AI models
 - Agent frameworks
 xlSigma helps determine what architecture is appropriate for the business problem.
+[drawer, collapsed] What the Enterprise Semantic Foundation is made of
+It may physically consist of several components across several platforms. Typical logical components include a business glossary or semantic catalog, a knowledge graph or ontology, entity resolution, metadata and lineage, and a knowledge and document index, along with the mappings that identify the authoritative source for each fact.
+[drawer, collapsed] How Context Services are implemented
+Illustratively, through combinations of APIs, retrieval, policy and decision services, entity resolution, workflow, and authorization services, built on the technology you already have. No single product is required.
 We do not begin with a preferred AI tool and search for somewhere to deploy it.
 We begin with the business and determine what technology is required.
 How Clients Can Engage
