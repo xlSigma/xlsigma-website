@@ -118,7 +118,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - Converted the 12 `--` stand-ins to em dashes across Home, Capabilities, Commercial, and Government, and updated CONTENT-INVENTORY.md in the same commit
 - Gave Commercial, Government, Careers, and Contact their own tab titles (approved wording, built from each page H1; descriptions still inherit the root layout). Careers and Contact are client components, so their metadata lives in a small `layout.tsx` beside each page
 - Set up Resend sending from xlsigma.com: added the domain in Resend, added the DKIM, `send` MX, and `send` SPF records in Vercel DNS, set `RESEND_FROM_EMAIL=noreply@xlsigma.com` (Production and Preview), and redeployed. A Contact form test email arrived from noreply@xlsigma.com. Details are in HANDOFF.md
-- Pointed `JOIN_US_NOTIFY_EMAIL` at talent@xlsigma.com (a two-member Microsoft 365 distribution list with external senders allowed) after confirming the list settings; a Careers test submission was delivered
+- Reviewed `JOIN_US_NOTIFY_EMAIL` and decided to leave it unchanged. A Careers test submission was delivered to andresslack@xlsigma.com. talent@xlsigma.com exists as a two-member Microsoft 365 distribution list (external senders allowed) but delivery through it from Resend is untested
 
 **Decisions made:**
 - NAICS list is 541511, 541512, 541611, 541614, 541618; flag any other code
@@ -134,4 +134,5 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 
 ## Pending / Future Work
 
+- [ ] Optional: point JOIN_US_NOTIFY_EMAIL at talent@xlsigma.com (a distribution list; members andresslack@ and tjdmochowski@, external senders allowed). Redeploy and run a Careers test first; see HANDOFF.md
 - [ ] Add more sessions to this log as work continues
