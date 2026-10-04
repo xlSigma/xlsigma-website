@@ -25,6 +25,8 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - **Color.** Gold #C9A24B on navy and for rules and buttons. Gold-on-white #8A6A1F for small text and numerals on light backgrounds. Use the Tailwind @theme tokens in `app/globals.css`; no hardcoded burnt-yellow values. Do not name a token `field` (Tailwind did not generate its classes); the input border token is `input-line`.
 - **Accessibility.** Real buttons and links, 4.5:1 text contrast, visible focus states, labels tied to inputs by id, sensible alt text.
 - **Primitives first.** Build pages from `app/components/ui/` (Section, ContentContainer, Eyebrow, Headline, Rule, Button, Tag, PullQuote, CapabilityRow, MedallionHero, form helpers). Section tone classes drive text and accent colors.
+- **Semantic-to-Action™ canonical source.** The methodology is defined in OB1, not in this repo: the six-layer Reference Architecture, the Phase 0 through Phase 9 Implementation Methodology, the five-level and nine-dimension Maturity Model, and the Principle of Minimum Sufficient Semantics. Source of truth: the OB1 note "2026-10-02 - myMETA: xlSigma Semantic-to-Action Methodology Suite | Canonical V1 ...", as amended by "2026-10-03 - myMETA: Semantic-to-Action | V1 Addendum A | Change Management and Adoption". Also read the 2026-10-02 Supersession and Precedence Note and the 2026-10-03 Knowledge Maturity Assessment note. The 8/14/2026 charter is historical context except where the supersession note says it still governs (positioning language, offering direction, website strategy and operating model, remaining deferred items). Do not restate the methodology in this repo; read OB1.
+- **Layer 6 naming.** The website six-stage chain says "Business Outcomes" (federal variant "Mission Outcomes"). The formal Layer 6 name in methodology documents is "Outcomes & Measurement". Same layer, named for different audiences. Do not change either.
 
 ---
 
@@ -129,6 +131,19 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 **Lessons:**
 - After a PR is merged, new commits on its branch need a new PR. Check `git log origin/main..origin/<branch>` before assuming everything shipped.
 - Pull before starting work: a commit from another session reached `main` while this session was open.
+
+### Session 4 - 2026-10-04 (methodology alignment)
+**Goal:** Point the repo notes at the canonical Semantic-to-Action™ V1 methodology in OB1.
+
+**What was done:**
+- Added the canonical-source and Layer 6 naming bullets to the Redesign Guardrails in CLAUDE.md, and a canonical-source paragraph to HANDOFF.md
+- Searched `C:\dev` and project memory for stale methodology text (the 7-step method, seven layers, the Experience Layer, the old Knowledge Maturity scale) and found none
+- Added a project memory note holding only the OB1 note titles and the Layer 6 naming rule
+- Corrected the stale Branches list in HANDOFF.md
+
+**Open items (out of scope here):**
+- OB1 suggests a one-line website note tying "Business Outcomes" to "Outcomes & Measurement" when the page is next edited; this is live website copy, so it needs separate approval
+- HANDOFF.md still has an outdated "To ship the redesign" paragraph in the Deployment section
 
 ---
 

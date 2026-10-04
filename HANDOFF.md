@@ -42,8 +42,7 @@ Vercel auto-deploys on push to main. Other branches get Vercel preview deploymen
 
 Branches:
 - `main`: production.
-- `redesign`: the full presentation redesign. Draft PR #1.
-- `feature/semantic-to-action`: earlier branch for the Semantic-to-Action page; its work is already on `redesign`.
+- All other work uses short-lived branches that are deleted after merge.
 
 ---
 
@@ -302,6 +301,11 @@ SemanticToActionDiagram (app/components/SemanticToActionDiagram.tsx): server com
 an ordered list (01 Enterprise Systems & Knowledge, 02 Enterprise Semantic Foundation [featured],
 03 Process & Policy, 04 Role & Authority, 05 AI Agents & Intelligent Automation, 06 Business
 Outcomes). Vertical by default, horizontal at 1280px and up. It expects a tone-light parent.
+
+Canonical source: the methodology behind this diagram is defined in OB1; see the Semantic-to-Action™
+canonical source bullet in CLAUDE.md for the note titles. The six stages above are the marketing and
+website chain. Stage 06 is named Business Outcomes here, while the formal Layer 6 name in the Reference
+Architecture is Outcomes & Measurement. Neither is to be corrected to match the other.
 
 ---
 
