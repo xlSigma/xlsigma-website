@@ -26,7 +26,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - **Color.** Gold #C9A24B on navy and for rules and buttons. Gold-on-white #8A6A1F for small text and numerals on light backgrounds. Use the Tailwind @theme tokens in `app/globals.css`; no hardcoded burnt-yellow values. Do not name a token `field` (Tailwind did not generate its classes); the input border token is `input-line`.
 - **Accessibility.** Real buttons and links, 4.5:1 text contrast, visible focus states, labels tied to inputs by id, sensible alt text.
 - **Primitives first.** Build pages from `app/components/ui/` (Section, ContentContainer, Eyebrow, Headline, Rule, Button, Tag, PullQuote, CapabilityRow, MedallionHero, form helpers). Section tone classes drive text and accent colors.
-- **Semantic-to-Action™ canonical source.** The methodology is defined in OB1, not in this repo: the six-layer Reference Architecture, the Phase 0 through Phase 9 Implementation Methodology, the five-level and nine-dimension Maturity Model, and the Principle of Minimum Sufficient Semantics. Source of truth: the OB1 note "2026-10-02 - myMETA: xlSigma Semantic-to-Action Methodology Suite | Canonical V1 ..." (OB1 ID: 61b1f15a-b8f0-4299-8a58-8b73b6da0838), as amended by "2026-10-03 - myMETA: Semantic-to-Action | V1 Addendum A | Change Management and Adoption" (OB1 ID: 4f706a63-7e08-40d8-91f7-8a753eb61b00). Also read the 2026-10-02 Supersession and Precedence Note (OB1 ID: 970b4c6c-e906-4adb-a323-06826c7dafbb) and the 2026-10-03 Knowledge Maturity Assessment note (OB1 ID: 51cf6fb9-3636-41ea-9bb7-a7efe925fe56). If an ID does not resolve, search OB1 by title and tell Andres. The 8/14/2026 charter is historical context except where the supersession note says it still governs (positioning language, offering direction, website strategy and operating model, remaining deferred items). Do not restate the methodology in this repo; read OB1.
+- **Semantic-to-Action™ canonical source.** The methodology is defined in OB1, not in this repo: the six-layer Reference Architecture, the Phase 0 through Phase 9 Implementation Methodology, the five-level and nine-dimension Maturity Model, and the Principle of Minimum Sufficient Semantics. Source of truth: the OB1 note "2026-10-02 - myMETA: xlSigma Semantic-to-Action Methodology Suite | Canonical V1 ..." (OB1 ID: 61b1f15a-b8f0-4299-8a58-8b73b6da0838), as amended by "2026-10-03 - myMETA: Semantic-to-Action | V1 Addendum A | Change Management and Adoption" (OB1 ID: 4f706a63-7e08-40d8-91f7-8a753eb61b00) and "2026-10-04 - myMETA: Semantic-to-Action™ | V1 Addendum B | Context Services" (OB1 ID: 38877751-de44-40c1-b361-120e5ba28a31). Also read the 2026-10-02 Supersession and Precedence Note (OB1 ID: 970b4c6c-e906-4adb-a323-06826c7dafbb) and the 2026-10-03 Knowledge Maturity Assessment note (OB1 ID: 51cf6fb9-3636-41ea-9bb7-a7efe925fe56). If an ID does not resolve, search OB1 by title and tell Andres. The 8/14/2026 charter is historical context except where the supersession note says it still governs (positioning language, offering direction, website strategy and operating model, remaining deferred items). Do not restate the methodology in this repo; read OB1.
 - **Layer 6 naming.** The website six-stage chain says "Business Outcomes" (federal variant "Mission Outcomes"). The formal Layer 6 name in methodology documents is "Outcomes & Measurement". Same layer, named for different audiences. Do not change either.
 
 ---
@@ -162,6 +162,17 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 **Open items:**
 - Optional: point JOIN_US_NOTIFY_EMAIL at talent@xlsigma.com (see Pending)
 - The Capabilities differentiator "Lower business overhead translates to lower prices for top talent and results" mentions prices in general terms and publishes no figures; decide whether it fits the new pricing guardrail
+
+### Session 6 - 2026-10-04 (Addendum B)
+**Goal:** Point the repo notes at V1 Addendum B (Context Services) in OB1.
+
+**What was done:**
+- Added Addendum B (title and OB1 ID) to the Semantic-to-Action™ canonical source bullet in CLAUDE.md and to the canonical-source paragraph in HANDOFF.md
+- Looked up the Addendum B Thought ID in OB1 by title (read-only; a single match)
+
+**Decisions made:**
+- Addendum B is canonical. The component is named "Context Services" (never "Semantic-to-Action™ Context Services"). It is a runtime interface, not a seventh layer, so the six-layer architecture is unchanged
+- Docs only: no website copy, CONTENT-INVENTORY.md, or app/ changes
 
 ---
 
