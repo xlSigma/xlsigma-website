@@ -151,6 +151,7 @@ Agents / Orchestration / RPA
 - 06
 ### Business Outcomes
 Speed / Adaptability / Control
+Business Outcomes, formally Outcomes & Measurement in our reference architecture, is where results are measured and fed back so each use case can build on the last.
 We don't start with the AI agent. We model the business the agent must understand.
 Domain by domain. Process by process. Outcome by outcome.
 - 01
@@ -268,6 +269,7 @@ Agents / Orchestration / RPA
 - 06
 ### Business Outcomes
 Speed / Adaptability / Control
+Business Outcomes, formally Outcomes & Measurement in our reference architecture, is where results are measured and fed back so each use case can build on the last.
 - 01
 ### Enterprise Systems & Knowledge
 The information the organization already relies on.
