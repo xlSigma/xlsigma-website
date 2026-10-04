@@ -27,6 +27,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - **Accessibility.** Real buttons and links, 4.5:1 text contrast, visible focus states, labels tied to inputs by id, sensible alt text.
 - **Primitives first.** Build pages from `app/components/ui/` (Section, ContentContainer, Eyebrow, Headline, Rule, Button, Tag, PullQuote, CapabilityRow, MedallionHero, form helpers). Section tone classes drive text and accent colors.
 - **Semantic-to-Action™ canonical source.** The methodology is defined in OB1, not in this repo: the six-layer Reference Architecture, the Phase 0 through Phase 9 Implementation Methodology, the five-level and nine-dimension Maturity Model, and the Principle of Minimum Sufficient Semantics. Source of truth: the OB1 note "2026-10-02 - myMETA: xlSigma Semantic-to-Action Methodology Suite | Canonical V1 ..." (OB1 ID: 61b1f15a-b8f0-4299-8a58-8b73b6da0838), as amended by "2026-10-03 - myMETA: Semantic-to-Action | V1 Addendum A | Change Management and Adoption" (OB1 ID: 4f706a63-7e08-40d8-91f7-8a753eb61b00) and "2026-10-04 - myMETA: Semantic-to-Action™ | V1 Addendum B | Context Services" (OB1 ID: 38877751-de44-40c1-b361-120e5ba28a31). Also read the 2026-10-02 Supersession and Precedence Note (OB1 ID: 970b4c6c-e906-4adb-a323-06826c7dafbb) and the 2026-10-03 Knowledge Maturity Assessment note (OB1 ID: 51cf6fb9-3636-41ea-9bb7-a7efe925fe56). If an ID does not resolve, search OB1 by title and tell Andres. The 8/14/2026 charter is historical context except where the supersession note says it still governs (positioning language, offering direction, website strategy and operating model, remaining deferred items). Do not restate the methodology in this repo; read OB1.
+- **Context Services.** No trademark symbol on "Context Services" (the Semantic-to-Action™ mark stays on the umbrella architecture only). The site is a reference design, not a product: say xlSigma specifies the design and guides implementation, and imply no delivered-implementation track record. Never publish vendor names, service names (ResolveEntity() and similar), or the seven V1 authority classifications. "Logically unified, physically distributed" and "reference design, not a product" appear once on /semantic-to-action, in the technology-neutrality section. Shared pages stay sector-neutral; audience-specific copy belongs on Commercial and Government only.
 - **Layer 6 naming.** The website six-stage chain says "Business Outcomes" (federal variant "Mission Outcomes"). The formal Layer 6 name in methodology documents is "Outcomes & Measurement". Same layer, named for different audiences. Do not change either.
 
 ---
@@ -54,7 +55,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 | `app/commercial/page.tsx` | Commercial page |
 | `app/government-contracting/page.tsx` | Government page, past performance |
 | `app/careers/page.tsx`, `app/contact/page.tsx` | Forms (client components) |
-| `app/components/ui/*` | Shared primitives |
+| `app/components/ui/*` | Shared primitives (includes `Disclosure`, a native details/summary drawer) |
 | `app/components/NavBar.tsx`, `Footer.tsx`, `ScrollToTop.tsx` | Shared chrome |
 | `CONTENT-INVENTORY.md` | Verbatim copy checkpoint and open flags |
 | `HANDOFF.md` | Architecture, stack, DNS, deployment reference |
@@ -173,6 +174,22 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 **Decisions made:**
 - Addendum B is canonical. The component is named "Context Services" (never "Semantic-to-Action™ Context Services"). It is a runtime interface, not a seventh layer, so the six-layer architecture is unchanged
 - Docs only: no website copy, CONTENT-INVENTORY.md, or app/ changes
+
+### Session 7 - 2026-10-04 (Context Services incorporation)
+**Goal:** Add Context Services (Addendum B) to the website from the approved copy deck.
+
+**What was done:**
+- PR #16 (merge `3a38ed5`): Context Services band in the shared diagram (Treatment A), a new `Disclosure` primitive, and on /semantic-to-action the Context Services section, authority callout, six capabilities, commercial and federal runtime examples, Layer 5 rewrite, two new "Adds" items and new closing line, Minimum Sufficient Semantics block, merged technology-neutrality section, and three collapsed drawers
+- Copy fixes E1 (AI role line in the Example section) and E2 (Capabilities overhead differentiator, now "Our lean overhead lets us concentrate on top talent and results."), which closes the Session 5 pricing-wording item
+- CONTENT-INVENTORY.md updated in the same commits; verified on production (counts of the once-only phrases, band aria-label, three drawers)
+- Deleted the merged branch
+
+**Decisions made:**
+- Home teaser and the five AI boundary cards stay unchanged (Prepare and Prohibited are not added; the V1 authority classifications stay reserved)
+- Metadata, OG, and the missing metadataBase, sitemap, and robots were out of scope
+
+**Open items:**
+- Metadata/OG gaps on /semantic-to-action (no og:image, siteName, Twitter card; no metadataBase, sitemap, or robots) need separate approval
 
 ---
 
