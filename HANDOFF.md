@@ -203,9 +203,13 @@ Resend DNS records live in Vercel DNS (added 2026-10-04): TXT `resend._domainkey
 (priority 10), and TXT `send` (SPF). They sit on subdomains, so the Microsoft 365 root MX and SPF
 records are untouched. Do not merge Resend into the root SPF record.
 
-JOIN_US_NOTIFY_EMAIL was set in Jul 2026 (value hidden in Vercel; an earlier note says
-andresslack@xlsigma.com). Change it to talent@xlsigma.com only once that mailbox or alias exists in
-Microsoft 365.
+JOIN_US_NOTIFY_EMAIL is talent@xlsigma.com (changed 2026-10-04; Production and Preview). That address is
+a Microsoft 365 distribution list ("Talent", created 2026-07-31) with two members, andresslack@xlsigma.com
+and tjdmochowski@xlsigma.com, so both receive every application. The list's "Allow external senders to
+email this group" setting must stay ON: Resend sends from Amazon's servers, which Exchange treats as
+external, and a list that blocks outside senders would reject the notification while Resend still reports
+success. A Careers test submission was delivered to a member's inbox after the change. To roll back,
+set the variable to a single mailbox address and redeploy.
 
 ---
 
