@@ -98,6 +98,9 @@ export default function SemanticToActionDiagram() {
           return [card];
         })}
       </ol>
+      <p className="mt-6 border-t border-rule pt-5 text-sm leading-relaxed text-ink-muted xl:text-base">
+        Business Outcomes, formally Outcomes &amp; Measurement in our reference architecture, is where results are measured and fed back so each use case can build on the last.
+      </p>
     </div>
   );
 }
