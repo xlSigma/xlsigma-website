@@ -42,8 +42,7 @@ Vercel auto-deploys on push to main. Other branches get Vercel preview deploymen
 
 Branches:
 - `main`: production.
-- `redesign`: the full presentation redesign. Draft PR #1.
-- `feature/semantic-to-action`: earlier branch for the Semantic-to-Action page; its work is already on `redesign`.
+- All other work uses short-lived branches that are deleted after merge.
 
 ---
 
