@@ -64,7 +64,7 @@ A Claude Code preview config lives in `.claude/launch.json` (port 3001). It is n
 |--------------------------|-----------------------------------------|----------------------------------------------------------|
 | /                        | app/page.tsx                            | Homepage, banner hero, private sector audience           |
 | /capabilities            | app/capabilities/page.tsx               | All 10 capabilities, hub diagram, Semantic-to-Action diagram |
-| /semantic-to-action      | app/semantic-to-action/page.tsx         | Long-form Semantic-to-Action explainer (13 sections)     |
+| /semantic-to-action      | app/semantic-to-action/page.tsx         | Long-form Semantic-to-Action explainer (16 sections)     |
 | /commercial              | app/commercial/page.tsx                 | Commercial enterprises audience                          |
 | /government-contracting  | app/government-contracting/page.tsx     | Federal primes audience, past performance                |
 | /careers                 | app/careers/page.tsx                    | Talent community page and application form               |
@@ -82,6 +82,7 @@ UI primitives (app/components/ui/):
 - Section             - page band; variants white, paper, navy; sets the tone variables below
 - ContentContainer    - max width and gutters
 - Eyebrow, Headline, Rule, PullQuote, Tag
+- Disclosure           - native details/summary drawer, collapsed by default, server component (no client JS)
 - Button              - primary (gold) and secondary (outline); renders a link or a real button
 - CapabilityRow       - numbered row with thin rules (CapabilityList wraps rows)
 - MedallionHero       - navy hero panel with the centered medallion, used on interior pages
@@ -301,6 +302,21 @@ SemanticToActionDiagram (app/components/SemanticToActionDiagram.tsx): server com
 an ordered list (01 Enterprise Systems & Knowledge, 02 Enterprise Semantic Foundation [featured],
 03 Process & Policy, 04 Role & Authority, 05 AI Agents & Intelligent Automation, 06 Business
 Outcomes). Vertical by default, horizontal at 1280px and up. It expects a tone-light parent.
+
+Context Services band (in the same component): an unnumbered band, never a seventh layer. At xl and
+up it sits in a second grid row under cards 2 to 4 (six-column grid, column N = Layer N) with a
+connector up to card 5. Below xl it is a full-width card before card 5, and cards 2 to 4 get a gold left
+rule. It is an `li role="presentation"` holding a `role="group"` with the aria-label "Context Services
+draw on layers 2 to 4 and deliver context to layer 5.", so the list still counts six items. The
+component is used on /capabilities and /semantic-to-action only, not on Home.
+
+Context Services on /semantic-to-action (added 2026-10-04, PR #16): the section after the
+architecture (semantic, operational, and authority context; the authority-enforcement callout; six
+unnumbered capabilities), two illustrative runtime examples (commercial and federal, side by side), the
+Minimum Sufficient Semantics block, and a merged technology-neutrality section. Three Disclosure drawers
+hold the deeper detail. Approved copy source: the OB1 note "2026-10-04 - myMETA: xlsigma.com | Context
+Services Website Incorporation | APPROVED Copy Deck and Decisions". Home and the AI boundary cards were
+deliberately left unchanged.
 
 Canonical source: the methodology behind this diagram is defined in OB1; see the Semantic-to-Action™
 canonical source bullet in CLAUDE.md for the note titles. V1 is amended by Addendum A and by "2026-10-04 - myMETA: Semantic-to-Action™ | V1 Addendum B | Context Services" (OB1 ID: 38877751-de44-40c1-b361-120e5ba28a31); do not restate the methodology here. The six stages above are the marketing and
