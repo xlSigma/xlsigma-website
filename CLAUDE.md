@@ -117,6 +117,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - Deleted the merged or stale branches `redesign`, `feature/semantic-to-action`, `fix/mobile-inputs-hub-labels`, `home-title-ai-enabled`
 - Converted the 12 `--` stand-ins to em dashes across Home, Capabilities, Commercial, and Government, and updated CONTENT-INVENTORY.md in the same commit
 - Gave Commercial, Government, Careers, and Contact their own tab titles (approved wording, built from each page H1; descriptions still inherit the root layout). Careers and Contact are client components, so their metadata lives in a small `layout.tsx` beside each page
+- Set up Resend sending from xlsigma.com: added the domain in Resend, added the DKIM, `send` MX, and `send` SPF records in Vercel DNS, set `RESEND_FROM_EMAIL=noreply@xlsigma.com` (Production and Preview), and redeployed. A Contact form test email arrived from noreply@xlsigma.com. Details are in HANDOFF.md
 
 **Decisions made:**
 - NAICS list is 541511, 541512, 541611, 541614, 541618; flag any other code
@@ -132,5 +133,5 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 
 ## Pending / Future Work
 
-- [ ] Confirm RESEND_FROM_EMAIL is set to noreply@xlsigma.com once the domain is verified in Resend
+- [ ] Decide whether to point JOIN_US_NOTIFY_EMAIL at talent@xlsigma.com (value is hidden in Vercel; an earlier note says andresslack@xlsigma.com); only after that mailbox or alias exists in Microsoft 365
 - [ ] Add more sessions to this log as work continues

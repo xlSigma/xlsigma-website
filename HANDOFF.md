@@ -195,8 +195,17 @@ Resend to JOIN_US_NOTIFY_EMAIL.
 | JOIN_US_NOTIFY_EMAIL  | Inbox for careers form submissions                   | talent@xlsigma.com        |
 | BLOB_READ_WRITE_TOKEN | Vercel Blob token for resume file storage            | (Vercel provides this)    |
 
-Note: RESEND_FROM_EMAIL should be noreply@xlsigma.com once xlsigma.com is verified in Resend.
-Until then, onboarding@resend.dev is used as a safe interim sender.
+Note: xlsigma.com is verified in Resend (us-east-1, return path `send`) and RESEND_FROM_EMAIL is set to
+noreply@xlsigma.com in Vercel (Production and Preview). If the variable is ever removed, the code falls
+back to the onboarding@resend.dev sandbox sender, which can only deliver to the Resend account owner.
+
+Resend DNS records live in Vercel DNS (added 2026-10-04): TXT `resend._domainkey` (DKIM), MX `send`
+(priority 10), and TXT `send` (SPF). They sit on subdomains, so the Microsoft 365 root MX and SPF
+records are untouched. Do not merge Resend into the root SPF record.
+
+JOIN_US_NOTIFY_EMAIL was set in Jul 2026 (value hidden in Vercel; an earlier note says
+andresslack@xlsigma.com). Change it to talent@xlsigma.com only once that mailbox or alias exists in
+Microsoft 365.
 
 ---
 
