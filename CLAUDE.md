@@ -145,6 +145,23 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - OB1 suggests a one-line website note tying "Business Outcomes" to "Outcomes & Measurement" when the page is next edited; this is live website copy, so it needs separate approval
 - HANDOFF.md still has an outdated "To ship the redesign" paragraph in the Deployment section
 
+### Session 5 - 2026-10-04 (Outcomes note and deploy docs)
+**Goal:** Tie the website's "Business Outcomes" to the formal "Outcomes & Measurement" name, and clear the stale deploy documentation.
+
+**What was done:**
+- Shipped the approved one-line note under the six-stage diagram (PR #13, merged as `9e96711`): "Business Outcomes, formally Outcomes & Measurement in our reference architecture, is where results are measured and fed back so each use case can build on the last." It lives in the shared `SemanticToActionDiagram` component, so it shows on /capabilities and /semantic-to-action, and CONTENT-INVENTORY.md mirrors it in both places. Confirmed in the production HTML of both pages and checked at 390px
+- Replaced the stale "To ship the redesign" and "To deploy a normal change" paragraphs in the HANDOFF.md Deployment section with a branch, pull request, Vercel check, merge, and delete-branch list
+- Added a content guardrail that pricing is never published on the website
+- Resolved both Session 4 open items (the website note and the outdated HANDOFF.md paragraph)
+
+**Decisions made:**
+- The Home teaser and the Government page were intentionally left unchanged. The Home teaser row is decorative and hidden from assistive technology, and the Government page has no six-stage chain
+- "Mission Outcomes" does not appear anywhere on the live site, so there is no federal-variant line
+
+**Open items:**
+- Optional: point JOIN_US_NOTIFY_EMAIL at talent@xlsigma.com (see Pending)
+- The Capabilities differentiator "Lower business overhead translates to lower prices for top talent and results" mentions prices in general terms and publishes no figures; decide whether it fits the new pricing guardrail
+
 ---
 
 ## Pending / Future Work
