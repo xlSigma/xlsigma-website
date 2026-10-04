@@ -303,6 +303,11 @@ an ordered list (01 Enterprise Systems & Knowledge, 02 Enterprise Semantic Found
 03 Process & Policy, 04 Role & Authority, 05 AI Agents & Intelligent Automation, 06 Business
 Outcomes). Vertical by default, horizontal at 1280px and up. It expects a tone-light parent.
 
+Canonical source: the methodology behind this diagram is defined in OB1; see the Semantic-to-Action™
+canonical source bullet in CLAUDE.md for the note titles. The six stages above are the marketing and
+website chain. Stage 06 is named Business Outcomes here, while the formal Layer 6 name in the Reference
+Architecture is Outcomes & Measurement. Neither is to be corrected to match the other.
+
 ---
 
 ## Known Quirks
