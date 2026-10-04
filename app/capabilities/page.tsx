@@ -86,7 +86,7 @@ const DIFFERENTIATORS = [
   'Lean Six Sigma Master Black Belt (rare at small-business scale)',
   'Full-stack delivery: strategy, design, build, implement, and train',
   'AI transformation grounded in operational excellence',
-  'Lower business overhead translates to lower prices for top talent and results',
+  'Our lean overhead lets us concentrate on top talent and results.',
 ];
 
 const SPOKE_STROKE = '#C9A24B';
