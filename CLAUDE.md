@@ -132,6 +132,19 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - After a PR is merged, new commits on its branch need a new PR. Check `git log origin/main..origin/<branch>` before assuming everything shipped.
 - Pull before starting work: a commit from another session reached `main` while this session was open.
 
+### Session 4 - 2026-10-04 (methodology alignment)
+**Goal:** Point the repo notes at the canonical Semantic-to-Action™ V1 methodology in OB1.
+
+**What was done:**
+- Added the canonical-source and Layer 6 naming bullets to the Redesign Guardrails in CLAUDE.md, and a canonical-source paragraph to HANDOFF.md
+- Searched `C:\dev` and project memory for stale methodology text (the 7-step method, seven layers, the Experience Layer, the old Knowledge Maturity scale) and found none
+- Added a project memory note holding only the OB1 note titles and the Layer 6 naming rule
+- Corrected the stale Branches list in HANDOFF.md
+
+**Open items (out of scope here):**
+- OB1 suggests a one-line website note tying "Business Outcomes" to "Outcomes & Measurement" when the page is next edited; this is live website copy, so it needs separate approval
+- HANDOFF.md still has an outdated "To ship the redesign" paragraph in the Deployment section
+
 ---
 
 ## Pending / Future Work
