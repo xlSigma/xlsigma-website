@@ -144,6 +144,11 @@ Workflows / Rules / Controls
 ### Role & Authority
 Responsibilities / Decisions / Approvals
 -
+[band, unnumbered, not a list item; aria-label: "Context Services draw on layers 2 to 4 and deliver context to layer 5."]
+Context Services
+Semantic, operational, and authority context, delivered to AI at runtime
+[below xl only, aria-hidden: Serves Layer 5]
+-
 - 05
 ### AI Agents & Intelligent Automation
 Agents / Orchestration / RPA
@@ -151,7 +156,7 @@ Agents / Orchestration / RPA
 - 06
 ### Business Outcomes
 Speed / Adaptability / Control
-Business Outcomes, formally Outcomes & Measurement in our reference architecture, is where results are measured and fed back so each use case can build on the last.
+Business Outcomes, formally Outcomes & Measurement in our reference architecture, is where results are measured and fed back so each use case can build on the last. Context Services deliver the context AI needs, at the moment it acts.
 We don't start with the AI agent. We model the business the agent must understand.
 Domain by domain. Process by process. Outcome by outcome.
 - 01
@@ -262,6 +267,11 @@ Workflows / Rules / Controls
 ### Role & Authority
 Responsibilities / Decisions / Approvals
 -
+[band, unnumbered, not a list item; aria-label: "Context Services draw on layers 2 to 4 and deliver context to layer 5."]
+Context Services
+Semantic, operational, and authority context, delivered to AI at runtime
+[below xl only, aria-hidden: Serves Layer 5]
+-
 - 05
 ### AI Agents & Intelligent Automation
 Agents / Orchestration / RPA
@@ -269,7 +279,7 @@ Agents / Orchestration / RPA
 - 06
 ### Business Outcomes
 Speed / Adaptability / Control
-Business Outcomes, formally Outcomes & Measurement in our reference architecture, is where results are measured and fed back so each use case can build on the last.
+Business Outcomes, formally Outcomes & Measurement in our reference architecture, is where results are measured and fed back so each use case can build on the last. Context Services deliver the context AI needs, at the moment it acts.
 - 01
 ### Enterprise Systems & Knowledge
 The information the organization already relies on.
