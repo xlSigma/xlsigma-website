@@ -6,6 +6,15 @@ Any visible copy change after this point must be an intentional, approved edit. 
 
 ---
 
+## Global: Social share metadata (all pages)
+
+og:site_name: xlSigma
+Twitter card: summary_large_image (title and description match the page meta)
+Share image: /og/xlsigma-banner.jpg (1200x630), copy of app/opengraph-image.jpg
+Share image alt: xlSigma medallion logo beside the text AI - Automation & Enterprise Knowledge Transformation, Powered by Lean Six Sigma, on a dark network background. [PROPOSED, pending approval]
+
+---
+
 ## Global: Navigation bar (all pages)
 
 
@@ -601,7 +610,7 @@ Talk With xlSigma {{→ /contact}}Explore Our AI & Technology Capabilities{{→ 
 ## Commercial (`/commercial`)
 
 Meta title: Operational Excellence for Commercial Enterprises | xlSigma
-Meta description: Senior-level management consulting and technology services. Process improvement, business process automation, strategy deployment, advanced analytics. SDVOSB and Veteran-Owned Small Business.
+Meta description: xlSigma partners with private-sector organizations to reengineer processes, deploy AI and intelligent automation, and build enterprise knowledge foundations. [PROPOSED, pending approval]
 
 [image alt: xlSigma medallion]
 # Operational Excellence for Commercial Enterprises
@@ -635,7 +644,7 @@ Start the Conversation {{→ /contact}}
 ## Government Contracting (`/government-contracting`)
 
 Meta title: SDVOSB Subcontracting Partner | xlSigma
-Meta description: Senior-level management consulting and technology services. Process improvement, business process automation, strategy deployment, advanced analytics. SDVOSB and Veteran-Owned Small Business.
+Meta description: xlSigma, a Service-Disabled Veteran-Owned Small Business, helps federal primes meet SDVOSB participation goals with senior consulting and technology talent. [PROPOSED, pending approval]
 
 [image alt: xlSigma medallion]
 # Your Trusted SDVOSB Subcontracting Partner
@@ -741,7 +750,7 @@ Start the Conversation {{→ /contact}}
 ## Careers (`/careers`)
 
 Meta title: Join Our Talent Community | xlSigma
-Meta description: Senior-level management consulting and technology services. Process improvement, business process automation, strategy deployment, advanced analytics. SDVOSB and Veteran-Owned Small Business.
+Meta description: Join the xlSigma talent community of senior consultants and subject-matter experts for project-based work in operational excellence, AI, and automation. [PROPOSED, pending approval]
 
 [image alt: xlSigma medallion]
 Opportunities
@@ -795,7 +804,7 @@ Submit Application
 ## Contact (`/contact`)
 
 Meta title: Contact | xlSigma
-Meta description: Senior-level management consulting and technology services. Process improvement, business process automation, strategy deployment, advanced analytics. SDVOSB and Veteran-Owned Small Business.
+Meta description: Tell xlSigma about your operational, automation, or AI challenge. Call, text, or send a message and we respond within one business day. [PROPOSED, pending approval]
 
 [image alt: xlSigma medallion]
 Reach Out

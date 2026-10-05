@@ -8,10 +8,14 @@ import Headline from '../components/ui/Headline';
 import Rule from '../components/ui/Rule';
 import Button from '../components/ui/Button';
 import Tag from '../components/ui/Tag';
+import { pageMetadata } from '../lib/site';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'SDVOSB Subcontracting Partner | xlSigma',
-};
+  description:
+    'xlSigma, a Service-Disabled Veteran-Owned Small Business, helps federal primes meet SDVOSB participation goals with senior consulting and technology talent.',
+  path: '/government-contracting',
+});
 
 const VALUE_PROPS = [
   'Satisfies SDVOSB small-business participation goals',

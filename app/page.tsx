@@ -7,14 +7,16 @@ import Eyebrow from './components/ui/Eyebrow';
 import Headline from './components/ui/Headline';
 import Rule from './components/ui/Rule';
 import Button from './components/ui/Button';
+import { pageMetadata } from './lib/site';
 import PullQuote from './components/ui/PullQuote';
 import { CapabilityList, CapabilityRow } from './components/ui/CapabilityRow';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'xlSigma | AI-Enabled Operations, Automation & Enterprise Transformation',
   description:
     'xlSigma helps commercial and government organizations improve performance through Lean Six Sigma, enterprise knowledge and semantic transformation, AI agents, intelligent automation, analytics, and technology-enabled transformation.',
-};
+  path: '/',
+});
 
 const CAPABILITIES_PREVIEW = [
   {
