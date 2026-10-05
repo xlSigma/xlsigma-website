@@ -206,8 +206,22 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - Home canonical and sitemap entry have no trailing slash
 
 **Open items:**
-- Open copy item for Andres: the Government page body says "proven federal track record". Not edited; decide whether it fits the reference-design posture
-- Out of scope, still open: twitter:site handle, JSON-LD, favicon changes, screen-reader pass on the Context Services band and drawers, phone visual check of the band
+- Resolved in Session 9: the Government page "proven federal track record" copy item (reframed in PR #23)
+- Resolved in Session 9: screen-reader pass on the Context Services band and drawers, and the phone visual check of the band
+- Out of scope, still open: twitter:site handle, JSON-LD, favicon changes
+
+---
+
+### Session 9 - 2026-10-05 (close-out of Session 8 open items)
+**Goal:** Close the three open items left from Session 8. Docs only; no site copy, component, or metadata changes.
+
+**What was done:**
+- Government hero reframed (PR #23, merge `0a0f54f`, live on production): "proven federal track record" became "led by senior leaders with hands-on federal program delivery experience", matching the Capabilities Statement "Relevant Experience" framing. The SBA certification for xlSigma LLC dates from March 2026 and the federal proof points belong to the team's earlier roles, so "proven" no longer reads as a company-level claim. CONTENT-INVENTORY.md was updated in the same commit
+- Phone and 1280px visual check of the Context Services band on /capabilities and /semantic-to-action passed (emulated, 2026-10-05)
+- NVDA pass on the Context Services band and the three drawers passed, with no failures
+
+**Open items:**
+- Still open: twitter:site handle, JSON-LD, favicon changes
 
 ---
 
