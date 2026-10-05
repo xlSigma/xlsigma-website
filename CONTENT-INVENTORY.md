@@ -10,7 +10,7 @@ Any visible copy change after this point must be an intentional, approved edit. 
 
 og:site_name: xlSigma
 Twitter card: summary_large_image (title and description match the page meta)
-Share image: /og/xlsigma-banner-v2.jpg (1200x630), byte-identical copy at app/opengraph-image.jpg
+Share image: /og/xlsigma-banner-v3.jpg (1200x630), byte-identical copy at app/opengraph-image.jpg
 Share image alt: xlSigma gold medallion logo with a blue XL beside the text AI - Automation & Enterprise Knowledge Transformation, Powered by Lean Six Sigma, on a solid navy background. [PROPOSED, pending approval]
 
 ---
