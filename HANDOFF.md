@@ -69,6 +69,8 @@ A Claude Code preview config lives in `.claude/launch.json` (port 3001). It is n
 | /government-contracting  | app/government-contracting/page.tsx     | Federal primes audience, past performance                |
 | /careers                 | app/careers/page.tsx                    | Talent community page and application form               |
 | /contact                 | app/contact/page.tsx                    | Contact form and details                                 |
+| /sitemap.xml             | app/sitemap.ts                          | Generated from PUBLIC_PATHS in app/lib/site.ts           |
+| /robots.txt              | app/robots.ts                           | Allow all, disallow /api/, points to the www sitemap     |
 | /api/contact             | app/api/contact/route.ts                | Server route: sends email via Resend                     |
 | /api/careers             | app/api/careers/route.ts                | Server route: uploads resume to Vercel Blob, sends email |
 
@@ -87,6 +89,9 @@ UI primitives (app/components/ui/):
 - CapabilityRow       - numbered row with thin rules (CapabilityList wraps rows)
 - MedallionHero       - navy hero panel with the centered medallion, used on interior pages
 - form.tsx            - Field (label tied to input by id) and INPUT_CLASS
+
+Shared helpers (app/lib/):
+- site.ts              - SITE_URL, SITE_NAME, OG_IMAGE, PUBLIC_PATHS, and pageMetadata()
 
 Layout: app/layout.tsx sets the fonts, wraps pages in NavBar, ScrollToTop, and Footer, and sets
 `data-scroll-behavior="smooth"` on <html> so Next does not animate route changes.
@@ -109,6 +114,17 @@ Typical change:
 
 Copy is frozen in `CONTENT-INVENTORY.md`. It lists every page's text and a list of open flags.
 Change visible copy only on purpose, and update the inventory when you do.
+
+---
+
+## Metadata and Share Image
+
+- **Origin.** `SITE_URL` in `app/lib/site.ts` is https://www.xlsigma.com (xlsigma.com redirects to www). `app/layout.tsx` passes it as `metadataBase`, so canonical and og:url can be relative paths. `SITE_NAME` is "xlSigma".
+- **Page metadata.** Every page's metadata must use the shared `pageMetadata({ title, description, path, ogTitle? })` helper in `app/lib/site.ts`. Do not hand-write `openGraph` or `twitter` objects: a page-level object replaces the layout's instead of merging, which silently drops siteName, the Twitter card, and the image. Edit a title or description in that page's `metadata` export (`layout.tsx` beside the page for /contact and /careers, which are client components).
+- **New public page.** Add its path to `PUBLIC_PATHS` in `app/lib/site.ts`; `app/sitemap.ts` reads it. Update CONTENT-INVENTORY.md in the same commit.
+- **Share image.** `public/og/xlsigma-banner.jpg` (1200x630) is the canonical OG file; every page references it through `OG_IMAGE`. `app/opengraph-image.jpg` is a fallback copy that must stay byte-identical (SHA256 `2902cffb9d3feaa4d0dc7aa767aeb64c8193d0790e6411f945b8cbfdb5f9cbd8`, checked 2026-10-04). To replace the image, swap both files together, keep 1200x630, and update the alt text in `OG_IMAGE` and in `app/opengraph-image.alt.txt`. Compare with `Get-FileHash public\og\xlsigma-banner.jpg, app\opengraph-image.jpg`.
+- **Why the image is named explicitly.** The file convention reaches only the root segment, and each page-level `openGraph` replaced it, so the other pages lost the image until `OG_IMAGE` was set in `openGraph.images` and `twitter.images`. There is no `twitter-image` file.
+- Out of scope so far: twitter:site handle, JSON-LD, favicon changes.
 
 ---
 
