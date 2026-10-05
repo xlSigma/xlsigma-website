@@ -11,19 +11,15 @@ import Rule from '../components/ui/Rule';
 import Button from '../components/ui/Button';
 import PullQuote from '../components/ui/PullQuote';
 import Disclosure from '../components/ui/Disclosure';
+import { pageMetadata } from '../lib/site';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Semantic-to-Action™ | AI Transformation Architecture | xlSigma',
   description:
     'xlSigma Semantic-to-Action™ connects enterprise knowledge, processes, policies, decision authority, and AI to turn business understanding into governed action and measurable outcomes.',
-  alternates: { canonical: '/semantic-to-action' },
-  openGraph: {
-    title: 'Semantic-to-Action™ | From Enterprise Knowledge to Governed Action',
-    description:
-      'xlSigma Semantic-to-Action™ connects enterprise knowledge, processes, policies, decision authority, and AI to turn business understanding into governed action and measurable outcomes.',
-    type: 'website',
-  },
-};
+  path: '/semantic-to-action',
+  ogTitle: 'Semantic-to-Action™ | From Enterprise Knowledge to Governed Action',
+});
 
 /* ---------- Content ---------- */
 

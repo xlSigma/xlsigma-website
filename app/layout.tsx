@@ -4,6 +4,7 @@ import './globals.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import { SITE_NAME, SITE_URL } from './lib/site';
 
 const newsreader = Newsreader({
   subsets: ['latin'],
@@ -18,6 +19,9 @@ const hanken = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  openGraph: { type: 'website', siteName: SITE_NAME, locale: 'en_US' },
+  twitter: { card: 'summary_large_image' },
   title: 'xlSigma LLC | Management Consulting & Technology',
   description:
     'Senior-level management consulting and technology services. ' +

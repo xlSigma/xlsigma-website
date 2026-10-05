@@ -8,10 +8,14 @@ import Headline from '../components/ui/Headline';
 import Rule from '../components/ui/Rule';
 import Button from '../components/ui/Button';
 import PullQuote from '../components/ui/PullQuote';
+import { pageMetadata } from '../lib/site';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Operational Excellence for Commercial Enterprises | xlSigma',
-};
+  description:
+    'xlSigma partners with private-sector organizations to reengineer processes, deploy AI and intelligent automation, and build enterprise knowledge foundations.',
+  path: '/commercial',
+});
 
 const VALUE_PROPS = [
   'Senior-only delivery teams with Fortune 500 depth — no juniors, no bench',
