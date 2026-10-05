@@ -6,12 +6,12 @@ export const SITE_NAME = 'xlSigma';
 
 // Shared social image. A page-level openGraph or twitter object drops the file-based image from
 // app/opengraph-image.jpg, so every page names this copy explicitly. To replace the image, swap
-// public/og/xlsigma-banner.jpg (keep 1200x630) and app/opengraph-image.jpg, app/twitter-image.jpg.
+// public/og/xlsigma-banner-v2.jpg (keep 1200x630) and the byte-identical copy at app/opengraph-image.jpg.
 export const OG_IMAGE = {
-  url: '/og/xlsigma-banner.jpg',
+  url: '/og/xlsigma-banner-v2.jpg',
   width: 1200,
   height: 630,
-  alt: 'xlSigma medallion logo beside the text AI - Automation & Enterprise Knowledge Transformation, Powered by Lean Six Sigma, on a dark network background.',
+  alt: 'xlSigma gold medallion logo with a blue XL beside the text AI - Automation & Enterprise Knowledge Transformation, Powered by Lean Six Sigma, on a solid navy background.',
 };
 
 // Public routes, used by app/sitemap.ts. Add a route here when a new public page is created.
