@@ -55,6 +55,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 | `app/commercial/page.tsx` | Commercial page |
 | `app/government-contracting/page.tsx` | Government page, past performance |
 | `app/careers/page.tsx`, `app/contact/page.tsx` | Forms (client components) |
+| `app/lib/site.ts` | Site origin, share image, public paths, `pageMetadata()` helper (all page metadata goes through it) |
 | `app/components/ui/*` | Shared primitives (includes `Disclosure`, a native details/summary drawer) |
 | `app/components/NavBar.tsx`, `Footer.tsx`, `ScrollToTop.tsx` | Shared chrome |
 | `CONTENT-INVENTORY.md` | Verbatim copy checkpoint and open flags |
@@ -190,6 +191,23 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 
 **Open items:**
 - Metadata/OG gaps on /semantic-to-action (no og:image, siteName, Twitter card; no metadataBase, sitemap, or robots) need separate approval
+
+### Session 8 - 2026-10-04 (metadata and OG)
+**Goal:** Close the metadata and OG gaps (no og:image, siteName, Twitter card, metadataBase, sitemap, or robots).
+
+**What was done:**
+- PR #18 (merge `9b7f43b`): `metadataBase` https://www.xlsigma.com, siteName "xlSigma", Twitter `summary_large_image`, and page-level title, description, canonical, and og:url on all 7 public routes through the shared `pageMetadata()` helper in `app/lib/site.ts`; plus `app/sitemap.ts` and `app/robots.ts`
+- Share image is Andres's designed 1200x630 jpg (115 KB), unaltered. Verified on production: all 7 routes emit the absolute www og:image (200, image/jpeg, 1200x630), the canonical, and the Twitter card; sitemap and robots respond correctly
+- Approved the Commercial, Government, Careers, and Contact descriptions and the alt text (Andres to confirm the banner wording). Contact keeps its description because the page body already promises a response within one business day
+- HANDOFF.md documents the helper, the image files, and how to replace the image
+
+**Decisions made:**
+- The file-convention image reached only Home because page-level `openGraph` objects replace the layout's, so every page names `public/og/xlsigma-banner.jpg` explicitly. That file is canonical; `app/opengraph-image.jpg` is a byte-identical fallback copy. No `twitter-image` file
+- Home canonical and sitemap entry have no trailing slash
+
+**Open items:**
+- Open copy item for Andres: the Government page body says "proven federal track record". Not edited; decide whether it fits the reference-design posture
+- Out of scope, still open: twitter:site handle, JSON-LD, favicon changes, screen-reader pass on the Context Services band and drawers, phone visual check of the band
 
 ---
 
