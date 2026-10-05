@@ -6,9 +6,9 @@ export const SITE_NAME = 'xlSigma';
 
 // Shared social image. A page-level openGraph or twitter object drops the file-based image from
 // app/opengraph-image.jpg, so every page names this copy explicitly. To replace the image, swap
-// public/og/xlsigma-banner-v2.jpg (keep 1200x630) and the byte-identical copy at app/opengraph-image.jpg.
+// public/og/xlsigma-banner-v3.jpg (keep 1200x630) and the byte-identical copy at app/opengraph-image.jpg.
 export const OG_IMAGE = {
-  url: '/og/xlsigma-banner-v2.jpg',
+  url: '/og/xlsigma-banner-v3.jpg',
   width: 1200,
   height: 630,
   alt: 'xlSigma gold medallion logo with a blue XL beside the text AI - Automation & Enterprise Knowledge Transformation, Powered by Lean Six Sigma, on a solid navy background.',
