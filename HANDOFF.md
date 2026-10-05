@@ -124,7 +124,8 @@ Change visible copy only on purpose, and update the inventory when you do.
 - **New public page.** Add its path to `PUBLIC_PATHS` in `app/lib/site.ts`; `app/sitemap.ts` reads it. Update CONTENT-INVENTORY.md in the same commit.
 - **Share image.** `public/og/xlsigma-banner-v3.jpg` (1200x630) is the canonical OG file (v3 since 2026-10-05; LinkedIn caches by URL, so a new image needs a new file name; the earlier `xlsigma-banner-v2.jpg` and `xlsigma-banner.jpg` were deleted); every page references it through `OG_IMAGE`. `app/opengraph-image.jpg` is a fallback copy that must stay byte-identical (SHA256 `1be38b4d6154a35f1a02c4426b31b07029cbea8917e4d892afbdc5899c42ad02`, checked 2026-10-05). To replace the image, swap both files together, keep 1200x630, and update the alt text in `OG_IMAGE` and in `app/opengraph-image.alt.txt`. Compare with `Get-FileHash public\og\xlsigma-banner-v3.jpg, app\opengraph-image.jpg`.
 - **Why the image is named explicitly.** The file convention reaches only the root segment, and each page-level `openGraph` replaced it, so the other pages lost the image until `OG_IMAGE` was set in `openGraph.images` and `twitter.images`. There is no `twitter-image` file.
-- Out of scope so far: twitter:site handle, JSON-LD, favicon changes.
+- **Structured data.** One Organization JSON-LD record, defined as `ORGANIZATION_JSON_LD` in `app/lib/site.ts` and rendered once from `app/layout.tsx`, so every route emits exactly one `application/ld+json` block. Serialized with `JSON.stringify` plus a `<` to `<` escape, per the Next 16 JSON-LD guide. Every field is a public claim and the set is frozen: change it only on approval and update CONTENT-INVENTORY.md in the same commit. `contactPoint` is intentionally omitted because info@xlsigma.com is not shown in site copy; it can be added if info@ appears on the Contact page. The logo URL is `public/medallion.png` (512x512).
+- Out of scope so far: twitter:site handle, favicon changes.
 
 ---
 

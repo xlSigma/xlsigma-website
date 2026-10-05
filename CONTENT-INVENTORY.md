@@ -15,6 +15,22 @@ Share image alt: xlSigma gold medallion logo with a blue XL beside the text AI -
 
 ---
 
+## Global: Structured data (all pages)
+
+Source: `ORGANIZATION_JSON_LD` in app/lib/site.ts, rendered once from app/layout.tsx as a single `application/ld+json` block. Site-wide: every route emits the same record. Machine-readable only, not visible copy. Published fields (no others):
+@context: https://schema.org
+@type: Organization
+@id: https://www.xlsigma.com/#organization
+name: xlSigma
+legalName: xlSigma LLC
+url: https://www.xlsigma.com
+logo: https://www.xlsigma.com/medallion.png (public/medallion.png, 512x512 navy-circle medallion)
+address: PostalAddress, addressLocality Tampa, addressRegion FL, addressCountry US
+sameAs: https://www.linkedin.com/company/xlsigma/
+contactPoint is intentionally omitted (info@xlsigma.com is not public in site copy).
+
+---
+
 ## Global: Navigation bar (all pages)
 
 

@@ -58,3 +58,40 @@ export function pageMetadata({ title, description, path, ogTitle }: PageMetaInpu
     },
   };
 }
+
+// Site-wide Organization structured data. Rendered once from app/layout.tsx. Every field is a
+// public machine-readable claim: change a value only on Andres's approval and update
+// CONTENT-INVENTORY.md in the same commit.
+type OrganizationJsonLd = {
+  '@context': 'https://schema.org';
+  '@type': 'Organization';
+  '@id': string;
+  name: string;
+  legalName: string;
+  url: string;
+  logo: string;
+  address: {
+    '@type': 'PostalAddress';
+    addressLocality: string;
+    addressRegion: string;
+    addressCountry: string;
+  };
+  sameAs: string[];
+};
+
+export const ORGANIZATION_JSON_LD: OrganizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://www.xlsigma.com/#organization',
+  name: 'xlSigma',
+  legalName: 'xlSigma LLC',
+  url: 'https://www.xlsigma.com',
+  logo: 'https://www.xlsigma.com/medallion.png',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Tampa',
+    addressRegion: 'FL',
+    addressCountry: 'US',
+  },
+  sameAs: ['https://www.linkedin.com/company/xlsigma/'],
+};
