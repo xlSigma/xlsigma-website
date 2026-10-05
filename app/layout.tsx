@@ -4,7 +4,7 @@ import './globals.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import { SITE_NAME, SITE_URL } from './lib/site';
+import { ORGANIZATION_JSON_LD, SITE_NAME, SITE_URL } from './lib/site';
 
 const newsreader = Newsreader({
   subsets: ['latin'],
@@ -38,6 +38,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${newsreader.variable} ${hanken.variable}`}>
       <body className="bg-white font-sans text-ink antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(ORGANIZATION_JSON_LD).replace(/</g, '\\u003c'),
+          }}
+        />
         <ScrollToTop />
         <NavBar />
         <main>{children}</main>
