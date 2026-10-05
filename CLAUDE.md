@@ -209,6 +209,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - Resolved in Session 9: the Government page "proven federal track record" copy item (reframed in PR #23)
 - Resolved in Session 9: screen-reader pass on the Context Services band and drawers, and the phone visual check of the band
 - Out of scope, still open: twitter:site handle, JSON-LD, favicon changes
+- Future to-do: improve the sharpness of the image and text on the LinkedIn share card (OG banner); any new image must ship under a new filename (v4 or later) because LinkedIn caches by URL, with key content 60 to 80 px inside the left and right edges.
 
 ---
 
