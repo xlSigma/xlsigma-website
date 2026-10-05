@@ -648,7 +648,7 @@ Meta description: xlSigma, a Service-Disabled Veteran-Owned Small Business, help
 
 [image alt: xlSigma medallion]
 # Your Trusted SDVOSB Subcontracting Partner
-xlSigma helps federal prime contractors meet small-business SDVOSB participation goals while delivering senior-level consulting and technology capabilities with a proven federal track record.
+xlSigma helps federal prime contractors meet small-business SDVOSB participation goals while delivering senior-level consulting and technology capabilities, led by senior leaders with hands-on federal program delivery experience.
 Small Business Credits
 ## Service-Disabled Veteran-Owned Small Business
 -

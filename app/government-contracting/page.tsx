@@ -125,8 +125,8 @@ export default function GovernmentContractingPage() {
         </Headline>
         <p className="mx-auto mt-8 max-w-2xl text-lead text-(--fg-muted)">
           xlSigma helps federal prime contractors meet small-business SDVOSB participation
-          goals while delivering senior-level consulting and technology capabilities
-          with a proven federal track record.
+          goals while delivering senior-level consulting and technology capabilities, led
+          by senior leaders with hands-on federal program delivery experience.
         </p>
       </MedallionHero>
 
