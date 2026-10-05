@@ -220,6 +220,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - Government hero reframed (PR #23, merge `0a0f54f`, live on production): "proven federal track record" became "led by senior leaders with hands-on federal program delivery experience", matching the Capabilities Statement "Relevant Experience" framing. The SBA certification for xlSigma LLC dates from March 2026 and the federal proof points belong to the team's earlier roles, so "proven" no longer reads as a company-level claim. CONTENT-INVENTORY.md was updated in the same commit
 - Phone and 1280px visual check of the Context Services band on /capabilities and /semantic-to-action passed (emulated, 2026-10-05)
 - NVDA pass on the Context Services band and the three drawers passed, with no failures
+- Deleted the old OG files `public/og/xlsigma-banner.jpg` and `public/og/xlsigma-banner-v2.jpg`; v3 and the `app/opengraph-image.jpg` fallback are unchanged (HANDOFF.md updated; the Session 8 entry above is historical)
 
 **Open items:**
 - Still open: twitter:site handle, JSON-LD, favicon changes
