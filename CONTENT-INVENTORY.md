@@ -31,6 +31,16 @@ contactPoint is intentionally omitted (info@xlsigma.com is not public in site co
 
 ---
 
+## Global: Favicon and app icons (all pages)
+
+Source: file conventions in app/ (no `icons` key in layout or metadata). Image only, not visible copy. The master is the gold and navy Medallion, trimmed to the circle so it fills each icon edge to edge. Measured from the files:
+- app/favicon.ico: ICO with three PNG frames at 16x16, 32x32, and 48x48 (32 bpp, transparent background), 9,373 bytes.
+- app/icon.png: PNG, RGBA, 256x256, transparent corners, 108,452 bytes.
+- app/apple-icon.png: PNG, RGB with no alpha channel, 180x180, 144 px Medallion circle (80 percent) centered on a solid navy square #001C3F, 35,365 bytes.
+The earlier yellow-disc XL icon (app/icon.png, 700x700) is replaced.
+
+---
+
 ## Global: Navigation bar (all pages)
 
 
