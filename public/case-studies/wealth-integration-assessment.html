@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wealth Integration Assessment</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Anonymized case study: an end-to-end wealth management strategy assessment, from business question to a risk-weighted roadmap.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon.png" type="image/png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="xlSigma">
+<meta property="og:title" content="Wealth Integration Assessment">
+<meta property="og:description" content="Anonymized case study: an end-to-end wealth management strategy assessment, from business question to a risk-weighted roadmap.">
+<meta property="og:url" content="https://www.xlsigma.com/case-studies/wealth-integration-assessment">
+<meta property="og:image" content="https://www.xlsigma.com/og/xlsigma-banner-v3.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>.home-link{display:inline-block;margin-top:20px;font-family:var(--f-mono);font-size:var(--t-xs);color:var(--ink-3);text-decoration:none;letter-spacing:.04em}.home-link:hover{color:var(--ink);text-decoration:underline}.home-link:focus-visible{outline:2px solid var(--brass);outline-offset:3px}</style>
+</head>
+<body>
+<style>
+/* Layout: a single-column private-bank report. Navy ink on cool paper, brass used only for structure. Ten numbered, collapsible chapters follow the real sequence of the work. */
+:root{
+  --paper:#f6f7f8; --surface:#ffffff; --ink:#14213a; --ink-2:#4a5468; --ink-3:#6f7889;
+  --rule:#d9dde4; --rule-2:#eceef2; --brass:#8a6420; --brass-soft:#efe6d4; --navy:#1d3a6b;
+  --on-strong:#ffffff;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
+  --seq-lo:#eef4fc; --seq-hi:#184f95;
+  --good:#0ca30c; --warn:#fab219; --crit:#d03b3b;
+  --tip-bg:#14213a; --tip-fg:#f4f6fa;
+  --f-display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --f-body:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  --t-xs:.75rem; --t-sm:.875rem; --t-md:1rem; --t-lg:1.1875rem; --t-xl:1.6rem; --t-2xl:2.4rem;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0f1522; --surface:#161e2e; --ink:#e9edf4; --ink-2:#b4bccb; --ink-3:#8c95a6;
+  --rule:#2c3649; --rule-2:#212a3b; --brass:#d2a75a; --brass-soft:#2e2818; --navy:#9fbbe8;
+  --on-strong:#ffffff;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+  --seq-lo:#1b2538; --seq-hi:#3987e5;
+  --tip-bg:#e9edf4; --tip-fg:#14213a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0f1522; --surface:#161e2e; --ink:#e9edf4; --ink-2:#b4bccb; --ink-3:#8c95a6;
+  --rule:#2c3649; --rule-2:#212a3b; --brass:#d2a75a; --brass-soft:#2e2818; --navy:#9fbbe8;
+  --on-strong:#ffffff;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+  --seq-lo:#1b2538; --seq-hi:#3987e5;
+  --tip-bg:#e9edf4; --tip-fg:#14213a; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--t-md);line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:980px;margin:0 auto}
+a{color:var(--navy)}
+:focus-visible{outline:2px solid var(--brass);outline-offset:2px;border-radius:2px}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+.prose{max-width:66ch;display:grid;gap:.8em}
+.eyebrow{font-family:var(--f-mono);font-size:var(--t-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
+.mono{font-family:var(--f-mono)}
+.num{font-variant-numeric:tabular-nums}
+
+/* Hero */
+header.hero{padding-block:56px 32px;display:grid;gap:22px;border-bottom:1px solid var(--rule)}
+.hero h1{font-family:var(--f-display);font-weight:600;font-size:clamp(2rem,5.2vw,3.25rem);line-height:1.08;letter-spacing:-.01em;max-width:22ch}
+.hero .lede{font-size:var(--t-lg);color:var(--ink-2);max-width:62ch}
+.byline{font-size:var(--t-sm);color:var(--ink-3)}
+.outcome{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--brass-soft);border-left:3px solid var(--brass);padding:14px 18px;border-radius:0 6px 6px 0;max-width:72ch}
+.outcome b{font-family:var(--f-mono);font-size:var(--t-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--brass);padding-top:3px}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.fact{padding:16px 16px 14px 0;display:grid;gap:2px}
+.fact + .fact{padding-left:16px;border-left:1px solid var(--rule)}
+.fact .v{font-family:var(--f-display);font-size:var(--t-2xl);font-weight:500;line-height:1;font-variant-numeric:lining-nums tabular-nums}
+.fact .l{font-size:var(--t-sm);color:var(--ink-2)}
+@media (max-width:640px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.fact:nth-child(3){padding-left:0;border-left:0}.fact:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+/* Role map */
+.rolemap{padding-block:28px;display:grid;gap:14px;border-bottom:1px solid var(--rule)}
+.rolemap h2{font-family:var(--f-display);font-weight:500;font-size:var(--t-xl)}
+.roles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.role{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:12px 14px;display:grid;gap:6px;align-content:start}
+.role .k{display:flex;gap:8px;align-items:center;font-weight:600;font-size:var(--t-sm)}
+.role p{font-size:var(--t-sm);color:var(--ink-2)}
+.role .where{font-family:var(--f-mono);font-size:var(--t-xs);color:var(--ink-3)}
+.tag{display:inline-flex;align-items:center;justify-content:center;font-family:var(--f-mono);font-size:.6875rem;font-weight:500;min-width:1.6em;height:1.6em;border-radius:3px;background:var(--ink);color:var(--paper);padding:0 .35em}
+@media (max-width:820px){.roles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.roles{grid-template-columns:1fr}}
+
+/* Chapters */
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-block:24px 8px}
+.toolbar h2{font-family:var(--f-display);font-weight:500;font-size:var(--t-xl)}
+button.btn{font:500 var(--t-sm)/1 var(--f-body);color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:5px;padding:9px 14px;cursor:pointer}
+button.btn:hover{border-color:var(--ink-3)}
+details.ch{border-bottom:1px solid var(--rule)}
+details.ch > summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:3.2rem 1fr auto;gap:4px 14px;align-items:baseline;padding-block:20px}
+details.ch > summary::-webkit-details-marker{display:none}
+.ch .n{font-family:var(--f-display);font-size:var(--t-xl);color:var(--brass);font-variant-numeric:lining-nums}
+.ch h3{font-family:var(--f-display);font-weight:600;font-size:clamp(1.25rem,2.6vw,1.5rem);line-height:1.2}
+.ch .take{grid-column:2;color:var(--ink-2);font-size:var(--t-md);max-width:70ch}
+.ch .chev{grid-row:1;grid-column:3;width:28px;height:28px;border:1px solid var(--rule);border-radius:50%;display:grid;place-items:center;transition:transform .2s}
+.ch .chev svg{width:12px;height:12px;stroke:var(--ink-2);fill:none;stroke-width:2}
+details.ch[open] .chev{transform:rotate(180deg)}
+details.ch > summary:hover h3{color:var(--navy)}
+.body{padding:0 0 32px 3.2rem;display:grid;gap:22px}
+@media (max-width:560px){.body{padding-left:0}details.ch > summary{grid-template-columns:2.4rem 1fr auto}}
+.shows{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:var(--t-xs);color:var(--ink-3);font-family:var(--f-mono);letter-spacing:.04em}
+.callout{border-left:3px solid var(--navy);padding:4px 0 4px 16px;max-width:66ch}
+.callout b{display:block;font-family:var(--f-mono);font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin-bottom:4px}
+ul.clean{margin:0;padding-left:1.1em;display:grid;gap:.35em;max-width:66ch}
+
+/* Figures */
+figure{margin:0;display:grid;gap:10px;min-width:0}
+figcaption{font-size:var(--t-sm);color:var(--ink-2);max-width:70ch}
+figcaption b{color:var(--ink);font-weight:600}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px;min-width:0}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:760px){.grid2,.grid3{grid-template-columns:1fr}}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:var(--t-xs);color:var(--ink-2);align-items:center}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.legend i.sq{border-radius:2px}
+svg text{font-family:var(--f-body)}
+.axis-t{fill:var(--ink-3);font-size:11px}
+.axis-l{fill:var(--ink-2);font-size:12px}
+.lbl{fill:var(--ink);font-size:12px}
+.lbl-2{fill:var(--ink-2);font-size:11.5px}
+.gridline{stroke:var(--rule-2);stroke-width:1}
+.baseline{stroke:var(--rule);stroke-width:1}
+
+/* Framework */
+.fw{min-width:760px;display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:2px;font-size:var(--t-xs)}
+.fw .office{padding:6px;text-align:center;font-family:var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);background:var(--rule-2)}
+.fw .l0{padding:10px 6px;text-align:center;font-weight:600;color:var(--on-strong);background:var(--navy-strong,#1d3a6b)}
+.fw .l1{padding:10px 6px;text-align:center;background:var(--surface);border:1px solid var(--rule);line-height:1.3;cursor:default;font-size:.75rem}
+.fw .l1:hover,.fw .l1:focus{border-color:var(--brass)}
+.fw .ph{padding:6px 4px;text-align:center;font-family:var(--f-mono);color:var(--ink-2);border-top:2px solid var(--brass)}
+.fw-desc{min-height:3.2em;font-size:var(--t-sm);color:var(--ink-2)}
+.lc{display:flex;gap:0;flex-wrap:wrap;font-family:var(--f-mono);font-size:var(--t-xs)}
+.lc span{padding:6px 12px 6px 18px;background:var(--rule-2);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 50%,calc(100% - 8px) 100%,0 100%,8px 50%);margin-right:-4px;color:var(--ink)}
+.lc span:first-child{clip-path:polygon(0 0,calc(100% - 8px) 0,100% 50%,calc(100% - 8px) 100%,0 100%);padding-left:12px}
+
+/* Funnel */
+.funnel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.fstep{border-top:2px solid var(--ink);padding-top:10px;display:grid;gap:4px}
+.fstep .v{font-family:var(--f-display);font-size:2rem;line-height:1;font-variant-numeric:lining-nums tabular-nums}
+.fstep .l{font-size:var(--t-sm);font-weight:600}
+.fstep .d{font-size:var(--t-xs);color:var(--ink-2)}
+@media (max-width:640px){.funnel{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Heat tables */
+table.heat{border-collapse:separate;border-spacing:2px;font-size:var(--t-xs);width:100%}
+table.heat th{font-weight:500;color:var(--ink-2);text-align:left;padding:4px 6px;vertical-align:bottom}
+table.heat thead th{text-align:center;font-size:.6875rem;line-height:1.25;min-width:64px}
+table.heat td{text-align:center;padding:8px 4px;border-radius:3px;font-variant-numeric:tabular-nums;font-family:var(--f-mono)}
+table.heat tbody th{white-space:nowrap}
+
+.mat{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:3px;min-width:620px}
+.mcell{border-radius:4px;padding:10px 6px 8px;display:grid;gap:4px;text-align:left;cursor:pointer;border:1px solid transparent;background:var(--surface);font:inherit;color:inherit}
+.mcell .sc{font-family:var(--f-mono);font-size:1.05rem;font-weight:500}
+.mcell .fn{font-size:.6875rem;line-height:1.25;color:var(--ink-2)}
+.mcell .st{font-family:var(--f-mono);font-size:.625rem;letter-spacing:.06em;text-transform:uppercase}
+.mcell[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.mstage{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:3px;min-width:620px;font-family:var(--f-mono);font-size:.625rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
+.mstage span{border-top:1px solid var(--rule);padding-top:4px}
+
+table.data{border-collapse:collapse;width:100%;min-width:640px;font-size:var(--t-sm)}
+table.data th{font-weight:600;text-align:left;font-size:var(--t-xs);color:var(--ink-2);border-bottom:1px solid var(--ink);padding:8px 8px 6px;white-space:nowrap}
+table.data td{padding:9px 8px;border-bottom:1px solid var(--rule-2);vertical-align:top}
+table.data td.r,table.data th.r{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--f-mono)}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:.6875rem;padding:1px 7px;border-radius:10px;border:1px solid var(--rule);white-space:nowrap}
+.bar-in{display:inline-block;height:6px;border-radius:0 3px 3px 0;background:var(--s1);vertical-align:middle;margin-right:8px}
+
+/* Roadmap */
+.road{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gen{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px;display:grid;gap:10px;align-content:start;border-top:4px solid var(--g)}
+.gen h4{margin:0;font-family:var(--f-display);font-size:var(--t-lg);font-weight:600}
+.gen .hz{font-family:var(--f-mono);font-size:var(--t-xs);color:var(--ink-3);letter-spacing:.06em;text-transform:uppercase}
+.gen p{font-size:var(--t-sm);color:var(--ink-2)}
+.gen ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:var(--t-sm)}
+.gen li{display:grid;grid-template-columns:2.2em 1fr;gap:6px}
+.gen li span{font-family:var(--f-mono);font-size:var(--t-xs);color:var(--ink-3);padding-top:2px}
+@media (max-width:760px){.road{grid-template-columns:1fr}}
+
+/* Model */
+.model{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch}
+.mbox{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:14px;display:grid;gap:8px;align-content:start}
+.mbox h4{margin:0;font-size:var(--t-sm);font-weight:600}
+.mbox ul{margin:0;padding-left:1em;font-size:var(--t-sm);color:var(--ink-2);display:grid;gap:3px}
+.arrow{display:grid;place-items:center;color:var(--brass);font-family:var(--f-mono)}
+@media (max-width:760px){.model{grid-template-columns:1fr}.arrow{transform:rotate(90deg);height:20px}}
+
+/* Tooltip */
+#tip{position:fixed;z-index:20;pointer-events:none;background:var(--tip-bg);color:var(--tip-fg);font-size:var(--t-xs);line-height:1.45;padding:8px 10px;border-radius:5px;max-width:260px;opacity:0;transition:opacity .12s;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+#tip b{font-weight:600;display:block;margin-bottom:2px;font-size:.8rem}
+#tip.on{opacity:1}
+.hit{cursor:pointer}
+
+footer{padding-block:36px 0;display:grid;gap:8px;font-size:var(--t-sm);color:var(--ink-3)}
+footer .sig{font-family:var(--f-display);font-size:var(--t-lg);color:var(--ink)}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{
+  body{background:#fff;color:#000}
+  details.ch::details-content{content-visibility:visible;display:block;height:auto}
+  .toolbar button,.chev{display:none}
+  .panel{break-inside:avoid}
+}
+</style>
+
+<div id="tip" role="tooltip"></div>
+<div class="wrap">
+<a class="home-link" href="/">xlsigma.com</a>
+
+<header class="hero">
+  <div class="eyebrow">Case study | Wealth management strategy &amp; analytics</div>
+  <h1>Where wealth growth was leaking, and what to fix first</h1>
+  <p class="lede">An end-to-end assessment of the U.S. wealth management business of a large North American bank. Leadership needed one answer: which initiatives, in what order, would grow the business by embedding wealth in the bank's retail, commercial and brokerage-partner channels.</p>
+  <p class="byline">Led by Andres Slack while serving as an internal strategy consultant at the bank. Andres is now President of xlSigma LLC.</p>
+  <div class="outcome"><b>Outcome</b><p>The bank implemented the full assessment. The business met or exceeded every target it set over the following five years.</p></div>
+  <div class="facts">
+    <div class="fact"><span class="v">130</span><span class="l">field irritants collected and validated</span></div>
+    <div class="fact"><span class="v">90</span><span class="l">client requirements across five segments</span></div>
+    <div class="fact"><span class="v">52</span><span class="l">initiatives scored and ranked</span></div>
+    <div class="fact"><span class="v">3</span><span class="l">roadmap generations, 2 to 5+ years</span></div>
+  </div>
+</header>
+
+<section class="rolemap" aria-labelledby="rm">
+  <div class="eyebrow">Why this example</div>
+  <h2 id="rm">The same four kinds of work your Data &amp; Analytics role calls for</h2>
+  <div class="roles">
+    <div class="role"><div class="k"><span class="tag">A</span>Frame the question</div><p>Turned a broad growth ambition into decision-ready questions and an analytical approach leadership agreed to.</p><span class="where">Chapters 1, 2</span></div>
+    <div class="role"><div class="k"><span class="tag">B</span>Integrate &amp; validate data</div><p>Combined field irritants, client requirements, process ratings and expert weightings into one validated dataset.</p><span class="where">Chapters 3, 4, 9</span></div>
+    <div class="role"><div class="k"><span class="tag">C</span>Decision tools &amp; reporting</div><p>Built interactive heat maps, scoring matrices and dashboards that leaders used to choose and sequence work.</p><span class="where">Chapters 4 to 8</span></div>
+    <div class="role"><div class="k"><span class="tag">D</span>Reusable data assets</div><p>Designed a traceable model, from pain point to roadmap, that could be rescored as conditions changed.</p><span class="where">Chapter 10</span></div>
+  </div>
+</section>
+
+<div class="toolbar">
+  <h2>The work, step by step</h2>
+  <button class="btn" id="toggleAll" type="button">Expand all chapters</button>
+</div>
+
+<!-- 1 -->
+<details class="ch" id="question">
+<summary><span class="n">1</span><h3>The business question</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">Grow wealth by embedding it in the channels the bank already had. Leadership needed to know where to invest first.</p></summary>
+<div class="body">
+  <div class="shows"><span class="tag">A</span>Frame priority questions with strategy and business leaders</div>
+  <div class="prose">
+    <p>The wealth business sat beside a large retail and commercial bank and a strategic brokerage partner. Each had clients who belonged in wealth, but referrals were manual, client data was fragmented across platforms, and incentives did not reward cross-business work.</p>
+    <p>The leadership team had a long list of ideas and no common way to compare them. The assessment was set up to answer three questions.</p>
+  </div>
+  <ul class="clean">
+    <li><b>Where are the gaps?</b> Which parts of the client journey and which business functions limit growth most?</li>
+    <li><b>What should we fund?</b> Which initiatives close those gaps with the best balance of impact, effort and client value?</li>
+    <li><b>In what order?</b> How do we sequence the work against risk, dependencies and the bank's integration strategy?</li>
+  </ul>
+  <div class="callout"><b>Scope</b>7 client lifecycle phases, 6 process stages, 10 business functions, 5 client segments, and stakeholders across wealth, retail, commercial, operations, technology and finance.</div>
+</div>
+</details>
+
+<!-- 2 -->
+<details class="ch" id="framework">
+<summary><span class="n">2</span><h3>Structuring the problem</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">One shared map of the client lifecycle gave every team the same language for gaps, data and fixes.</p></summary>
+<div class="body">
+  <div class="shows"><span class="tag">A</span>Bring structure to a broad business question</div>
+  <div class="prose"><p>Every pain point, requirement and initiative in the assessment was tagged to this framework. That tagging is what made the later heat maps, rollups and roadmap possible, because every number traces back to a place in the client journey.</p></div>
+  <figure>
+    <div class="panel">
+      <div class="lc" aria-label="Client lifecycle phases">
+        <span>Aware</span><span>Attract</span><span>Consider</span><span>Trade</span><span>Grow</span><span>Harvest</span><span>Transfer</span>
+      </div>
+    </div>
+    <div class="panel scroll">
+      <div class="fw" id="fw"></div>
+      <p class="fw-desc" id="fwDesc" aria-live="polite">Hover or tab to a function to see what it covers.</p>
+    </div>
+    <figcaption><b>End-to-end process framework.</b> Six process stages and ten business functions, grouped by front, middle and back office, with the lifecycle phases each one serves.</figcaption>
+  </figure>
+</div>
+</details>
+
+<!-- 3 -->
+<details class="ch" id="evidence">
+<summary><span class="n">3</span><h3>Gathering and validating the evidence</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">130 field irritants and 90 client requirements, weighted so the analysis reflected what mattered most to the business.</p></summary>
+<div class="body">
+  <div class="shows"><span class="tag">B</span>Analyze, integrate and validate complex data</div>
+  <div class="funnel">
+    <div class="fstep"><span class="v">130</span><span class="l">Raw irritants</span><span class="d">Logged by advisors, operations and partners in the field</span></div>
+    <div class="fstep"><span class="v">187</span><span class="l">Mapped pain points</span><span class="d">De-duplicated, split by function and tagged to a root cause</span></div>
+    <div class="fstep"><span class="v">90</span><span class="l">Client requirements</span><span class="d">Critical-to-quality needs, defined segment by segment</span></div>
+    <div class="fstep"><span class="v">10</span><span class="l">Weighted functions</span><span class="d">Relative importance set by pairwise comparison (AHP)</span></div>
+  </div>
+  <div class="grid2">
+    <figure><div class="panel"><div id="chSeg"></div></div><figcaption><b>Client requirements by segment.</b> High-net-worth and mass-affluent clients drove more than half of the requirements.</figcaption></figure>
+    <figure><div class="panel"><div id="chDrv"></div></div><figcaption><b>Root cause of the 187 pain points.</b> Technology and process together explained four in five.</figcaption></figure>
+  </div>
+  <figure><div class="panel"><div id="chAhp"></div></div><figcaption><b>Function weights from the pairwise analysis.</b> Leaders compared every pair of functions. The resulting weights fed the initiative scoring in chapter 5, so a fix in Sales &amp; Channel Management counted for about five times as much as one in Risk &amp; Governance.</figcaption></figure>
+</div>
+</details>
+
+<!-- 4 -->
+<details class="ch" id="diagnosis">
+<summary><span class="n">4</span><h3>Diagnosis</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">The biggest capability gaps sat at the front of the client journey, which is not where most complaints were logged.</p></summary>
+<div class="body">
+  <div class="shows"><span class="tag">B</span><span class="tag">C</span>Identify trends, opportunities and risks; business-facing reporting</div>
+  <div class="prose"><p>Each function was rated on 7 to 11 process dimensions, such as integration, reporting capability and people effectiveness, on a 1 to 10 scale. Scores below 3 flagged a gap and scores above 6 a strength.</p></div>
+  <figure>
+    <div class="panel">
+      <div class="legend" style="margin-bottom:10px"><span><i class="sq" style="background:var(--crit)"></i>Gap (below 3)</span><span><i class="sq" style="background:var(--warn)"></i>Watch (3 to 6)</span><span><i class="sq" style="background:var(--good)"></i>Strength (above 6)</span></div>
+      <div class="scroll"><div class="mstage" id="mstage"></div><div class="mat" id="mat" role="group" aria-label="Function maturity scores"></div></div>
+      <div id="drill" style="margin-top:16px"></div>
+    </div>
+    <figcaption><b>Process maturity heat map.</b> Select a function to see the dimension scores behind its average.</figcaption>
+  </figure>
+  <div class="grid2">
+    <figure><div class="panel"><div id="chRed"></div></div><figcaption><b>Share of process activities rated red.</b> 70% of client relationship activities and 63% of sales activities were red, against 2% to 4% in back-office functions.</figcaption></figure>
+    <figure><div class="panel"><div id="chPain"></div></div><figcaption><b>Where pain points were logged.</b> Client servicing generated the most complaints, 79 of 187, because that is where staff feel the friction.</figcaption></figure>
+  </div>
+  <div class="callout"><b>So what</b>Ranking by complaint volume alone would have pointed investment at servicing. The weighted view showed the growth constraint was upstream: the bank was not identifying, referring and onboarding wealth clients well. That reframing set the priorities for everything that followed.</div>
+</div>
+</details>
+
+<!-- 5 -->
+<details class="ch" id="priorities">
+<summary><span class="n">5</span><h3>Prioritization</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">52 initiatives scored on ease, impact and client value. A clear top ten emerged, led by front-end data and referral fixes.</p></summary>
+<div class="body">
+  <div class="shows"><span class="tag">C</span>Analytical tools that deliver decision-ready insight</div>
+  <div class="prose"><p>Each initiative was scored for speed and affordability (1 to 9, higher is easier) and impact (1 to 9). The composite priority score multiplied ease and impact by the client-requirement score and the function weight from chapter 3, then was indexed so the top initiative equals 100.</p></div>
+  <figure>
+    <div class="panel">
+      <div class="legend" id="bubLegend" style="margin-bottom:6px"></div>
+      <div id="chBub"></div>
+    </div>
+    <figcaption><b>Solution selection matrix.</b> Ease of delivery against impact. Bubble size is the priority index. Hover a bubble for the initiative.</figcaption>
+  </figure>
+  <figure>
+    <div class="panel scroll"><table class="data" id="topTable"></table></div>
+    <figcaption><b>Top ten initiatives by priority index.</b> Eight of the ten sit in the Market stage, where chapter 4 found the largest gaps.</figcaption>
+  </figure>
+</div>
+</details>
+
+<!-- 6 -->
+<details class="ch" id="alignment">
+<summary><span class="n">6</span><h3>Strategic alignment</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">The plan was tested against nine bank-and-wealth integration levers, so it reinforced the enterprise strategy rather than competing with it.</p></summary>
+<div class="body">
+  <div class="shows"><span class="tag">A</span><span class="tag">C</span>Partner with strategy; translate findings into recommendations</div>
+  <div class="prose"><p>The bank's integration strategy rested on seven operational levers plus two enterprise levers. Every initiative was rated 0 to 9 on how strongly it moved each lever, then averaged by function.</p></div>
+  <figure>
+    <div class="panel scroll"><table class="heat" id="levTable"></table></div>
+    <figcaption><b>Average lever alignment by function</b> (0 to 9, darker is stronger). Operational excellence and client satisfaction were supported everywhere. Revenue sharing (shadow credit) and client triage were thinly covered, which became a design input for the second generation.</figcaption>
+  </figure>
+</div>
+</details>
+
+<!-- 7 -->
+<details class="ch" id="risk">
+<summary><span class="n">7</span><h3>Risk</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">Risk scoring separated quick wins from the few strategic bets that needed sponsorship and time.</p></summary>
+<div class="body">
+  <div class="shows"><span class="tag">B</span><span class="tag">C</span>Identify risks tied to strategic initiatives</div>
+  <div class="prose"><p>Each initiative was rated 1 to 9 on technology complexity, time, cost, process complexity and the number of lines of business involved. The five ratings were summed into a risk score from 5 to 45.</p></div>
+  <figure>
+    <div class="panel"><div class="legend" id="riskLegend" style="margin-bottom:6px"></div><div id="chRisk"></div></div>
+    <figcaption><b>Risk against priority.</b> The top initiatives were also low risk, which made a fast first generation credible. The enterprise data strategy and the operations redesign carried the highest risk and were deliberately placed in generation two.</figcaption>
+  </figure>
+</div>
+</details>
+
+<!-- 8 -->
+<details class="ch" id="roadmap">
+<summary><span class="n">8</span><h3>Roadmap</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">Quick wins first, structural change second, innovation third. The bank delivered all three.</p></summary>
+<div class="body">
+  <div class="shows"><span class="tag">A</span>Balance immediate decision support with scalable capability</div>
+  <div class="prose"><p>A multi-generation plan sequenced the work by priority, risk and dependency. Generation one closed the front-end gaps quickly and freed capacity. Generation two built the data and platform foundations. Generation three used those foundations to compete in new ways.</p></div>
+  <div class="road" id="road"></div>
+  <div class="callout"><b>Result</b>The bank implemented the full assessment. Over the next five years the business met or exceeded every target it set.</div>
+</div>
+</details>
+
+<!-- 9 -->
+<details class="ch" id="maturity">
+<summary><span class="n">9</span><h3>Current-state maturity</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">An 18-dimension baseline showed strong market opportunity and leadership, held back by low digitization and automation.</p></summary>
+<div class="body">
+  <div class="shows"><span class="tag">B</span>Interpret complex data for senior leaders</div>
+  <div class="prose"><p>Leaders rated the business from 1 to 10 across three lenses. The profile is lopsided in a useful way: the ingredients for growth were present, and the gaps were concentrated in the delivery engine.</p></div>
+  <div class="grid3" id="radars"></div>
+</div>
+</details>
+
+<!-- 10 -->
+<details class="ch" id="reuse">
+<summary><span class="n">10</span><h3>From analysis to reusable asset</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">The assessment was built as a decision model, not a one-time report. Today the same model would run as a governed Power BI semantic model on a cloud data platform.</p></summary>
+<div class="body">
+  <div class="shows"><span class="tag">D</span>Well-documented, reusable analytical data assets</div>
+  <div class="prose"><p>Every element links to the next: a pain point maps to a function and lifecycle phase, inherits that function's weight and client requirements, and rolls up to an initiative, a lever and a roadmap generation. Change one input, such as a function weight or an impact score, and the rankings and roadmap update. That traceability is what let leaders challenge the results and trust them.</p></div>
+  <div class="model">
+    <div class="mbox"><h4>Sources</h4><ul><li>Field irritant logs</li><li>Client requirement workshops</li><li>Process maturity ratings</li><li>Pairwise function weights</li><li>Initiative scoring and risk inputs</li></ul></div>
+    <div class="arrow" aria-hidden="true">&rarr;</div>
+    <div class="mbox"><h4>Governed model</h4><ul><li><b>Facts:</b> pain points, initiative scores, risk scores, maturity ratings</li><li><b>Dimensions:</b> function, stage, lifecycle phase, segment, requirement, lever, generation</li><li>Documented definitions and scoring rules</li></ul></div>
+    <div class="arrow" aria-hidden="true">&rarr;</div>
+    <div class="mbox"><h4>Decision products</h4><ul><li>Heat maps and hotspot rollups</li><li>Solution selection matrix</li><li>Risk and alignment views</li><li>Roadmap tracking against targets</li></ul></div>
+  </div>
+  <div class="callout"><b>Delivered today</b>The original was a structured workbook. The same design maps directly to a star-schema semantic model in Power BI over a cloud lakehouse: certified datasets, row-level security by line of business, refreshable scoring, and dashboards that Strategy can reuse for the next portfolio review instead of rebuilding the analysis.</div>
+</div>
+</details>
+
+<footer>
+  <span class="sig">Andres Slack</span>
+  <span>President, xlSigma LLC | Lean Six Sigma Master Black Belt</span>
+  <span>Figures are drawn from the original assessment. The client is anonymized, internal names are generalized, and composite scores are indexed to 100.</span>
+</footer>
+</div>
+
+<script>
+const DATA = {"inits":[{"rank":1,"name":"Wealth indicator on core banking systems","desc":"Flag wealth-eligible clients inside core retail and commercial systems so they receive differentiated service.","stage":"Market","speed":7,"afford":9,"impact":9,"index":100.0,"risk":15,"riskParts":[3,3,1,3,5],"gen":1,"levers":[3,7,3,3,9,1,7,3,9]},{"rank":2,"name":"CRM book-of-record integration","desc":"Automate data feeds from the custody and brokerage books of record into the CRM, with common field mapping.","stage":"Market","speed":7,"afford":9,"impact":7,"index":77.8,"risk":17,"riskParts":[5,3,1,3,5],"gen":1,"levers":[1,3,7,1,3,1,5,0,9]},{"rank":3,"name":"Digital referral triage","desc":"Automate referral routing between Retail, Commercial and Wealth.","stage":"Market","speed":7,"afford":5,"impact":9,"index":55.6,"risk":23,"riskParts":[7,3,5,5,3],"gen":1,"levers":[3,9,9,9,7,5,1,1,7]},{"rank":4,"name":"Relationship-based pricing","desc":"Price products on the client's total relationship with the bank.","stage":"Market","speed":5,"afford":7,"impact":7,"index":43.2,"risk":21,"riskParts":[3,5,3,3,7],"gen":1,"levers":[5,9,7,3,0,3,0,9,3]},{"rank":5,"name":"Single client portal","desc":"Consolidate wealth account data and documents in one client-friendly portal.","stage":"Market","speed":5,"afford":5,"impact":9,"index":39.7,"risk":17,"riskParts":[5,5,5,1,1],"gen":1,"levers":[1,1,1,0,3,1,9,9,3]},{"rank":6,"name":"Single sign-on for client portals","desc":"One login across the existing custody and brokerage client portals.","stage":"Market","speed":5,"afford":5,"impact":7,"index":30.9,"risk":19,"riskParts":[3,5,5,3,3],"gen":1,"levers":[3,0,5,0,0,0,9,9,5]},{"rank":7,"name":"Client-initiated funds transfer","desc":"Let clients move funds themselves through the online portal.","stage":"Market","speed":5,"afford":7,"impact":5,"index":30.9,"risk":17,"riskParts":[5,5,3,3,1],"gen":1,"levers":[1,3,5,0,0,0,9,9,5]},{"rank":8,"name":"External wealth website redesign","desc":"Rebuild the public wealth website to be fully functional and intuitive.","stage":"Market","speed":7,"afford":5,"impact":5,"index":30.9,"risk":13,"riskParts":[3,3,5,1,1],"gen":1,"levers":["0",3,3,0,0,0,9,7,3]},{"rank":9,"name":"Lending platform integration","desc":"Align wealth loan processes with the bank's new retail and commercial lending platforms.","stage":"Client Servicing","speed":5,"afford":7,"impact":5,"index":30.3,"risk":15,"riskParts":[3,3,3,3,3],"gen":1,"levers":[1,7,3,3,3,1,0,3,9]},{"rank":10,"name":"Integrated cash management account","desc":"Add bank cash-management features inside investment accounts.","stage":"Market","speed":7,"afford":7,"impact":3,"index":25.9,"risk":31,"riskParts":[5,7,7,7,5],"gen":2,"levers":[1,1,0,1,0,0,0,5,7]},{"rank":11,"name":"HNW insurance solutions","desc":"Offer life, disability and long-term-care coverage within the planning process.","stage":"Product & Service","speed":7,"afford":7,"impact":5,"index":25.8,"risk":13,"riskParts":[1,3,3,5,1],"gen":1,"levers":[7,0,1,5,3,3,0,7,3]},{"rank":12,"name":"HNW cash-back program","desc":"A cash-back program for high-net-worth clients seeking investment advice.","stage":"Product & Service","speed":9,"afford":9,"impact":3,"index":25.6,"risk":7,"riskParts":[1,1,1,3,1],"gen":1,"levers":[5,1,1,0,0,3,0,7,1]},{"rank":13,"name":"Portal asset aggregation","desc":"Aggregate held-away assets for online reporting and planning.","stage":"Market","speed":5,"afford":3,"impact":9,"index":23.8,"risk":21,"riskParts":[5,5,3,3,5],"gen":1,"levers":[5,9,5,3,5,1,5,9,7]},{"rank":14,"name":"Financial-plan adoption","desc":"Increase use of the firm's financial-planning tool across the footprint.","stage":"Reporting & Enablement","speed":5,"afford":9,"impact":3,"index":18.7,"risk":21,"riskParts":[5,5,1,9,1],"gen":1,"levers":[7,7,9,3,1,3,0,5,9]},{"rank":15,"name":"Financial-plan usage reporting","desc":"Report plan usage and its revenue impact to leadership and the field.","stage":"Reporting & Enablement","speed":5,"afford":7,"impact":3,"index":14.5,"risk":13,"riskParts":[3,3,3,3,1],"gen":1,"levers":[9,1,5,3,0,3,1,0,5]},{"rank":16,"name":"Wealth enterprise data strategy","desc":"Extend the data warehouse and governance into a wealth data lake, starting with client data.","stage":"Market","speed":3,"afford":3,"impact":9,"index":14.3,"risk":41,"riskParts":[9,7,7,9,9],"gen":2,"levers":[5,7,3,3,3,1,0,0,9]},{"rank":17,"name":"Policy & procedure review cycle","desc":"Annual review protocol for all wealth policies and procedures.","stage":"Market","speed":9,"afford":9,"impact":1,"index":14.3,"risk":7,"riskParts":[1,1,1,3,1],"gen":1,"levers":[1,1,3,1,3,1,0,0,3]},{"rank":18,"name":"Wealth collaboration site refresh","desc":"Modernize the internal wealth collaboration site.","stage":"Market","speed":9,"afford":9,"impact":1,"index":14.3,"risk":7,"riskParts":[1,1,1,3,1],"gen":1,"levers":[0,0,1,0,0,0,0,0,3]},{"rank":19,"name":"Operations intranet refresh","desc":"Modernize the wealth operations intranet.","stage":"Market","speed":9,"afford":9,"impact":1,"index":14.3,"risk":9,"riskParts":[3,1,1,3,1],"gen":1,"levers":[1,1,3,0,0,3,0,0,5]},{"rank":20,"name":"Wealth team intranet refresh","desc":"Modernize the wealth team intranet.","stage":"Market","speed":9,"afford":9,"impact":1,"index":14.3,"risk":13,"riskParts":[3,1,1,3,5],"gen":0,"levers":[0,0,0,0,0,7,0,0,0]},{"rank":21,"name":"Pricing & approval limits review","desc":"Revise approval limits for pricing discounts, credit pricing, overdrafts and wires.","stage":"Market","speed":9,"afford":9,"impact":1,"index":14.3,"risk":7,"riskParts":[1,1,1,3,1],"gen":1,"levers":[3,0,5,0,0,0,0,3,5]},{"rank":22,"name":"Credit card servicing migration","desc":"Move wealth credit card servicing into the wealth operations service center.","stage":"Market","speed":9,"afford":9,"impact":1,"index":14.3,"risk":7,"riskParts":[1,1,1,1,3],"gen":1,"levers":[0,0,1,0,0,0,0,0,3]},{"rank":23,"name":"Private banking servicing migration","desc":"Handle out-of-profile transfers and account maintenance in wealth operations.","stage":"Client Servicing","speed":9,"afford":9,"impact":1,"index":14.0,"risk":9,"riskParts":[1,1,1,3,3],"gen":1,"levers":[1,0,0,0,0,0,0,1,3]},{"rank":24,"name":"Check & advice printing consolidation","desc":"Consolidate check and advice printing with the bank's print operations.","stage":"Client Servicing","speed":9,"afford":9,"impact":1,"index":14.0,"risk":7,"riskParts":[1,1,1,3,1],"gen":1,"levers":[0,0,0,0,0,0,0,0,1]},{"rank":25,"name":"Community engagement program","desc":"Coordinate participation in community events and campaigns.","stage":"Client Servicing","speed":9,"afford":9,"impact":1,"index":14.0,"risk":null,"riskParts":null,"gen":0,"levers":[0,0,5,1,0,3,0,0,0]},{"rank":26,"name":"Trust process migration study","desc":"Assess moving trust administration processes into wealth operations.","stage":"Client Servicing","speed":9,"afford":9,"impact":1,"index":14.0,"risk":17,"riskParts":[3,1,5,5,3],"gen":1,"levers":[0,1,1,0,0,0,0,0,7]},{"rank":27,"name":"Simplified recurring wires","desc":"Recurring wire payments without repetitive client instructions.","stage":"Client Servicing","speed":9,"afford":9,"impact":1,"index":14.0,"risk":5,"riskParts":[1,1,1,1,1],"gen":1,"levers":[0,0,0,0,0,0,0,3,7]},{"rank":28,"name":"Institutional offering build-out","desc":"Strengthen the institutional offering with products, reporting and processes.","stage":"Reporting & Enablement","speed":7,"afford":9,"impact":5,"index":11.6,"risk":15,"riskParts":[7,3,1,3,1],"gen":1,"levers":[3,3,1,0,1,3,3,7,3]},{"rank":29,"name":"Omnichannel roadmap","desc":"Journey mapping and a multi-year omnichannel roadmap.","stage":"Reporting & Enablement","speed":9,"afford":9,"impact":1,"index":11.2,"risk":11,"riskParts":[1,1,1,3,5],"gen":1,"levers":[3,3,0,0,0,0,9,9,7]},{"rank":30,"name":"Planning workflows & procedures","desc":"Consistent planning tools, workflows and practice management in the field.","stage":"Client Servicing","speed":7,"afford":9,"impact":1,"index":10.9,"risk":13,"riskParts":[3,3,1,3,3],"gen":1,"levers":[9,5,3,1,3,3,0,0,5]},{"rank":31,"name":"Wire payment platform replacement","desc":"Replace the legacy wire payment system.","stage":"Client Servicing","speed":9,"afford":7,"impact":1,"index":10.9,"risk":13,"riskParts":[5,1,3,3,1],"gen":1,"levers":[5,1,0,0,0,0,0,0,3]},{"rank":32,"name":"Formal wealth training program","desc":"Onboarding, practice-management and continuing-education curriculum.","stage":"Client Servicing","speed":7,"afford":9,"impact":1,"index":10.9,"risk":11,"riskParts":[1,3,1,5,1],"gen":1,"levers":[1,5,3,1,3,1,0,0,5]},{"rank":33,"name":"Mortgage services for partner clients","desc":"Extend mortgage services to clients of an acquired brokerage.","stage":"Sales & Discovery","speed":3,"afford":3,"impact":7,"index":10.0,"risk":33,"riskParts":[7,7,7,7,5],"gen":1,"levers":[0,7,0,3,0,1,0,1,7]},{"rank":34,"name":"Bank deposit sweep migration","desc":"Support migration to a new bank sweep product.","stage":"Product & Service","speed":9,"afford":9,"impact":3,"index":9.7,"risk":9,"riskParts":[3,1,1,3,1],"gen":1,"levers":[0,0,0,0,0,0,0,0,5]},{"rank":35,"name":"Shadow credits for referrers","desc":"Credit referring retail and commercial units for deposits converted to wealth.","stage":"Product & Service","speed":9,"afford":9,"impact":3,"index":9.7,"risk":7,"riskParts":[1,1,1,1,3],"gen":1,"levers":[5,7,9,9,3,5,0,0,9]},{"rank":36,"name":"End-to-end digital mortgage","desc":"Digitize the mortgage process across bank, wealth and brokerage channels.","stage":"Sales & Discovery","speed":3,"afford":2,"impact":9,"index":8.6,"risk":37,"riskParts":[9,7,7,7,7],"gen":2,"levers":[0,9,3,0,0,0,9,7,7]},{"rank":37,"name":"Ultra-HNW premium service model","desc":"Differentiated service tier for ultra-high-net-worth clients and newly transitioned advisors.","stage":"Product & Service","speed":7,"afford":5,"impact":5,"index":7.0,"risk":15,"riskParts":[3,3,3,3,3],"gen":1,"levers":[1,7,3,3,3,1,1,7,3]},{"rank":38,"name":"Plan integration with client portal","desc":"Surface the financial plan in the client portal.","stage":"Onboarding","speed":7,"afford":7,"impact":3,"index":6.9,"risk":15,"riskParts":[5,3,3,3,1],"gen":1,"levers":[5,3,3,0,0,3,0,5,9]},{"rank":39,"name":"Mortgage cycle-time improvement","desc":"Processing and underwriting changes to cut wealth mortgage cycle times.","stage":"Onboarding","speed":7,"afford":7,"impact":3,"index":6.9,"risk":17,"riskParts":[3,3,3,5,3],"gen":1,"levers":[1,3,1,0,0,0,0,5,7]},{"rank":40,"name":"Compensation & incentive redesign","desc":"Align compensation and incentive plans with bank priorities.","stage":"Client Servicing","speed":9,"afford":3,"impact":3,"index":6.7,"risk":15,"riskParts":[3,1,7,3,1],"gen":1,"levers":[9,9,0,5,3,9,0,0,5]},{"rank":41,"name":"Fee invoicing automation","desc":"Automate fee invoicing and receivables.","stage":"Client Servicing","speed":9,"afford":9,"impact":1,"index":6.7,"risk":11,"riskParts":[3,1,1,3,3],"gen":1,"levers":[3,3,1,0,0,0,0,0,7]},{"rank":42,"name":"Managed-portfolio fee simplification","desc":"Remove a layered manager fee from the managed-portfolio pricing.","stage":"Onboarding","speed":9,"afford":9,"impact":1,"index":6.6,"risk":5,"riskParts":[1,1,1,1,1],"gen":1,"levers":[0,0,0,0,0,0,0,7,1]},{"rank":43,"name":"Mobile apps for wealth clients","desc":"Roll out existing custody and brokerage mobile apps to wealth clients.","stage":"Market","speed":5,"afford":7,"impact":1,"index":6.2,"risk":15,"riskParts":[3,5,3,3,1],"gen":1,"levers":[0,0,1,0,0,0,9,7,7]},{"rank":44,"name":"Online tax documents","desc":"Let clients view tax documents in the online portal.","stage":"Market","speed":5,"afford":7,"impact":1,"index":6.2,"risk":15,"riskParts":[3,5,3,3,1],"gen":1,"levers":[0,0,0,0,0,0,9,7,3]},{"rank":45,"name":"Entity account documentation","desc":"Revised application and resolution documents for entity accounts.","stage":"Onboarding","speed":9,"afford":9,"impact":1,"index":3.8,"risk":5,"riskParts":[1,1,1,1,1],"gen":1,"levers":[5,0,0,0,0,0,3,1,3]},{"rank":46,"name":"Annual controls examination","desc":"Coordinate the annual third-party controls examination.","stage":"Onboarding","speed":9,"afford":9,"impact":1,"index":3.8,"risk":5,"riskParts":[1,1,1,1,1],"gen":1,"levers":[0,0,0,0,0,0,0,0,1]},{"rank":47,"name":"Advisor transition team","desc":"Processes and a team to help newly hired advisors transition clients and assets.","stage":"Onboarding","speed":5,"afford":3,"impact":3,"index":3.7,"risk":25,"riskParts":[3,5,7,5,5],"gen":1,"levers":[3,3,5,3,3,3,0,3,7]},{"rank":48,"name":"Product risk review","desc":"Periodic product risk and compliance review.","stage":"Product & Service","speed":9,"afford":9,"impact":1,"index":3.2,"risk":9,"riskParts":[1,1,1,5,1],"gen":1,"levers":[1,0,0,0,0,0,0,0,5]},{"rank":49,"name":"Trust deposit tagging","desc":"Tag trust-booked deposit accounts to the wealth officer.","stage":"Product & Service","speed":9,"afford":9,"impact":1,"index":3.2,"risk":13,"riskParts":[3,1,1,3,5],"gen":1,"levers":[3,7,3,3,3,1,0,0,3]},{"rank":50,"name":"Private client sweep migration","desc":"Support migration to a new private-client sweep product.","stage":"Product & Service","speed":7,"afford":7,"impact":1,"index":2.0,"risk":13,"riskParts":[3,3,3,3,1],"gen":1,"levers":[1,0,0,0,0,0,0,0,3]},{"rank":51,"name":"Employee engagement action plans","desc":"Act on employee survey results.","stage":"Client Servicing","speed":3,"afford":7,"impact":1,"index":1.7,"risk":13,"riskParts":[1,5,3,3,1],"gen":0,"levers":[0,0,0,0,0,0,0,0,3]},{"rank":52,"name":"Operations organization redesign","desc":"Realign wealth operations into a platform-agnostic, process-based organization.","stage":"Product & Service","speed":1,"afford":1,"impact":9,"index":0.9,"risk":41,"riskParts":[9,9,9,9,5],"gen":2,"levers":[5,7,1,0,3,1,3,0,9]}],"levers":["Regional performance management","Shared scorecards","Co-located advisors","Shadow credit","Defined client triage","Reward & recognition","Online platform integration","Client satisfaction driver","Operational excellence"],"ahp":[["Sales & Channel Mgmt",17.5],["Client Relationship Mgmt",15.7],["Internal Processing",14.5],["Financial & Regulatory",12.8],["Advice & Service Mgmt",10.4],["Account Opening",8.7],["Client-Initiated Requests",8.3],["Product Processing",4.7],["Product Development",4.2],["Risk & Governance",3.3]]};
+const $ = s => document.querySelector(s);
+const NS = "http://www.w3.org/2000/svg";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+
+/* ---------- tooltip ---------- */
+const tip = $("#tip");
+function showTip(html, x, y){
+  tip.innerHTML = html; tip.classList.add("on");
+  const w = tip.offsetWidth, h = tip.offsetHeight, vw = innerWidth;
+  let left = x + 14, top = y - h - 12;
+  if (left + w > vw - 8) left = x - w - 14;
+  if (left < 8) left = 8;
+  if (top < 8) top = y + 16;
+  tip.style.left = left + "px"; tip.style.top = top + "px";
+}
+function hideTip(){ tip.classList.remove("on"); }
+function bindTip(el, html){
+  el.classList.add("hit");
+  el.addEventListener("pointerenter", e => showTip(html, e.clientX, e.clientY));
+  el.addEventListener("pointermove", e => showTip(html, e.clientX, e.clientY));
+  el.addEventListener("pointerleave", hideTip);
+  el.addEventListener("pointerdown", e => showTip(html, e.clientX, e.clientY));
+}
+addEventListener("scroll", hideTip, {passive:true});
+
+function svg(w, h, cls){ const s = document.createElementNS(NS,"svg"); s.setAttribute("viewBox",`0 0 ${w} ${h}`); s.setAttribute("width","100%"); s.setAttribute("role","img"); if(cls) s.setAttribute("class",cls); return s; }
+function el(tag, attrs, parent, text){ const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text!=null) e.textContent = text; if (parent) parent.appendChild(e); return e; }
+const W = node => Math.max(300, Math.round(node.clientWidth || node.parentNode.clientWidth || 600));
+
+/* ---------- horizontal bar chart ---------- */
+function hbar(target, rows, opt={}){
+  const host = $(target); host.innerHTML = "";
+  const w = W(host), lw = Math.min(opt.labelW || 170, w*0.46), rowH = 26, top = 4, h = rows.length*rowH + top + 6;
+  const max = opt.max || Math.max(...rows.map(r=>r[1]));
+  const vw = w - lw - 54;
+  const s = svg(w, h); s.setAttribute("aria-label", opt.aria || "Bar chart");
+  rows.forEach((r,i)=>{
+    const y = top + i*rowH, bw = Math.max(2, vw * r[1]/max);
+    el("text",{x:lw-10,y:y+rowH/2+4,"text-anchor":"end",class:"lbl-2"},s,r[0]);
+    const col = typeof opt.color === "function" ? opt.color(r,i) : (opt.color || "var(--s1)");
+    const p = el("path",{d:`M${lw},${y+5}h${bw-4}a4,4 0 0 1 4,4v${rowH-18}a4,4 0 0 1 -4,4h${-(bw-4)}z`,fill:col},s);
+    el("text",{x:lw+bw+6,y:y+rowH/2+4,class:"lbl num"},s,(opt.fmt||(v=>v))(r[1]));
+    const hit = el("rect",{x:0,y:y,width:w,height:rowH,fill:"transparent"},s);
+    bindTip(hit, `<b>${esc(r[0])}</b>${esc(opt.tipFmt?opt.tipFmt(r):(opt.fmt||(v=>v))(r[1]))}`);
+  });
+  el("line",{x1:lw,x2:lw,y1:top,y2:h-4,class:"baseline"},s);
+  host.appendChild(s);
+}
+
+/* ---------- framework ---------- */
+const FW = [
+  {l0:"Market", l1:[["Advertising &amp; marketing","How the business presents itself to the world. Aware."],["Client relationship mgmt","Finding unidentified and identified prospects before onboarding. Attract."]], o:"Front"},
+  {l0:"CRM Discovery", l1:[["Sales &amp; channel mgmt","Identifying specific prospects within high-net-worth, affluent and mass-affluent strata. Attract."]], o:"Front"},
+  {l0:"Product &amp; Service", l1:[["Product development","Providing products and services for distribution. Consider."],["Advice &amp; service mgmt","Aligning products and services with the client's needs and purchase. Consider."]], o:"Front"},
+  {l0:"Onboarding", l1:[["Account opening","Gathering requirements and transferring assets until account opening and investment selection are complete. Grow, Harvest, Transfer."],["Product processing","Accounting and trading readiness, through fulfillment of the financial model. Trade to Transfer."]], o:"Middle"},
+  {l0:"Client Servicing", l1:[["Client-initiated requests","One-off client requests and transactions. Trade to Transfer."],["Internal processing","Systematic trading, portfolio balancing and maintenance. Trade to Transfer."]], o:"Middle"},
+  {l0:"Reporting", l1:[["Risk &amp; governance","Systems oversight and enablement. Service."],["Financial &amp; regulatory","Financial, compliance and regulatory oversight. Service."]], o:"Back"}
+];
+(function(){
+  const host = $("#fw"), desc = $("#fwDesc");
+  const offices = [["Front office",5],["Middle office",4],["Back office",2]];
+  // office row spans (10 columns total: Market2 CRM1 Prod2 Onb2 Serv2 Rep2 = 11) -> adjust: use 11 cols
+  host.style.gridTemplateColumns = "repeat(11,minmax(0,1fr))";
+  offices.forEach(([n,sp])=>{ const d=document.createElement("div"); d.className="office"; d.style.gridColumn=`span ${sp}`; d.textContent=n; host.appendChild(d); });
+  FW.forEach(s=>{ const d=document.createElement("div"); d.className="l0"; d.style.gridColumn=`span ${s.l1.length}`; d.innerHTML=s.l0; host.appendChild(d); });
+  FW.forEach(s=>s.l1.forEach(([n,t])=>{ const d=document.createElement("div"); d.className="l1"; d.tabIndex=0; d.innerHTML=n;
+    const show=()=>{ desc.innerHTML=`<b>${n}.</b> ${t}`; }; d.addEventListener("pointerenter",show); d.addEventListener("focus",show); host.appendChild(d); }));
+})();
+
+/* ---------- evidence charts ---------- */
+const SEG = [["High net worth",30],["Mass affluent",22],["Institutional",19],["Cross-segment",12],["Partner &amp; branch channels",7]];
+const DRV = [["Technology",71],["Process",58],["Policy",29],["Technology + process",24],["People",5]];
+function drawEvidence(){
+  hbar("#chSeg", SEG.map(r=>[r[0].replace("&amp;","&"),r[1]]), {labelW:170, aria:"Client requirements by segment", tipFmt:r=>`${r[1]} of 90 requirements`});
+  hbar("#chDrv", DRV, {labelW:170, aria:"Root cause of pain points", tipFmt:r=>`${r[1]} of 187 pain points (${Math.round(r[1]/1.87)}%)`});
+  hbar("#chAhp", DATA.ahp, {labelW:190, aria:"Function weights", fmt:v=>v.toFixed(1)+"%", tipFmt:r=>`${r[1].toFixed(1)}% of total weight`});
+}
+
+/* ---------- diagnosis ---------- */
+const MAT = [
+ {f:"Client relationship mgmt", st:"Market", s:2.15, d:[["Effectiveness",1],["Segment focus",4.33],["Business process maturity",1.67],["System ease of use",1],["Full view of relationships",1],["Business/system integration",1],["Management reporting",1.67],["Metrics",7],["People skills",1.67],["Market competitiveness",2.33],["Digital footprint",1]]},
+ {f:"Sales &amp; channel mgmt", st:"CRM Discovery", s:2.29, d:[["Easy to transact",3.86],["System enablement",1],["Business/system integration",1],["Reporting & measurement",2.14],["Resource competency",4],["Resource capacity",2],["Client access to channel",2]]},
+ {f:"Product development", st:"Product & Service", s:3.65, d:[["Effectiveness",2.71],["Revenue contribution",3.71],["System enablement",3.91],["Product complexity",4.17],["Product competitiveness",3.36],["Product knowledge",3.17],["Alignment to channel",5.33],["Breadth of offerings",3.29],["Reporting & measurement",3.18]]},
+ {f:"Advice &amp; service mgmt", st:"Product & Service", s:3.04, d:[["Effectiveness",4.43],["Breadth of offerings",4.69],["System enablement",2.57],["Program delivery",3.62],["Tools and methods",2.86],["Client access",1.83],["Full view of relationships",1.5],["Business/system integration",1.57],["Reporting & measurement",2.69],["People skills",4.14],["Resource capacity",3.57]]},
+ {f:"Account opening", st:"Onboarding", s:4.86, d:[["Effectiveness",3.36],["Onboarding accuracy",8.4],["Execution speed",3.22],["System/process performance",5.25],["Business/system integration",2],["Reporting & measurement",5.75],["People skills",6]]},
+ {f:"Product processing", st:"Onboarding", s:7.49, d:[["Effectiveness",9],["Processing accuracy",9],["Execution speed",5.29],["System/process performance",6.14],["Business/system integration",5],["Reporting & measurement",9],["People skills",9]]},
+ {f:"Client-initiated requests", st:"Client Servicing", s:6.49, d:[["Effectiveness",5],["Request fulfillment",7.67],["Execution speed",5.44],["System/process performance",7.67],["Business/system integration",5],["Reporting & measurement",7.86],["People skills",6.78]]},
+ {f:"Internal processing", st:"Client Servicing", s:6.76, d:[["Effectiveness",8.14],["Performance accuracy",8.14],["Execution speed",7.29],["System/process performance",6.43],["Business/system integration",3.57],["Reporting & measurement",5.57],["People skills",8.14]]},
+ {f:"Risk &amp; governance", st:"Reporting", s:6.39, d:[["Effectiveness",7.5],["Controls sensitivity",7.5],["Frequency",7.5],["Severity",7.5],["Risk ID accuracy",7.5],["Mitigation timeliness",7.5],["System/process performance",2],["Business/system integration",3.5],["Reporting & measurement",7]]},
+ {f:"Financial &amp; regulatory", st:"Reporting", s:4.64, d:[["Effectiveness",5.25],["Compliance alignment",5.25],["Reporting timeliness",4.5],["System/process performance",4.5],["Business/system integration",4.25],["Reporting & measurement",4.25],["People skills",4.5]]}
+];
+const rag = v => v < 3 ? ["var(--crit)","Gap"] : v > 6 ? ["var(--good)","Strength"] : ["var(--warn)","Watch"];
+let matSel = 0;
+function drawMat(){
+  const host = $("#mat"); host.innerHTML = "";
+  const stHost = $("#mstage"); stHost.innerHTML = "";
+  let prev = null;
+  MAT.forEach(m=>{ const sp=document.createElement("span"); sp.textContent = m.st!==prev ? m.st : ""; if(m.st===prev) sp.style.borderTopColor="transparent"; prev=m.st; stHost.appendChild(sp); });
+  MAT.forEach((m,i)=>{
+    const [c,l] = rag(m.s);
+    const b = document.createElement("button"); b.type="button"; b.className="mcell"; b.setAttribute("aria-pressed", i===matSel);
+    b.style.background = `color-mix(in oklab, ${c} 22%, var(--surface))`;
+    b.style.borderLeft = `3px solid ${c}`;
+    b.innerHTML = `<span class="sc">${m.s.toFixed(1)}</span><span class="st">${l}</span><span class="fn">${m.f}</span>`;
+    b.addEventListener("click",()=>{ matSel=i; drawMat(); });
+    host.appendChild(b);
+  });
+  const m = MAT[matSel];
+  $("#drill").innerHTML = `<div class="eyebrow" style="margin-bottom:4px">Dimension scores</div><div style="font-weight:600;margin-bottom:6px">${m.f} <span class="mono" style="color:var(--ink-3);font-weight:400">| average ${m.s.toFixed(2)}</span></div><div id="chDrill"></div>`;
+  hbar("#chDrill", m.d.slice().sort((a,b)=>a[1]-b[1]), {labelW:200, max:10, fmt:v=>(+v).toFixed(1), color:r=>rag(r[1])[0], aria:"Dimension scores", tipFmt:r=>`${(+r[1]).toFixed(2)} of 10 | ${rag(r[1])[1]}`});
+}
+const RED = [["Client relationship mgmt",70],["Sales & channel mgmt",63],["Advice & service mgmt",35],["Product development",28],["Account opening",18],["Risk & governance",14],["Client-initiated requests",10],["Product processing",9],["Financial & regulatory",4],["Internal processing",2]];
+const PAIN = [["Client servicing",79],["Onboarding",34],["Product & service",31],["Market",23],["Reporting",11],["CRM discovery",9]];
+function drawDiag(){
+  drawMat();
+  hbar("#chRed", RED, {labelW:180, max:100, fmt:v=>v+"%", color:"var(--crit)", aria:"Share of activities rated red", tipFmt:r=>`${r[1]}% of activities rated red`});
+  hbar("#chPain", PAIN, {labelW:130, fmt:v=>v, color:"var(--s1)", aria:"Pain points by stage", tipFmt:r=>`${r[1]} of 187 pain points`});
+}
+
+/* ---------- bubble chart ---------- */
+const GEN = {1:["Generation 1","var(--s1)"],2:["Generation 2","var(--s2)"],0:["Not phased","var(--s3)"]};
+function legendFor(id){ $(id).innerHTML = [1,2,0].map(g=>`<span><i style="background:${GEN[g][1]}"></i>${GEN[g][0]}</span>`).join(""); }
+function hashJ(i, k){ const x = Math.sin(i*12.9898 + k*78.233)*43758.5453; return (x - Math.floor(x)) - 0.5; }
+function drawBubble(){
+  const host = $("#chBub"); host.innerHTML="";
+  const w = W(host), h = Math.round(Math.min(460, Math.max(320, w*0.58)));
+  const m = {l:46,r:16,t:14,b:44}, pw = w-m.l-m.r, ph = h-m.t-m.b;
+  const x = v => m.l + (v/86)*pw, y = v => m.t + ph - ((v-0)/10)*ph;
+  const s = svg(w,h); s.setAttribute("aria-label","Ease of delivery versus impact for 52 initiatives");
+  [0,20,40,60,80].forEach(t=>{ el("line",{x1:x(t),x2:x(t),y1:m.t,y2:m.t+ph,class:"gridline"},s); el("text",{x:x(t),y:m.t+ph+16,"text-anchor":"middle",class:"axis-t num"},s,t); });
+  [1,3,5,7,9].forEach(t=>{ el("line",{x1:m.l,x2:m.l+pw,y1:y(t),y2:y(t),class:"gridline"},s); el("text",{x:m.l-8,y:y(t)+4,"text-anchor":"end",class:"axis-t num"},s,t); });
+  el("line",{x1:m.l,x2:m.l+pw,y1:m.t+ph,y2:m.t+ph,class:"baseline"},s);
+  el("text",{x:m.l+pw/2,y:h-6,"text-anchor":"middle",class:"axis-l"},s,"Ease of delivery (speed × affordability, 1 to 81)");
+  el("text",{x:12,y:m.t+ph/2,"text-anchor":"middle",class:"axis-l",transform:`rotate(-90 12 ${m.t+ph/2})`},s,"Impact (1 to 9)");
+  const rmax = Math.max(10, Math.min(24, w/34));
+  const items = DATA.inits.slice().sort((a,b)=>b.index-a.index);
+  items.forEach((d,i)=>{
+    const ease = d.speed*d.afford, r = Math.max(4, rmax*Math.sqrt(d.index/100));
+    const cx = x(ease) + hashJ(d.rank,1)*pw*0.035, cy = y(d.impact) + hashJ(d.rank,2)*ph*0.07;
+    const c = el("circle",{cx,cy,r,fill:GEN[d.gen][1],"fill-opacity":0.72,stroke:"var(--surface)","stroke-width":2},s);
+    bindTip(c, `<b>#${d.rank} ${esc(d.name)}</b>${esc(d.stage)} | ${GEN[d.gen][0]}<br>Ease ${ease} | Impact ${d.impact} | Priority ${d.index.toFixed(0)}`);
+  });
+  // direct labels for top 3
+  if (w >= 560) {
+    const place = {1:"above", 2:"left", 3:"below"};
+    items.slice(0,3).forEach(d=>{
+      const ease=d.speed*d.afford, cx = x(ease) + hashJ(d.rank,1)*pw*0.035, cy = y(d.impact) + hashJ(d.rank,2)*ph*0.07, r=Math.max(4, rmax*Math.sqrt(d.index/100));
+      const pl = place[d.rank];
+      const a = pl==="left" ? {x:cx-r-8, y:cy+4, "text-anchor":"end"} : pl==="above" ? {x:cx, y:cy-r-8, "text-anchor":"end"} : {x:cx, y:cy+r+16, "text-anchor":"middle"};
+      el("text",Object.assign(a,{class:"lbl","font-weight":600,"pointer-events":"none"}),s, `#${d.rank} ${d.name}`);
+    });
+  }
+  host.appendChild(s);
+}
+function drawTop(){
+  const rows = DATA.inits.slice(0,10);
+  $("#topTable").innerHTML = `<thead><tr><th class="r">#</th><th>Initiative</th><th>Stage</th><th class="r">Ease</th><th class="r">Impact</th><th>Priority index</th></tr></thead><tbody>` +
+   rows.map(d=>`<tr><td class="r">${d.rank}</td><td><div style="font-weight:600">${esc(d.name)}</div><div style="color:var(--ink-2);font-size:var(--t-xs)">${esc(d.desc)}</div></td><td><span class="pill">${esc(d.stage)}</span></td><td class="r">${d.speed*d.afford}</td><td class="r">${d.impact}</td><td class="num mono" style="white-space:nowrap"><span class="bar-in" style="width:${Math.round(d.index*0.9)}px"></span>${d.index.toFixed(0)}</td></tr>`).join("") + `</tbody>`;
+}
+
+/* ---------- levers ---------- */
+const LEVF = ["Client relationship mgmt","Sales & channel mgmt","Product development","Advice & service mgmt","Account opening","Product processing","Client-initiated requests","Internal processing","Risk & governance","Financial & regulatory"];
+const LEVV = [
+ [1.74,2.84,3.26,1.26,1.74,1.26,3.79,4.11,5.05],
+ [1.8,4.2,3.5,1.8,2,1.4,3.5,3.5,6.2],
+ [2,3.3,2.7,2.1,1.2,1.3,0.1,2.7,4.2],
+ [4.6,3.4,1.6,1.6,2.2,1.6,1.6,4.8,4.6],
+ [1,2.5,2.25,1.5,1.5,1,0,3.25,5],
+ [1.71,1.29,1,0,0,0.43,1.71,3.14,4.71],
+ [2.14,3.29,1.57,1.14,1.29,1.57,2.57,3,5],
+ [1.41,1.59,2.24,0.41,0.88,1.18,1.35,1.65,4.29],
+ [3,3,1,0,1,3,3,7,3],
+ [5.5,4.5,4.25,2.25,2.5,1.75,4.25,4.25,7.5]
+];
+const LEVH = ["Regional performance mgmt","Shared scorecards","Co-located advisors","Shadow credit","Client triage","Reward &amp; recognition","Online platform integration","Client satisfaction","Operational excellence"];
+function drawLev(){
+  const cell = v => { const p = Math.round(Math.min(1, v/7.5)*100); const dark = p>55; return `<td style="background:color-mix(in oklab, var(--seq-hi) ${p}%, var(--seq-lo));color:${dark?'var(--on-strong)':'var(--ink)'}">${v.toFixed(1)}</td>`; };
+  $("#levTable").innerHTML = `<thead><tr><th></th>${LEVH.map((h,i)=>`<th scope="col">${i<7?'':'<span style="color:var(--brass)">+</span> '}${h}</th>`).join("")}</tr></thead><tbody>` +
+   LEVF.map((f,i)=>`<tr><th scope="row">${f}</th>${LEVV[i].map(cell).join("")}</tr>`).join("") + `</tbody>`;
+}
+
+/* ---------- risk scatter ---------- */
+function drawRisk(){
+  const host = $("#chRisk"); host.innerHTML="";
+  const w = W(host), h = Math.round(Math.min(440, Math.max(320, w*0.55)));
+  const m = {l:46,r:16,t:22,b:44}, pw=w-m.l-m.r, ph=h-m.t-m.b;
+  const x = v => m.l + ((v-0)/45)*pw, y = v => m.t + ph - (v/100)*ph;
+  const s = svg(w,h); s.setAttribute("aria-label","Risk score versus priority index");
+  [5,15,25,35,45].forEach(t=>{ el("line",{x1:x(t),x2:x(t),y1:m.t,y2:m.t+ph,class:"gridline"},s); el("text",{x:x(t),y:m.t+ph+16,"text-anchor":"middle",class:"axis-t num"},s,t); });
+  [0,25,50,75,100].forEach(t=>{ el("line",{x1:m.l,x2:m.l+pw,y1:y(t),y2:y(t),class:"gridline"},s); el("text",{x:m.l-8,y:y(t)+4,"text-anchor":"end",class:"axis-t num"},s,t); });
+  el("line",{x1:m.l,x2:m.l+pw,y1:m.t+ph,y2:m.t+ph,class:"baseline"},s);
+  // quadrant guides
+  el("line",{x1:x(25),x2:x(25),y1:m.t,y2:m.t+ph,stroke:"var(--ink-3)","stroke-dasharray":"3 4"},s);
+  el("line",{x1:m.l,x2:m.l+pw,y1:y(25),y2:y(25),stroke:"var(--ink-3)","stroke-dasharray":"3 4"},s);
+  el("text",{x:m.l+6,y:y(25)-8,class:"lbl-2","font-weight":600},s,"Quick wins");
+  el("text",{x:m.l+pw-6,y:y(25)-8,"text-anchor":"end",class:"lbl-2","font-weight":600},s,"Strategic bets");
+  el("text",{x:m.l+pw/2,y:h-6,"text-anchor":"middle",class:"axis-l"},s,"Risk score (5 to 45, higher is riskier)");
+  el("text",{x:12,y:m.t+ph/2,"text-anchor":"middle",class:"axis-l",transform:`rotate(-90 12 ${m.t+ph/2})`},s,"Priority index");
+  const items = DATA.inits.filter(d=>d.risk!=null);
+  items.forEach(d=>{
+    const cx = x(d.risk) + hashJ(d.rank,3)*pw*0.02, cy = y(d.index) + hashJ(d.rank,4)*ph*0.02;
+    const c = el("circle",{cx,cy,r:6,fill:GEN[d.gen][1],stroke:"var(--surface)","stroke-width":2},s);
+    const p = d.riskParts||[];
+    bindTip(c, `<b>#${d.rank} ${esc(d.name)}</b>Risk ${d.risk} | Priority ${d.index.toFixed(0)} | ${GEN[d.gen][0]}<br>Tech ${p[0]} | Time ${p[1]} | Cost ${p[2]} | Process ${p[3]} | LOBs ${p[4]}`);
+  });
+  const lab = [1,16,52].map(r=>items.find(d=>d.rank===r)).filter(Boolean);
+  lab.forEach(d=>{ const cx=x(d.risk)+hashJ(d.rank,3)*pw*0.02, cy=y(d.index)+hashJ(d.rank,4)*ph*0.02; const right = cx < m.l+pw*0.6;
+    if (w < 560 && d.rank!==1) return; el("text",{x:right?cx+10:cx-10,y:d.rank===1?cy+4:cy-8,"text-anchor":right?"start":"end",class:"lbl","pointer-events":"none"},s,d.name); });
+  host.appendChild(s);
+}
+
+/* ---------- roadmap ---------- */
+function drawRoad(){
+  const g1 = DATA.inits.filter(d=>d.gen===1).slice(0,8), g2 = DATA.inits.filter(d=>d.gen===2);
+  const li = d => `<li><span>#${d.rank}</span>${esc(d.name)}</li>`;
+  $("#road").innerHTML = `
+   <div class="gen" style="--g:var(--s1)"><div class="hz">Generation 1 | 2 years</div><h4>Advance current strategies</h4><p>Close the front-end gaps. Build a consolidated client view, automate referrals, integrate the CRM and standardize tools and policies to free advisor capacity. 45 initiatives, led by:</p><ul>${g1.map(li).join("")}</ul></div>
+   <div class="gen" style="--g:var(--s2)"><div class="hz">Generation 2 | 3 years</div><h4>Integrate and innovate</h4><p>Build the foundations. Scale bilateral referrals with the brokerage partner, expand high-net-worth distribution, and fund the higher-risk structural work:</p><ul>${g2.map(li).join("")}</ul></div>
+   <div class="gen" style="--g:var(--s3)"><div class="hz">Generation 3 | 5+ years</div><h4>Optimize</h4><p>Use the data and platform foundations to launch an integrated digital banking offering inside the brokerage partner's platform, giving several million partner clients one view of bank and brokerage balances.</p><ul><li><span>&rarr;</span>Integrated deposits and lending for partner clients</li><li><span>&rarr;</span>Instant transfers between bank and brokerage</li><li><span>&rarr;</span>Asset management pivot to higher-demand products</li></ul></div>`;
+}
+
+/* ---------- radars ---------- */
+const RAD = [
+ ["Innovation",[["Innovation",3],["Digitization",2],["Industrialization",3],["Disruption",1],["Opportunities",8],["Demographic shift",7]]],
+ ["Target operating model",[["Product breadth",7],["Service model",5],["Price positioning",8],["Digitization",2],["Omnichannel",2],["Self-service",2]]],
+ ["Work structure",[["Scalability",3.5],["Efficiency",4],["Automation",1],["Integration",3],["Advisor maturity",6],["Leadership model",8]]]
+];
+function drawRadars(){
+  const host = $("#radars"); host.innerHTML="";
+  RAD.forEach(([title, pts])=>{
+    const fig = document.createElement("figure"); const panel=document.createElement("div"); panel.className="panel"; fig.appendChild(panel);
+    const cap = document.createElement("figcaption"); cap.innerHTML = `<b>${title}.</b> ` + pts.slice().sort((a,b)=>b[1]-a[1]).map(p=>`${p[0]} ${p[1]}`).join(", ");
+    fig.appendChild(cap); host.appendChild(fig);
+    const w = 380, h = 270, cx = 190, cy = 138, R = 80;
+    const s = svg(w,h); s.setAttribute("aria-label", title+" maturity radar");
+    const ang = i => -Math.PI/2 + i*2*Math.PI/pts.length;
+    [2,4,6,8,10].forEach(v=>{ const r=R*v/10; el("polygon",{points:pts.map((_,i)=>`${cx+r*Math.cos(ang(i))},${cy+r*Math.sin(ang(i))}`).join(" "),fill:"none",class:"gridline"},s); });
+    el("text",{x:cx+3,y:cy-R*0.5+3,class:"axis-t"},s,"5"); el("text",{x:cx+3,y:cy-R+3,class:"axis-t"},s,"10");
+    pts.forEach((p,i)=>{ el("line",{x1:cx,y1:cy,x2:cx+R*Math.cos(ang(i)),y2:cy+R*Math.sin(ang(i)),class:"gridline"},s);
+      const lx = cx+(R+14)*Math.cos(ang(i)), ly = cy+(R+14)*Math.sin(ang(i));
+      const a = Math.abs(Math.cos(ang(i)))<0.2 ? "middle" : (Math.cos(ang(i))>0?"start":"end");
+      el("text",{x:lx,y:ly+(Math.sin(ang(i))>0.5?10:Math.sin(ang(i))<-0.5?-2:4),"text-anchor":a,class:"lbl-2"},s,p[0]); });
+    el("polygon",{points:pts.map((p,i)=>`${cx+R*p[1]/10*Math.cos(ang(i))},${cy+R*p[1]/10*Math.sin(ang(i))}`).join(" "),fill:"var(--s1)","fill-opacity":0.18,stroke:"var(--s1)","stroke-width":2,"stroke-linejoin":"round"},s);
+    pts.forEach((p,i)=>{ const c=el("circle",{cx:cx+R*p[1]/10*Math.cos(ang(i)),cy:cy+R*p[1]/10*Math.sin(ang(i)),r:4,fill:"var(--s1)",stroke:"var(--surface)","stroke-width":2},s);
+      const hit=el("circle",{cx:+c.getAttribute("cx"),cy:+c.getAttribute("cy"),r:12,fill:"transparent"},s); bindTip(hit, `<b>${esc(p[0])}</b>${p[1]} of 10`); });
+    panel.appendChild(s);
+  });
+}
+
+/* ---------- open/close ---------- */
+const chapters = [...document.querySelectorAll("details.ch")];
+const btn = $("#toggleAll");
+function syncBtn(){ btn.textContent = chapters.every(d=>d.open) ? "Collapse all chapters" : "Expand all chapters"; }
+btn.addEventListener("click",()=>{ const open = !chapters.every(d=>d.open); chapters.forEach(d=>d.open=open); syncBtn(); });
+const drawn = new Set();
+const DRAW = {evidence:drawEvidence, diagnosis:drawDiag, priorities:()=>{legendFor("#bubLegend");drawBubble();drawTop();}, alignment:drawLev, risk:()=>{legendFor("#riskLegend");drawRisk();}, roadmap:drawRoad, maturity:drawRadars};
+function drawIf(d){ if (d.open && DRAW[d.id]) { DRAW[d.id](); drawn.add(d.id); } }
+chapters.forEach(d=>d.addEventListener("toggle",()=>{ drawIf(d); syncBtn(); hideTip(); }));
+addEventListener("beforeprint",()=>{ chapters.forEach(d=>d.open=true); });
+let rt; addEventListener("resize",()=>{ clearTimeout(rt); rt=setTimeout(()=>chapters.forEach(d=>{ if(d.open) drawIf(d); }),150); });
+// draw lightweight non-size-dependent pieces now so print and deep links work
+drawRoad(); drawLev(); drawRadars();
+const h = location.hash.slice(1); const target = chapters.find(d=>d.id===h);
+if (target){ target.open = true; drawIf(target); setTimeout(()=>target.scrollIntoView(),60); } else { chapters[0].open = true; }
+syncBtn();
+</script>
+</body>
+</html>

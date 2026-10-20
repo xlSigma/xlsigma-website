@@ -858,6 +858,17 @@ Tampa, FL 33624
 
 ---
 
+## Unlisted: Wealth Integration Assessment (`/case-studies/wealth-integration-assessment`)
+
+Static page, not a Next.js route. Not in the navbar, footer, `PUBLIC_PATHS`, or the sitemap; `noindex, nofollow`. Its copy speaks to one prospect's role, so it must not read as a public site page. The full page copy is frozen in `public/case-studies/wealth-integration-assessment.html`, which is the verbatim source for this page; it is not duplicated here.
+
+Meta title: Wealth Integration Assessment
+Meta description: Anonymized case study: an end-to-end wealth management strategy assessment, from business question to a risk-weighted roadmap.
+Added by the site wrapper (not case-study copy): a small "xlsigma.com" text link at the top of the page, pointing to `/`.
+Flag: the byline names Andres Slack and xlSigma LLC. This is original case-study copy and was not edited.
+
+---
+
 ## Flags (observed, not changed)
 
 These conflict with, or sit near, the project constraints. Nothing here was edited.
