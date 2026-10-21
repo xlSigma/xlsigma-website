@@ -74,6 +74,9 @@ A Claude Code preview config lives in `.claude/launch.json` (port 3001). It is n
 | /api/contact             | app/api/contact/route.ts                | Server route: sends email via Resend                     |
 | /api/careers             | app/api/careers/route.ts                | Server route: uploads resume to Vercel Blob, sends email |
 
+Unlisted static page (not a Next.js route):
+- /case-studies/wealth-integration-assessment - served from `public/case-studies/wealth-integration-assessment.html` through a rewrite in `next.config.ts` (no `.html` in the link). A self-contained page with inline CSS and JS, Google Fonts (Bodoni Moda, IBM Plex Sans, IBM Plex Mono), and its own light/dark themes. It has no navbar or footer, a small "xlsigma.com" link back to `/`, `noindex, nofollow`, and is not in `PUBLIC_PATHS` or the sitemap. robots.txt does not mention it. `next.config.ts` sets no Content-Security-Policy, so the Google Fonts hosts need no allowlist. To edit it, change the HTML file directly; copy is frozen (see CONTENT-INVENTORY.md).
+
 Shared components (app/components/):
 - NavBar.tsx                  - Sticky navy header, desktop links and mobile menu (client component)
 - Footer.tsx                  - Navy footer: brand, certifications, navigation, contact, NAICS
