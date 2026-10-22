@@ -70,7 +70,9 @@ p{margin:0}
 
 /* Hero */
 header.hero{padding-block:56px 32px;display:grid;gap:22px;border-bottom:1px solid var(--rule)}
-.hero h1{font-family:var(--f-display);font-weight:600;font-size:clamp(2rem,5.2vw,3.25rem);line-height:1.08;letter-spacing:-.01em;max-width:22ch}
+.hero h1{font-family:var(--f-display);font-weight:600;font-size:clamp(2rem,5.2vw,3.25rem);line-height:1.08;letter-spacing:-.01em;max-width:24ch}
+.hero h1 .sub{display:block;margin-top:.55em;font-family:var(--f-body);font-weight:500;font-size:clamp(1.05rem,2.4vw,1.4rem);line-height:1.3;letter-spacing:0;color:var(--brass)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .hero .lede{font-size:var(--t-lg);color:var(--ink-2);max-width:62ch}
 .byline{font-size:var(--t-sm);color:var(--ink-3)}
 .outcome{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--brass-soft);border-left:3px solid var(--brass);padding:14px 18px;border-radius:0 6px 6px 0;max-width:72ch}
@@ -222,8 +224,8 @@ footer .sig{font-family:var(--f-display);font-size:var(--t-lg);color:var(--ink)}
 
 <header class="hero">
   <div class="eyebrow">Case study | Wealth management strategy &amp; analytics</div>
-  <h1>Where wealth growth was leaking, and what to fix first</h1>
-  <p class="lede">An end-to-end assessment of the U.S. wealth management business of a large North American bank. Leadership needed one answer: which initiatives, in what order, would grow the business by embedding wealth in the bank's retail, commercial and brokerage-partner channels.</p>
+  <h1>Building the Analytics Foundation for Wealth Growth<span class="vh"> | </span><span class="sub">Reusable Data Assets, Clear Priorities</span></h1>
+  <p class="lede">A data-driven assessment of the U.S. wealth management business of a large North American bank. Leadership needed to know which initiatives to fund first to grow wealth through the bank's retail, commercial and brokerage-partner channels. The answer came from integrating field, client and process data into one validated, reusable model that scored 52 initiatives and sequenced them into a roadmap.</p>
   <p class="byline">Led by Andres Slack while serving as an internal strategy consultant at the bank. Andres is now President of xlSigma LLC.</p>
   <div class="outcome"><b>Outcome</b><p>The bank implemented the full assessment. The business met or exceeded every target it set over the following five years.</p></div>
   <div class="facts">
@@ -399,7 +401,7 @@ footer .sig{font-family:var(--f-display);font-size:var(--t-lg);color:var(--ink)}
 
 <!-- 10 -->
 <details class="ch" id="reuse">
-<summary><span class="n">10</span><h3>From analysis to reusable asset</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">The assessment was built as a decision model, not a one-time report. Today the same model would run as a governed Power BI semantic model on a cloud data platform.</p></summary>
+<summary><span class="n">10</span><h3>From analysis to reusable asset</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">The assessment was built as a decision model, not a one-time report. Today the same model translates directly to a governed Power BI semantic model over a SQL data layer.</p></summary>
 <div class="body">
   <div class="shows"><span class="tag">D</span>Well-documented, reusable analytical data assets</div>
   <div class="prose"><p>Every element links to the next: a pain point maps to a function and lifecycle phase, inherits that function's weight and client requirements, and rolls up to an initiative, a lever and a roadmap generation. Change one input, such as a function weight or an impact score, and the rankings and roadmap update. That traceability is what let leaders challenge the results and trust them.</p></div>
@@ -410,7 +412,7 @@ footer .sig{font-family:var(--f-display);font-size:var(--t-lg);color:var(--ink)}
     <div class="arrow" aria-hidden="true">&rarr;</div>
     <div class="mbox"><h4>Decision products</h4><ul><li>Heat maps and hotspot rollups</li><li>Solution selection matrix</li><li>Risk and alignment views</li><li>Roadmap tracking against targets</li></ul></div>
   </div>
-  <div class="callout"><b>Delivered today</b>The original was a structured workbook. The same design maps directly to a star-schema semantic model in Power BI over a cloud lakehouse: certified datasets, row-level security by line of business, refreshable scoring, and dashboards that Strategy can reuse for the next portfolio review instead of rebuilding the analysis.</div>
+  <div class="callout"><b>Today</b>The original was a structured workbook. The same design maps directly to a star-schema semantic model in Power BI over a SQL data layer, on premises or in the cloud: certified datasets, row-level security by line of business, refreshable scoring, and dashboards that Strategy can reuse for the next portfolio review instead of rebuilding the analysis.</div>
 </div>
 </details>
 
