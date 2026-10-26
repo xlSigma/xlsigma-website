@@ -349,7 +349,7 @@ footer .sig{font-family:var(--f-display);font-size:var(--t-lg);color:var(--ink)}
   </figure>
   <figure>
     <div class="panel scroll"><table class="data" id="topTable"></table></div>
-    <figcaption><b>Top ten initiatives by priority index.</b> Eight of the ten sit in the Market stage, where chapter 4 found the largest gaps.</figcaption>
+    <figcaption><b>Top ten initiatives by priority index.</b> Nine of the ten sit in the Market stage, where chapter 4 found the largest gaps.</figcaption>
   </figure>
 </div>
 </details>
@@ -478,7 +478,7 @@ function hbar(target, rows, opt={}){
 
 /* ---------- framework ---------- */
 const FW = [
-  {l0:"Market", l1:[["Advertising &amp; marketing","How the business presents itself to the world. Aware."],["Client relationship mgmt","Finding unidentified and identified prospects before onboarding. Attract."]], o:"Front"},
+  {l0:"Market", l1:[["Client relationship mgmt","Finding unidentified and identified prospects before onboarding. Attract."]], o:"Front"},
   {l0:"CRM Discovery", l1:[["Sales &amp; channel mgmt","Identifying specific prospects within high-net-worth, affluent and mass-affluent strata. Attract."]], o:"Front"},
   {l0:"Product &amp; Service", l1:[["Product development","Providing products and services for distribution. Consider."],["Advice &amp; service mgmt","Aligning products and services with the client's needs and purchase. Consider."]], o:"Front"},
   {l0:"Onboarding", l1:[["Account opening","Gathering requirements and transferring assets until account opening and investment selection are complete. Grow, Harvest, Transfer."],["Product processing","Accounting and trading readiness, through fulfillment of the financial model. Trade to Transfer."]], o:"Middle"},
@@ -487,9 +487,9 @@ const FW = [
 ];
 (function(){
   const host = $("#fw"), desc = $("#fwDesc");
-  const offices = [["Front office",5],["Middle office",4],["Back office",2]];
-  // office row spans (10 columns total: Market2 CRM1 Prod2 Onb2 Serv2 Rep2 = 11) -> adjust: use 11 cols
-  host.style.gridTemplateColumns = "repeat(11,minmax(0,1fr))";
+  const offices = [["Front office",4],["Middle office",4],["Back office",2]];
+  // 10 columns: Market1 CRM1 Prod2 Onb2 Serv2 Rep2
+  host.style.gridTemplateColumns = "repeat(10,minmax(0,1fr))";
   offices.forEach(([n,sp])=>{ const d=document.createElement("div"); d.className="office"; d.style.gridColumn=`span ${sp}`; d.textContent=n; host.appendChild(d); });
   FW.forEach(s=>{ const d=document.createElement("div"); d.className="l0"; d.style.gridColumn=`span ${s.l1.length}`; d.innerHTML=s.l0; host.appendChild(d); });
   FW.forEach(s=>s.l1.forEach(([n,t])=>{ const d=document.createElement("div"); d.className="l1"; d.tabIndex=0; d.innerHTML=n;
