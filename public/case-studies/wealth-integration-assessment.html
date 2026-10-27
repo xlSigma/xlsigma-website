@@ -115,6 +115,10 @@ details.ch > summary:hover h3{color:var(--navy)}
 @media (max-width:560px){.body{padding-left:0}details.ch > summary{grid-template-columns:2.4rem 1fr auto}}
 .shows{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:var(--t-xs);color:var(--ink-3);font-family:var(--f-mono);letter-spacing:.04em}
 .callout{border-left:3px solid var(--navy);padding:4px 0 4px 16px;max-width:66ch}
+.callout.today{border-left:6px solid var(--brass);background:var(--brass-soft);padding:16px 20px 16px 22px;max-width:none;border-radius:0 6px 6px 0;font-size:1.4rem;line-height:1.4;font-style:italic;color:var(--ink)}
+.callout.today b{font-style:normal;color:var(--brass)}
+.callout.today strong{font-weight:700;color:var(--brass)}
+@media (max-width:639px){.callout.today{font-size:1.15rem;padding:14px 16px 14px 18px}}
 .callout b{display:block;font-family:var(--f-mono);font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin-bottom:4px}
 ul.clean{margin:0;padding-left:1.1em;display:grid;gap:.35em;max-width:66ch}
 
@@ -236,7 +240,7 @@ footer .sig{font-family:var(--f-display);font-size:var(--t-lg);color:var(--ink)}
   <p class="deck">A reusable analytical decision model that evaluated 52 initiatives and shaped a multiyear growth roadmap.</p>
   <div class="outcome"><b>Outcome</b><p>The bank implemented the full assessment and met or exceeded its targets over the following five years.</p></div>
   <p class="lede">Leadership of a large North American bank's U.S. wealth management business needed to decide where to invest to accelerate growth across its retail, commercial, and brokerage-partner channels, in alignment with the <strong>bank's strategic objectives</strong>. The assessment translated that broad question into a structured analytical approach, integrating and validating frontline issues, client requirements, process maturity ratings, and leader-set weightings in one interactive, reusable decision model.</p>
-  <p class="lede">The analysis showed that the biggest growth constraints were in client identification, referrals, and onboarding, not in the servicing activities that generated the most complaints. The model let leadership score 52 initiatives on impact, client value, feasibility, strategic alignment, and risk, and produced a prioritized multiyear roadmap.</p>
+  <p class="lede">The analysis showed that the biggest growth constraints were in client identification, referrals, and onboarding, not in the servicing activities that generated the most complaints. The model let leadership score 52 initiatives on impact, client value, feasibility, strategic alignment, and risk. It produced a prioritized multiyear roadmap.</p>
   <p class="byline">Led by Andres Slack while serving as an internal strategy consultant at the bank. Andres is now President of xlSigma LLC.</p>
   <div class="facts">
     <div class="fact"><span class="v">130</span><span class="l">field irritants collected and validated</span></div>
@@ -408,7 +412,7 @@ footer .sig{font-family:var(--f-display);font-size:var(--t-lg);color:var(--ink)}
 
 <!-- 9 -->
 <details class="ch" id="maturity">
-<summary><span class="n">9</span><h3>Current-state maturity</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">An 18-dimension baseline showed strong market opportunity and leadership, held back by low digitization and automation.</p></summary>
+<summary><span class="n">9</span><h3>Current-state maturity</h3><span class="chev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></span><p class="take">An 18-dimension baseline showed strong market opportunity and a strong leadership model, held back by low digitization and automation.</p></summary>
 <div class="body">
   <div class="shows"><span class="tag">B</span>Interpret complex data for senior leaders</div>
   <div class="prose"><p>Leaders rated the business from 1 to 10 across three lenses. The profile is lopsided in a useful way: the ingredients for growth were present, and the gaps were concentrated in the delivery engine.</p></div>
@@ -429,7 +433,7 @@ footer .sig{font-family:var(--f-display);font-size:var(--t-lg);color:var(--ink)}
     <div class="arrow" aria-hidden="true">&rarr;</div>
     <div class="mbox"><h4>Decision products</h4><ul><li>Heat maps and hotspot rollups</li><li>Solution selection matrix</li><li>Risk and alignment views</li><li>Roadmap tracking against targets</li></ul></div>
   </div>
-  <div class="callout"><b>Today</b>The original was a structured workbook. The same design maps directly to a star-schema semantic model on the client's own data platform (for example Snowflake, Databricks, or SQL Server) with a BI layer such as Power BI, Tableau, or Looker: certified datasets, row-level security by line of business, refreshable scoring, and dashboards that Strategy can reuse for the next portfolio review instead of rebuilding the analysis.</div>
+  <div class="callout today"><b>Today</b>The original was a structured workbook. The same design maps directly to a <strong>star-schema semantic model</strong> on the <strong>client's own data platform</strong> (for example Snowflake, Databricks, or SQL Server) with a <strong>BI layer</strong> such as Power BI, Tableau, or Looker: certified datasets, row-level security by line of business, refreshable scoring, and <strong>dashboards that Strategy can reuse</strong> for the next portfolio review instead of rebuilding the analysis.</div>
 </div>
 </details>
 
@@ -497,7 +501,7 @@ const FW = [
   {l0:"CRM Discovery", l1:[["Sales &amp; channel mgmt","Identifying specific prospects within high-net-worth, affluent, and mass-affluent strata. Attract."]], o:"Front"},
   {l0:"Product &amp; Service", l1:[["Product development","Providing products and services for distribution. Consider."],["Advice &amp; service mgmt","Aligning products and services with the client's needs and purchase. Consider."]], o:"Front"},
   {l0:"Onboarding", l1:[["Account opening","Gathering requirements and transferring assets until account opening and investment selection are complete. Grow, Harvest, Transfer."],["Product processing","Accounting and trading readiness, through fulfillment of the financial model. Trade to Transfer."]], o:"Middle"},
-  {l0:"Client Servicing", l1:[["Client-initiated requests","One-off client requests and transactions. Trade to Transfer."],["Internal processing","Systematic trading, portfolio balancing, and maintenance. Trade to Transfer."]], o:"Middle"},
+  {l0:"Client Servicing", l1:[["Client-initiated requests","One-off client requests and transactions. Trade to Transfer."],["Internal processing","Systematic trading, portfolio balancing and maintenance. Trade to Transfer."]], o:"Middle"},
   {l0:"Reporting", l1:[["Risk &amp; governance","Systems oversight and enablement. Service."],["Financial &amp; regulatory","Financial, compliance, and regulatory oversight. Service."]], o:"Back"}
 ];
 (function(){
