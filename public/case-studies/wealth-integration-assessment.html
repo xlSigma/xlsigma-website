@@ -64,6 +64,9 @@ a{color:var(--navy)}
 h1,h2,h3{text-wrap:balance;margin:0}
 p{margin:0}
 .prose{max-width:66ch;display:grid;gap:.8em}
+.audience-note{max-width:64ch;margin-bottom:-4px}
+.audience-note p{font-size:var(--t-sm);line-height:1.55;color:var(--ink-2)}
+.audience-note a{color:var(--navy)}
 .eyebrow{font-family:var(--f-mono);font-size:var(--t-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
 .mono{font-family:var(--f-mono)}
 .num{font-variant-numeric:tabular-nums}
@@ -235,6 +238,8 @@ footer .sig{font-family:var(--f-display);font-size:var(--t-lg);color:var(--ink)}
 <a class="home-link" href="/">&larr; Back to xlSigma.com</a>
 
 <header class="hero">
+  <!-- BTG-specific note: remove or replace for other audiences -->
+  <div class="audience-note"><p>Prepared for Business Talent Group (BTG) in connection with the opportunity for a senior Data &amp; Analytics Consultant to support high-priority strategic initiatives at a wealth management firm. This anonymized case study shows the approach and the kind of deliverable that role calls for... turning a broad strategic growth ambition and scattered frontline, client, and process data into one governed decision model that leadership can use to decide where to invest first. It scored 52 initiatives on impact, strategic alignment, and risk, and produced a multiyear roadmap that data and BI teams can carry forward as a reusable asset. <a href="#reuse">Chapter 10</a> shows how the same design maps to a semantic model on a modern data platform and BI layer.</p></div>
   <div class="eyebrow">Case study | Wealth management strategy &amp; analytics | Large North American bank</div>
   <h1>Wealth Management Analytics: Turning Fragmented Data into Strategic Growth Priorities</h1>
   <p class="deck">A reusable analytical decision model that evaluated 52 initiatives and shaped a multiyear growth roadmap.</p>
@@ -711,6 +716,7 @@ drawRoad(); drawLev(); drawRadars();
 const h = location.hash.slice(1); const target = chapters.find(d=>d.id===h);
 if (target){ target.open = true; drawIf(target); setTimeout(()=>target.scrollIntoView(),60); } else { chapters[0].open = true; }
 syncBtn();
+addEventListener("hashchange",()=>{ const t=chapters.find(d=>d.id===location.hash.slice(1)); if(t){ t.open=true; drawIf(t); setTimeout(()=>t.scrollIntoView(),60); } });
 </script>
 </body>
 </html>
