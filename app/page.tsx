@@ -66,7 +66,7 @@ const VALUE_PROPS = [
   'Intelligent Workflow Automation',
   'Full-stack delivery: strategy, design, build, implement, and training',
   'Strategy Deployment, Process Improvement, Data Analytics, KPI Dashboards',
-  'Leadership: Lean Six Sigma Master Black Belts with Fortune 500 track record\nProfessional experience across PwC, Accenture, GE, Emerson, Xerox, Citi, Discover, TD Bank, and Federal Government agencies',
+  'Leadership: Lean Six Sigma Master Black Belts with Fortune 500 track record\nProfessional experience across PwC, Accenture, GE, Emerson, IBM, Xerox, Citi, Discover, TD Bank, and Federal Government agencies',
 ];
 
 const SERVICE_LINES = [
