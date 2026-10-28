@@ -651,59 +651,72 @@ export default function SemanticToActionPage() {
       {/* 5. OUTCOME-BACKWARD */}
       <Section variant="paper" aria-labelledby="backward-heading">
         <ContentContainer>
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-5">
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-x-16 lg:gap-y-12">
+            <div className="lg:col-span-5 lg:col-start-1 lg:row-start-1">
               <SectionIntro eyebrow="Outcome-Backward" id="backward-heading" className="mb-8">
                 We start with the outcome, not the technology.
               </SectionIntro>
-              <div className="space-y-10 text-lead text-(--fg-muted)">
+              <div className="space-y-10">
                 <div className="space-y-3">
-                  <p>A Semantic-to-Action™ engagement does not begin by asking:</p>
-                  <p className="border-l-2 border-(--rule) pl-5 font-serif italic text-(--fg-muted)">
+                  <p className="text-lead text-(--fg-muted)">
+                    A Semantic-to-Action™ engagement does not begin by asking:
+                  </p>
+                  <p className="max-sm:min-h-[2lh] lg:min-h-[2lh] border-l-2 border-(--rule) pl-5 font-serif text-title font-normal italic leading-snug text-(--fg-muted)">
                     &ldquo;Where can we deploy AI?&rdquo;
                   </p>
                 </div>
                 <div className="space-y-3">
-                  <p>It begins by asking:</p>
-                  <p className="border-l-2 border-gold pl-5 font-serif text-title font-medium italic leading-snug text-(--fg)">
+                  <p className="text-lead font-semibold text-(--fg)">It begins by asking:</p>
+                  <p className="max-sm:min-h-[2lh] lg:min-h-[2lh] border-l-2 border-gold pl-5 font-serif text-title font-medium italic leading-snug text-(--fg)">
                     &ldquo;What needs to materially improve?&rdquo;
                   </p>
                 </div>
-                <p className="border-t border-(--rule) pt-6 font-semibold text-(--fg)">Then we work backward.</p>
+                <p className="border-t border-(--rule) pt-8 font-serif text-title font-semibold leading-snug text-(--fg)">
+                  Then we work backward.
+                </p>
               </div>
             </div>
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 lg:col-start-6 lg:row-span-2 lg:row-start-1">
               <ol
                 aria-label="Outcome-backward sequence, from Outcome to Technology"
-                className="list-none p-0"
+                className="list-none p-0 lg:grid lg:h-full lg:grid-rows-[repeat(6,minmax(0,1fr)_auto)_minmax(0,1fr)]"
               >
-                {BACKWARD.map((b, i) => (
-                  <li key={b.label} className="relative pb-2">
-                    <div
-                      className={[
-                        'grid items-baseline gap-x-5 gap-y-1 rounded-sm border px-5 py-4 sm:grid-cols-[3rem_13rem_1fr]',
-                        i === 0 ? 'border-gold bg-gold-pale' : 'border-(--rule) bg-white',
-                      ].join(' ')}
-                    >
-                      <span className="font-serif text-lg font-medium text-(--accent)">
-                        {String(i + 1).padStart(2, '0')}
-                      </span>
-                      <span className="font-serif text-xl font-medium text-(--fg)">{b.label}</span>
-                      <span className="text-base text-(--fg-muted)">{b.q}</span>
-                    </div>
-                    {i < BACKWARD.length - 1 && (
-                      <div aria-hidden="true" className="flex justify-start pl-6 pt-2 text-(--accent)">
-                        <ArrowDown size={18} />
+                {BACKWARD.flatMap((b, i) => {
+                  const box = (
+                    <li key={b.label} className="relative lg:flex">
+                      <div
+                        className={[
+                          'grid w-full content-center items-baseline gap-x-5 gap-y-1 rounded-sm border px-5 py-4 sm:grid-cols-[3rem_13rem_1fr]',
+                          i === 0 ? 'border-gold bg-gold-pale' : 'border-(--rule) bg-white',
+                        ].join(' ')}
+                      >
+                        <span className="font-serif text-lg font-medium text-(--accent)">
+                          {String(i + 1).padStart(2, '0')}
+                        </span>
+                        <span className="font-serif text-xl font-medium text-(--fg)">{b.label}</span>
+                        <span className="text-base text-(--fg-muted)">{b.q}</span>
                       </div>
-                    )}
-                  </li>
-                ))}
+                    </li>
+                  );
+                  if (i === BACKWARD.length - 1) return [box];
+                  return [
+                    box,
+                    <li
+                      key={`${b.label}-arrow`}
+                      role="presentation"
+                      aria-hidden="true"
+                      className="flex justify-start py-2 pl-6 text-(--accent)"
+                    >
+                      <ArrowDown size={18} />
+                    </li>,
+                  ];
+                })}
               </ol>
             </div>
+            <p className="border-l-2 border-gold pl-6 font-serif text-xl font-medium leading-snug text-(--fg) lg:col-span-5 lg:col-start-1 lg:row-start-2 lg:self-end">
+              Technology becomes an enabler of the operating model, rather than the starting point for redesigning it.
+            </p>
           </div>
-          <p className="mt-12 max-w-3xl border-l-2 border-gold pl-6 font-serif text-title font-medium leading-snug text-(--fg) md:pl-8">
-            Technology becomes an enabler of the operating model, rather than the starting point for redesigning it.
-          </p>
         </ContentContainer>
       </Section>
 
