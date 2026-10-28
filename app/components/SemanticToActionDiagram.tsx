@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowRight, ArrowUp } from 'lucide-react';
+import { ArrowDown, ArrowRight, ArrowUp, Plus } from 'lucide-react';
 
 type Stage = {
   num:      string;
@@ -70,13 +70,41 @@ export default function SemanticToActionDiagram() {
               <p className="text-sm text-ink-muted leading-relaxed">
                 {stage.desc}
               </p>
-              {i < STAGES.length - 1 && (
-                <ArrowRight
-                  size={16}
-                  strokeWidth={1.5}
+              {i >= 1 && i <= 3 && (
+                // Drops from layers 2 to 4 into the Context Services band (crosses the xl:gap-y-4 row gap).
+                <svg
                   aria-hidden="true"
-                  className="pointer-events-none absolute top-1/2 -right-[18px] hidden -translate-y-1/2 text-gold xl:block"
-                />
+                  viewBox="0 0 10 16"
+                  width="10"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="pointer-events-none absolute top-full left-1/2 hidden -translate-x-1/2 text-gold xl:block"
+                >
+                  <path d="M5 0V14.5M1.5 11L5 14.5L8.5 11" />
+                </svg>
+              )}
+              {i < STAGES.length - 1 && i !== 3 && (
+                // Layers 2, 3 and 4 combine into Context Services (Addendum B), so "+" joins them.
+                // No 04 to 05 arrow: Context Services carry that hand-off.
+                i === 1 || i === 2 ? (
+                  <Plus
+                    size={16}
+                    strokeWidth={2}
+                    aria-hidden="true"
+                    className="pointer-events-none absolute top-1/2 -right-[18px] hidden -translate-y-1/2 text-gold xl:block"
+                  />
+                ) : (
+                  <ArrowRight
+                    size={16}
+                    strokeWidth={2.5}
+                    aria-hidden="true"
+                    className="pointer-events-none absolute top-1/2 -right-[18px] hidden -translate-y-1/2 text-gold xl:block"
+                  />
+                )
               )}
             </li>
           );
@@ -89,7 +117,11 @@ export default function SemanticToActionDiagram() {
                 aria-hidden="true"
                 className="flex items-center justify-center py-2 xl:hidden"
               >
-                <ArrowDown size={16} strokeWidth={1.5} className="text-gold" />
+                {i === 1 || i === 2 ? (
+                  <Plus size={16} strokeWidth={2} className="text-gold" />
+                ) : (
+                  <ArrowDown size={16} strokeWidth={2.5} className="text-gold" />
+                )}
               </li>
             );
             if (i === 3) {
@@ -128,7 +160,7 @@ export default function SemanticToActionDiagram() {
                   aria-hidden="true"
                   className="flex items-center justify-center py-2 xl:hidden"
                 >
-                  <ArrowDown size={16} strokeWidth={1.5} className="text-gold" />
+                  <ArrowDown size={16} strokeWidth={2.5} className="text-gold" />
                 </li>
               );
               const bandLink = (
@@ -141,8 +173,8 @@ export default function SemanticToActionDiagram() {
                   <span className="absolute -top-4 right-1/2 bottom-1/2 -left-5 rounded-br-sm border-r-2 border-b-2 border-gold" />
                   <ArrowUp
                     size={16}
-                    strokeWidth={2}
-                    className="absolute -top-4 left-1/2 -translate-x-1/2 text-gold"
+                    strokeWidth={2.5}
+                    className="absolute -top-[18.5px] left-1/2 -translate-x-1/2 text-gold"
                   />
                 </li>
               );
