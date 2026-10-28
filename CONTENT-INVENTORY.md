@@ -84,7 +84,7 @@ Meta description: xlSigma helps commercial and government organizations improve 
 - Operationalizing AI
 - AI & Intelligent Automation
 - Enterprise Knowledge Transformation
-- Process Reengineering
+- Business Process Redesign
 - Lean Six Sigma
 - Advanced Analytics
 Backed by Fortune 500 experience in transformation and operational excellence
@@ -93,7 +93,7 @@ Who We Are
 xlSigma is a management consulting and technology firm built to deliver enterprise-grade expertise with small-firm agility and direct accountability.
 You won't be handed off to a junior delivery team. Every engagement is led by senior practitioners and backed by direct principal oversight.
 ### Leadership Credentials
-President MBA, Michigan Ross · Lean Six Sigma Master Black Belt · BS Electrical Engineering, FIU
+President MBA, Michigan Ross · BS Electrical Engineering, FIU · Lean Six Sigma Master Black Belt
 Chief Growth & Transformation Officer BS Economics and Accounting, Elizabethtown College · Lean Six Sigma Master Black Belt (PwC) · Former Big 4 Strategy Partner · Led $300M CENTCOM enterprise transformation
 Chief Technology Officer MS Computer Science, Washington University in St. Louis · 25+ years enterprise software architecture · Azure platform serving 200,000+ users
 Core Capabilities
@@ -127,16 +127,15 @@ Why xlSigma
 ## The Engagement Model Makes the Difference
 Large firms send senior partners to sell — then deliver with junior staff. xlSigma operates differently. We deliver with senior-level consultants with Principal oversight from day one through final handoff.
 - Senior-only delivery teams on every engagement — no juniors, no bench
-- Workflow Automation
+- Intelligent Workflow Automation
 - Full-stack delivery: strategy, design, build, implement, and training
 - Strategy Deployment, Process Improvement, Data Analytics, KPI Dashboards
-- Leadership: Lean Six Sigma Master Black Belt with Fortune 500 track record
-- Deep expertise across Accenture, GE, Emerson, Citi, Discover, Federal Government agencies
+- Leadership: Lean Six Sigma Master Black Belts with Fortune 500 track record / Professional experience across PwC, Accenture, GE, Emerson, Xerox, Citi, Discover, TD Bank, and Federal Government agencies (second sentence on its own row, same list item)
 - SDVOSB
 - FL OSD Veteran CBE (pending)
 -
 ## Federal Prime Contractor?
-xlSigma is a certified SDVOSB — helping prime contractors meet participation goals while delivering senior-level execution.
+xlSigma is a certified SDVOSB — helping prime contractors meet participation goals while delivering senior-led execution.
 View Federal Contracting Credentials {{→ /government-contracting}}
 ## Ready to Get Started?
 Tell us about your challenge. We will respond within one business day.
@@ -646,7 +645,7 @@ Why Commercial Clients Choose xlSigma
 We bring the same senior-level rigor used across Fortune 500 engagements to organizations of any size — pairing Lean Six Sigma discipline with modern AI and automation capability.
 We don't start with the AI agent. We model the business the agent must understand.
 - Senior-only delivery teams with Fortune 500 depth — no juniors, no bench
-- Lean Six Sigma-led process reengineering that drives measurable cycle-time and cost results
+- Lean Six Sigma-led business process redesign that drives measurable cycle-time and cost results
 - AI, agents, and intelligent automation deployed on real operational workflows
 - Enterprise knowledge and semantic transformation that makes systems and data AI-ready
 - Full-stack delivery: strategy, design, build, implementation, and training
@@ -699,7 +698,7 @@ Track Record
 -
 ### U.S. Army / ARCENT
 Reengineered LOGCAP logistics change-order process in Afghanistan theater (with Calibre Systems Inc.). Cut cycle time from 150+ days to under 70 days. Built supporting EUC tools (Excel, SharePoint, SQL database).
-- Process Reengineering
+- Business Process Redesign
 - EUC Tools
 - DoD
 -
@@ -736,7 +735,7 @@ Led a $300M enterprise-wide Lean Six Sigma transformation initiative across CENT
 -
 ### U.S. Forces-Afghanistan / DoD
 Supported the initial standup of the U.S. Forces-Afghanistan Fusion Cell (with Calibre Systems Inc.). Built foundational business-process design mapping PBUSE and SARSS/SASSY logistics systems, identifying data sources and owners, establishing collection frequencies, and aligning reporting outputs with the commander's information requirements.
-- Process Reengineering
+- Business Process Redesign
 - Data Analytics
 - DoD
 -

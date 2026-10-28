@@ -36,13 +36,15 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 
 ### Workflow Every Session
 1. cd C:\dev\xlsigma-website
-2. git pull
-3. Read the relevant guide in `node_modules/next/dist/docs/` before writing framework code
-4. Edit the TSX files (never the legacy scripts)
-5. npm run lint and npm run build
-6. Preview: `npm run dev` (http://localhost:3000), or the preview server on port 3001 via `.claude/launch.json`
-7. git add, git commit with a clear message
-8. git push only when asked; pushing a branch creates a Vercel preview, merging to `main` deploys to xlsigma.com
+2. git pull (standing first step; always pull before any work)
+3. Start of session: run `git branch -a` and `gh pr list` to see unmerged branches and open PRs; finish, merge, or delete stale ones before starting new work
+4. Read the relevant guide in `node_modules/next/dist/docs/` before writing framework code
+5. Edit the TSX files (never the legacy scripts)
+6. npm run lint and npm run build
+7. Preview: `npm run dev` (http://localhost:3000), or the preview server on port 3001 via `.claude/launch.json`
+8. git add, git commit with a clear message
+9. git push only when asked; pushing a branch creates a Vercel preview, merging to `main` deploys to xlsigma.com
+10. Before closing a session, merge or delete every branch created in it (use a draft PR for work that is intentionally unfinished)
 
 ### Key Files
 | File | Purpose |

@@ -19,7 +19,7 @@ export const metadata: Metadata = pageMetadata({
 
 const VALUE_PROPS = [
   'Senior-only delivery teams with Fortune 500 depth — no juniors, no bench',
-  'Lean Six Sigma-led process reengineering that drives measurable cycle-time and cost results',
+  'Lean Six Sigma-led business process redesign that drives measurable cycle-time and cost results',
   'AI, agents, and intelligent automation deployed on real operational workflows',
   'Enterprise knowledge and semantic transformation that makes systems and data AI-ready',
   'Full-stack delivery: strategy, design, build, implementation, and training',

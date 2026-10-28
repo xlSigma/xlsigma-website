@@ -40,7 +40,7 @@ const CAPABILITIES_PREVIEW = [
 const LEADERSHIP = [
   {
     role:    'President',
-    details: 'MBA, Michigan Ross · Lean Six Sigma Master Black Belt · BS Electrical Engineering, FIU',
+    details: 'MBA, Michigan Ross · BS Electrical Engineering, FIU · Lean Six Sigma Master Black Belt',
   },
   {
     role:    'Chief Growth & Transformation Officer',
@@ -63,18 +63,17 @@ const STAGES = [
 
 const VALUE_PROPS = [
   'Senior-only delivery teams on every engagement — no juniors, no bench',
-  'Workflow Automation',
+  'Intelligent Workflow Automation',
   'Full-stack delivery: strategy, design, build, implement, and training',
   'Strategy Deployment, Process Improvement, Data Analytics, KPI Dashboards',
-  'Leadership: Lean Six Sigma Master Black Belt with Fortune 500 track record',
-  'Deep expertise across Accenture, GE, Emerson, Citi, Discover, Federal Government agencies',
+  'Leadership: Lean Six Sigma Master Black Belts with Fortune 500 track record\nProfessional experience across PwC, Accenture, GE, Emerson, Xerox, Citi, Discover, TD Bank, and Federal Government agencies',
 ];
 
 const SERVICE_LINES = [
   'Operationalizing AI',
   'AI & Intelligent Automation',
   'Enterprise Knowledge Transformation',
-  'Process Reengineering',
+  'Business Process Redesign',
   'Lean Six Sigma',
   'Advanced Analytics',
 ];
@@ -271,7 +270,7 @@ export default function HomePage() {
               {VALUE_PROPS.map((prop) => (
                 <li
                   key={prop}
-                  className="border-t border-(--rule) py-5 text-base leading-relaxed text-(--fg) md:py-6"
+                  className="border-t border-(--rule) py-5 text-base leading-relaxed whitespace-pre-line text-(--fg) md:py-6"
                 >
                   {prop}
                 </li>
@@ -301,7 +300,7 @@ export default function HomePage() {
               </Headline>
               <p className="max-w-xl text-lead text-(--fg-muted)">
                 xlSigma is a certified SDVOSB — helping
-                prime contractors meet participation goals while delivering senior-level execution.
+                prime contractors meet participation goals while delivering senior-led execution.
               </p>
             </div>
             <div className="lg:col-span-5 lg:justify-self-end">
