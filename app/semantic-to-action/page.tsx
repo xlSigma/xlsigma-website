@@ -538,7 +538,7 @@ export default function SemanticToActionPage() {
           <Disclosure
             summary="What an actionable context package contains"
             className="mt-6 max-w-4xl"
-            summaryClassName="text-lead font-semibold italic"
+            summaryClassName="text-lead font-normal italic"
           >
             <p>
               For a given situation, the package may contain resolved business entities, authoritative
@@ -638,7 +638,7 @@ export default function SemanticToActionPage() {
             </div>
           </div>
 
-          <div className="mt-12 border-t-2 border-gold pt-8">
+          <div className="mt-16 border-t-2 border-gold pt-section">
             <p className="max-w-4xl font-serif text-headline font-medium leading-tight text-balance text-(--fg)">
               Within Semantic-to-Action™, the Enterprise Semantic Foundation makes the business
               understandable, Context Services make that understanding usable at runtime,{' '}
