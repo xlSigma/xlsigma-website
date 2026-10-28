@@ -295,7 +295,7 @@ const RUNTIME_EXAMPLES = [
     result: "The agent recognizes the amount exceeds its authority, prepares the evidence, and routes the request to a supervisor. Independently, the refund workflow verifies the approver's authority and blocks any refund above the approver's limit. After approval, the workflow issues the refund, notifies the customer, records the transaction, and measures the outcome.",
   },
   {
-    title: 'In a federal setting',
+    title: 'In a government setting',
     request: 'An applicant requests a 60-day extension on a filing deadline.',
     steps: [
       { name: 'Resolve',   text: 'identifies the applicant and the case across records and case management systems.' },
@@ -656,12 +656,20 @@ export default function SemanticToActionPage() {
               <SectionIntro eyebrow="Outcome-Backward" id="backward-heading" className="mb-8">
                 We start with the outcome, not the technology.
               </SectionIntro>
-              <div className="space-y-5 text-lead text-(--fg-muted)">
-                <p>A Semantic-to-Action™ engagement does not begin by asking:</p>
-                <p className="font-serif italic text-(--fg)">&ldquo;Where can we deploy AI?&rdquo;</p>
-                <p>It begins by asking:</p>
-                <p className="font-serif font-medium italic text-(--fg)">&ldquo;What needs to materially improve?&rdquo;</p>
-                <p>Then we work backward.</p>
+              <div className="space-y-10 text-lead text-(--fg-muted)">
+                <div className="space-y-3">
+                  <p>A Semantic-to-Action™ engagement does not begin by asking:</p>
+                  <p className="border-l-2 border-(--rule) pl-5 font-serif italic text-(--fg-muted)">
+                    &ldquo;Where can we deploy AI?&rdquo;
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <p>It begins by asking:</p>
+                  <p className="border-l-2 border-gold pl-5 font-serif text-title font-medium italic leading-snug text-(--fg)">
+                    &ldquo;What needs to materially improve?&rdquo;
+                  </p>
+                </div>
+                <p className="border-t border-(--rule) pt-6 font-semibold text-(--fg)">Then we work backward.</p>
               </div>
             </div>
             <div className="lg:col-span-7">

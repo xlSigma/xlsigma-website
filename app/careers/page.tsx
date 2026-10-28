@@ -211,7 +211,7 @@ export default function CareersPage() {
               <p>
                 The Senior Management Consultant is a senior practitioner role supporting future
                 full-time, part-time, remote, hybrid, and client on-site consulting opportunities
-                as client needs, prime-contractor teaming opportunities, and federal or commercial
+                as client needs, prime-contractor teaming opportunities, and government or commercial
                 engagements develop.
               </p>
               <p>
@@ -238,7 +238,7 @@ export default function CareersPage() {
               </p>
               <p>
                 Selected consultants will be considered for future project-based opportunities as
-                client needs, prime-contractor teaming opportunities, and federal or commercial
+                client needs, prime-contractor teaming opportunities, and government or commercial
                 engagements develop.
               </p>
             </div>

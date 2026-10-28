@@ -136,7 +136,7 @@ Large firms send senior partners to sell — then deliver with junior staff. xlS
 -
 ## Federal Prime Contractor?
 xlSigma is a certified SDVOSB — helping prime contractors meet participation goals while delivering senior-led execution.
-View Federal Contracting Credentials {{→ /government-contracting}}
+View Government Contracting Credentials {{→ /government-contracting}}
 ## Ready to Get Started?
 Tell us about your challenge. We will respond within one business day.
 Contact Us{{→ /contact}}
@@ -233,7 +233,7 @@ These are not marketing claims — they are structural advantages built into how
 - Our lean overhead lets us concentrate on top talent and results.
 ## See How These Apply to Your Situation
 Every engagement starts with understanding your specific challenge. Let us show you what senior-level delivery looks like in practice.
-Contact Us {{→ /contact}}Federal Contracting{{→ /government-contracting}}
+Contact Us {{→ /contact}}Government Contracting{{→ /government-contracting}}
 
 ---
 
@@ -429,7 +429,7 @@ A customer requests a $475 refund.
 6. Deliver: returns the context package to the AI agent.
 Result
 The agent recognizes the amount exceeds its authority, prepares the evidence, and routes the request to a supervisor. Independently, the refund workflow verifies the approver's authority and blocks any refund above the approver's limit. After approval, the workflow issues the refund, notifies the customer, records the transaction, and measures the outcome.
-### In a federal setting
+### In a government setting
 An applicant requests a 60-day extension on a filing deadline.
 1. Resolve: identifies the applicant and the case across records and case management systems.
 2. Retrieve: pulls the case file, governing regulation, current extension policy, and documentation.
@@ -792,11 +792,11 @@ xlSigma serves clients across industries including manufacturing, healthcare, fi
 Headquartered in the Greater Tampa Bay Area, xlSigma serves commercial clients directly and partners with federal prime contractors as a strategic subcontracting partner. The firm is building a talent pool of senior consultants, subject-matter experts, and delivery practitioners who can support high-impact transformation, automation, process improvement, and knowledge-management initiatives.
 xlSigma is especially interested in experienced consultants who bring practical delivery expertise, client-facing judgment, and the ability to convert strategy into measurable operational results.
 ## Role Description: Senior Management Consultant / SME - Talent Pool
-The Senior Management Consultant is a senior practitioner role supporting future full-time, part-time, remote, hybrid, and client on-site consulting opportunities as client needs, prime-contractor teaming opportunities, and federal or commercial engagements develop.
+The Senior Management Consultant is a senior practitioner role supporting future full-time, part-time, remote, hybrid, and client on-site consulting opportunities as client needs, prime-contractor teaming opportunities, and government or commercial engagements develop.
 This role is responsible for leading or supporting consulting engagements that diagnose client challenges and design practical, data-driven solutions integrating AI, automation, Lean Six Sigma, and operational excellence methods. Depending on the engagement, the Senior Management Consultant may serve as an engagement lead, workstream lead, subject-matter expert, or specialized delivery practitioner.
 Day-to-day activities may include conducting assessments and analyses, mapping and optimizing business processes, facilitating workshops with client leadership and cross-functional teams, and preparing clear, actionable deliverables such as roadmaps, business cases, operating models, requirements documents, and performance dashboards.
 The Senior Management Consultant will collaborate with technical and business stakeholders, mentor project team members, and help build reusable frameworks, tools, and methodologies that support xlSigma's service offerings. This role may also contribute to business development efforts by supporting proposals, participating in client presentations, and identifying opportunities to expand engagement scope and impact.
-Selected consultants will be considered for future project-based opportunities as client needs, prime-contractor teaming opportunities, and federal or commercial engagements develop.
+Selected consultants will be considered for future project-based opportunities as client needs, prime-contractor teaming opportunities, and government or commercial engagements develop.
 ## Qualifications
 - Strong analytical skills with the ability to interpret complex data, develop insights, and translate findings into practical recommendations.
 - Demonstrated expertise in management consulting and consulting practices, including client-facing leadership, engagement delivery, and stakeholder management.

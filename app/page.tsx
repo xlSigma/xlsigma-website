@@ -305,7 +305,7 @@ export default function HomePage() {
             </div>
             <div className="lg:col-span-5 lg:justify-self-end">
               <Button href="/government-contracting" variant="primary">
-                View Federal Contracting Credentials <ArrowRight size={16} aria-hidden="true" />
+                View Government Contracting Credentials <ArrowRight size={16} aria-hidden="true" />
               </Button>
             </div>
           </div>

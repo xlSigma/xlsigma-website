@@ -373,7 +373,7 @@ export default function CapabilitiesPage() {
               <Button href="/contact" variant="primary">
                 Contact Us <ArrowRight size={16} aria-hidden="true" />
               </Button>
-              <Button href="/government-contracting" variant="secondary">Federal Contracting</Button>
+              <Button href="/government-contracting" variant="secondary">Government Contracting</Button>
             </div>
           </div>
         </ContentContainer>
