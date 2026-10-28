@@ -5,13 +5,14 @@ type Props = {
   summary: string;
   children: ReactNode;
   className?: string;
+  summaryClassName?: string;
 };
 
 /** Native details/summary drawer. Collapsed by default; no client JS. Follows the section tone. */
-export default function Disclosure({ summary, children, className = '' }: Props) {
+export default function Disclosure({ summary, children, className = '', summaryClassName = 'text-base font-semibold' }: Props) {
   return (
     <details className={`group border-y border-(--rule) ${className}`}>
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-base font-semibold text-(--fg) marker:hidden [&::-webkit-details-marker]:hidden">
+      <summary className={`flex cursor-pointer list-none items-center justify-between gap-4 py-4 ${summaryClassName} text-(--fg) marker:hidden [&::-webkit-details-marker]:hidden`}>
         <span>{summary}</span>
         <ChevronDown
           size={18}
