@@ -32,7 +32,7 @@ const PAST_PERFORMANCE = [
 			 ' (with Calibre Systems Inc.). ' +
              'Cut cycle time from 150+ days to under 70 days. ' +
              'Built supporting EUC tools (Excel, SharePoint, SQL database).',
-    tags:    ['Process Reengineering', 'EUC Tools', 'DoD'],
+    tags:    ['Business Process Redesign', 'EUC Tools', 'DoD'],
   },
   {
     client:  'CENTCOM / DoD',
@@ -83,7 +83,7 @@ const PAST_PERFORMANCE = [
              'logistics systems, identifying data sources and owners, establishing ' +
              'collection frequencies, and aligning reporting outputs with the ' +
              'commander\'s information requirements.',
-    tags:    ['Process Reengineering', 'Data Analytics', 'DoD'],
+    tags:    ['Business Process Redesign', 'Data Analytics', 'DoD'],
   },
   {
     client:  'USF Health',
