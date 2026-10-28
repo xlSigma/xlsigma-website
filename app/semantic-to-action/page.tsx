@@ -395,7 +395,7 @@ export default function SemanticToActionPage() {
             <div className="space-y-6 text-lead text-(--fg-muted) lg:col-span-7">
               <p>
                 Many organizations have valuable data, capable technology, experienced people,
-                documented processes, and growing access to AI.
+                documented processes, and growing access to&nbsp;AI.
               </p>
               <p className="font-semibold text-(--fg)">
                 What they often lack is a common structure connecting them.
@@ -434,7 +434,7 @@ export default function SemanticToActionPage() {
               </div>
             </div>
             <div className="lg:col-span-7">
-              <p className="mb-5 text-base text-(--fg-muted)">
+              <p className="mb-5 text-lg font-bold text-(--fg-muted)">
                 It establishes the context needed to answer questions such as:
               </p>
               <ol className="border-b border-(--rule)">
@@ -535,7 +535,11 @@ export default function SemanticToActionPage() {
             Delivered context is governed, traceable, version-aware, source-aware, permission-aware,
             scoped to the situation, and auditable. Only the context the situation requires is delivered.
           </p>
-          <Disclosure summary="What an actionable context package contains" className="mt-6 max-w-4xl">
+          <Disclosure
+            summary="What an actionable context package contains"
+            className="mt-6 max-w-4xl"
+            summaryClassName="text-lead font-semibold italic"
+          >
             <p>
               For a given situation, the package may contain resolved business entities, authoritative
               facts, relevant relationships, applicable policies, governing rules, current process
@@ -555,8 +559,8 @@ export default function SemanticToActionPage() {
 
           <div className="mt-14">
             <p className="mb-6 max-w-3xl text-lead text-(--fg-muted)">
-              Six conceptual capabilities, not a fixed sequence. Implementations may combine, reorder,
-              or repeat them.
+              <span className="block">Six conceptual capabilities, not a fixed sequence.</span>{' '}
+              <span className="block">Implementations may combine, reorder, or repeat them.</span>
             </p>
             <ul className="grid list-none gap-5 p-0 md:grid-cols-2 lg:grid-cols-3">
               {CONTEXT_FUNCTIONS.map((f) => (
@@ -581,12 +585,12 @@ export default function SemanticToActionPage() {
           </p>
           <div className="grid gap-6 lg:grid-cols-2">
             {RUNTIME_EXAMPLES.map((ex) => (
-              <article key={ex.title} className="flex flex-col gap-5 rounded-sm border border-(--rule) bg-white p-7 md:p-9">
-                <h3 className="font-serif text-title font-medium leading-snug text-(--fg)">{ex.title}</h3>
-                <p className="text-lead font-semibold text-(--fg)">{ex.request}</p>
-                <ol className="list-none border-b border-(--rule) p-0">
+              <article key={ex.title} className="flex flex-col gap-5 rounded-sm border border-(--rule) bg-white p-7 md:p-9 lg:row-span-9 lg:grid lg:grid-rows-subgrid lg:gap-y-0">
+                <h3 className="font-serif text-title font-medium leading-snug text-(--fg) lg:mb-5">{ex.title}</h3>
+                <p className="text-lead font-semibold text-(--fg) lg:mb-5">{ex.request}</p>
+                <ol role="list" className="list-none border-b border-(--rule) p-0 lg:contents lg:border-b-0">
                   {ex.steps.map((st, i) => (
-                    <li key={st.name} className="grid grid-cols-[2rem_1fr] gap-x-2 border-t border-(--rule) py-3 text-base leading-relaxed">
+                    <li key={st.name} className="grid grid-cols-[2rem_1fr] gap-x-2 border-t border-(--rule) py-3 text-base leading-relaxed lg:last:border-b">
                       <span className="font-serif text-lg font-medium text-(--accent)">{i + 1}</span>
                       <span className="text-(--fg-muted)">
                         <span className="font-semibold text-(--fg)">{st.name}:</span> {st.text}
@@ -594,7 +598,7 @@ export default function SemanticToActionPage() {
                     </li>
                   ))}
                 </ol>
-                <div className="border-l-2 border-gold pl-5">
+                <div className="border-l-2 border-gold pl-5 lg:mt-5">
                   <p className="mb-2 text-[0.8125rem] font-semibold uppercase tracking-[0.14em] text-(--accent)">Result</p>
                   <p className="text-base leading-relaxed text-(--fg)">{ex.result}</p>
                 </div>
