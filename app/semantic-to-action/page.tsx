@@ -875,7 +875,8 @@ export default function SemanticToActionPage() {
             </div>
           </div>
           <PullQuote className="mt-12 max-w-4xl">
-            That is the difference between AI that understands a question and an enterprise that can use AI to perform work.
+            <span className="block">That is the difference between AI that understands a question</span>{' '}
+            <span className="block">…and an enterprise that can use AI to perform work.</span>
           </PullQuote>
         </ContentContainer>
       </Section>
@@ -915,7 +916,7 @@ export default function SemanticToActionPage() {
               </p>
               <Chips items={TECHNOLOGIES} className="mb-6" />
               <p className="text-base text-(--fg-muted)">
-                xlSigma helps determine what architecture is appropriate for the business problem.
+                xlSigma helps determine what architecture is appropriate for the business&nbsp;problem.
               </p>
             </div>
           </div>
@@ -954,7 +955,7 @@ export default function SemanticToActionPage() {
           </SectionIntro>
           <ol className="grid list-none gap-5 p-0 md:grid-cols-2">
             {ENGAGEMENTS.map((e, i) => (
-              <li key={e.title} className="flex flex-col gap-4 rounded-sm border border-(--rule) bg-white p-7">
+              <li key={e.title} className="flex flex-col gap-4 rounded-sm border border-(--rule) bg-white p-7 md:row-span-5 md:grid md:grid-rows-subgrid md:gap-y-4">
                 <span className="font-serif text-lg font-medium text-(--accent)">
                   {String(i + 1).padStart(2, '0')}
                 </span>
@@ -980,19 +981,20 @@ export default function SemanticToActionPage() {
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
               <SectionIntro eyebrow="Why xlSigma" id="why-heading" className="mb-8">
-                Business transformation first. Technology where it creates value.
+                Business transformation first{' '}
+                <span className="block">Technology where it creates value</span>
               </SectionIntro>
               <div className="space-y-5 text-lead text-(--fg-muted)">
                 <p>
                   AI transformation sits at the intersection of strategy, operations, data, technology, and
                   organizational change.
                 </p>
-                <p className="font-semibold text-(--fg)">xlSigma brings those disciplines together.</p>
+                <p className="font-semibold text-(--fg)">xlSigma pulls those disciplines together.</p>
               </div>
             </div>
             <div className="lg:col-span-7 lg:self-end">
               <p className="mb-4 text-lead font-semibold text-(--fg)">Our approach combines:</p>
-              <ul className="border-b border-(--rule)">
+              <ul className="border-b border-(--rule) sm:grid sm:auto-rows-fr">
                 {WHY.map((w) => (
                   <li
                     key={w.title}
