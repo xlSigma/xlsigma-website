@@ -130,7 +130,7 @@ Large firms send senior partners to sell — then deliver with junior staff. xlS
 - Intelligent Workflow Automation
 - Full-stack delivery: strategy, design, build, implement, and training
 - Strategy Deployment, Process Improvement, Data Analytics, KPI Dashboards
-- Leadership: Lean Six Sigma Master Black Belts with Fortune 500 track record / Professional experience across PwC, Accenture, GE, Emerson, Xerox, Citi, Discover, TD Bank, and Federal Government agencies (second sentence on its own row, same list item)
+- Leadership: Lean Six Sigma Master Black Belts with Fortune 500 track record / Professional experience across PwC, Accenture, GE, Emerson, IBM, Xerox, Citi, Discover, TD Bank, and Federal Government agencies (second sentence on its own row, same list item)
 - SDVOSB
 - FL OSD Veteran CBE (pending)
 -
