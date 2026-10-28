@@ -554,7 +554,7 @@ Authority Who may authorize the exception, and within what limits?
 AI role May the agent recommend, prepare the case, act within its authority, or escalate?
 Action What should happen in the operational system?
 Outcome Was the issue resolved faster, at lower cost, with appropriate control?
-That is the difference between AI that understands a question and an enterprise that can use AI to perform work.
+That is the difference between AI that understands a question / …and an enterprise that can use AI to perform work. (second sentence part on its own line)
 Technology Neutrality
 ## Built around your enterprise, not a predetermined technology stack
 The Enterprise Semantic Foundation is a logical capability, not a single database or product. It is logically unified but physically distributed. It contains and connects enterprise meaning across the platforms you already own, while your systems of record remain authoritative. Context Services work the same way, as a logical runtime layer that draws context from wherever it already lives.
@@ -614,9 +614,9 @@ Potential outputs
 ### Enterprise Scale
 Extend proven patterns across processes, business units, technologies, and AI use cases while establishing appropriate semantic and AI governance.
 Why xlSigma
-## Business transformation first. Technology where it creates value.
+## Business transformation first / Technology where it creates value (no periods; second part on its own line)
 AI transformation sits at the intersection of strategy, operations, data, technology, and organizational change.
-xlSigma brings those disciplines together.
+xlSigma pulls those disciplines together.
 Our approach combines:
 - Enterprise transformation Design around the operating model and measurable business result.
 - Lean Six Sigma discipline Understand how value flows, where performance is lost, and what should change.
