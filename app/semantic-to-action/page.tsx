@@ -471,12 +471,16 @@ export default function SemanticToActionPage() {
           </div>
 
           <ol className="tone-light mt-10 grid list-none gap-5 p-0 md:grid-cols-2 xl:grid-cols-3">
-            {ARCH_STAGES.map((s) => (
+            {ARCH_STAGES.map((s, i) => (
               <li
                 key={s.num}
                 className={[
                   'flex flex-col gap-4 rounded-sm border p-6 md:p-7',
-                  s.featured ? 'border-gold bg-gold-pale' : 'border-(--rule) bg-white',
+                  s.featured
+                    ? 'border-gold bg-gold-pale'
+                    : i === 2 || i === 3
+                      ? 'border-gold bg-gold-wash'
+                      : 'border-(--rule) bg-white',
                 ].join(' ')}
               >
                 <span className="font-serif text-lg font-medium text-(--accent)">{s.num}</span>

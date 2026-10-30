@@ -57,7 +57,9 @@ export default function SemanticToActionDiagram() {
                 'relative min-w-0 rounded-sm p-4 xl:p-5 flex flex-col gap-2',
                 stage.featured
                   ? 'bg-gold-pale border border-gold'
-                  : 'bg-white border border-rule hover:border-gold transition-colors',
+                  : i === 2 || i === 3
+                    ? 'bg-gold-wash border border-gold'
+                    : 'bg-white border border-rule hover:border-gold transition-colors',
                 i >= 1 && i <= 3 ? 'max-xl:border-l-4 max-xl:border-l-gold' : '',
               ].join(' ')}
             >
