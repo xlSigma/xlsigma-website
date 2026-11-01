@@ -519,8 +519,8 @@ export default function SemanticToActionPage() {
             </SectionIntro>
             <p className="text-lead text-(--fg-muted) lg:col-span-7 lg:self-end">
               AI agents should not have to navigate every database, application, and document repository
-              on their own. Context Services are the governed runtime interface that assembles and
-              delivers the minimum sufficient semantic, operational, and authority context people,
+              on their own. <strong><em>Context Services</em></strong> are the governed runtime interface that assembles and
+              delivers the minimum sufficient semantic, operational, and authority context that people,
               applications, automation, and AI need to interpret, decide, and act consistently.
             </p>
           </div>
@@ -539,18 +539,17 @@ export default function SemanticToActionPage() {
             Delivered context is governed, traceable, version-aware, source-aware, permission-aware,
             scoped to the situation, and auditable. Only the context the situation requires is delivered.
           </p>
-          <Disclosure
-            summary="What an actionable context package contains"
-            className="mt-6 max-w-4xl"
-            summaryClassName="text-lead font-normal italic"
-          >
-            <p>
+          <div className="mt-6 max-w-4xl border-y border-(--rule)">
+            <p className="py-4 text-lead font-normal italic text-(--fg)">
+              What an actionable context package contains
+            </p>
+            <p className="pb-5 text-base leading-relaxed text-(--fg-muted)">
               For a given situation, the package may contain resolved business entities, authoritative
               facts, relevant relationships, applicable policies, governing rules, current process
               state, exceptions, controls, authority thresholds, permitted actions, required approvals,
               supporting evidence, provenance, effective versions, and escalation options.
             </p>
-          </Disclosure>
+          </div>
 
           <div className="mt-12 rounded-sm border border-l-4 border-gold bg-gold-pale p-7 md:p-9">
             <p className="max-w-4xl font-serif text-title font-medium leading-snug text-(--fg)">
@@ -563,7 +562,7 @@ export default function SemanticToActionPage() {
 
           <div className="mt-14">
             <p className="mb-6 max-w-3xl text-lead text-(--fg-muted)">
-              <span className="block">Six conceptual capabilities, not a fixed sequence.</span>{' '}
+              <span className="block"><strong>Six conceptual capabilities</strong> (not a fixed sequence).</span>{' '}
               <span className="block">Implementations may combine, reorder, or repeat them.</span>
             </p>
             <ul className="grid list-none gap-5 p-0 md:grid-cols-2 lg:grid-cols-3">
@@ -590,7 +589,7 @@ export default function SemanticToActionPage() {
           <div className="grid gap-6 lg:grid-cols-2">
             {RUNTIME_EXAMPLES.map((ex) => (
               <article key={ex.title} className="flex flex-col gap-5 rounded-sm border border-(--rule) bg-white p-7 md:p-9 lg:row-span-9 lg:grid lg:grid-rows-subgrid lg:gap-y-0">
-                <h3 className="font-serif text-title font-medium leading-snug text-(--fg) lg:mb-5">{ex.title}</h3>
+                <h3 className="font-serif text-title font-medium uppercase leading-snug tracking-wide text-(--fg) text-center lg:mb-5">{ex.title}</h3>
                 <p className="text-lead font-semibold text-(--fg) lg:mb-5">{ex.request}</p>
                 <ol role="list" className="list-none border-b border-(--rule) p-0 lg:contents lg:border-b-0">
                   {ex.steps.map((st, i) => (
@@ -734,7 +733,11 @@ export default function SemanticToActionPage() {
             <div className="space-y-6 text-lead text-(--fg-muted) lg:col-span-7">
               <p className="font-serif text-title font-medium leading-snug text-(--fg)">
                 Model only enough of the enterprise to support the targeted decisions, actions,
-                governance, and outcomes, then expand through reuse.
+                governance, and outcomes, then reuse and extend that foundation for the next outcome.
+              </p>
+              <p>
+                Each iteration builds on the last, extending semantic, operational, and authority
+                context across the enterprise one outcome at a time.
               </p>
               <p>
                 Minimum sufficient does not mean minimal effort or reduced rigor. It means the smallest

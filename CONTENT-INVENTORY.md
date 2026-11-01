@@ -391,7 +391,7 @@ Semantic-to-Action™ connects AI transformation to measurable outcomes such as
 - Mission performance
 Context Services
 ## How AI gets the context it needs
-AI agents should not have to navigate every database, application, and document repository on their own. Context Services are the governed runtime interface that assembles and delivers the minimum sufficient semantic, operational, and authority context people, applications, automation, and AI need to interpret, decide, and act consistently.
+AI agents should not have to navigate every database, application, and document repository on their own. Context Services are the governed runtime interface that assembles and delivers the minimum sufficient semantic, operational, and authority context that people, applications, automation, and AI need to interpret, decide, and act consistently.
 - ### Semantic context
   What is this, what does it mean, and how is it related?
   Business entities, definitions, relationships, authoritative facts, and the knowledge behind them. Drawn from the Enterprise Semantic Foundation.
@@ -402,10 +402,10 @@ AI agents should not have to navigate every database, application, and document 
   Who or what is permitted to decide, approve, recommend, execute, or escalate?
   Decision rights, approval thresholds, limits, prohibited actions, and required human approvals. Drawn from Role & Authority.
 Delivered context is governed, traceable, version-aware, source-aware, permission-aware, scoped to the situation, and auditable. Only the context the situation requires is delivered.
-[drawer, collapsed] What an actionable context package contains
+[always expanded, no drawer] What an actionable context package contains
 For a given situation, the package may contain resolved business entities, authoritative facts, relevant relationships, applicable policies, governing rules, current process state, exceptions, controls, authority thresholds, permitted actions, required approvals, supporting evidence, provenance, effective versions, and escalation options.
 [callout] Context Services deliver authority context. They do not enforce it on their own. Enforcement happens at the action boundary, where the approval gate, workflow, or target system independently verifies authority before anything is executed. An AI agent is never the sole control on its own authority.
-Six conceptual capabilities, not a fixed sequence. Implementations may combine, reorder, or repeat them.
+Six conceptual capabilities (not a fixed sequence). Implementations may combine, reorder, or repeat them.
 - ### Resolve
   Identify the right customer, case, contract, or asset across systems.
 - ### Retrieve
@@ -490,7 +490,8 @@ Then we work backward.
 Technology becomes an enabler of the operating model, rather than the starting point for redesigning it.
 Design principle
 ## The Principle of Minimum Sufficient Semantics
-Model only enough of the enterprise to support the targeted decisions, actions, governance, and outcomes, then expand through reuse.
+Model only enough of the enterprise to support the targeted decisions, actions, governance, and outcomes, then reuse and extend that foundation for the next outcome.
+Each iteration builds on the last, extending semantic, operational, and authority context across the enterprise one outcome at a time.
 Minimum sufficient does not mean minimal effort or reduced rigor. It means the smallest semantic and operational representation that is complete enough to support the intended decisions and actions with the required reliability, governance, context, and measurability.
 The same rule applies at runtime. Context Services deliver only the context needed to interpret, decide, and act correctly for the current situation.
 Lean Six Sigma Connection
