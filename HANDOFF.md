@@ -339,8 +339,8 @@ hold the deeper detail. Approved copy source: the OB1 note "2026-10-04 - myMETA:
 Services Website Incorporation | APPROVED Copy Deck and Decisions". Home and the AI boundary cards were
 deliberately left unchanged.
 
-Canonical source: the methodology behind this diagram is defined in OB1; see the Semantic-to-Action™
-canonical source bullet in CLAUDE.md for the note titles. V1 is amended by Addendum A and by "2026-10-04 - myMETA: Semantic-to-Action™ | V1 Addendum B | Context Services" (OB1 ID: 38877751-de44-40c1-b361-120e5ba28a31); do not restate the methodology here. The six stages above are the marketing and
+Canonical source: the methodology behind this diagram is defined in the controlled document xlS-MTH-002 v1.0 (stored in the xlSigma SharePoint Semantic-to-Action folder), with OB1 as the decision record; where the two differ in wording, the document governs (2026-10-07 Precedence note, OB1 ID: 6bacaf59-7604-4e80-9414-4e52d869870d). See the Semantic-to-Action™
+canonical source bullet in CLAUDE.md for the note titles. V1 is amended by "2026-10-03 - myMETA: Semantic-to-Action | V1 Addendum A | Change Management and Adoption" (OB1 ID: 4f706a63-7e08-40d8-91f7-8a753eb61b00), "2026-10-04 - myMETA: Semantic-to-Action™ | V1 Addendum B | Context Services" (OB1 ID: 38877751-de44-40c1-b361-120e5ba28a31), "2026-10-07 - myMETA: Semantic-to-Action™ | V1 Addendum C | Context Services Placement in Methodology and Maturity" (OB1 ID: c503093b-b5e5-4ec0-ab33-5169388122b5), and "2026-10-30 - myMETA: Semantic-to-Action™ | V1 Addendum D | Principle of Minimum Sufficient Semantics Wording and Supporting Line" (OB1 ID: 7c7353f7-9b0f-4006-adda-d18e54560955); do not restate the methodology here. The six stages above are the marketing and
 website chain. Stage 06 is named Business Outcomes here, while the formal Layer 6 name in the Reference
 Architecture is Outcomes & Measurement. Neither is to be corrected to match the other.
 
