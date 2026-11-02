@@ -2,6 +2,14 @@
 
 # Claude Session Notes - xlsigma-website
 
+## Working Rules (read first)
+
+1. **The TSX files are the source of truth.** Edit `app/` and the docs directly.
+2. **Never restore or run the retired generator scripts** (`xlsigma-files.ps1`, `xlsigma-write-handoff.ps1`, `xlsigma-contact-checkboxes.ps1`). They were deleted on 2026-10-02, predate the redesign, and would overwrite the live site. Do not build replacements.
+3. **Every change goes through a branch and a pull request.** No direct commits to `main`. Only Andres merges.
+4. **Content changes are scoped and approved by Andres** (Claude Chat acts as PM) before they are made, and are recorded in `CONTENT-INVENTORY.md` in the same PR.
+5. **CI must pass.** The `checks` workflow runs lint, type check and `npm run build` on every PR to `main`.
+
 > This file is a working log for AI-assisted development sessions.
 > It supplements HANDOFF.md (architecture reference) with guardrails, workflow,
 > session history, decisions made, and pending items.
