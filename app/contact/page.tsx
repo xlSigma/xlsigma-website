@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Send, CheckCircle } from 'lucide-react';
 import Section from '../components/ui/Section';
 import ContentContainer from '../components/ui/ContentContainer';
@@ -11,14 +12,30 @@ import { Field, INPUT_CLASS } from '../components/ui/form';
 
 type FormState = 'idle' | 'sending' | 'success' | 'error';
 
-export default function ContactPage() {
+// Known ?topic= values and the message each one prefills. Unknown values are ignored.
+const TOPICS = {
+  'private-ai': "I'd like to discuss our private AI requirements.",
+} as const;
+type Topic = keyof typeof TOPICS;
+
+function isTopic(value: string | null): value is Topic {
+  return value !== null && Object.hasOwn(TOPICS, value);
+}
+
+/** Reads ?topic= from the URL. Rendered inside Suspense so the page still prerenders. */
+function ContactFormFromParams() {
+  const param = useSearchParams().get('topic');
+  return <ContactForm topic={isTopic(param) ? param : null} />;
+}
+
+function ContactForm({ topic }: { topic: Topic | null }) {
   const [state, setState] = useState<FormState>('idle');
   const [form, setForm] = useState({
     name:    '',
     company: '',
     email:   '',
     phone:   '',
-    message: '',
+    message: topic ? TOPICS[topic] : '',
   });
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -39,7 +56,7 @@ export default function ContactPage() {
       const res = await fetch('/api/contact', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(form),
+        body:    JSON.stringify(topic ? { ...form, topic } : form),
       });
       if (res.ok) {
         setState('success');
@@ -54,24 +71,6 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Header */}
-      <MedallionHero>
-        <Eyebrow className="mb-4">Reach Out</Eyebrow>
-        <Headline level={1} size="display" className="mb-6">Contact xlSigma</Headline>
-        <p className="mx-auto max-w-xl text-lead text-(--fg-muted)">
-          Tell us about your challenge.
-          <br />
-          We respond within one business day.
-        </p>
-      </MedallionHero>
-
-      {/* Form + Info */}
-      <Section variant="white">
-        <ContentContainer>
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-
-            {/* Form */}
-            <div className="lg:col-span-7">
               {state === 'success' ? (
                 <div className="border border-(--rule) px-8 py-16 text-center" role="status">
                   <CheckCircle size={44} className="mx-auto mb-5 text-gold-ink" aria-hidden="true" />
@@ -131,6 +130,34 @@ export default function ContactPage() {
                   </Button>
                 </form>
               )}
+    </>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <>
+      {/* Header */}
+      <MedallionHero>
+        <Eyebrow className="mb-4">Reach Out</Eyebrow>
+        <Headline level={1} size="display" className="mb-6">Contact xlSigma</Headline>
+        <p className="mx-auto max-w-xl text-lead text-(--fg-muted)">
+          Tell us about your challenge.
+          <br />
+          We respond within one business day.
+        </p>
+      </MedallionHero>
+
+      {/* Form + Info */}
+      <Section variant="white">
+        <ContentContainer>
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+
+            {/* Form. The fallback is the same form without a prefill, so the prerendered HTML is unchanged. */}
+            <div className="lg:col-span-7">
+              <Suspense fallback={<ContactForm topic={null} />}>
+                <ContactFormFromParams />
+              </Suspense>
             </div>
 
             {/* Contact Info */}

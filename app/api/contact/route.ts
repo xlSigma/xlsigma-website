@@ -10,6 +10,8 @@ export async function POST(request: NextRequest) {
     const email   = (body.email   as string | undefined)?.trim() ?? '';
     const phone   = (body.phone   as string | undefined)?.trim() ?? '';
     const message = (body.message as string | undefined)?.trim() ?? '';
+    // Only known topics tag the subject. Any other value is ignored and never echoed.
+    const topicTag = body.topic === 'private-ai' ? 'Private AI | ' : '';
 
     if (!name || !email || !message) {
       return Response.json({ error: 'Name, email, and message are required.' }, { status: 400 });
@@ -24,7 +26,7 @@ export async function POST(request: NextRequest) {
     const result = await resend.emails.send({
       from,
       to,
-      subject: `New Contact Form Submission – ${name}`,
+      subject: `${topicTag}New Contact Form Submission | ${name}`,
       html: `
         <h2 style="font-family:sans-serif;color:#1B3F7A;margin-bottom:16px">
           New Contact Form Submission

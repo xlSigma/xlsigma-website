@@ -137,7 +137,7 @@ function SectionHeading({ id, children, className = '' }: { id: string; children
 
 function CtaButton() {
   return (
-    <Button href="/contact" variant="primary">
+    <Button href="/contact?topic=private-ai" variant="primary">
       {CTA_LABEL} <ArrowRight size={16} aria-hidden="true" />
     </Button>
   );
