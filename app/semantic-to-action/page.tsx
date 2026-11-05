@@ -1063,6 +1063,9 @@ export default function SemanticToActionPage() {
               <Button href="/capabilities" variant="secondary">
                 Explore Our AI &amp; Technology Capabilities
               </Button>
+              <Button href="/private-ai" variant="secondary">
+                Private AI
+              </Button>
             </div>
           </div>
         </ContentContainer>
