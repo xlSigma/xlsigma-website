@@ -18,7 +18,7 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const VALUE_PROPS = [
-  'Senior-only delivery teams with Fortune 500 depth — no juniors, no bench',
+  'Senior-only delivery teams with Fortune 500 depth. No juniors, no bench',
   'Lean Six Sigma-led business process redesign that drives measurable cycle-time and cost results',
   'AI, agents, and intelligent automation deployed on real operational workflows',
   'Enterprise knowledge and semantic transformation that makes systems and data AI-ready',
@@ -59,7 +59,7 @@ export default function CommercialPage() {
               </Headline>
               <p className="text-lead text-(--fg-muted)">
                 We bring the same senior-level rigor used across Fortune 500 engagements
-                to organizations of any size — pairing Lean Six Sigma discipline with
+                to organizations of any size, pairing Lean Six Sigma discipline with
                 modern AI and automation capability.
               </p>
               <PullQuote className="mt-10">
