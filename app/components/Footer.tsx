@@ -6,6 +6,8 @@ import ContentContainer from './ui/ContentContainer';
 const NAV_LINKS = [
   { href: '/',                       label: 'Home'         },
   { href: '/capabilities',           label: 'Capabilities' },
+  { href: '/semantic-to-action',     label: 'Semantic-to-Action™' },
+  { href: '/private-ai',             label: 'Private AI'   },
   { href: '/commercial',             label: 'Commercial'   },
   { href: '/government-contracting', label: 'Government'   },
   { href: '/careers',                label: 'Careers'      },

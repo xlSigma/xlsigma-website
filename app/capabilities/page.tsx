@@ -315,6 +315,12 @@ export default function CapabilitiesPage() {
               Domain by domain. Process by process. Outcome by outcome.
             </p>
           </div>
+
+          <div className="mt-10">
+            <Button href="/private-ai" variant="secondary">
+              Private AI <ArrowRight size={16} aria-hidden="true" />
+            </Button>
+          </div>
         </ContentContainer>
       </Section>
 

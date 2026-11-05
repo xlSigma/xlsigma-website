@@ -8,11 +8,16 @@ const LINKS = [
   { href: '/',                       label: 'Home'         },
   { href: '/capabilities',           label: 'Capabilities' },
   { href: '/semantic-to-action',     label: 'Semantic-to-Action™' },
+  { href: '/private-ai',             label: 'Private AI'   },
   { href: '/commercial',             label: 'Commercial'   },
   { href: '/government-contracting', label: 'Government'   },
   { href: '/careers',                label: 'Careers'      },
   { href: '/contact',                label: 'Contact'      },
 ];
+
+function isActive(pathname: string, href: string) {
+  return pathname === href || pathname.startsWith(href + '/');
+}
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -28,15 +33,16 @@ export default function NavBar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-2 lg:gap-3">
+        <nav className="hidden md:flex items-center gap-1.5 lg:gap-3">
           {LINKS.map(({ href, label }, i) => {
-            const active = pathname === href || pathname.startsWith(href + '/');
+            const active = isActive(pathname, href);
             return (
-              <span key={href} className="flex items-center gap-2 lg:gap-3">
+              <span key={href} className="flex items-center gap-1.5 lg:gap-3">
                 {i > 0 && <span className="text-slate-600">|</span>}
                 <Link
                   href={href}
-                  className={`text-sm font-normal transition-colors whitespace-nowrap
+                  aria-current={active ? 'page' : undefined}
+                  className={`text-[0.8125rem] lg:text-sm font-normal transition-colors whitespace-nowrap
                     ${active
                       ? 'text-gold-light border-b-2 border-gold-light pb-0.5'
                       : 'text-slate-300 hover:text-white'}`}
@@ -61,16 +67,21 @@ export default function NavBar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-navy-dark px-4 py-4 space-y-1 border-t border-slate-700">
-          {LINKS.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setOpen(false)}
-              className="block text-slate-300 hover:text-white py-2.5 text-sm border-b border-slate-700/50"
-            >
-              {label}
-            </Link>
-          ))}
+          {LINKS.map(({ href, label }) => {
+            const active = isActive(pathname, href);
+            return (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setOpen(false)}
+                aria-current={active ? 'page' : undefined}
+                className={`block py-2.5 text-sm border-b border-slate-700/50
+                  ${active ? 'text-gold-light font-semibold' : 'text-slate-300 hover:text-white'}`}
+              >
+                {label}
+              </Link>
+            );
+          })}
         </div>
       )}
     </header>

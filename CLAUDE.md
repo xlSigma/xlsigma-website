@@ -256,6 +256,23 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 **Lessons:**
 - GitHub PR creation can return 502 or GraphQL errors; retry after a short wait (it succeeded on a later retry)
 
+### Session 11 - 2026-11-04 (Private AI page)
+**Goal:** Publish the approved /private-ai offering page from Andres's handoff (copy approved verbatim).
+
+**What was done:**
+- Branch `feature/private-ai-page`: new `app/private-ai/page.tsx` (eight sections, sector-neutral) built from the existing primitives; metadata through `pageMetadata()`; `/private-ai` added to `PUBLIC_PATHS` (sitemap)
+- "Private AI" link added to the navbar (after Semantic-to-Action™), the footer, the Capabilities Semantic-to-Action section, and the /semantic-to-action final CTA. Both menus now mark the current page (aria-current, gold text). From 768 to 1023 px the desktop links use 13 px text and tighter gaps so all eight fit
+- Deployment options render as a table at 768 px and wider and as a stacked list below that (no horizontal scroll at 390 px)
+- CONTENT-INVENTORY.md and HANDOFF.md updated in the same PR
+
+**Decisions made:**
+- The handoff said to work through `xlsigma-files.ps1` and `xlsigma-write-handoff.ps1`. Those scripts were retired on 2026-10-02 and Working Rule 2 forbids restoring them, so the TSX and docs were edited directly
+- "Operationalizing AI" in the eyebrow stays plain text: the site has no such page or anchor
+
+- Contact capture by query parameter (Andres's decision, no new form field): both Private AI CTAs link to `/contact?topic=private-ai`, which prefills the message with "I'd like to discuss our private AI requirements." (editable). The form reads the parameter with `useSearchParams` inside a Suspense boundary whose fallback is the same form without the prefill, so /contact still prerenders and is unchanged without the parameter. The topic is sent to `/api/contact`, which prefixes the Resend subject with "Private AI | " for that topic only and ignores other values. The subject's en dash became " | "
+- Footer Navigation gained Semantic-to-Action™ before Private AI (approved), so it lists the same eight links as the header
+- Stale remote branch `ci-and-guardrails` (PR #49, merged 2026-11-02) had already been deleted on GitHub; nothing to delete
+
 ---
 
 ## Pending / Future Work

@@ -44,7 +44,7 @@ The earlier yellow-disc XL icon (app/icon.png, 700x700) is replaced.
 ## Global: Navigation bar (all pages)
 
 
-xlSigma {{→ /}} Home{{→ /}} | Capabilities{{→ /capabilities}} | Semantic-to-Action™{{→ /semantic-to-action}} | Commercial{{→ /commercial}} | Government{{→ /government-contracting}} | Careers{{→ /careers}} | Contact{{→ /contact}}
+xlSigma {{→ /}} Home{{→ /}} | Capabilities{{→ /capabilities}} | Semantic-to-Action™{{→ /semantic-to-action}} | Private AI{{→ /private-ai}} | Commercial{{→ /commercial}} | Government{{→ /government-contracting}} | Careers{{→ /careers}} | Contact{{→ /contact}}
 
 ---
 
@@ -61,6 +61,8 @@ Senior-level consulting and technology services for commercial and government cl
 ## Navigation
 - Home{{→ /}}
 - Capabilities{{→ /capabilities}}
+- Semantic-to-Action™{{→ /semantic-to-action}}
+- Private AI{{→ /private-ai}}
 - Commercial{{→ /commercial}}
 - Government{{→ /government-contracting}}
 - Careers{{→ /careers}}
@@ -193,6 +195,7 @@ Speed / Adaptability / Control
 Business Outcomes, formally Outcomes & Measurement in our reference architecture, is where results are measured and fed back so each use case can build on the last. Context Services deliver the context AI needs, at the moment it acts.
 We don't start with the AI agent. We model the business the agent must understand.
 Domain by domain. Process by process. Outcome by outcome.
+Private AI {{→ /private-ai}}
 - 01
 ### Lean Six Sigma / DMAIC / Continuous Improvement
 DMAIC-driven process transformation led by a certified Lean Six Sigma Master Black Belt. From rapid kaizen events to enterprise-wide deployment programs, with governance, metrics, and training infrastructure. This is the discipline behind every other capability on this page.
@@ -629,7 +632,75 @@ The objective is not to add AI to the enterprise. It is to build an enterprise c
 ## Move from AI experimentation to operational impact.
 If your organization is exploring AI but struggling to connect pilots, data, processes, governance, and measurable business value, Semantic-to-Action™ provides a structured path forward.
 Let's identify where AI can materially improve how your organization operates.
-Talk With xlSigma {{→ /contact}}Explore Our AI & Technology Capabilities{{→ /capabilities}}
+Talk With xlSigma {{→ /contact}}Explore Our AI & Technology Capabilities{{→ /capabilities}}Private AI{{→ /private-ai}}
+
+---
+
+## Private AI (`/private-ai`)
+
+Added 2026-11-04 (approved by Andres, copy verbatim from the approved handoff). Sector-neutral offering page. "Operationalizing AI" in the eyebrow is plain text: the site has no Operationalizing AI page or anchor (it appears only as a Home hero list item).
+
+Meta title: Private AI | Secure, Governed Enterprise AI | xlSigma
+Meta description: xlSigma helps organizations put AI to work on sensitive knowledge inside an enterprise-controlled boundary, led by business outcomes and governed by design.
+
+[image alt: xlSigma medallion]
+Private AI | A specialization of Operationalizing AI
+# Private AI, Governed for Real Work
+Some knowledge can't leave your environment. We help you apply AI to it inside a security boundary you control, starting with the work that has to improve and the constraint that requires it.
+Discuss your private AI requirements {{→ /contact?topic=private-ai}}
+## Start with the constraint, not the hardware
+Managed enterprise AI with contractual data protections is often the fastest path, and sometimes the right one. A private deployment earns its cost when a real constraint rules that out. Common examples include:
+- Data residency or customer terms that keep information in a defined environment
+- Contractual or regulatory boundaries on where sensitive data may be processed
+- Isolated networks, disconnected sites or limited connectivity
+- Internal policy that restricts which systems may handle proprietary knowledge
+Confidentiality alone does not require private deployment. We test that distinction with you before anything is built.
+## Business outcomes first. Architecture in proportion.
+Lean Six Sigma is xlSigma's transformation discipline.
+Semantic-to-Action™ is our AI transformation architecture.
+The deployment choice follows the business case, not a vendor catalog.
+1. 01
+### A measured result.
+A named workflow improves against a baseline, such as search time, rework, cycle time or mission performance, and is sustained through a control plan with a named owner.
+2. 02
+### An objective deployment choice.
+Options are compared on capability, risk, lifecycle cost and operational fit. That includes recommending managed AI when it is sufficient.
+3. 03
+### Defined, enforced authority.
+What AI may inform, recommend or do is defined before deployment and enforced by controls outside the AI itself.
+4. 04
+### A run model decided before build.
+Every deployment has a named owner for day-to-day operation before go-live.
+## The right boundary for the requirement
+Private, on-premises, disconnected and air-gapped are not interchangeable. We help you choose the least complex option that meets your security, reliability and business requirements.
+Option | When it fits (table at 768 px and wider; below that, each option is a stacked item with a "When it fits" label)
+- Enterprise-managed AI | Existing platforms with contractual protections meet the requirement
+- Private or dedicated hosted AI | Isolation and customer control are required, with hosted operations
+- On-premises with controlled connectivity | AI runs locally under enterprise administration, with approved external connections
+- Disconnected deployment | No routine external connection, with controlled updates and transfers
+- Fully air-gapped deployment | A specific isolation requirement and threat model call for verified isolation
+## Three ways to engage
+Engagements are sized to the problem, from a single workflow to a team, a domain or the enterprise. Each component can be engaged on its own when requirements are already known.
+1. 01
+### Private AI Assessment.
+Define the business outcome and constraints, compare deployment options including managed AI, and build the lifecycle business case and recommendation. The recommendation may be that a private deployment isn't needed.
+2. 02
+### Secure AI Implementation & Operationalization.
+Deploy with qualified specialists, connect governed knowledge sources, redesign the work, and test access controls and acceptance before go-live.
+3. 03
+### AI Assurance & Lifecycle Optimization.
+Run quality evaluations, operational and benefits reviews, and controlled changes after go-live, coordinated with the named operations owner.
+## Traceable answers. Enforced access. Owned operations.
+Private deployment alone doesn't make AI trustworthy. We design for what has to hold up in daily use:
+- Source traceability. Answers cite the authoritative source and current version.
+- Access enforcement. People see only what their permissions allow, and access controls are tested before go-live.
+- Honest limits. When evidence is missing or conflicting, the system says so or escalates instead of guessing.
+- Complete data flows. The boundary covers logging, backups, connectors, administration and support, not only where the model runs.
+## We own the outcome. Specialists deliver the platform.
+xlSigma leads the business outcome, functional design, integration coordination, adoption and benefits realization. Qualified specialists deliver infrastructure, AI engineering and security work within scopes you can see. You keep ownership of your data, access decisions and acceptance. Day-to-day operation is assigned to a named owner before go-live, whether that's your IT team, a platform provider or a specialist partner.
+## Have knowledge that can't leave your environment?
+Tell us about the work you want to improve and the constraint you're working within.
+Discuss your private AI requirements {{→ /contact?topic=private-ai}}
 
 ---
 
@@ -847,7 +918,9 @@ Phone (optional)
 [placeholder: (555) 123-4567]
 Message *
 [placeholder: Describe your challenge or what you are looking for...]
+[prefill when the URL has ?topic=private-ai (added 2026-11-04), editable: I'd like to discuss our private AI requirements.]
 Send Message
+Notification email subject (not visible on the site): "New Contact Form Submission | {name}", prefixed with "Private AI | " when the topic is private-ai. Other topic values are ignored.
 ## Contact Information
 - Call or text:
 - (813) 539-8229

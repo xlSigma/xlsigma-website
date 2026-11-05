@@ -65,6 +65,7 @@ A Claude Code preview config lives in `.claude/launch.json` (port 3001). It is n
 | /                        | app/page.tsx                            | Homepage, banner hero, private sector audience           |
 | /capabilities            | app/capabilities/page.tsx               | All 10 capabilities, hub diagram, Semantic-to-Action diagram |
 | /semantic-to-action      | app/semantic-to-action/page.tsx         | Long-form Semantic-to-Action explainer (16 sections)     |
+| /private-ai              | app/private-ai/page.tsx                 | Private AI offering page, sector-neutral (added 2026-11-04) |
 | /commercial              | app/commercial/page.tsx                 | Commercial enterprises audience                          |
 | /government-contracting  | app/government-contracting/page.tsx     | Federal primes audience, past performance                |
 | /careers                 | app/careers/page.tsx                    | Talent community page and application form               |
@@ -78,7 +79,7 @@ Unlisted static page (not a Next.js route):
 - /case-studies/wealth-integration-assessment - served from `public/case-studies/wealth-integration-assessment.html` through a rewrite in `next.config.ts` (no `.html` in the link). A self-contained page with inline CSS and JS, Google Fonts (Bodoni Moda, IBM Plex Sans, IBM Plex Mono), and its own light/dark themes. It has no navbar or footer, a small "xlsigma.com" link back to `/`, `noindex, nofollow`, and is not in `PUBLIC_PATHS` or the sitemap. robots.txt does not mention it. `next.config.ts` sets no Content-Security-Policy, so the Google Fonts hosts need no allowlist. To edit it, change the HTML file directly; copy is frozen (see CONTENT-INVENTORY.md).
 
 Shared components (app/components/):
-- NavBar.tsx                  - Sticky navy header, desktop links and mobile menu (client component)
+- NavBar.tsx                  - Sticky navy header, desktop links and mobile menu (client component). Eight links; both menus mark the current page with aria-current and gold text. From 768 to 1023 px the desktop links use 13 px text and tighter gaps so all eight fit
 - Footer.tsx                  - Navy footer: brand, certifications, navigation, contact, NAICS
 - ScrollToTop.tsx             - Forces scroll to the very top on every route change (skipped for #anchors)
 - SemanticToActionDiagram.tsx - Six-stage architecture diagram (server component)
