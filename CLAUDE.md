@@ -29,7 +29,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - **Contact facts.** Phone (813) 539-8229 ("Call or text"). Mailing address: 4522 W Village Dr, Unit #1563, Tampa, FL 33624. Update every place if these change (footer, contact page, HANDOFF.md).
 - **No pricing on the website.** Pricing is never published. No prices, rates, fees, price ranges, "starting at" figures, or rate-card details in site copy, metadata, or `CONTENT-INVENTORY.md`, for any offering.
 - **Preserve recent copy.** "Department of War" and "Public Health" labels; the Semantic-to-Action signature line placements (homepage teaser, Capabilities under the diagram, Commercial pull quote, and the Semantic-to-Action page hero; not in the homepage hero); lint and typo fixes. Write the trademark as Semantic-to-Action™.
-- **Em dashes.** No em dashes or en dashes in site copy or code comments; use a comma, period or pipe.
+- **Em dashes.** No em dashes or en dashes in site copy or code comments; use a comma, period or pipe. Never write a double hyphen (--) as a dash stand-in.
 - **Branding.** Home uses the banner image in the hero (no medallion). Interior pages use MedallionHero (medallion centered at the top of the navy hero). No small XL icon in the navbar; the "xlSigma" wordmark stays. Footer logo stays.
 - **Color.** Gold #C9A24B on navy and for rules and buttons. Gold-on-white #8A6A1F for small text and numerals on light backgrounds. Use the Tailwind @theme tokens in `app/globals.css`; no hardcoded burnt-yellow values. Do not name a token `field` (Tailwind did not generate its classes); the input border token is `input-line`.
 - **Accessibility.** Real buttons and links, 4.5:1 text contrast, visible focus states, labels tied to inputs by id, sensible alt text.
@@ -272,6 +272,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - Contact capture by query parameter (Andres's decision, no new form field): both Private AI CTAs link to `/contact?topic=private-ai`, which prefills the message with "I'd like to discuss our private AI requirements." (editable). The form reads the parameter with `useSearchParams` inside a Suspense boundary whose fallback is the same form without the prefill, so /contact still prerenders and is unchanged without the parameter. The topic is sent to `/api/contact`, which prefixes the Resend subject with "Private AI | " for that topic only and ignores other values. The subject's en dash became " | "
 - Footer Navigation gained Semantic-to-Action™ before Private AI (approved), so it lists the same eight links as the header
 - Stale remote branch `ci-and-guardrails` (PR #49, merged 2026-11-02) had already been deleted on GitHub; nothing to delete
+- PR #50 was squash-merged to main as `a702e79` and is live on production (verified by Andres's review)
 
 ---
 
