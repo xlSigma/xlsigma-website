@@ -269,8 +269,8 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - The handoff said to work through `xlsigma-files.ps1` and `xlsigma-write-handoff.ps1`. Those scripts were retired on 2026-10-02 and Working Rule 2 forbids restoring them, so the TSX and docs were edited directly
 - "Operationalizing AI" in the eyebrow stays plain text: the site has no such page or anchor
 
-**Open items:**
-- The contact form has no topic or interest selection, so there was nowhere to add a "Private AI" option. Adding one needs new form copy (label and option list), so it waits for Andres to approve it
+- Contact capture by query parameter (Andres's decision, no new form field): both Private AI CTAs link to `/contact?topic=private-ai`, which prefills the message with "I'd like to discuss our private AI requirements." (editable). The form reads the parameter with `useSearchParams` inside a Suspense boundary whose fallback is the same form without the prefill, so /contact still prerenders and is unchanged without the parameter. The topic is sent to `/api/contact`, which prefixes the Resend subject with "Private AI | " for that topic only and ignores other values. The subject's en dash became " | "
+- Stale remote branch `ci-and-guardrails` (PR #49, merged 2026-11-02) had already been deleted on GitHub; nothing to delete
 
 ---
 

@@ -646,7 +646,7 @@ Meta description: xlSigma helps organizations put AI to work on sensitive knowle
 Private AI | A specialization of Operationalizing AI
 # Private AI, Governed for Real Work
 Some knowledge can't leave your environment. We help you apply AI to it inside a security boundary you control, starting with the work that has to improve and the constraint that requires it.
-Discuss your private AI requirements {{→ /contact}}
+Discuss your private AI requirements {{→ /contact?topic=private-ai}}
 ## Start with the constraint, not the hardware
 Managed enterprise AI with contractual data protections is often the fastest path, and sometimes the right one. A private deployment earns its cost when a real constraint rules that out. Common examples include:
 - Data residency or customer terms that keep information in a defined environment
@@ -699,7 +699,7 @@ Private deployment alone doesn't make AI trustworthy. We design for what has to 
 xlSigma leads the business outcome, functional design, integration coordination, adoption and benefits realization. Qualified specialists deliver infrastructure, AI engineering and security work within scopes you can see. You keep ownership of your data, access decisions and acceptance. Day-to-day operation is assigned to a named owner before go-live, whether that's your IT team, a platform provider or a specialist partner.
 ## Have knowledge that can't leave your environment?
 Tell us about the work you want to improve and the constraint you're working within.
-Discuss your private AI requirements {{→ /contact}}
+Discuss your private AI requirements {{→ /contact?topic=private-ai}}
 
 ---
 
@@ -917,7 +917,9 @@ Phone (optional)
 [placeholder: (555) 123-4567]
 Message *
 [placeholder: Describe your challenge or what you are looking for...]
+[prefill when the URL has ?topic=private-ai (added 2026-11-04), editable: I'd like to discuss our private AI requirements.]
 Send Message
+Notification email subject (not visible on the site): "New Contact Form Submission | {name}", prefixed with "Private AI | " when the topic is private-ai. Other topic values are ignored.
 ## Contact Information
 - Call or text:
 - (813) 539-8229
