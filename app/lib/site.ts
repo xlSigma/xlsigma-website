@@ -19,6 +19,7 @@ export const PUBLIC_PATHS = [
   '/',
   '/capabilities',
   '/semantic-to-action',
+  '/private-ai',
   '/commercial',
   '/government-contracting',
   '/careers',
