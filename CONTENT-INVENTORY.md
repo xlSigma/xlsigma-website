@@ -61,6 +61,7 @@ Senior-level consulting and technology services for commercial and government cl
 ## Navigation
 - Home{{→ /}}
 - Capabilities{{→ /capabilities}}
+- Semantic-to-Action™{{→ /semantic-to-action}}
 - Private AI{{→ /private-ai}}
 - Commercial{{→ /commercial}}
 - Government{{→ /government-contracting}}

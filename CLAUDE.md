@@ -270,6 +270,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - "Operationalizing AI" in the eyebrow stays plain text: the site has no such page or anchor
 
 - Contact capture by query parameter (Andres's decision, no new form field): both Private AI CTAs link to `/contact?topic=private-ai`, which prefills the message with "I'd like to discuss our private AI requirements." (editable). The form reads the parameter with `useSearchParams` inside a Suspense boundary whose fallback is the same form without the prefill, so /contact still prerenders and is unchanged without the parameter. The topic is sent to `/api/contact`, which prefixes the Resend subject with "Private AI | " for that topic only and ignores other values. The subject's en dash became " | "
+- Footer Navigation gained Semantic-to-Action™ before Private AI (approved), so it lists the same eight links as the header
 - Stale remote branch `ci-and-guardrails` (PR #49, merged 2026-11-02) had already been deleted on GitHub; nothing to delete
 
 ---
