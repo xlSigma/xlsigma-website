@@ -205,7 +205,7 @@ export default function CareersPage() {
             <div className="lg:col-span-4">
               <Rule variant="gold" className="mb-6" />
               <Headline id="role-description" level={2} size="md">
-                Role Description: Senior Management Consultant / SME - Talent Pool
+                Role Description: Senior Management Consultant / SME | Talent Pool
               </Headline>
             </div>
             <div className="space-y-5 text-base leading-relaxed text-(--fg-muted) lg:col-span-8">
@@ -236,11 +236,6 @@ export default function CareersPage() {
                 may also contribute to business development efforts by supporting proposals,
                 participating in client presentations, and identifying opportunities to expand
                 engagement scope and impact.
-              </p>
-              <p>
-                Selected consultants will be considered for future project-based opportunities as
-                client needs, prime-contractor teaming opportunities, and government or commercial
-                engagements develop.
               </p>
             </div>
           </div>
