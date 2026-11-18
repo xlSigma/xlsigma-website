@@ -860,16 +860,16 @@ This is not an immediate or guaranteed opening. Engagements are project-based, a
 ## Company Description
 xlSigma LLC is a management consulting firm that delivers solutions at the intersection of operational excellence, AI, automation, enterprise knowledge transformation, IT, and Lean Six Sigma.
 We help private-sector and government organizations improve performance by integrating AI, automation, knowledge management, and Lean Six Sigma into core operations. Our core capabilities include process optimization, AI/RPA-enabled automation, enterprise knowledge management, technology-enabled transformation, KPI and management dashboards, and operational performance improvement.
-xlSigma serves clients across industries including manufacturing, healthcare, financial services, and government. Engagements are led by experienced practitioners with backgrounds at organizations such as GE, Emerson, TD Bank, Citi, and major consulting firms.
+xlSigma serves clients across industries including manufacturing, healthcare, financial services, and government. Engagements are led by principals with backgrounds at organizations such as IBM, GE, Emerson, TD Bank, Citi, and major consulting firms.
 Headquartered in the Greater Tampa Bay Area, xlSigma serves commercial clients directly and partners with federal prime contractors as a strategic subcontracting partner. The firm is building a talent pool of senior consultants, subject-matter experts, and delivery practitioners who can support high-impact transformation, automation, process improvement, and knowledge-management initiatives.
 xlSigma is especially interested in experienced consultants who bring practical delivery expertise, client-facing judgment, and the ability to convert strategy into measurable operational results.
-## Role Description: Senior Management Consultant / SME - Talent Pool
-The Senior Management Consultant is a senior practitioner role supporting future full-time, part-time, remote, hybrid, and client on-site consulting opportunities as client needs, prime-contractor teaming opportunities, and government or commercial engagements develop.
+## Role Description: Senior Management Consultant / SME | Talent Pool
+The Senior Management Consultant is a senior practitioner role supporting future project-based consulting engagements, full-time or part-time, remote, hybrid, or on-site at client locations, as client needs, prime-contractor teaming opportunities, and government or commercial engagements develop.
 This role is responsible for leading or supporting consulting engagements that diagnose client challenges and design practical, data-driven solutions integrating AI, automation, Lean Six Sigma, and operational excellence methods. Depending on the engagement, the Senior Management Consultant may serve as an engagement lead, workstream lead, subject-matter expert, or specialized delivery practitioner.
 Day-to-day activities may include conducting assessments and analyses, mapping and optimizing business processes, facilitating workshops with client leadership and cross-functional teams, and preparing clear, actionable deliverables such as roadmaps, business cases, operating models, requirements documents, and performance dashboards.
 The Senior Management Consultant will collaborate with technical and business stakeholders, mentor project team members, and help build reusable frameworks, tools, and methodologies that support xlSigma's service offerings. This role may also contribute to business development efforts by supporting proposals, participating in client presentations, and identifying opportunities to expand engagement scope and impact.
-Selected consultants will be considered for future project-based opportunities as client needs, prime-contractor teaming opportunities, and government or commercial engagements develop.
 ## Qualifications
+- Typically 10 or more years of professional experience, including significant time in management consulting, process improvement, or transformation delivery roles.
 - Strong analytical skills with the ability to interpret complex data, develop insights, and translate findings into practical recommendations.
 - Demonstrated expertise in management consulting and consulting practices, including client-facing leadership, engagement delivery, and stakeholder management.
 - Experience in finance-related analysis, such as building business cases, ROI models, and cost-benefit analyses to support transformation initiatives.
@@ -878,6 +878,10 @@ Selected consultants will be considered for future project-based opportunities a
 - Proven track record leading or supporting projects in one or more domains such as manufacturing, healthcare, financial services, IT, or government programs.
 - Excellent communication, presentation, and facilitation skills, with the ability to work collaboratively with senior leadership and diverse cross-functional teams.
 - Advanced degree and professional certifications, such as MBA, Lean Six Sigma Master Black Belt, PMP, or related credentials, are a plus.
+## Engagement Terms and Vetting
+Talent community members are engaged as independent contractors (1099) on a project-by-project basis. Joining the talent community is not an offer of employment.
+Many federal engagements require U.S. citizenship, and some require the ability to obtain and maintain a security clearance. We match practitioners to engagements based on these client and prime-contractor requirements.
+Our vetting process includes a resume and credential review, an interview with an xlSigma principal, professional reference checks, and verification of certifications. Practitioners who complete vetting sign an independent contractor agreement and a nondisclosure agreement before being proposed for client work.
 Apply Now
 ## Submit Your Interest
 Full Name *
