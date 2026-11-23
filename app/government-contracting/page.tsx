@@ -49,7 +49,7 @@ const PAST_PERFORMANCE = [
     summary: 'Designed and deployed IT infrastructure for reporting the location of 90,000+ ' +
 			 'shipping containers across the war theater in preparation for draw-down (retrograde),' +
 			 ' with Calibre Systems Inc. ' +
-             'Reduced errors 80%+ and accelerated reporting cycle time x4. ' +
+             'Reduced errors 80%+ and accelerated reporting cycle time x4 ' +
              '(Raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).',
     tags:    ['Data Analytics', 'Database Design', 'DoD'],
   },
