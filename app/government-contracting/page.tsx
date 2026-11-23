@@ -19,7 +19,7 @@ export const metadata: Metadata = pageMetadata({
 
 const VALUE_PROPS = [
   'Satisfies SDVOSB small-business participation goals',
-  'Delivers senior-level execution with no ramp-up. Hit the ground running',
+  'Delivers senior-level execution with no ramp-up... Hit the ground running',
   'Fills capability gaps in operations excellence, process improvement, automation, and analytics',
   'Augments proposal teams with differentiated technical content',
   'Scales engagement size to fit subcontract scope and timeline',
@@ -28,7 +28,7 @@ const VALUE_PROPS = [
 const PAST_PERFORMANCE = [
   {
     client:  'U.S. Army / ARCENT',
-    summary: 'Reengineered LOGCAP logistics change-order process in Afghanistan theater' +
+    summary: 'Reengineered LOGCAP logistics change-order process in the Afghanistan theater' +
 			 ' (with Calibre Systems Inc.). ' +
              'Cut cycle time from 150+ days to under 70 days. ' +
              'Built supporting EUC tools (Excel, SharePoint, SQL database).',
@@ -36,21 +36,21 @@ const PAST_PERFORMANCE = [
   },
   {
     client:  'CENTCOM / DoD',
-    summary: 'Developed alternate land-routes logistics for the draw-down (retrograde) in ' +
+    summary: 'Developed alternate land-routes logistics for the drawdown (retrograde) in ' +
 			 'the Afghanistan theater' +
 			 ' (with Calibre Systems Inc.). ' +
-             'Risk mitigation imperative for the scenario of Pakistan closing access to the sea. ' +
-             'Designed stochastic multi-node network flow optimizer to minimize cost/time/risk while ' +
-			 'maximizing throughput, safety, and adherence to timelines, subject to constraints (with Calibre Systems). ',
+             'A risk-mitigation imperative in case Pakistan closed access to the sea. ' +
+             'Designed a stochastic multi-node network-flow optimizer to minimize cost/time/risk while ' +
+			 'maximizing throughput, safety, and adherence to timelines, subject to constraints.',
     tags:    ['Logistics', 'Data Analytics', 'DoD'],
   },
     {
     client:  'U.S. Army / DoD',
     summary: 'Designed and deployed IT infrastructure for reporting the location of 90,000+ ' +
-			 'shipping containers across the war theater in preparation for draw-down (retrograde),' +
+			 'shipping containers across the war theater in preparation for drawdown (retrograde),' +
 			 ' with Calibre Systems Inc. ' +
-             'Reduced errors 80%+ and accelerated reporting cycle time x4 ' +
-             '(Raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).',
+             'Reduced errors 80%+ and accelerated reporting cycle time 4x ' +
+             '(raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).',
     tags:    ['Data Analytics', 'Database Design', 'DoD'],
   },
   {
@@ -88,7 +88,7 @@ const PAST_PERFORMANCE = [
   {
     client:  'USF Health',
     summary: 'Process improvement and workflow automation supporting ' +
-             'referrals process of BRIDGE Clinic operations.',
+             'the referral process for BRIDGE Clinic operations.',
     tags:    ['Healthcare', 'Process Improvement', 'Workflow Automation'],
   },
 ];
@@ -97,7 +97,7 @@ const AGENCIES = [
   { label: 'Department of War',     sub: 'Combatant commands & theater support operations' },
   { label: 'U.S. Army',             sub: 'Logistics, sustainment & retrograde'      },
   { label: 'Federal Civilian',      sub: 'Enterprise Lean Six Sigma deployment'     },
-  { label: 'Public Health',         sub: 'Process improvement, workflow automation.\nPHAB assessment' },
+  { label: 'Public Health',         sub: 'Process improvement, workflow automation\nPHAB assessment' },
 ];
 
 const NAICS = [
