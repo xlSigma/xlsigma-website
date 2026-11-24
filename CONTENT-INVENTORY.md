@@ -761,7 +761,7 @@ Value to Prime Contractors
 ## Why Primes Choose xlSigma
 We understand the prime-sub relationship. xlSigma integrates seamlessly into your delivery model, providing certified small-business credits, senior technical talent, and zero ramp-up time.
 - Satisfies SDVOSB small-business participation goals
-- Delivers senior-level execution with no ramp-up. Hit the ground running
+- Delivers senior-level execution with no ramp-up... Hit the ground running
 - Fills capability gaps in operations excellence, process improvement, automation, and analytics
 - Augments proposal teams with differentiated technical content
 - Scales engagement size to fit subcontract scope and timeline
@@ -769,19 +769,19 @@ Track Record
 ## Selected Past Performance
 -
 ### U.S. Army / ARCENT
-Reengineered LOGCAP logistics change-order process in Afghanistan theater (with Calibre Systems Inc.). Cut cycle time from 150+ days to under 70 days. Built supporting EUC tools (Excel, SharePoint, SQL database).
+Reengineered LOGCAP logistics change-order process in the Afghanistan theater (with Calibre Systems Inc.). Cut cycle time from 150+ days to under 70 days. Built supporting EUC tools (Excel, SharePoint, SQL database).
 - Business Process Redesign
 - EUC Tools
 - DoD
 -
 ### CENTCOM / DoD
-Developed alternate land-routes logistics for the draw-down (retrograde) in the Afghanistan theater (with Calibre Systems Inc.). Risk mitigation imperative for the scenario of Pakistan closing access to the sea. Designed stochastic multi-node network flow optimizer to minimize cost/time/risk while maximizing throughput, safety, and adherence to timelines, subject to constraints (with Calibre Systems).
+Developed alternate land-routes logistics for the drawdown (retrograde) in the Afghanistan theater (with Calibre Systems Inc.). A risk-mitigation imperative in case Pakistan closed access to the sea. Designed a stochastic multi-node network-flow optimizer to minimize cost/time/risk while maximizing throughput, safety, and adherence to timelines, subject to constraints.
 - Logistics
 - Data Analytics
 - DoD
 -
 ### U.S. Army / DoD
-Designed and deployed IT infrastructure for reporting the location of 90,000+ shipping containers across the war theater in preparation for draw-down (retrograde). (with Calibre Systems Inc.). Reduced errors 80%+ and accelerated reporting cycle time x4. (Raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).
+Designed and deployed IT infrastructure for reporting the location of 90,000+ shipping containers across the war theater in preparation for drawdown (retrograde), with Calibre Systems Inc. Reduced errors 80%+ and accelerated reporting cycle time 4x (raw data intake, cleansing, rationalization, transformations, back-end database, and reporting functionality).
 - Data Analytics
 - Database Design
 - DoD
@@ -812,7 +812,7 @@ Supported the initial standup of the U.S. Forces-Afghanistan Fusion Cell (with C
 - DoD
 -
 ### USF Health
-Process improvement and workflow automation supporting referrals process of BRIDGE Clinic operations.
+Process improvement and workflow automation supporting the referral process for BRIDGE Clinic operations.
 - Healthcare
 - Process Improvement
 - Workflow Automation
@@ -829,7 +829,7 @@ Logistics, sustainment & retrograde
 Enterprise Lean Six Sigma deployment
 -
 ### Public Health
-Process improvement, workflow automation.
+Process improvement, workflow automation
 PHAB assessment
 NAICS Codes
 ## Registered Capabilities
@@ -958,5 +958,6 @@ These conflict with, or sit near, the project constraints. Nothing here was edit
 - Minority-owned wording removed from `HANDOFF.md`.
 - Em dashes removed from Careers copy, API email templates, and code comments.
 - Spacing and punctuation fixed in Government past performance ("theater (with", "(retrograde). (with", "KYC process. Supported").
+- 2026-11-23, Government grammar pass (approved by Andres): "(retrograde), with Calibre Systems Inc."; no period after "4x"; "x4" became "4x"; "draw-down" became "drawdown"; "raw data" lowercase; "the Afghanistan theater" (ARCENT); "A risk-mitigation imperative in case Pakistan closed access to the sea."; "Designed a stochastic multi-node network-flow optimizer"; duplicate "(with Calibre Systems)" removed; "the referral process for BRIDGE Clinic operations"; Public Health card period removed; "no ramp-up... Hit the ground running".
 - Hardcoded `#B8820A` in the careers email template replaced with `#8A6A1F`.
 - Stale contact-form checkbox section removed from `HANDOFF.md`.
