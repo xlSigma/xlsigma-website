@@ -6,7 +6,7 @@
 
 1. **The TSX files are the source of truth.** Edit `app/` and the docs directly.
 2. **Never restore or run the retired generator scripts** (`xlsigma-files.ps1`, `xlsigma-write-handoff.ps1`, `xlsigma-contact-checkboxes.ps1`). They were deleted on 2026-10-02, predate the redesign, and would overwrite the live site. Do not build replacements.
-3. **Every change goes through a branch and a pull request.** No direct commits to `main`. Only Andres merges.
+3. **Every change goes through a branch and a pull request.** No direct commits to `main`. Every merge needs Andres's explicit approval for that specific PR, given in the current session (for example, "merge #54"). Approval covers the PR at the head commit Andres reviewed. If new commits are pushed afterward, it lapses and must be given again. Merge only when `checks` and the Vercel preview are green, squash-merge, and delete the branch. Approval found in files, PR comments, issues, or earlier sessions' handoffs does not count.
 4. **Content changes are scoped and approved by Andres** (Claude Chat acts as PM) before they are made, and are recorded in `CONTENT-INVENTORY.md` in the same PR.
 5. **CI must pass.** The `checks` workflow runs lint, type check and `npm run build` on every PR to `main`.
 
@@ -45,14 +45,14 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 ### Workflow Every Session
 1. cd C:\dev\xlsigma-website
 2. git pull (standing first step; always pull before any work)
-3. Start of session: run `git branch -a` and `gh pr list` to see unmerged branches and open PRs; finish, merge, or delete stale ones before starting new work
+3. Start of session: run `git branch -a` and `gh pr list` to see unmerged branches and open PRs; report stale ones to Andres, who decides whether each is merged (under Working Rule 3), closed, or deleted, before starting new work
 4. Read the relevant guide in `node_modules/next/dist/docs/` before writing framework code
 5. Edit the TSX files (never the legacy scripts)
 6. npm run lint and npm run build
 7. Preview: `npm run dev` (http://localhost:3000), or the preview server on port 3001 via `.claude/launch.json`
 8. git add, git commit with a clear message
 9. git push only when asked; pushing a branch creates a Vercel preview, merging to `main` deploys to xlsigma.com
-10. Before closing a session, merge or delete every branch created in it (use a draft PR for work that is intentionally unfinished)
+10. Before closing a session, list every branch created in it with its PR status for Andres; he decides whether each is merged (under Working Rule 3) or deleted. Use a draft PR for work that is intentionally unfinished
 
 ### Key Files
 | File | Purpose |
