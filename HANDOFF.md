@@ -205,6 +205,16 @@ Form fields (as shown on the page):
 Submissions upload the resume to Vercel Blob (signed URL) and send an HTML notification email via
 Resend to JOIN_US_NOTIFY_EMAIL.
 
+After the internal notice succeeds, the route sends the applicant a confirmation email (HTML and plain
+text) from CAREERS_CONFIRM_FROM ("xlSigma Talent Community <talent@xlsigma.com>"), with replyTo
+talent@xlsigma.com, so applicant replies reach the Talent distribution list. Subject: "We received your
+application | xlSigma Talent Community". The greeting uses the first word of the Full Name. If the
+confirmation fails (Resend error, or the address fails a single-address format check), the error is
+logged and the request still returns success, because the application was already received.
+
+Every form field placed in either email's HTML (name, email, phone, LinkedIn, expertise, message, resume
+file name) goes through the `escapeHtml` helper in the route, so submitted markup renders as text.
+
 ---
 
 ## Environment Variables (Vercel)
@@ -215,6 +225,7 @@ Resend to JOIN_US_NOTIFY_EMAIL.
 | RESEND_FROM_EMAIL     | Sender address for outbound emails                   | onboarding@resend.dev     |
 | CONTACT_NOTIFY_EMAIL  | Inbox for contact form submissions                   | andresslack@xlsigma.com   |
 | JOIN_US_NOTIFY_EMAIL  | Inbox for careers form submissions                   | talent@xlsigma.com        |
+| CAREERS_CONFIRM_FROM  | Sender of the applicant confirmation email           | xlSigma Talent Community <talent@xlsigma.com> |
 | BLOB_READ_WRITE_TOKEN | Vercel Blob token for resume file storage            | (Vercel provides this)    |
 
 Note: xlsigma.com is verified in Resend (us-east-1, return path `send`) and RESEND_FROM_EMAIL is set to
