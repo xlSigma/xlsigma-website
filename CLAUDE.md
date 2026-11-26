@@ -274,6 +274,15 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 - Stale remote branch `ci-and-guardrails` (PR #49, merged 2026-11-02) had already been deleted on GitHub; nothing to delete
 - PR #50 was squash-merged to main as `a702e79` and is live on production (verified by Andres's review)
 
+### Session 12 - 2026-11-23 (Careers engagement terms, PR #52)
+**Goal:** Apply the final /careers copy Andres approved on 2026-11-23 (PM review in Claude Chat) to the open PR #52.
+
+**What was done:**
+- Rebased `feature/careers-engagement-terms` onto `origin/main` (it was 1 commit behind, `96443ad`, #53). The rebase was clean with no conflicts
+- Kept the branch's earlier changes: the soft seniority qualification, the Engagement Terms and Vetting section, and the apply section on `variant="white"`
+- Approved edits on /careers: the principals sentence now lists Accenture, IBM, GE, Emerson, TD Bank, and Citi; the role heading is "Senior Management Consultant / SME | Talent Pool" (the "Role Description:" prefix is gone); the first role paragraph was reworded; the consulting qualification now covers internal consulting and transformation roles; the vetting paragraph adds "We will not include your resume in any proposal without your written consent."
+- CONTENT-INVENTORY.md Careers section mirrors every edit in the same PR
+
 ### Session 13 - 2026-11-25 (Careers applicant confirmation)
 **Goal:** Send applicants a confirmation email and escape form fields in the Careers email HTML.
 
