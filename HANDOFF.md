@@ -4,9 +4,7 @@ Marketing website for xlSigma LLC (SDVOSB and Veteran-Owned Small Business).
 Built with Next.js 16.2.4 App Router, TypeScript strict, Tailwind CSS v4.
 Live at: https://xlsigma.com
 
-Status: an editorial redesign (white and warm off-white sections, deep navy bands, serif display
-headlines) is complete on the `redesign` branch and open as a draft pull request (#1) against `main`.
-Until it is merged, xlsigma.com still shows the previous design.
+Status: the editorial redesign is merged into `main` and live on xlsigma.com.
 
 ---
 
