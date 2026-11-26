@@ -208,7 +208,8 @@ Resend to JOIN_US_NOTIFY_EMAIL.
 After the internal notice succeeds, the route sends the applicant a confirmation email (HTML and plain
 text) from CAREERS_CONFIRM_FROM ("xlSigma Talent Community <talent@xlsigma.com>"), with replyTo
 talent@xlsigma.com, so applicant replies reach the Talent distribution list. Subject: "We received your
-application | xlSigma Talent Community". The greeting uses the first word of the Full Name. If the
+application | xlSigma Talent Community". The greeting uses the first word of the Full Name, and the email is signed
+"Andres Slack, President, xlSigma LLC" (sender display name stays "xlSigma Talent Community"). If the
 confirmation fails (Resend error, or the address fails a single-address format check), the error is
 logged and the request still returns success, because the application was already received.
 

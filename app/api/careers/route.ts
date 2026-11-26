@@ -168,7 +168,8 @@ export async function POST(request: NextRequest) {
             'Questions in the meantime? Just reply to this email.',
             '',
             'Regards,',
-            'xlSigma Talent Community',
+            'Andres Slack',
+            'President, xlSigma LLC',
             'xlsigma.com',
           ].join('\n'),
           html: `
@@ -177,7 +178,7 @@ export async function POST(request: NextRequest) {
               <p>Thank you for joining the xlSigma Talent Community. We received your application and resume.</p>
               <p>Our team reviews every submission. When a project comes up that matches your expertise, we will reach out to you directly.</p>
               <p>Questions in the meantime? Just reply to this email.</p>
-              <p>Regards,<br>xlSigma Talent Community<br><a href="https://www.xlsigma.com" style="color:#8A6A1F">xlsigma.com</a></p>
+              <p>Regards,<br>Andres Slack<br>President, xlSigma LLC<br><a href="https://www.xlsigma.com" style="color:#8A6A1F">xlsigma.com</a></p>
             </div>
           `,
         });

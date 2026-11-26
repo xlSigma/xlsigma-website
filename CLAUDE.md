@@ -278,7 +278,7 @@ and #3) and is live on xlsigma.com. These rules hold on `main` and on any workin
 **Goal:** Send applicants a confirmation email and escape form fields in the Careers email HTML.
 
 **What was done:**
-- Branch `feature/careers-applicant-confirmation` off `main`: `app/api/careers/route.ts` now escapes every form field placed in email HTML (`escapeHtml`) and, after the internal notice succeeds, sends the applicant a confirmation from `CAREERS_CONFIRM_FROM` (default "xlSigma Talent Community <talent@xlsigma.com>") with replyTo talent@xlsigma.com. A failed confirmation is logged and the request still succeeds
+- Branch `feature/careers-applicant-confirmation` off `main`: `app/api/careers/route.ts` now escapes every form field placed in email HTML (`escapeHtml`) and, after the internal notice succeeds, sends the applicant a confirmation from `CAREERS_CONFIRM_FROM` (default "xlSigma Talent Community <talent@xlsigma.com>") with replyTo talent@xlsigma.com. The email is signed "Regards, Andres Slack, President, xlSigma LLC, xlsigma.com" (changed from "xlSigma Talent Community" at Andres's direction). A failed confirmation is logged and the request still succeeds
 - New env var `CAREERS_CONFIRM_FROM`, documented in HANDOFF.md. RESEND_FROM_EMAIL and JOIN_US_NOTIFY_EMAIL are unchanged; no DNS changes
 
 **Decisions made:**
