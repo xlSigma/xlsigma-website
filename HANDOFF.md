@@ -382,6 +382,6 @@ Required environment variables must be set in Vercel project settings
 To deploy a normal change:
 1. Pull main, then create a branch.
 2. Commit the change, push the branch, and open a pull request against main. The push creates a Vercel preview.
-3. Wait for the Vercel check on the pull request to pass, then merge it. The merge deploys to production.
+3. Wait for `checks` and the Vercel preview on the pull request to pass. Merge only with Andres's explicit approval for that pull request at its reviewed head commit (CLAUDE.md Working Rule 3), as a squash merge. The merge deploys to production.
 4. Delete the branch after the merge.
-Do not push directly to main without explicit approval.
+Do not commit or push directly to main.
